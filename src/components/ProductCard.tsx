@@ -17,9 +17,11 @@ const ProductCard = ({ product }: { product: any }) => {
         <div>
             <div>
                 <div >
+                    <Link to={`/products/${product?._id}`}>
                     <div className="bg-gray-200 py-12 flex items-center justify-center">
                         <img className="" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855" />
                     </div>
+                    </Link>
                     <div >
                         <h3 className="pt-2 text-lg font-semibold">{product?.name}</h3>
                         <p className="opacity-[0.7] text-[14px]">AI powered conversational&nbsp;learning robot for kids&nbsp;that is small in size but big on personality.</p>

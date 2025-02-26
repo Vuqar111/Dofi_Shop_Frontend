@@ -4,7 +4,7 @@ import { profileDetails } from '../redux/features/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faShoppingCart, faUser, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -36,6 +36,9 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
         {/* Right: Cart Icon */}
         <div className='flex gap-2'>
+        <Link to="/shop" className="text-2xl cursor-pointer">
+              <FontAwesomeIcon icon={faCartPlus} />
+            </Link>
           <button onClick={() => setIsOpened(true)} className="text-2xl cursor-pointer">
             <FontAwesomeIcon icon={faShoppingCart} />
           </button>
@@ -53,18 +56,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
         </div>
       </div>
 
-      {/* Desktop Menu */}
-      <ul className='hidden md:flex gap-4 justify-center'>
-        <li className="text-[16px] hover:text-green-400"><Link to="/about">About</Link></li>
-        <li className="text-[16px] hover:text-green-400"><Link to="/shop">Shop</Link></li>
-        <li className="text-[16px] hover:text-green-400">
-          {profile ? (
-            <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile">{profile.fullName?.slice(0, 5)}</Link>
-          ) : (
-            <Link to="/auth/login">Login</Link>
-          )}
-        </li>
-      </ul>
+
 
       {/* Mobile Sidebar Menu */}
       <AnimatePresence>

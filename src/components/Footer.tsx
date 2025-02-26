@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className="bg-black text-white p-4">
-            <div className="w-[100%] p-4 md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-black text-white px-4 py-8">
+            <div className="w-[100%] p-4 md:p-0 md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div>
                     <Link to="/">
                         <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>

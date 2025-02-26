@@ -66,21 +66,21 @@ const CartScreen = () => {
                     </div>
 
                     <span className="hidden md:flex items-center justify-between border border-gray-200 mt-2 p-2">
-                          <button
-                            className="px-2 cursor-pointer"
-                            onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
-                            disabled={product.quantity <= 1}
-                          >
-                            -
-                          </button>
-                          <span className="px-2">{product.quantity}</span>
-                          <button
-                            className="px-2 cursor-pointer"
-                            onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
-                          >
-                            +
-                          </button>
-                        </span>
+                      <button
+                        className="px-2 cursor-pointer"
+                        onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
+                        disabled={product.quantity <= 1}
+                      >
+                        -
+                      </button>
+                      <span className="px-2">{product.quantity}</span>
+                      <button
+                        className="px-2 cursor-pointer"
+                        onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
+                      >
+                        +
+                      </button>
+                    </span>
 
                     <div className="font-semibold">{product.quantity} X {product.salePrice} AZN</div>
 
@@ -98,7 +98,7 @@ const CartScreen = () => {
             </div>
           </div>
 
-          <div className='col-span-1 bg-gray-100 shadow p-2'>
+          <div className='col-span-1 bg-gray-100 shadow p-4'>
             <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
             <div className="mt-6">
               <div className="flex justify-between mb-2 text-sm">
