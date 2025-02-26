@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, lazy, useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './screens/HomeScreen';
+import Loader from './helpers/Loader';
+import routes from './routes';
+import { AppDispatch } from './redux/store';
+import { useDispatch } from 'react-redux';
+import PageNotFound from './components/PageNotFound';
+import { ProtectedRoute } from './routes/ProtectedRoute';
+import RegisterScreen from './screens/RegisterScreen';
+import CartScreen from './screens/CartScreen';
+import LoginScreen from "./screens/LoginScreen";
+import ProductDetailsScreen from './screens/ProductDetailsScreen';
+import ShopScreen from './screens/ShopScreen';
+import AboutScreen from './screens/AboutScreen';
+const DefaultLayout = lazy(() => import('./layout/layout'));
+const App = () => {
+  const dispatch: AppDispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  // useEffect(() => {
+  //   dispatch(profileDetails());
+  //   setTimeout(() => setLoading(false), 1000);
+  // }, [dispatch]);
+
+  return loading ? (
+    <Loader />
+  ) : (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/auth/register" element={<RegisterScreen />} />
+      <Route path="/auth/login" element={<LoginScreen />} />
+      <Route path="/shop" element={<ShopScreen />} />
+      <Route path="/products/:slug" element={<ProductDetailsScreen />} />
+      <Route path="/about" element={<AboutScreen />} />
+      <Route path="/cart" element={<CartScreen />} />
+
+  
+      {/* <Route path="/auth/forgot-password" element={<ForgotPassword />} />  */}
+      <Route element={<DefaultLayout />}>
+    
+        {routes.map((route, index) => {
+          const { path, component: Component } = route;
+          return (
+            <Route
+              key={index}
+              path={path}
+              element={
+                <ProtectedRoute>
+                  <Suspense fallback={<Loader />}>
+                    <Component />
+                  </Suspense>
+                </ProtectedRoute>
+              }
+            />
+          );
+        })}
+
+        <Route path="*" element={<PageNotFound />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
