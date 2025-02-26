@@ -10,7 +10,7 @@ const HomeScreen = () => {
   const [isOpened, setIsOpened] = useState(false)
 
   return (
-    <div className='relative'>
+    <div className='relative bg-red-300'>
       <div>
         <Header setIsOpened={setIsOpened} />
         <HeroScreen />
