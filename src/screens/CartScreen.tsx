@@ -45,23 +45,49 @@ const CartScreen = () => {
     <>
       <Header />
 
-      <div className='w-[80%] mx-auto mb-8'>
+      <div className='w-[100%] md:w-[80%] mx-auto  p-4 md:p-8 mb-8'>
         <h1 className='text-3xl font-bold my-6'>Cart</h1>
-        <div className='grid grid-cols-3 gap-2'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
           <div className='col-span-2 shadow'>
             <div className="grid grid-cols-1">
               {cart.map((product: any) => (
                 <div key={product._id}>
                   <div className='bg-white flex justify-between  text-left items-center p-2 '>
-                    <div className='border p-2 border-gray-200'>
-                      <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
+                    <div className='flex md:items-center'>
+                      <div className='border p-2 border-gray-200 flex items-center justify-center'>
+                        <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
+                      </div>
+
+                      <div className='pl-2'>
+                        <h3 className="font-semibold">{product.name}</h3>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
+                      </div>
                     </div>
-                    <h2 className='text-left'>{product.name}</h2>
-                    <p className='text-left'>${product.salePrice}</p>
-                    <p className='text-left'>Quantity: {product.quantity}</p>
-                    <p className='text-left'>{product?.salePrice * product.quantity} AZN</p>
-                    <div className='text-right pt-1'>
+
+                    <span className="hidden md:flex items-center justify-between border border-gray-200 mt-2 p-2">
+                          <button
+                            className="px-2 cursor-pointer"
+                            onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
+                            disabled={product.quantity <= 1}
+                          >
+                            -
+                          </button>
+                          <span className="px-2">{product.quantity}</span>
+                          <button
+                            className="px-2 cursor-pointer"
+                            onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
+                          >
+                            +
+                          </button>
+                        </span>
+
+                    <div className="font-semibold">{product.quantity} X {product.salePrice} AZN</div>
+
+
+
+
+                    <div className='text-right md:pt-1'>
                       <button onClick={() => handleRemove(product._id)}>
                         <FontAwesomeIcon icon={faTrash} className='text-[16px] text-right text-gray-400 hover:text-red-400 cursor-pointer' />
                       </button>
