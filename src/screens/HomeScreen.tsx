@@ -21,7 +21,7 @@ const HomeScreen = () => {
           <ProductsScreen />
         </div>
         <ProductAdvertising />
-        {/* <Safety /> */}
+        <Safety />
         <Footer />
       </div>
       {isOpened && <CartModal setIsOpened={setIsOpened} />}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeroScreen = () => {
     return (
-        <div className='relative w-[100%] px-4 py-2 md:w-[80%] mx-auto h-[40vh] md:h-[80vh] rounded-[5px] overflow-hidden'>
+        <div className='relative w-[100%]  py-1 md:w-[100%] mx-auto h-[60vh] md:h-[80vh] rounded-[5px] overflow-hidden'>
             <video autoPlay muted loop className='w-full h-full object-cover'>
                 <source src="https://cdn.shopify.com/videos/c/o/v/b53aad82a4c143d6a02e9a186e65322d.mp4" type="video/mp4" />
             </video>

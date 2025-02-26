@@ -25,11 +25,6 @@ const coreRoutes = [
       title: 'Order Details',
       component: OrderDetailsScreen,
     },
-    {
-      path: '/checkout',
-      title: 'Checkout',
-      component: CheckOutScreen,
-    },
 ];
 
 const routes = [...coreRoutes];

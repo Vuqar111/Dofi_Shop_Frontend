@@ -1,47 +1,72 @@
-import { Link } from 'react-router-dom'
-import React, { useEffect, useState } from "react"
-import { profileDetails } from '../redux/features/profileSlice'
-import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch } from '../redux/store'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { motion, AnimatePresence } from 'framer-motion'
+import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { profileDetails } from '../redux/features/profileSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch } from '../redux/store';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
-  const dispatch: AppDispatch = useDispatch()
-  const { profile, loading, error } = useSelector((state: any) => state.profile)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const dispatch: AppDispatch = useDispatch();
+  const { profile } = useSelector((state: any) => state.profile);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    dispatch(profileDetails())
-  }, [dispatch])
+    dispatch(profileDetails());
+  }, [dispatch]);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <React.Fragment>
-      <div className="w-[100%] md:w-[100%] mx-auto flex justify-between items-center p-4">
-        <Link to="/">
+      <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-4">
+        {/* Left: Hamburger Icon */}
+        <button onClick={toggleMenu} className="md:hidden text-2xl cursor-pointer">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+
+        {/* Center: Logo */}
+        <Link to="/" className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
           <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
         </Link>
-        <button onClick={toggleMenu} className="md:hidden text-2xl cursor-pointer">
-          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-        </button>
-        <ul className='hidden md:flex gap-2'>
-          <li className="text-[16px] hover:text-green-400"><Link to="/about">About</Link></li>
-          <li className="text-[16px] hover:text-green-400"><Link to="/shop">Shop</Link></li>
-          <li onClick={() => setIsOpened(true)} className="cursor-pointer text-[16px] hover:text-green-400">Cart</li>
-          <li className="text-[16px] hover:text-green-400">
-            {profile ? (
-              <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile">{profile.fullName?.slice(0, 5)}</Link>
-            ) : (
-              <Link to="/auth/login">Login</Link>
-            )}
-          </li>
-        </ul>
+
+        {/* Right: Cart Icon */}
+        <div className='flex gap-2'>
+          <button onClick={() => setIsOpened(true)} className="text-2xl cursor-pointer">
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </button>
+
+          {profile ? (
+            <Link to="/shop" className="text-2xl cursor-pointer">
+              <FontAwesomeIcon icon={faUser} />
+            </Link>
+          ) : (
+            <Link to="/auth/login" className="text-2xl cursor-pointer">
+              <FontAwesomeIcon icon={faUser} />
+            </Link>
+          )}
+
+        </div>
       </div>
+
+      {/* Desktop Menu */}
+      <ul className='hidden md:flex gap-4 justify-center'>
+        <li className="text-[16px] hover:text-green-400"><Link to="/about">About</Link></li>
+        <li className="text-[16px] hover:text-green-400"><Link to="/shop">Shop</Link></li>
+        <li className="text-[16px] hover:text-green-400">
+          {profile ? (
+            <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile">{profile.fullName?.slice(0, 5)}</Link>
+          ) : (
+            <Link to="/auth/login">Login</Link>
+          )}
+        </li>
+      </ul>
+
+      {/* Mobile Sidebar Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -60,7 +85,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
             <ul className='flex flex-col items-start gap-4 p-4'>
               <li className="text-[16px] hover:text-green-400"><Link to="/about" onClick={toggleMenu}>About</Link></li>
               <li className="text-[16px] hover:text-green-400"><Link to="/shop" onClick={toggleMenu}>Shop</Link></li>
-              <li onClick={() => { setIsOpened(true); toggleMenu() }} className="cursor-pointer text-[16px] hover:text-green-400">Cart</li>
+              <li className="cursor-pointer text-[16px] hover:text-green-400" onClick={() => { setIsOpened(true); toggleMenu(); }}>Cart</li>
               <li className="text-[16px] hover:text-green-400">
                 {profile ? (
                   <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile" onClick={toggleMenu}>{profile.fullName?.slice(0, 5)}</Link>
@@ -73,7 +98,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
         )}
       </AnimatePresence>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

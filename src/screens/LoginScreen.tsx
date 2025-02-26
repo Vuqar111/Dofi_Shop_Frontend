@@ -36,16 +36,16 @@ const LoginScreen = () => {
 
 
     return (
-        <div className="flex flex-col md:flex-row h-screen bg-gray-100">
-            <div className="w-full flex flex-col justify-center items-center p-8 bg-white">
+        <div className="flex flex-col md:flex-row h-screen">
+            <div className="w-full flex flex-col justify-center items-center h-screen p-4 md:p-8 bg-white">
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
                 </Link>
                 <p className="mb-4">Səni yenidən görməyə məmnunuq!</p>
                 <form className="w-full max-w-md" onSubmit={handleLogin}>
                     <div className="mb-4">
-                    <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                    E-poçt
+                        <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                            E-poçt
                         </label>
                         <div className="relative">
                             <input
@@ -76,8 +76,8 @@ const LoginScreen = () => {
                         </div>
                     </div>
                     <div className="mb-6">
-                    <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                    Parol
+                        <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                            Parol
                         </label>
                         <div className="relative">
                             <input

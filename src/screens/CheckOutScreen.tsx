@@ -4,6 +4,7 @@ import { profileDetails } from '../redux/features/profileSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { AppDispatch } from '../redux/store'
+import Header from '../components/Profile/Header'
 import ActionButton from "../partials/ActionButton"
 import swal from 'sweetalert'
 
@@ -84,8 +85,10 @@ const CheckOutScreen = () => {
     const total = subtotal + shippingCost - discount
 
     return (
-        <div className='flex'>
-            <div className='w-2/3 p-8'>
+        <>
+        <Header/>
+        <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
+            <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
                 <form onSubmit={handleOrder}>
                     <h2 className="text-2xl font-bold mb-4">Contact</h2>
                     <div className="mb-4">
@@ -104,9 +107,9 @@ const CheckOutScreen = () => {
                     </div>
 
                     <h2 className="text-xl font-bold mb-4">Delivery</h2>
-                    <div className='grid grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
-                        <div className="mb-4">
+                        <div className="mb-2 md:mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 First Name
                             </label>
@@ -134,9 +137,9 @@ const CheckOutScreen = () => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
 
-                        <div className="mb-4">
+                        <div className="mb-2 md:mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 Country
                             </label>
@@ -149,7 +152,7 @@ const CheckOutScreen = () => {
                             />
                         </div>
 
-                        <div className="mb-4">
+                        <div className="mb-2 md:mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 City
                             </label>
@@ -213,7 +216,7 @@ const CheckOutScreen = () => {
                     />
                 </form>
             </div>
-            <div className='w-1/3 bg-gray-100 p-8'>
+            <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-8'>
                 <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
                 {products?.length === 0 ? (
                     <p>Your cart is empty</p>
@@ -243,7 +246,7 @@ const CheckOutScreen = () => {
                             />
                         </div>
 
-                        <button type='submit' className='bg-gray-200 rounded-[5px]'>Apply</button>
+                        <button type='submit' disabled className='bg-gray-200 rounded-[5px]'>Apply</button>
                     </form>
                 </div>
                 <div className="mt-6">
@@ -267,6 +270,7 @@ const CheckOutScreen = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
