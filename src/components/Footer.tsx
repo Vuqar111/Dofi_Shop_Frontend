@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <div className="bg-black text-white py-8">
-            <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
+        <div className="bg-black text-white p-4">
+            <div className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div>
-                    <img src="https://osoturkiye.com/cdn/shop/files/oso_logo_150x@2x.png?v=1729500459" alt="OSO Türkiye Logo" className="w-[150px] mb-4" />
-                    <div>
-                        <p className='text-2xl font-bold'>Doffy AZE</p>
+                    <Link to="/">
+                        <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
+                    </Link>                    <div>
                     </div>
                 </div>
                 <div>
@@ -60,6 +60,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+            <div className="w-[80%] mx-auto mt-4 border-t border-gray-700 pt-4 text-center">
+        <p>&copy; 2025 Doofy. All rights reserved.</p>
+      </div>
         </div>
     )
 }

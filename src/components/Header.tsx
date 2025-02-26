@@ -22,11 +22,11 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
   return (
     <React.Fragment>
-      <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-4">
+      <div className="w-[100%] md:w-[100%] mx-auto flex justify-between items-center p-4">
         <Link to="/">
           <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
         </Link>
-        <button onClick={toggleMenu} className="md:hidden text-2xl">
+        <button onClick={toggleMenu} className="md:hidden text-2xl cursor-pointer">
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
         </button>
         <ul className='hidden md:flex gap-2'>
