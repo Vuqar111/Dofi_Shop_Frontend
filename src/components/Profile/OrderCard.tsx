@@ -2,11 +2,11 @@ import {Link} from 'react-router-dom'
 const OrderCard = ({order}: {order:any}) => {
   return (
     <div className="shadow mb-4">
-      <header className="flex item-center justify-between p-4">
+      <header className="flex md:flex-row flex-col item-center justify-between p-4">
         <div>
           <p>Order number: <span>{order?.orderNumber}</span></p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex md:flex-row flex-col gap-2">
         <span className="px-1 py-1 rounded:sm text:xs">Order date: 29.12.2023</span>
           <span className="bg-green-400 text-white px-1 py-1 rounded:sm text:xs">{order?.payment?.payment_status}</span>
           <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">Delivered</span>
@@ -26,11 +26,11 @@ const OrderCard = ({order}: {order:any}) => {
           ))}
         </div>
       </div>
-      <footer className='p-4 flex items-center justify-between'>
+      <footer className='p-4 flex md:flex-row flex-col md:items-center justify-between'>
         <h2 className='text-green-500'>
           <Link to={`/profile/orders/${order?._id}`}>Details about order</Link>
         </h2>
-        <h2>Total estimate: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
+        <h2 className='md:pt-0 pt-4'>Total estimate: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
       </footer>
     </div>
   )

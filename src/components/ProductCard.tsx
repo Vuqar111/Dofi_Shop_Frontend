@@ -27,7 +27,7 @@ const ProductCard = ({ product }: { product: any }) => {
   return (
     <div className="bg-white">
       <Link to={`/products/${product?._id}`}>
-        <div className="bg-gray-200 py-12 flex items-center justify-center rounded-md">
+        <div className="bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img 
             className="w-32 h-32 object-contain" 
             src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855" 

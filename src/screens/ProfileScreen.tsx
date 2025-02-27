@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import swal from 'sweetalert'
 import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
+import Loading from '../components/Loader'
 const ProfileScreen = () => {
 
    const dispatch: AppDispatch = useDispatch()
@@ -50,19 +51,21 @@ const ProfileScreen = () => {
     }
 
       if (loading) {
-        return <div>Loading...</div>
+        return <div>
+          <Loading/>
+        </div>
       }
 
 
 
   return (
-    <div className='w-[100%] '>
-      <h2 className='pb-4 text-2xl'>Your profile</h2>
+    <div className='w-[100%]'>
+      <h2 className='pb-4 text-xl md:text-2xl'>Your profile</h2>
       <form className='' onSubmit={handleUpdateProfile}>
-        <div className='grid grid-cols-2 gap-4'>
-        <div className="mb-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className="md:mb-4">
           <label className="mb-2 block font-medium text-black opacity-[0.6]">
-            Full Name
+          Ad və soyad
           </label>
           <input
             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -70,13 +73,13 @@ const ProfileScreen = () => {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             type="text"
-            placeholder="Write full name"
-          />
+            placeholder="Adınızı və soyadınızı yazın"
+            />
         </div>
 
-        <div className="mb-4">
+        <div className="md:mb-4">
           <label className="mb-2 block font-medium text-black opacity-[0.6]">
-            Email
+            E-poçt
           </label>
           <input
             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -84,13 +87,13 @@ const ProfileScreen = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="Write email"
+            placeholder="E-poçtunuzu yazın"
           />
         </div>
 
-        <div className="mb-4">
+        <div className="md:mb-4">
           <label className="mb-2 block font-medium text-black opacity-[0.6]">
-            Phone
+            Əlaqə nömrəsi
           </label>
           <input
             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -98,14 +101,14 @@ const ProfileScreen = () => {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             type="tel"
-            placeholder="Write phone"
+            placeholder="Əlaqə nömrənizi yazın"
           />
         </div>
 
 
-        <div className="mb-4">
+        <div className="md:mb-4">
           <label className="mb-2 block font-medium text-black opacity-[0.6]">
-            Customer type
+            Rol
           </label>
           <select
             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -113,20 +116,20 @@ const ProfileScreen = () => {
             value={customer_type}
             onChange={(e) => setCustomerType(e.target.value)}
           >
-            <option value="Individual">Individual</option>
-            <option value="Company">Company</option>
+            <option value="Individual">Valideyn</option>
+            <option value="Company">Şirkət</option>
             <option value="VIP">VIP</option>
           </select>
         </div>
         </div>
 
         <ActionButton
-                        content="Complete profile"
+                        content="Yadda saxla"
                         success={updateProfileSuccess}
                         loading={updateProfileLoading}
                         error={updateProfileError}
                         path={`/profile`}
-                        message="Profile updated successfully"
+                        message="Təbriklər"
                     />
       </form>
     </div>

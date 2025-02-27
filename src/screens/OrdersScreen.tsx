@@ -32,6 +32,7 @@ const OrdersScreen = () => {
   return (
     <>
       <div className=''>
+      <h2 className='pb-4 text-xl md:text-2xl'>Your profile</h2>
         <div className="grid grid-cols-1 ">
           {data?.map((order: any) => (
             <div key={order._id}>

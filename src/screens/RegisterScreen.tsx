@@ -1,14 +1,10 @@
 import { Link } from 'react-router-dom'
 import { registerUser } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
 import { useState } from "react";
 import swal from 'sweetalert';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const RegisterScreen = () => {
     const dispatch: AppDispatch = useDispatch();
@@ -86,7 +82,7 @@ const RegisterScreen = () => {
                             message="Uğurlu qeydiyyat"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Artıq hesabınız var? <Link to="/auth/login"  className="text-green-500">Daxil olun</Link>
+                            Artıq hesabınız var? <Link to="/auth/login" className="text-green-500">Daxil olun</Link>
                         </span>
                     </div>
                 </form>

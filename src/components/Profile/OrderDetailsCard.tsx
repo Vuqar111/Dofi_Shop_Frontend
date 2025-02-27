@@ -4,18 +4,18 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
     console.log(order);
     return (
         <div className="shadow mb-4">
-            <header className="flex item-center justify-between p-4">
+            <header className="flex md:flex-row flex-col item-center justify-between p-4">
                 <div>
                     <p>Order number: <span>{order?.orderNumber}</span></p>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex md:flex-row flex-col gap-2">
                     <span className="px-1 py-1 rounded:sm text:xs">Order date: 29.12.2023</span>
                     <span className="bg-green-400 text-white px-1 py-1 rounded:sm text:xs">{order?.payment?.payment_status}</span>
                     <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">Delivered</span>
                 </div>
             </header>
             <div className='border border-b border-gray-100'></div>
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div>
                     <h2 className='p-4'>Delivery:</h2>
                     <div className='px-4 pt-2'>
@@ -86,7 +86,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
             </div>
             <div className='border border-b border-gray-100'></div>
 
-            <footer className='flex flex-col justify-end items-end flex-end p-4'>
+            <footer className='flex md:flex-row flex-col  justify-end items-end flex-end p-4'>
                 <h2 className='pb-1'>Subtotal cost: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
                 <h2 className='pb-1'>Discount: <span className='font-semibold'>{order?.discount} AZN</span></h2>
                 <h2>Total estimate: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
