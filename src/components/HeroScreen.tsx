@@ -38,7 +38,7 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 >
-                    <Link to="/products">
+                    <Link to="/shop">
                         <span className='bg-green-400 text-white py-2 px-8 sm:py-4 sm:px-12 text-xs sm:text-lg rounded-full inline-block'>
                             Shop Now
                         </span>

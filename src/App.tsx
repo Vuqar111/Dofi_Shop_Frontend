@@ -64,9 +64,8 @@ const App = () => {
             />
           );
         })}
-
-        <Route path="*" element={<PageNotFound />} />
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };
