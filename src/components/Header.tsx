@@ -19,13 +19,10 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
     setIsMenuOpen(!isMenuOpen);
   };
 
-
   const productCount = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')!).length : 0;
-
   return (
     <React.Fragment>
       <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-2 md:p-4">
-
         <button onClick={toggleMenu} className="md:hidden rounded text-2xl cursor-pointer relative w-12 h-12 flex items-center justify-center">
           <svg
             className="w-8 h-8 transition-transform duration-300 ease-in-out"
@@ -67,7 +64,6 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
         {/* Right: Cart Icon */}
         <div className='flex gap-2'>
-
           <button onClick={() => setIsOpened(true)} className="relative text-2xl cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -79,29 +75,21 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
             </span>
           </button>
 
-
           {profile ? (
             <Link to="/profile" className="text-2xl cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
-
             </Link>
-
           ) : (
             <Link to="/profile" className="text-2xl cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
-
             </Link>
-
           )}
-
         </div>
       </div>
-
-
 
       {/* Mobile Sidebar Menu */}
       <AnimatePresence>
@@ -122,9 +110,25 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
               </button>
             </div>
             <ul className='flex flex-col items-start gap-4 p-4'>
-              <li className="text-[16px] hover:text-green-400"><Link to="/about" onClick={toggleMenu}>About</Link></li>
-              <li className="text-[16px] hover:text-green-400"><Link to="/shop" onClick={toggleMenu}>Shop</Link></li>
-              <li className="cursor-pointer text-[16px] hover:text-green-400" onClick={() => { setIsOpened(true); toggleMenu(); }}>Cart</li>
+              <li className='grid grid-cols-2 gap-4  w-[100%] text-center pb-4'>
+                <div>
+                  <Link to="/shop">
+                    <div className='flex items-center justify-center'>
+                      <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_mini.png?v=1718185082" alt='' />
+                    </div>
+                    <p className='pt-2 opacity-[0.8]'>Bags for robot</p>
+                  </Link>
+                </div>
+
+                <div>
+                  <Link to="/shop">
+                    <div className='flex items-center justify-center'>
+                      <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_miko3.png?v=1718185082" alt='' />
+                    </div>
+                    <p className='pt-2 opacity-[0.8]'>Bags for girls</p>
+                  </Link>
+                </div>
+              </li>
               <li className="text-[16px] hover:text-green-400 w-[100%]">
                 {profile ? (
                   <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile" onClick={toggleMenu}>{profile.fullName?.slice(0, 5)}</Link>
@@ -137,7 +141,6 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                       <Link to="/auth/register" onClick={toggleMenu}>Register</Link>
                     </div>
                   </div>
-
                 )}
               </li>
             </ul>

@@ -38,42 +38,42 @@ const RegisterScreen = () => {
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
                 </Link>
-                <p className="mb-4">Create your account</p>
+                <p className="mb-4">Hesabınızı indicə bir kliklə yaradın</p>
                 <form className="w-full max-w-md" onSubmit={handleRegister}>
                     <div className="mb-4">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Full Name
+                            Ad və soyad
                         </label>
                         <input
                             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             id="fullname"
                             onChange={(e) => setFullName(e.target.value)}
                             type="text"
-                            placeholder="Write full name"
+                            placeholder="Adınızı və soyadınızı yazın"
                         />
                     </div>
                     <div className="mb-4">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Email
+                            E-poçt
                         </label>
                         <input
                             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             id="email"
                             onChange={(e) => setEmail(e.target.value)}
                             type="email"
-                            placeholder="Write email"
+                            placeholder="E-poçtunuzu yazın"
                         />
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Password
+                            Parol
                         </label>
                         <input
                             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             id="password"
                             onChange={(e) => setPassword(e.target.value)}
                             type="password"
-                            placeholder="Password"
+                            placeholder="Parol yazın"
                         />
                     </div>
                     <div className="flex flex-col">
@@ -85,9 +85,9 @@ const RegisterScreen = () => {
                             path={`/`}
                             message="Uğurlu qeydiyyat"
                         />
-                        <Link to="/auth/login" className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Already have an account? Login
-                        </Link>
+                        <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
+                            Artıq hesabınız var? <Link to="/auth/login"  className="text-green-500">Daxil olun</Link>
+                        </span>
                     </div>
                 </form>
             </div>

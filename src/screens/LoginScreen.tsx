@@ -52,7 +52,7 @@ const LoginScreen = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Write your email"
+                                placeholder="E-poçtunuzu yazın"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -73,7 +73,7 @@ const LoginScreen = () => {
                                 type={showPassword ? 'text' : 'password'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Write your password"
+                                placeholder="Parolunuzu yazın"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -107,9 +107,9 @@ const LoginScreen = () => {
                             path={`/`}
                             message="Uğurlu giriş"
                         />
-                        <Link to="/auth/register" className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Already don't have an account? Register
-                        </Link>
+                        <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
+                            Hesabınız yoxdur? <Link to="/auth/register"  className="text-green-500">Qeydiyyatdan keçin</Link>
+                        </span>
                     </div>
                 </form>
             </div>

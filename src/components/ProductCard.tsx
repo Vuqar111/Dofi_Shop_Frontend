@@ -63,7 +63,7 @@ const ProductCard = ({ product }: { product: any }) => {
             ) : (
               <motion.button
                 key="add"
-                className="text-white bg-green-400 px-3 py-2 flex items-center gap-2"
+                className="text-white bg-green-400 px-3 py-2 flex items-center gap-2 cursor-pointer"
                 onClick={() => handleAddToCart(product._id)}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.05 }}
