@@ -15,6 +15,7 @@ import ProductDetailsScreen from './screens/ProductDetailsScreen';
 import ShopScreen from './screens/ShopScreen';
 import AboutScreen from './screens/AboutScreen';
 import CheckOutScreen from './screens/CheckOutScreen';
+import ResetPasswordScreen from './screens/ResetPasswordScreen';
 const DefaultLayout = lazy(() => import('./layout/layout'));
 const App = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -33,7 +34,7 @@ const App = () => {
       <Route path="/auth/register" element={<RegisterScreen />} />
       <Route path="/auth/login" element={<LoginScreen />} />
       <Route path="/auth/forgot-password" element={<ForgotPassword />} />
-      <Route path="/auth/reset-password?" element={<ForgotPassword />} />
+      <Route path="/auth/reset-password" element={<ResetPasswordScreen />} />
 
 
       <Route path="/shop" element={<ShopScreen />} />
