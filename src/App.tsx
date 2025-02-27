@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import PageNotFound from './components/PageNotFound';
 import { ProtectedRoute } from './routes/ProtectedRoute';
 import RegisterScreen from './screens/RegisterScreen';
+import ForgotPassword from "./screens/ForgotPasswordScreen";
 import CartScreen from './screens/CartScreen';
 import LoginScreen from "./screens/LoginScreen";
 import ProductDetailsScreen from './screens/ProductDetailsScreen';
@@ -31,6 +32,10 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/auth/register" element={<RegisterScreen />} />
       <Route path="/auth/login" element={<LoginScreen />} />
+      <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+      <Route path="/auth/reset-password?" element={<ForgotPassword />} />
+
+
       <Route path="/shop" element={<ShopScreen />} />
       <Route path="/products/:slug" element={<ProductDetailsScreen />} />
       <Route path="/about" element={<AboutScreen />} />

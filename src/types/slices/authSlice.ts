@@ -15,8 +15,11 @@ export interface User {
     registerLoading: boolean;
     registerError: string | null;
     forgotPasswordSuccess: any,
-    forgotPasswordLoading: boolean
+    forgotPasswordLoading: boolean;
     forgotPasswordError: string | null;
+    resetPasswordSuccess: any,
+    resetPasswordLoading: boolean
+    resetPasswordError: string | null;
     isAuthenticated: boolean;
   }
   

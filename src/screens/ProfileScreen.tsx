@@ -5,11 +5,13 @@ import swal from 'sweetalert'
 import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
 import Loading from '../components/Loader'
-const ProfileScreen = () => {
 
+
+
+const ProfileScreen = () => {
    const dispatch: AppDispatch = useDispatch()
       const { profile, loading, error, updateProfileSuccess, updateProfileLoading, updateProfileError } = useSelector((state: any) => state.profile)
-  
+
       const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
       const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)
       const [phoneNumber, setPhoneNumber] = useState<string | undefined>(profile?.phoneNumber || undefined)

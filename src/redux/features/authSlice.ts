@@ -14,6 +14,9 @@ const initialState: AuthState = {
   forgotPasswordSuccess: null,
   forgotPasswordLoading: false,
   forgotPasswordError: null,
+  resetPasswordSuccess: null,
+  resetPasswordLoading: false,
+  resetPasswordError: null,
   isAuthenticated: false
 };
 
@@ -21,34 +24,34 @@ const initialState: AuthState = {
 
 
 export const registerUser = createAsyncThunk(
-    'user/register',
-    async (
-      { userData}: { userData: any},
-      { rejectWithValue }
-    ) => {
-      try {
-        const response = await axios.post<SigninResponse>(
-          `${API_URL}/auth/register`,
-          userData
-        );
-        const { token, expiresIn } = response.data;
-        const expiry = new Date().getTime() + expiresIn;
-  
-        localStorage.setItem('token', token);
-        localStorage.setItem('tokenExpiry', expiry.toString());
-  
-        localStorage.setItem('token', response?.data.token);
-        return response.data;
-      } catch (error: any) {
-        throw new Error(error.response.data.message);
-      }
+  'user/register',
+  async (
+    { userData }: { userData: any },
+    { rejectWithValue }
+  ) => {
+    try {
+      const response = await axios.post<SigninResponse>(
+        `${API_URL}/auth/register`,
+        userData
+      );
+      const { token, expiresIn } = response.data;
+      const expiry = new Date().getTime() + expiresIn;
+
+      localStorage.setItem('token', token);
+      localStorage.setItem('tokenExpiry', expiry.toString());
+
+      localStorage.setItem('token', response?.data.token);
+      return response.data;
+    } catch (error: any) {
+      throw new Error(error.response.data.message);
     }
-  );
+  }
+);
 
 export const loginUser = createAsyncThunk(
   'user/login',
   async (
-    { userData}: { userData: any},
+    { userData }: { userData: any },
     { rejectWithValue }
   ) => {
     try {
@@ -62,8 +65,8 @@ export const loginUser = createAsyncThunk(
       localStorage.setItem('token', token);
       localStorage.setItem('tokenExpiry', expiry.toString());
 
-        localStorage.setItem('token', response?.data.token);
-        return response.data;
+      localStorage.setItem('token', response?.data.token);
+      return response.data;
     } catch (error: any) {
       throw new Error(error.response.data.message);
     }
@@ -74,7 +77,7 @@ export const loginUser = createAsyncThunk(
 export const forgotPassword = createAsyncThunk(
   'user/forgot-password',
   async (
-    { userData}: { userData: any},
+    { userData }: { userData: any },
     { rejectWithValue }
   ) => {
     try {
@@ -83,7 +86,26 @@ export const forgotPassword = createAsyncThunk(
         userData
       );
       console.log(response.data);
-        return response.data;
+      return response.data;
+    } catch (error: any) {
+      throw new Error(error.response.data.message);
+    }
+  }
+);
+
+
+export const resetPassword = createAsyncThunk(
+  'user/reset-password',
+  async (
+    { userData }: { userData: any },
+    { rejectWithValue }
+  ) => {
+    try {
+      const response = await axios.post<SigninResponse>(
+        `${API_URL}/auth/reset-password`,
+        userData
+      );
+      return response.data;
     } catch (error: any) {
       throw new Error(error.response.data.message);
     }
@@ -98,7 +120,7 @@ const authSlice = createSlice({
     logout: (state) => {
       state.token = null;
       state.isAuthenticated = false;
-      localStorage.removeItem('token'); // Clear token from localStorage
+      localStorage.removeItem('token');
     }
   },
   extraReducers: (builder) => {
@@ -145,7 +167,19 @@ const authSlice = createSlice({
       })
       .addCase(forgotPassword.rejected, (state, action) => {
         state.forgotPasswordLoading = false;
-        state.forgotPasswordError =  action.error.message as string;
+        state.forgotPasswordError = action.error.message as string;
+      })
+      .addCase(resetPassword.pending, (state) => {
+        state.resetPasswordLoading = true;
+        state.resetPasswordError = null;
+      })
+      .addCase(resetPassword.fulfilled, (state, action: PayloadAction<any>) => {
+        state.resetPasswordLoading = false;
+        state.resetPasswordSuccess = action.payload.success;
+      })
+      .addCase(resetPassword.rejected, (state, action) => {
+        state.resetPasswordLoading = false;
+        state.resetPasswordError = action.error.message as string;
       })
   },
 });
