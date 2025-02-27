@@ -64,7 +64,6 @@ export const loginUser = createAsyncThunk(
 
       localStorage.setItem('token', token);
       localStorage.setItem('tokenExpiry', expiry.toString());
-
       localStorage.setItem('token', response?.data.token);
       return response.data;
     } catch (error: any) {
@@ -85,7 +84,6 @@ export const forgotPassword = createAsyncThunk(
         `${API_URL}/auth/forgot-password`,
         userData
       );
-      console.log(response.data);
       return response.data;
     } catch (error: any) {
       throw new Error(error.response.data.message);

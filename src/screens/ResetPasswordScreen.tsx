@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from "react-router-dom";
-import { loginUser } from "../redux/features/authSlice";
+import { resetPassword } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
@@ -10,17 +10,25 @@ const ResetPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { resetPasswordSuccess, resetPasswordError, resetPasswordLoading } = useSelector((state: any) => state.auth);
 
+
     const [password, setPassword] = useState("");
-    const [message, setMessage] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const [searchParams] = useSearchParams();
     const token = searchParams.get("token");
-    const [showPassword, setShowPassword] = useState(false);
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const handleResetPassword = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (confirmPassword !== password) {
+            swal('Error!', 'Passwords do not match', 'error')
+            return
+        }
+
         try {
             const userData = { token, newPassword: password };
-            await dispatch(loginUser({ userData }));
+            await dispatch(resetPassword({ userData }));
         } catch (error) {
             swal('Error!', 'Wrong email or password', 'error');
             console.error(error);
@@ -71,22 +79,22 @@ const ResetPasswordScreen = () => {
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Parol
+                            Parolu təkrarla
                         </label>
                         <div className="relative">
                             <input
-                                type={showPassword ? 'text' : 'password'}
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Parolunuzu yazın"
+                                type={showConfirmPassword ? 'text' : 'password'}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                placeholder="Parolunuzu təkrar yazın"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
                             <div
                                 className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
-                                onClick={() => setShowPassword(!showPassword)}
+                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+
                             >
-                                {showPassword ? (
+                                {showConfirmPassword ? (
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
                                     </svg>
