@@ -14,28 +14,29 @@ const Footer = () => {
                 <div>
                     <h3 className="font-bold mb-4">Products</h3>
                     <ul>
-                        <li className='mb-2'><Link to="/product1" className="hover:underline">Robot for boys</Link></li>
-                        <li className='mb-2'><Link to="/product2" className="hover:underline">Robot for girls</Link></li>
-                        <li className='mb-2'><Link to="/product3" className="hover:underline">Bag for robots</Link></li>
-                        <li className='mb-2'><Link to="/product4" className="hover:underline">Robot for daun</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for boys</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for girls</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Bag for robots</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for daun</Link></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="font-bold mb-4">Shipping & Policy</h3>
                     <ul>
-                        <li className='mb-2'><Link to="/shipping" className="hover:underline">Shipping Information</Link></li>
-                        <li className='mb-2'><Link to="/returns" className="hover:underline">Return Policy</Link></li>
-                        <li className='mb-2'><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
-                        <li className='mb-2'><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/about" className="hover:underline">About</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/shipping" className="hover:underline">Shipping Information</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/returns" className="hover:underline">Return Policy</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
+                        <li className='mb-2 text-sm'><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
                     </ul>
                 </div>
 
                 {/* Social Media Accounts */}
                 <div>
                     <h3 className="font-bold mb-4">Follow Us</h3>
-                    <p className='mb-2'>1234 Street Name, City, Country</p>
-                    <p className='mb-2'>Email: info@osoturkiye.com</p>
-                    <p className='mb-2'>Phone: +90 123 456 7890</p>
+                    <p className='mb-2 text-sm'>Sabunchu district, 10Q</p>
+                    <p className='mb-2 text-sm'>Email: info@doffy.com</p>
+                    <p className='mb-2 text-sm'>Phone: +50 519 87 54</p>
                     <ul className="flex space-x-4 mt-4">
                         <li>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">

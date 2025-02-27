@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import { profileDetails } from '../redux/features/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faShoppingCart, faUser, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -21,12 +19,45 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  const productCount = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')!).length : 0;
+
   return (
     <React.Fragment>
-      <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-4">
-        {/* Left: Hamburger Icon */}
-        <button onClick={toggleMenu} className="md:hidden text-2xl cursor-pointer">
-          <FontAwesomeIcon icon={faBars} />
+      <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-2 md:p-4">
+
+        <button onClick={toggleMenu} className="md:hidden rounded text-2xl cursor-pointer relative w-12 h-12 flex items-center justify-center">
+          <svg
+            className="w-8 h-8 transition-transform duration-300 ease-in-out"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line
+              x1="3"
+              y1="7"
+              x2="21"
+              y2="7"
+              className={`transition-all duration-300 ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <line
+              x1="3"
+              y1="12"
+              x2="21"
+              y2="12"
+              className={`transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+            />
+            <line
+              x1="3"
+              y1="17"
+              x2="21"
+              y2="17"
+              className={`transition-all duration-300 ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </svg>
         </button>
 
         {/* Center: Logo */}
@@ -36,21 +67,35 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
         {/* Right: Cart Icon */}
         <div className='flex gap-2'>
-        <Link to="/shop" className="text-2xl cursor-pointer">
-              <FontAwesomeIcon icon={faCartPlus} />
-            </Link>
-          <button onClick={() => setIsOpened(true)} className="text-2xl cursor-pointer">
-            <FontAwesomeIcon icon={faShoppingCart} />
+
+          <button onClick={() => setIsOpened(true)} className="relative text-2xl cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+
+            {/* Product Count Badge */}
+            <span className="absolute top-[-10px] right-[-5px] bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              {productCount} {/* Replace with dynamic count */}
+            </span>
           </button>
 
+
           {profile ? (
-            <Link to="/shop" className="text-2xl cursor-pointer">
-              <FontAwesomeIcon icon={faUser} />
+            <Link to="/profile" className="text-2xl cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+
             </Link>
+
           ) : (
-            <Link to="/auth/login" className="text-2xl cursor-pointer">
-              <FontAwesomeIcon icon={faUser} />
+            <Link to="/profile" className="text-2xl cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+
             </Link>
+
           )}
 
         </div>
@@ -71,18 +116,28 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
             <div className="flex justify-between items-center p-4 border-b border-gray-200">
               <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
               <button onClick={toggleMenu} className="text-2xl">
-                <FontAwesomeIcon icon={faTimes} />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FB2C36" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
               </button>
             </div>
             <ul className='flex flex-col items-start gap-4 p-4'>
               <li className="text-[16px] hover:text-green-400"><Link to="/about" onClick={toggleMenu}>About</Link></li>
               <li className="text-[16px] hover:text-green-400"><Link to="/shop" onClick={toggleMenu}>Shop</Link></li>
               <li className="cursor-pointer text-[16px] hover:text-green-400" onClick={() => { setIsOpened(true); toggleMenu(); }}>Cart</li>
-              <li className="text-[16px] hover:text-green-400">
+              <li className="text-[16px] hover:text-green-400 w-[100%]">
                 {profile ? (
                   <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile" onClick={toggleMenu}>{profile.fullName?.slice(0, 5)}</Link>
                 ) : (
-                  <Link to="/auth/login" onClick={toggleMenu}>Login</Link>
+                  <div className='w-[100%]'>
+                    <div className='w-[100%] text-center text-green-400 border border-green-400 px-2 py-2 rounded-[5px]'>
+                      <Link to="/auth/login" onClick={toggleMenu}>Login</Link>
+                    </div>
+                    <div className='w-[100%] text-center text-white border border-green-400 bg-green-400 px-2 py-2 rounded-[5px] mt-2'>
+                      <Link to="/auth/register" onClick={toggleMenu}>Register</Link>
+                    </div>
+                  </div>
+
                 )}
               </li>
             </ul>
