@@ -42,9 +42,8 @@ const ProductsScreen = () => {
   return (
     <>
       <Header/>
-   
-    <div className='my-6 p-4'>
-      <div className="w-[100%] md:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div className='w-[100%] md:w-[80%] mx-auto my-6 p-4'>
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {data?.map((product: any) => (
           <div key={product._id}>
             <ProductCard product={product} />

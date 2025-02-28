@@ -138,7 +138,6 @@ const CheckOutScreen = () => {
                     </div>
 
                     <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
-
                         <div className="mb-2 md:mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 Country
