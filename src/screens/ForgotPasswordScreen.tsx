@@ -2,17 +2,16 @@ import { Link } from 'react-router-dom'
 import { forgotPassword } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
-import ActionButton from "../partials/ActionButton";
+import ActionButton from "../partials/SecondaryActionButton";
 import { useState } from "react";
 import swal from 'sweetalert';
-
 
 const ForgotPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { forgotPasswordSuccess, forgotPasswordError, forgotPasswordLoading } = useSelector((state: any) => state.auth);
 
-
     const [email, setEmail] = useState('');
+    const [emailSent, setEmailSent] = useState(false);  // New state to track if email is sent
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -21,14 +20,26 @@ const ForgotPasswordScreen = () => {
             console.log(email);
             const userData = { email };
             await dispatch(forgotPassword({ userData }));
+            setEmailSent(true);  // Mark email as sent
         } catch (error) {
             swal('Error!', 'Wrong email or password', 'error');
             console.error(error);
         }
     };
 
+    const handleResendEmail = async (e: React.FormEvent) => {
+        e.preventDefault();
 
-
+        try {
+            console.log(email);
+            const userData = { email };
+            await dispatch(forgotPassword({ userData }));
+            swal('Success!', 'Check your email for further instructions.', 'success');
+        } catch (error) {
+            swal('Error!', 'Something went wrong. Please try again later.', 'error');
+            console.error(error);
+        }
+    };
 
     return (
         <div className="flex flex-col md:flex-row h-screen">
@@ -37,47 +48,63 @@ const ForgotPasswordScreen = () => {
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
                 </Link>
                 <p className="mb-4">Parolunu yenilə!</p>
-                <form className="w-full max-w-md" onSubmit={handleLogin}>
-                    <div className="mb-4">
-                        <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            E-poçt
-                        </label>
-                        <div className="relative">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="E-poçtunuzu yazın"
-                                className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+
+                {/* Conditional rendering based on whether email is sent */}
+                {!emailSent ? (
+                    <form className="w-full max-w-md" onSubmit={handleLogin}>
+                        <div className="mb-4">
+                            <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                E-poçt
+                            </label>
+                            <div className="relative">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="E-poçtunuzu yazın"
+                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                />
+                                <span className="absolute right-4 top-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <ActionButton
+                                content="Parolu yenilə"
+                                success={forgotPasswordSuccess}
+                                loading={forgotPasswordLoading}
+                                error={forgotPasswordError}
+                                message="Emailinizi yoxlayın"
                             />
-
-                            <span className="absolute right-4 top-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                                </svg>
-
+                            <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
+                                Hesabınız var? <Link to="/auth/login" className="text-green-500">Daxil ol</Link>
                             </span>
                         </div>
-                    </div>
-
-
-                    <div className="flex flex-col">
-                        <ActionButton
-                            content="Parolu yenilə"
-                            success={forgotPasswordSuccess}
-                            loading={forgotPasswordLoading}
-                            error={forgotPasswordError}
-                            path={`/`}
-                            message="Emailinizi yoxlayın"
-                        />
-                        <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Hesabınız var? <Link to="/auth/login" className="text-green-500">Daxil ol</Link>
+                    </form>
+                ) : (
+                    // Show success message and resend form
+                    <div className="w-full max-w-md text-center">
+                        <p className="mb-4">Parolunuzu sıfırlamaq üçün e-poçtunuza baxın.</p>
+                        <form onSubmit={handleResendEmail}>
+                            <button
+                                type="submit"
+                                className="w-full py-3 px-4 rounded-md bg-green-400 text-white cursor-pointer hover:bg-green-400 focus:outline-none"
+                            >
+                                E-poçtu yenidən göndər
+                            </button>
+                        </form>
+                        <span className="cursor-pointer text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
+                        <Link to="/" className="text-green-500">Ana səhifəyə geri dön</Link>  
                         </span>
                     </div>
-                </form>
+                )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ForgotPasswordScreen
+export default ForgotPasswordScreen;
