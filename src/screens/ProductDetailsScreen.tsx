@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Header from "../components/Header"
+import Header from "../components/Profile/Header"
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '../redux/store'
 import { productDetails } from "../redux/features/productSlice"
@@ -52,7 +52,7 @@ const ProductDetailsScreen = () => {
 
   return (
     <>
-      <Header setIsOpened={setIsOpened} />
+      <Header />
       <div className="w-[80%] mx-auto flex flex-col md:flex-row p-8">
         <div className="w-full md:w-1/2">
           <img src={selectedImage || imageGallery[0]} alt={product?.name} className="w-full h-auto" />

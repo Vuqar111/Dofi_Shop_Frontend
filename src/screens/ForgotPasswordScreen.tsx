@@ -3,7 +3,7 @@ import { forgotPassword } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/SecondaryActionButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import swal from 'sweetalert';
 
 const ForgotPasswordScreen = () => {
@@ -11,35 +11,28 @@ const ForgotPasswordScreen = () => {
     const { forgotPasswordSuccess, forgotPasswordError, forgotPasswordLoading } = useSelector((state: any) => state.auth);
 
     const [email, setEmail] = useState('');
-    const [emailSent, setEmailSent] = useState(false);  // New state to track if email is sent
+    const [emailSent, setEmailSent] = useState(false);
 
-    const handleLogin = async (e: React.FormEvent) => {
+    const handleForgotPassword = async (e: React.FormEvent) => {
         e.preventDefault();
 
         try {
-            console.log(email);
             const userData = { email };
             await dispatch(forgotPassword({ userData }));
-            setEmailSent(true);  // Mark email as sent
         } catch (error) {
-            swal('Error!', 'Wrong email or password', 'error');
             console.error(error);
-        }
-    };
-
-    const handleResendEmail = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        try {
-            console.log(email);
-            const userData = { email };
-            await dispatch(forgotPassword({ userData }));
-            swal('Success!', 'Check your email for further instructions.', 'success');
-        } catch (error) {
             swal('Error!', 'Something went wrong. Please try again later.', 'error');
-            console.error(error);
         }
     };
+
+    useEffect(() => {
+        if (forgotPasswordSuccess) {
+            setEmailSent(true);
+        }
+        if (forgotPasswordError) {
+            setEmailSent(false);
+        }
+    }, [forgotPasswordSuccess, forgotPasswordError]);
 
     return (
         <div className="flex flex-col md:flex-row h-screen">
@@ -47,11 +40,10 @@ const ForgotPasswordScreen = () => {
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
                 </Link>
-                <p className="mb-4">Parolunu yenilə!</p>
 
-                {/* Conditional rendering based on whether email is sent */}
                 {!emailSent ? (
-                    <form className="w-full max-w-md" onSubmit={handleLogin}>
+                    <form className="w-full max-w-md" onSubmit={handleForgotPassword}>
+                        <p className="mb-4 text-center">Parolunu yenilə!</p>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 E-poçt
@@ -86,19 +78,24 @@ const ForgotPasswordScreen = () => {
                         </div>
                     </form>
                 ) : (
-                    // Show success message and resend form
-                    <div className="w-full max-w-md text-center">
-                        <p className="mb-4">Parolunuzu sıfırlamaq üçün e-poçtunuza baxın.</p>
-                        <form onSubmit={handleResendEmail}>
-                            <button
-                                type="submit"
-                                className="w-full py-3 px-4 rounded-md bg-green-400 text-white cursor-pointer hover:bg-green-400 focus:outline-none"
-                            >
-                                E-poçtu yenidən göndər
-                            </button>
+                    <div className="w-full flex flex-col items-center justify-center max-w-md text-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#05DF72" className="size-40">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <p className="mb-4 opacity-[0.7]">Parolunuzu sıfırlamaq üçün e-poçtunuza baxın.</p>
+                        <form onSubmit={handleForgotPassword}>
+                            <ActionButton
+                                content="E-poçtu yenidən göndər"
+                                success={forgotPasswordSuccess}
+                                loading={forgotPasswordLoading}
+                                error={forgotPasswordError}
+                                message="Emailinizi yoxlayın"
+                            />
                         </form>
                         <span className="cursor-pointer text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                        <Link to="/" className="text-green-500">Ana səhifəyə geri dön</Link>  
+                            <Link to="/" className="text-green-500">Ana səhifəyə geri dön</Link>
                         </span>
                     </div>
                 )}

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTimes, faTrash } from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 

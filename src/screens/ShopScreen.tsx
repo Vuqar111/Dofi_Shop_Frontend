@@ -5,7 +5,7 @@ import { productList } from '../redux/features/productSlice'
 import { AppDispatch } from '../redux/store'
 import { useParams } from 'react-router-dom'
 import Loading from '../components/Loader'
-import Header from '../components/Header';
+import Header from "../components/Profile/Header"
 import Footer from '../components/Footer';
 const ProductsScreen = () => {
   const dispatch: AppDispatch = useDispatch()
@@ -41,7 +41,7 @@ const ProductsScreen = () => {
   }
   return (
     <>
-      <Header setIsOpened={setIsOpened} />
+      <Header/>
    
     <div className='my-6 p-4'>
       <div className="w-[100%] md:w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
