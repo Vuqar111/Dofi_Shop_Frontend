@@ -4,22 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const ProductCard = ({ product }: { product: any }) => {
   const [isAdded, setIsAdded] = useState(false);
-
-  const [selectedColor, setSelectedColor] = useState('text-green-500')
-
-
+  const [selectedColor, setSelectedColor] = useState("text-green-500");
   const handleAddToCart = (productId: string) => {
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
     const existingProduct = cart.find((item: any) => item._id === productId);
-
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
       cart.push({ ...product, quantity: 1, color: selectedColor });
     }
-
     localStorage.setItem("cart", JSON.stringify(cart));
-
     setIsAdded(true);
     setTimeout(() => setIsAdded(false), 2000);
   };
@@ -53,7 +47,7 @@ const ProductCard = ({ product }: { product: any }) => {
                 transition={{ duration: 0.3 }}
                 className="flex items-center justify-center gap-2 text-green-500 text-center px-3 py-1"
               >
-                <span className="">
+                <span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>

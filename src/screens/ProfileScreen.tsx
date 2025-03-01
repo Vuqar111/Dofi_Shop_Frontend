@@ -18,8 +18,6 @@ const ProfileScreen = () => {
       const [customer_type, setCustomerType] = useState<string | undefined>(profile?.customerType || undefined);
     
 
-      
-
       useEffect(() => {
           dispatch(profileDetails())
       }, [dispatch])
@@ -30,7 +28,7 @@ const ProfileScreen = () => {
               setFullName(profile.fullName || '')
               setEmail(profile.email || '')
               setPhoneNumber(profile.phoneNumber || '')
-              setCustomerType(profile.customerType || '')
+              setCustomerType(profile.customer_type || '')
           }
       }, [profile])
 
@@ -119,7 +117,7 @@ const ProfileScreen = () => {
             onChange={(e) => setCustomerType(e.target.value)}
           >
             <option value="Individual">Valideyn</option>
-            <option value="Company">Şirkət</option>
+            <option value="Business">Şirkət</option>
             <option value="VIP">VIP</option>
           </select>
         </div>

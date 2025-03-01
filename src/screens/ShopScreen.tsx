@@ -39,7 +39,7 @@ const ProductsScreen = () => {
       <Header />
 
       {loading ? (
-        <div className='w-[80%] mx-auto'>
+        <div className='w-[80%] mx-auto my-4'>
           <Loading />
         </div>
       ) : (
