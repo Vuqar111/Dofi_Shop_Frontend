@@ -9,7 +9,6 @@ import Footer from "../components/Footer"
 import Loading from "../components/Loader"
 
 const ProductDetailsScreen = () => {
-  const [cart, setCart] = useState<any[]>(JSON.parse(localStorage.getItem('cart') || '[]'));
   const [isOpened, setIsOpened] = useState(false)
   const [selectedColor, setSelectedColor] = useState('text-green-500')
   const [selectedImage, setSelectedImage] = useState('')
@@ -38,34 +37,26 @@ const ProductDetailsScreen = () => {
   ]
 
   const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
     // Check if a product with the same ID and color already exists
-    const existingProductIndex = cart.findIndex((item: any) => item._id === product._id && item.color === selectedColor);
+    const existingProductIndex = cart.findIndex((item: any) => item.id === product.id && item.color === selectedColor);
 
     if (existingProductIndex !== -1) {
-      // If the same product with the same color exists, increase its quantity
-      cart[existingProductIndex].quantity += 1;
+        // If the same product with the same color exists, increase its quantity
+        cart[existingProductIndex].quantity += 1;
     } else {
-      // Otherwise, add a new product entry with the selected color
-      cart.push({ ...product, quantity: 1, color: selectedColor });
+        // Otherwise, add a new product entry with the selected color
+        cart.push({ ...product, quantity: 1, color: selectedColor });
     }
 
     // Update localStorage with the new cart data
     localStorage.setItem('cart', JSON.stringify(cart));
-
+    
     swal('Success!', 'Product added to cart', 'success');
-  };
+};
 
-  const handleQuantityChange = (productId: string, color: string, quantity: number) => {
-    const updatedCart = cart.map((item) => {
-      if (item._id === productId && item.color === color) {
-        return { ...item, quantity };
-      }
-      return item;
-    });
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-  };
+  console.log(selectedColor);
 
   return (
     <>
@@ -161,28 +152,10 @@ const ProductDetailsScreen = () => {
             </div>
 
           </div>
-          <div className='flex  items-center gap-4'>
-            <span className="w-full max-w-[150px] hidden md:flex items-center justify-between border border-gray-200 mt-2 p-2">
-              <button
-                className="px-2 cursor-pointer"
-                onClick={() => handleQuantityChange(product._id, selectedColor, product.quantity - 1)}
-                disabled={product.quantity <= 1}
-              >
-                -
-              </button>
-              <span className="px-2">{product?.quantity || 1}</span>
-              <button
-                className="px-2 cursor-pointer"
-                onClick={() => handleQuantityChange(product._id, selectedColor, product.quantity + 1)}
-              >
-                +
-              </button>
-            </span>
-
-          </div>
+          <p className="mb-4">{product?.description}</p>
           <div
             onClick={handleAddToCart}
-            className="w-[100%] cursor-pointer text-center mt-6 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+            className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
           >
             Add to Cart
           </div>
@@ -193,19 +166,19 @@ const ProductDetailsScreen = () => {
         <p className="text-sm mt-2">
           {/* Write description of the robot*/}
           A smart and interactive kids' robot designed for ages 1-10, featuring voice commands, educational games, and fun storytelling. It helps children learn, play, and engage safely with parent monitoring and face recognition for security. 😊🤖
-          <br /> <br />
+             <br/> <br/>
 
           With built-in AI, it can answer questions, teach new skills, and adapt to a child’s interests. For safety, it includes parent monitoring features and face recognition to ensure secure interactions.
-          <br /> <br />
+          <br/> <br/>
           This smart robot makes learning exciting while providing a safe and engaging experience for kids. 😊🤖
 
         </p>
       </div>
       <div className="my-6">
-        <FAQ />
+        <FAQ/>
       </div>
       <div>
-        <Footer />
+        <Footer/>
       </div>
     </>
   )
