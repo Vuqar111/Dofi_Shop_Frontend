@@ -60,7 +60,7 @@ export const updateProfilePassword = createAsyncThunk(
   ) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post(
+      const response = await axios.put(
         `${API_URL}/profile/change-password`,
         updatedProfilePassword,
         {
