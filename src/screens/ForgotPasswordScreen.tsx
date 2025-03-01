@@ -85,18 +85,9 @@ const ForgotPasswordScreen = () => {
                             </svg>
                         </div>
                         <p className="mb-4 opacity-[0.7]">Parolunuzu sıfırlamaq üçün e-poçtunuza baxın.</p>
-                        <form onSubmit={handleForgotPassword}>
-                            <ActionButton
-                                content="E-poçtu yenidən göndər"
-                                success={forgotPasswordSuccess}
-                                loading={forgotPasswordLoading}
-                                error={forgotPasswordError}
-                                message="Emailinizi yoxlayın"
-                            />
-                        </form>
-                        <span className="cursor-pointer text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to="/" className="text-green-500">Ana səhifəyə geri dön</Link>
-                        </span>
+                        <Link to="/" className="cursor-pointer bg-green-400 text-white text-center px-8 py-3 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
+                           Ana səhifəyə geri dön
+                        </Link>
                     </div>
                 )}
             </div>

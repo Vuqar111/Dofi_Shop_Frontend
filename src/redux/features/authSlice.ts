@@ -103,6 +103,8 @@ export const resetPassword = createAsyncThunk(
         `${API_URL}/auth/reset-password`,
         userData
       );
+      localStorage.removeItem("token");
+      localStorage.removeItem("tokenExpiry");
       return response.data;
     } catch (error: any) {
       throw new Error(error.response.data.message);

@@ -60,6 +60,7 @@ export const orderCreate = createAsyncThunk(
           },
         }
       );
+      localStorage.removeItem("cart");
       return response.data;
     } catch (error: any) {
       return rejectWithValue(

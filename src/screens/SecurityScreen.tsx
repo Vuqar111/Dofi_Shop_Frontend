@@ -99,7 +99,7 @@ const SecurityScreen = () => {
           success={updateProfilePasswordSuccess}
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
-          path={`/profile/password`}
+          path={`/auth/login`}
           message="Profile password updated successfully"
         />
       </form>

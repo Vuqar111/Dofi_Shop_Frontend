@@ -33,7 +33,6 @@ const OrderDetailsScreen = () => {
     }
 
 
-    console.log(orderDetails)
     return (
         <>
             <div className=''>

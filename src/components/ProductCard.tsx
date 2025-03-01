@@ -9,7 +9,6 @@ const ProductCard = ({ product }: { product: any }) => {
 
 
   const handleAddToCart = (productId: string) => {
-    // Get cart from localStorage
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
     const existingProduct = cart.find((item: any) => item._id === productId);
 
@@ -19,20 +18,18 @@ const ProductCard = ({ product }: { product: any }) => {
       cart.push({ ...product, quantity: 1, color: selectedColor });
     }
 
-    // Update cart in localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // Set temporary "Done" state
     setIsAdded(true);
-    setTimeout(() => setIsAdded(false), 2000); // Reset after 2 seconds
+    setTimeout(() => setIsAdded(false), 2000);
   };
 
   return (
     <div className="bg-white">
       <Link to={`/shop/${product?.slug}`}>
-        <div className="bg-gray-200 py-24 flex items-center justify-center rounded-md">
+        <div className="min-h-[400px] bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img
-            className="w-32 h-32 object-contain"
+            className="w-48 h-48 object-contain"
             src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855"
             alt={product?.name}
           />
@@ -44,7 +41,7 @@ const ProductCard = ({ product }: { product: any }) => {
           AI-powered conversational learning robot for kids that is small in size but big on personality.
         </p>
         <div className="mt-3 flex items-center justify-between">
-          <div className="text-lg font-medium">${product?.salePrice}</div>
+          <div className="text-lg font-medium">{product?.salePrice} AZN</div>
 
           <AnimatePresence mode="wait">
             {isAdded ? (
@@ -54,13 +51,12 @@ const ProductCard = ({ product }: { product: any }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.5 }}
                 transition={{ duration: 0.3 }}
-                className="flex items-center justify-center gap-2 text-green-500 text-center"
+                className="flex items-center justify-center gap-2 text-green-500 text-center px-3 py-1"
               >
                 <span className="">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
-
                 </span>
               </motion.div>
             ) : (
