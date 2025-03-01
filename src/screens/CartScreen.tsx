@@ -23,23 +23,22 @@ const CartScreen = () => {
   const shippingCost = 10 // Example shipping cost
   const total = subtotal + shippingCost - discount
 
+  const handleRemove = (productId: string, color: string) => {
+    const updatedCart = cart.filter((item: any) => !(item._id === productId && item.color === color));
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
 
-  const handleRemove = (productId: string) => {
-    const updatedCart = cart.filter((item: any) => item._id !== productId)
-    setCart(updatedCart)
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
-  }
-
-  const handleQuantityChange = (productId: string, quantity: number) => {
+  const handleQuantityChange = (productId: string, color: string, quantity: number) => {
     const updatedCart = cart.map((item: any) => {
-      if (item._id === productId) {
-        return { ...item, quantity }
+      if (item._id === productId && item.color === color) {
+        return { ...item, quantity };
       }
-      return item
-    })
-    setCart(updatedCart)
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
-  }
+      return item;
+    });
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
 
   return (
     <>
@@ -82,9 +81,8 @@ const CartScreen = () => {
 
                   <div className='pl-2'>
                     <h3 className="font-semibold">{product.name}</h3>
-                    <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
+                    <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">Price: <div className='font-bold'>{product?.salePrice} AZN</div></p>
-
                   </div>
                 </div>
 
@@ -92,7 +90,7 @@ const CartScreen = () => {
                   <span className="w-full max-w-[150px] hidden md:flex items-center justify-between border border-gray-200 mt-2 p-2">
                     <button
                       className="px-2 cursor-pointer"
-                      onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
+                      onClick={() => handleQuantityChange(product._id, product?.color, product.quantity - 1)}
                       disabled={product.quantity <= 1}
                     >
                       -
@@ -100,13 +98,13 @@ const CartScreen = () => {
                     <span className="px-2">{product.quantity}</span>
                     <button
                       className="px-2 cursor-pointer"
-                      onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
+                      onClick={() => handleQuantityChange(product._id, product?.color, product.quantity + 1)}
                     >
                       +
                     </button>
                   </span>
                   <span className='text-right md:pt-1'>
-                    <button onClick={() => handleRemove(product._id)}>
+                    <button onClick={() => handleRemove(product._id, product?.color)}>
                       <FontAwesomeIcon icon={faTrash} className='text-[16px] text-right text-gray-400 hover:text-red-400 cursor-pointer' />
                     </button>
                   </span>
@@ -140,7 +138,7 @@ const CartScreen = () => {
                       <span className="w-full max-w-[150px]  flex items-center justify-between border border-gray-200  p-2">
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
+                          onClick={() => handleQuantityChange(product._id, product?.color, product.quantity - 1)}
                           disabled={product.quantity <= 1}
                         >
                           -
@@ -148,13 +146,13 @@ const CartScreen = () => {
                         <span className="px-2">{product.quantity}</span>
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
+                          onClick={() => handleQuantityChange(product._id, product?.color, product.quantity + 1)}
                         >
                           +
                         </button>
                       </span>
                       <span className='text-right md:pt-1'>
-                        <button onClick={() => handleRemove(product._id)}>
+                        <button onClick={() => handleRemove(product._id, product?.color,)}>
                           <FontAwesomeIcon icon={faTrash} className='text-[16px] text-right text-gray-400 hover:text-red-400 cursor-pointer' />
                         </button>
                       </span>

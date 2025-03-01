@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const ProductCard = ({ product }: { product: any }) => {
   const [isAdded, setIsAdded] = useState(false);
 
+  const [selectedColor, setSelectedColor] = useState('text-green-500')
+
+
   const handleAddToCart = (productId: string) => {
     // Get cart from localStorage
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -13,7 +16,7 @@ const ProductCard = ({ product }: { product: any }) => {
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      cart.push({ ...product, quantity: 1 });
+      cart.push({ ...product, quantity: 1, color: selectedColor });
     }
 
     // Update cart in localStorage
@@ -28,10 +31,10 @@ const ProductCard = ({ product }: { product: any }) => {
     <div className="bg-white">
       <Link to={`/shop/${product?.slug}`}>
         <div className="bg-gray-200 py-24 flex items-center justify-center rounded-md">
-          <img 
-            className="w-32 h-32 object-contain" 
-            src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855" 
-            alt={product?.name} 
+          <img
+            className="w-32 h-32 object-contain"
+            src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855"
+            alt={product?.name}
           />
         </div>
       </Link>
@@ -54,9 +57,9 @@ const ProductCard = ({ product }: { product: any }) => {
                 className="flex items-center justify-center gap-2 text-green-500 text-center"
               >
                 <span className="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-</svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
 
                 </span>
               </motion.div>
