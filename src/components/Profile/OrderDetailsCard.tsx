@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { formatDate } from '../../utils/convertDate';
 
 const OrderDetailsCard = ({ order }: { order: any }) => {
     console.log(order);
@@ -9,9 +9,9 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     <p>Order number: <span>{order?.orderNumber}</span></p>
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
-                    <span className="px-1 py-1 rounded:sm text:xs">Order date: 29.12.2023</span>
+                    <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}</span>
                     <span className="bg-green-400 text-white px-1 py-1 rounded:sm text:xs">{order?.payment?.payment_status}</span>
-                    <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">Delivered</span>
+                    <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">{order?.status}</span>
                 </div>
             </header>
             <div className='border border-b border-gray-100'></div>
@@ -86,7 +86,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
             </div>
             <div className='border border-b border-gray-100'></div>
 
-            <footer className='flex md:flex-row flex-col  justify-end items-end flex-end p-4'>
+            <footer className='flex md:flex-col flex-row  justify-end items-end flex-end p-4'>
                 <h2 className='pb-1'>Subtotal cost: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
                 <h2 className='pb-1'>Discount: <span className='font-semibold'>{order?.discount} AZN</span></h2>
                 <h2>Total estimate: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>

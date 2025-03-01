@@ -51,9 +51,9 @@ const SecurityScreen = () => {
 
 
 
-        <label className="block font-medium text-black opacity-[0.6]">
-              Current password
-            </label>
+          <label className="block font-medium text-black opacity-[0.6]">
+            Current password
+          </label>
           <div className="mb-4 relative">
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -81,8 +81,8 @@ const SecurityScreen = () => {
 
 
           <label className="block font-medium text-black opacity-[0.6]">
-              New password
-            </label>
+            New password
+          </label>
           <div className="mb-4 relative">
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -110,10 +110,10 @@ const SecurityScreen = () => {
 
 
           <label className="block font-medium text-black opacity-[0.6]">
-              Confirm password
-            </label>
+            Confirm password
+          </label>
           <div className="mb-4 relative">
-           
+
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
               id="current_password"

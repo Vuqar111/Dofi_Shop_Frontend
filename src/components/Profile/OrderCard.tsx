@@ -1,4 +1,6 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { formatDate } from '../../utils/convertDate';
+
 const OrderCard = ({order}: {order:any}) => {
   return (
     <div className="shadow mb-4">
@@ -7,9 +9,10 @@ const OrderCard = ({order}: {order:any}) => {
           <p>Order number: <span>{order?.orderNumber}</span></p>
         </div>
         <div className="flex md:flex-row flex-col gap-2">
-        <span className="px-1 py-1 rounded:sm text:xs">Order date: 29.12.2023</span>
+        <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}
+        </span>
           <span className="bg-green-400 text-white px-1 py-1 rounded:sm text:xs">{order?.payment?.payment_status}</span>
-          <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">Delivered</span>
+          <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">{order?.status}</span>
         </div>
       </header>
       <div className='border border-b border-gray-100'></div>
