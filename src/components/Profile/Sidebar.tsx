@@ -36,7 +36,7 @@ const Sidebar = () => {
             onClick={handleLogOut}
             className={`p-2 border border-gray-200 cursor-pointer`}
           >
-            Log out
+            Çıxış et
           </li>
       </ul>
     </div>

@@ -176,7 +176,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                                 <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
                                 <div>
                                     <h3 className="font-semibold">{product.name}</h3>
-                                    <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                    <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
                                 </div>
                             </div>
                             <div>

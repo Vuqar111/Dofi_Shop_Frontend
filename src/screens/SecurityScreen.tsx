@@ -4,6 +4,7 @@ import { useState } from 'react'
 import swal from 'sweetalert'
 import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
+import BreadCrumb from "../components/BreadCrumb";
 
 
 const SecurityScreen = () => {
@@ -18,6 +19,13 @@ const SecurityScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmedPassword, setShowConfirmedPassword] = useState(false);
+
+
+  const breadcrumbPaths = [
+    { name: 'Ana Səhifə', href: '/' },
+    { name: 'Profil', href: '/profile' },
+    { name: 'Təhlükəsizlik', href: '/profile/security' },
+  ];
 
 
   const handleUpdateProfilePassword = async (e: React.FormEvent) => {
@@ -45,14 +53,15 @@ const SecurityScreen = () => {
 
   return (
     <div className='w-[100%] '>
-      <h2 className='pb-4 text-2xl'>Your profile</h2>
+      <BreadCrumb paths={breadcrumbPaths} />
+      <h2 className='pb-4 text-2xl'>Təhlükəsizlik</h2>
       <form className='' onSubmit={handleUpdateProfilePassword}>
         <div className='grid grid-cols-1 gap-4'>
 
 
 
           <label className="block font-medium text-black opacity-[0.6]">
-            Current password
+            Mövcud parol
           </label>
           <div className="mb-4 relative">
             <input
@@ -60,7 +69,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setCurrentPassword(e.target.value)}
               type={showPassword ? 'text' : 'password'}
-              placeholder="Write current password"
+              placeholder="Mövcud parolunuzu yazın"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -79,9 +88,8 @@ const SecurityScreen = () => {
             </div>
           </div>
 
-
           <label className="block font-medium text-black opacity-[0.6]">
-            New password
+            Yeni parol
           </label>
           <div className="mb-4 relative">
             <input
@@ -89,7 +97,7 @@ const SecurityScreen = () => {
               id="new_password"
               onChange={(e) => setNewPassword(e.target.value)}
               type={showNewPassword ? 'text' : 'password'}
-              placeholder="Write new password"
+              placeholder="Yeni parolunuzu yazın"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -107,19 +115,16 @@ const SecurityScreen = () => {
               )}
             </div>
           </div>
-
-
           <label className="block font-medium text-black opacity-[0.6]">
-            Confirm password
+             Parolu təkrar yazın
           </label>
           <div className="mb-4 relative">
-
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
               id="current_password"
               onChange={(e) => setConfirmPassword(e.target.value)}
               type={showConfirmedPassword ? 'text' : 'password'}
-              placeholder="Write confirm password"
+              placeholder="Parolu təkrar yazın"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -137,18 +142,14 @@ const SecurityScreen = () => {
               )}
             </div>
           </div>
-
-
-
         </div>
-
         <ActionButton
-          content="Change profile password"
+          content="Parolu dəyişin"
           success={updateProfilePasswordSuccess}
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
           path={`/auth/login`}
-          message="Profile password updated successfully"
+          message="Parol uğurla dəyişdirildi"
         />
       </form>
     </div>

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { orderDetails } from '../redux/features/orderSlice'
 import { AppDispatch } from '../redux/store'
 import Loading from '../components/Loader'
+import BreadCrumb from "../components/BreadCrumb";
 
 
 const OrderDetailsScreen = () => {
@@ -12,8 +13,13 @@ const OrderDetailsScreen = () => {
 
     const id = window.location.pathname.split('/')[3]
 
-    const [isOpened, setIsOpened] = useState(false)
 
+    const breadcrumbPaths = [
+        { name: 'Ana Səhifə', href: '/' },
+        { name: 'Profil', href: '/profile' },
+        { name: 'Sifarişlər', href: '/profile/orders' },
+        { name: 'Sifariş', href: '/profile/orders/' },
+    ];
 
     useEffect(() => {
         dispatch(
@@ -35,6 +41,7 @@ const OrderDetailsScreen = () => {
 
     return (
         <>
+            <BreadCrumb paths={breadcrumbPaths}/>
             <div className=''>
                 <div className="">
                     <div key={data?._id}>

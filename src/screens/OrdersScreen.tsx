@@ -10,7 +10,6 @@ const OrdersScreen = () => {
   const dispatch: AppDispatch = useDispatch()
   const { loading, error, orders: data } = useSelector((state: any) => state.orders)
 
-  const [isOpened, setIsOpened] = useState(false)
 
 
   const breadcrumbPaths = [
