@@ -66,10 +66,10 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
         <div className="shadow mb-4">
             <header className="flex md:flex-row flex-col item-center justify-between p-4">
                 <div className='px-1 py-1'>
-                    <p>Order number: <span>{order?.orderNumber}</span></p>
+                    <p>Sifariş kodu: <span>{order?.orderNumber}</span></p>
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
-                    <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}</span>
+                    <span className="px-1 py-1 rounded:sm text:xs">Sifariş tarixi: {formatDate(order?.createdAt)}</span>
                     <span className={`text-white px-1 py-1 rounded:sm text:xs ${order?.payment?.payment_status === "Canceled" ? "bg-red-400" : "bg-green-400"}`}>
                         {order?.payment?.payment_status}
                     </span>
@@ -121,52 +121,52 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                 <div>
-                    <h2 className='p-4'>Delivery:</h2>
+                    <h2 className='p-4'>Çatdırılma:</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>Country: <span className='opacity-[0.7]'>{order?.delivery?.country}</span></p>
+                            <p>Ölkə: <span className='opacity-[0.7]'>{order?.delivery?.country}</span></p>
                         </label>
                         <label>
-                            <p>City: <span className='opacity-[0.7]'>{order?.delivery?.city}</span></p>
+                            <p>Şəhər: <span className='opacity-[0.7]'>{order?.delivery?.city}</span></p>
                         </label>
                         <label>
-                            <p>Address: <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
+                            <p>Ünvan: <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <h2 className='p-4'>Contact:</h2>
+                    <h2 className='p-4'>Əlaqə:</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>First name: <span className='opacity-[0.7]'>{order?.delivery?.first_name}</span></p>
+                            <p>Ad: <span className='opacity-[0.7]'>{order?.delivery?.first_name}</span></p>
                         </label>
                         <label>
-                            <p>Last name: <span className='opacity-[0.7]'>{order?.delivery?.last_name}</span></p>
+                            <p>Soyad: <span className='opacity-[0.7]'>{order?.delivery?.last_name}</span></p>
                         </label>
                         <label>
-                            <p>Email: <span className='opacity-[0.7]'>{order?.delivery?.email}</span></p>
+                            <p>Epoçt: <span className='opacity-[0.7]'>{order?.delivery?.email}</span></p>
                         </label>
                         <label>
-                            <p>Phone: <span className='opacity-[0.7]'>{order?.delivery?.phone}</span></p>
+                            <p>Telefon: <span className='opacity-[0.7]'>{order?.delivery?.phone}</span></p>
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <h2 className='p-4'>Payment:</h2>
+                    <h2 className='p-4'>Ödəniş:</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>Payment status: <span className='opacity-[0.7]'>{order?.payment?.payment_status}</span></p>
+                            <p>Ödəniş statusu: <span className='opacity-[0.7]'>{order?.payment?.payment_status}</span></p>
                         </label>
                         <label>
-                            <p>Payment type: <span className='opacity-[0.7]'>{order?.payment?.payment_type}</span></p>
+                            <p>Ödəniş növü: <span className='opacity-[0.7]'>{order?.payment?.payment_type}</span></p>
                         </label>
                     </div>
                 </div>
             </div>
 
-            <h2 className='p-4 mt-6'>Ordered Products:</h2>
+            <h2 className='p-4 mt-6'>Sifariş olunan məhsullar:</h2>
 
             <div>
                 <div className="w-full flex flex-col gap-2 p-4">
@@ -196,11 +196,12 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
             <div className='border border-b border-gray-100'></div>
 
             <footer className='flex md:flex-col flex-row justify-end items-end flex-end p-4'>
-                <h2 className='pb-1'>Subtotal cost: <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
+                <h2 className='pb-1'>Miqdar: <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
                 {order?.discount && (
-                <h2 className='pb-1'>Discount code: <span className='font-semibold'>{order?.discount}</span></h2>
+                <h2 className='pb-1'>Endirim kodu: <span className='font-semibold'>{order?.discount}</span></h2>
                 )}
-                <h2>Total estimate: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
+                <h2 className='pb-1'>Çatdırılma: <span className='font-semibold'>0 AZN</span></h2>
+                <h2>Ümumi miqdar: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
             </footer>
         </div>
     )

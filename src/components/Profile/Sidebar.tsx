@@ -5,18 +5,16 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { path: "/profile", label: "Profile" },
-    { path: "/profile/orders", label: "Orders" },
-    { path: "/profile/security", label: "Security" },
+    { path: "/profile", label: "Profil" },
+    { path: "/profile/orders", label: "Sifarişlər" },
+    { path: "/profile/security", label: "Təhlükəsizlik" },
   ];
 
 
   const handleLogOut = () => {
-    localStorage.removeItem("user"); // If user data is stored in localStorage
-    localStorage.removeItem("token"); // If you store JWT tokens
-
-    // Redirect to the login page (or home page)
-    navigate("/auth/login"); // Change to "/" if you want home
+    localStorage.removeItem("user");
+    localStorage.removeItem("token"); 
+    navigate("/auth/login"); 
   };
 
   return (

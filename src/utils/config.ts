@@ -1,2 +1,2 @@
-export const API_URL = 'https://doofy-shop-server.vercel.app/api';
+export const API_URL = 'http://localhost:8000/api';
 // http://localhost:8000

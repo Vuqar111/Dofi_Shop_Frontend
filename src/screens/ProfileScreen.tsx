@@ -60,7 +60,7 @@ const ProfileScreen = () => {
 
   return (
     <div className='w-[100%]'>
-      <h2 className='pb-4 text-xl md:text-2xl'>Your profile</h2>
+      <h2 className='pb-4 text-xl md:text-2xl'>Şəxsi məlumatlar</h2>
       <form className='' onSubmit={handleUpdateProfile}>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className="md:mb-4">
