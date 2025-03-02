@@ -6,6 +6,7 @@ import CartModal from '../components/CartModal'
 import Footer from '../components/Footer'
 import Safety from '../components/Safety'
 import ProductAdvertising from '../components/ProductAdvertising'
+import FAQ from "../components/FAQ"
 
 
 const HomeScreen = () => {
@@ -22,6 +23,7 @@ const HomeScreen = () => {
         </div>
         <ProductAdvertising />
         <Safety />
+        <FAQ/>
         <Footer />
       </div>
       {isOpened && <CartModal setIsOpened={setIsOpened} />}

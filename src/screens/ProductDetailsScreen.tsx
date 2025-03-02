@@ -6,7 +6,6 @@ import { productDetails } from "../redux/features/productSlice"
 import swal from 'sweetalert'
 import FAQ from "../components/FAQ"
 import Footer from "../components/Footer"
-import Loading from "../components/Loader"
 
 const ProductDetailsScreen = () => {
   const [isOpened, setIsOpened] = useState(false)
@@ -56,7 +55,6 @@ const ProductDetailsScreen = () => {
     swal('Success!', 'Product added to cart', 'success');
 };
 
-  console.log(selectedColor);
 
   return (
     <>

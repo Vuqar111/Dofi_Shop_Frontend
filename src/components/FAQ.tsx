@@ -6,34 +6,34 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "What is Doofy?",
-      answer: "Doofy is an AI-powered conversational learning robot for kids that is small in size but big on personality."
+      question: "Doofy nədir?",
+      answer: "Doofy, süni intellektlə işləyən, uşaqlar üçün nəzərdə tutulmuş, kiçik ölçülü, lakin böyük şəxsiyyətə sahib bir danışıq öyrənmə robotudur."
     },
     {
-      question: "How does Doofy work?",
-      answer: "Doofy uses advanced AI algorithms to interact with children, teach them new skills, and provide a fun and engaging learning experience."
+      question: "Doofy necə işləyir?",
+      answer: "Doofy, uşaqlarla qarşılıqlı əlaqə qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, maraqlı bir öyrənmə təcrübəsi təqdim etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir."
     },
     {
-      question: "Is Doofy safe for children?",
-      answer: "Yes, Doofy is designed with safety in mind. It includes enhanced encryption and parental control features to ensure a safe and secure experience for children."
+      question: "Doofy uşaqlar üçün təhlükəsizdirmi?",
+      answer: "Bəli, Doofy təhlükəsizlik nəzərə alınaraq hazırlanıb. O, uşaqlar üçün təhlükəsiz və güvənli bir təcrübə təmin etmək üçün gücləndirilmiş şifrələmə və valideyn nəzarəti funksiyalarına malikdir."
     },
     {
-      question: "What age group is Doofy suitable for?",
-      answer: "Doofy is suitable for children aged 5 and above."
+      question: "Doofy hansı yaş qrupuna uyğundur?",
+      answer: "Doofy 5 yaş və daha böyük uşaqlar üçün uyğundur."
     },
     {
-      question: "How can I purchase Doofy?",
-      answer: "You can purchase Doofy directly from our website. Simply add the product to your cart and proceed to checkout."
+      question: "Doofy-ni necə ala bilərəm?",
+      answer: "Doofy-ni birbaşa veb saytımızdan ala bilərsiniz. Sadəcə məhsulu səbətinizə əlavə edin və ödəmə prosesinə keçin."
     }
-  ]
-
+  ];
+  
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
   return (
     <div className="w-[80%] mx-auto p-8">
-      <h1 className="text-3xl font-semibold mb-8 text-center">Frequently Asked Questions</h1>
+      <h1 className="text-3xl font-semibold mb-8 text-center">Tez-tez soruşulan suallar</h1>
       <div className="border border-gray-200">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-200">

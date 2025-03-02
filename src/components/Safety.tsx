@@ -18,7 +18,7 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Artificial Intelligence and Privacy
+        Suni İntellekt və Təhlükəsizlik
       </motion.h2>
 
       {/* Description */}
@@ -29,28 +29,28 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
       >
-        We take security seriously. Every byte of a child's data is safeguarded within our closed system. <br />
-        Miko sets a new standard for family-friendly AI.
+        Biz təhlükəsizliyə ciddi yanaşırıq. Uşağın məlumatlarının hər bir baytı qapalı sistemimiz daxilində qorunur. <br />
+        Doofy ailə dostu süni intellekt üçün yeni bir standart müəyyənləşdirir.
       </motion.p>
 
       {/* Features Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 md:my-12">
         {[
           {
-            img: "https://miko.ai/cdn/shop/files/MiniPDP_Features_Parents.svg?v=1727687496&width=150",
-            title: "Useful For Parents",
-            description: "From secure calls to real-time progress reports",
+            "img": "https://miko.ai/cdn/shop/files/MiniPDP_Features_Parents.svg?v=1727687496&width=150",
+            "title": "Valideynlər üçün faydalıdır",
+            "description": "Təhlükəsiz zənglərdən real vaxtda irəliləyiş hesabatlarına qədər"
           },
           {
-            img: "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Tools.svg?v=1727687496&width=150",
-            title: "Better Parenting Tools",
-            description: "The Parent App that provides clear learning plans and identifies milestones",
+            "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Tools.svg?v=1727687496&width=150",
+            "title": "Daha yaxşı valideyn alətləri",
+            "description": "Uşağın təhsil planlarını aydın şəkildə təqdim edən və inkişaf mərhələlərini müəyyən edən Valideyn Tətbiqi"
           },
           {
-            img: "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Secure.svg?v=1727687496&width=150",
-            title: "Safe, Secure & Private",
-            description: "kidSAFE+ COPPA certified device with customizable security and privacy settings",
-          },
+            "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Secure.svg?v=1727687496&width=150",
+            "title": "Təhlükəsiz, güvənli və məxfi",
+            "description": "kidSAFE+ COPPA sertifikatlı cihaz, fərdiləşdirilə bilən təhlükəsizlik və məxfilik ayarları ilə"
+          }
         ].map((item, index) => (
           <motion.div
             key={index}
