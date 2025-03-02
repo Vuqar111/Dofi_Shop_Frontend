@@ -1,7 +1,7 @@
 import { orderCreate } from "../redux/features/orderSlice"
 import { checkDiscount } from "../redux/features/discountSlice";
 import { useDispatch, useSelector } from 'react-redux'
-import {  useState } from 'react'
+import { useState } from 'react'
 import { AppDispatch } from '../redux/store'
 import Header from '../components/Profile/Header'
 import ActionButton from "../partials/ActionButton"
@@ -12,7 +12,6 @@ const CheckOutScreen = () => {
     const dispatch: AppDispatch = useDispatch()
     const { createOrderSuccess, createOrderLoading, createOrderError } = useSelector((state: any) => state.orders)
 
-    const [status, setStatus] = useState('Created');
     const [payment_status, setPaymentStatus] = useState("Paid");
     const [payment_type, setPaymentType] = useState("Cart");
     const [discount, setDiscount] = useState("");
@@ -70,7 +69,7 @@ const CheckOutScreen = () => {
         try {
             const createdOrder = {
                 customerId: email,
-                status,
+                status: "Created",
                 products: products.map((product: any) => ({
                     ...product,
                     productId: product?._id,
@@ -305,7 +304,6 @@ const CheckOutScreen = () => {
                             <span className="font-bold">Total:</span>
                             <span>{total.toFixed(2)} AZN</span>
                         </div>
-
                     </div>
                 </div>
             </div>
