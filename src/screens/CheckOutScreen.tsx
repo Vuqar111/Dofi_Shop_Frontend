@@ -274,9 +274,13 @@ const CheckOutScreen = () => {
                                 <button
                                     type="submit"
                                     disabled={dloading}
-                                    className={`rounded-[5px] w-[100%]  py-3  ${dloading ? "bg-gray-300 text-black" : "bg-green-400 text-white cursor-pointer"}`}
+                                    className={`rounded-[5px] w-[100%]  py-3 flex items-center justify-center  ${dloading ? "bg-gray-300 text-black" : "bg-green-400 text-white cursor-pointer"}`}
                                 >
-                                    {dloading ? "Yoxlanılır..." : "Tətbiq et"}
+                                    {dloading ? (
+                                        <div className="flex items-center justify-center w-5 h-5 border-2 border-t-transparent border-gray-600 rounded-full animate-spin"></div>
+                                    ) : (
+                                        "Yoxla"
+                                    )}
                                 </button>
                             </div>
                         </form>
