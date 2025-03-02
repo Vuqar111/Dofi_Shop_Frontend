@@ -16,7 +16,7 @@ const CheckOutScreen = () => {
     const [payment_type, setPaymentType] = useState("Cart");
     const [discount, setDiscount] = useState("");
     const [email, setEmail] = useState('');
-    const [country, setCountry] = useState('Azerbaijan');
+    const [country, setCountry] = useState('Azərbaycan');
     const [city, setCity] = useState('');
     const [first_name, setFirstName] = useState('')
     const [last_name, setLastName] = useState('')
@@ -48,9 +48,9 @@ const CheckOutScreen = () => {
                 setCode(response.payload.code);
                 setValue(response.payload.value);
                 setDiscount(code);
-                setDSuccessMessage("Discount applied successfully! 🎉");
+                setDSuccessMessage("Promokod tətbiq edildi! 🎉");
             } else {
-                setDErrorMessage("Invalid discount code. Please try again")
+                setDErrorMessage("Yanlış promokod!")
             }
         } catch (error) {
             setDErrorMessage("An error occured. Please try again")
@@ -61,7 +61,6 @@ const CheckOutScreen = () => {
     };
 
 
-    console.log(discountData)
 
 
     const handleOrder = async (e: React.FormEvent) => {
@@ -116,7 +115,7 @@ const CheckOutScreen = () => {
             <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
                 <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
                     <form onSubmit={handleOrder}>
-                        <h2 className="text-2xl font-bold mb-4">Contact</h2>
+                        <h2 className="text-2xl font-bold mb-4">Əlaqə</h2>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 E-poçt
@@ -126,24 +125,24 @@ const CheckOutScreen = () => {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Write your email"
+                                    placeholder="E-poçtunuzu yazın"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
 
-                        <h2 className="text-xl font-bold mb-4">Delivery</h2>
+                        <h2 className="text-xl font-bold mb-4">Çatdırılma</h2>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
                             <div className=" md:mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    First Name
+                                    Ad
                                 </label>
                                 <input
                                     type="text"
                                     value={first_name}
                                     onChange={(e) => setFirstName(e.target.value)}
-                                    placeholder="Write your first name"
+                                    placeholder="Adınızı yazın"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
@@ -151,83 +150,77 @@ const CheckOutScreen = () => {
 
                             <div className="mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Last Name
+                                    Soyad
                                 </label>
                                 <input
                                     type="text"
                                     value={last_name}
                                     onChange={(e) => setLastName(e.target.value)}
-                                    placeholder="Write your last name"
+                                    placeholder="Soyadınızı yazın"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
-                            <div className="mb-2 md:mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Country
-                                </label>
-                                <input
-                                    type="text"
-                                    value={country}
-                                    onChange={(e) => setCountry(e.target.value)}
-                                    placeholder="Write your country"
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
-                            </div>
+                        <div className='grid grid-cols-1  md:gap-4'>
+
 
                             <div className="mb-2 md:mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    City
+                                    Şəhər
                                 </label>
-                                <input
-                                    type="text"
-                                    value={city}
-                                    onChange={(e) => setCity(e.target.value)}
-                                    placeholder="Write your city"
+                                <select
+                                    required
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
+
+                                    onChange={(e) => setCity(e.target.value)}
+                                >
+                                    <option value="">Şəhərinizi seçin</option>
+                                    <option value="Bakı">Bakı</option>
+                                    <option value="Sumqayıt">Sumqayıt</option>
+                                    <option value="Gəncə">Gəncə</option>
+                                </select>
+
                             </div>
 
                         </div>
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Address
+                                Ünvan
                             </label>
                             <input
                                 type="text"
                                 required={true}
                                 value={address}
                                 onChange={(e) => setAddress(e.target.value)}
-                                placeholder="Write your address"
+                                placeholder="Ünvanınızı yazın"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Apartment
+                                Bina
                             </label>
                             <input
                                 type="text"
                                 value={apartment}
                                 onChange={(e) => setApartmant(e.target.value)}
-                                placeholder="Write your apartment"
+                                placeholder="Binanızı yazın (əgər varsa)"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Phone
+                                Əlaqə
                             </label>
                             <input
                                 type="text"
                                 value={phone}
                                 required={true}
                                 onChange={(e) => setPhone(e.target.value)}
-                                placeholder="Write your phone number"
+                                placeholder="Telefon nömrənizi yazın"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -241,10 +234,11 @@ const CheckOutScreen = () => {
                         />
                     </form>
                 </div>
-                <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-8'>
-                    <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
+                <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-6'>
+                    <h2 className="text-2xl font-bold mb-4">Sifariş özəti
+                    </h2>
                     {products?.length === 0 ? (
-                        <p>Your cart is empty</p>
+                        <p>Sənin kartın boşdur</p>
                     ) : (
                         products?.map((product: any) => (
                             <div key={product.id} className="flex items-center justify-between mb-4">
@@ -252,11 +246,11 @@ const CheckOutScreen = () => {
                                     <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p>${product.salePrice * product.quantity}</p>
+                                    <p>{product.salePrice * product.quantity} AZN</p>
                                 </div>
                             </div>
                         ))
@@ -266,7 +260,7 @@ const CheckOutScreen = () => {
                             <div className="w-[100%] col-span-3">
                                 <input
                                     type="text"
-                                    placeholder="Enter discount code"
+                                    placeholder="Promokodu daxil edin"
                                     value={discountCode}
                                     onChange={(e) => setDiscountCode(e.target.value)}
                                     className={`w-[100%] bg-white rounded-sm placeholder:text-sm border ${derrorMessage ? "border-red-500" : "border-gray-200"
@@ -282,26 +276,26 @@ const CheckOutScreen = () => {
                                     disabled={dloading}
                                     className={`rounded-[5px] w-[100%]  py-3  ${dloading ? "bg-gray-300 text-black" : "bg-green-400 text-white cursor-pointer"}`}
                                 >
-                                    {dloading ? "Applying..." : "Apply"}
+                                    {dloading ? "Yoxlanılır..." : "Tətbiq et"}
                                 </button>
                             </div>
                         </form>
                     </div>
                     <div className="mt-6">
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Subtotal:</span>
+                            <span className="">Məhsul miqdarı:</span>
                             <span>{subtotal.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Shipping:</span>
+                            <span className="">Çatdırılma:</span>
                             <span>{shippingCost.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Discount:</span>
+                            <span className="">Endirim:</span>
                             <span>{discountAmount.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 mt-4">
-                            <span className="font-bold">Total:</span>
+                            <span className="font-bold">Ümumi miqdar:</span>
                             <span>{total.toFixed(2)} AZN</span>
                         </div>
                     </div>

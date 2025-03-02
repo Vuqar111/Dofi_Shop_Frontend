@@ -62,7 +62,7 @@ const ProductCard = ({ product }: { product: any }) => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span>Add to Cart</span>
+                <span>Əlavə et</span>
               </motion.button>
             )}
           </AnimatePresence>
