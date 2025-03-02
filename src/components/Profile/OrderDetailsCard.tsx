@@ -1,11 +1,13 @@
 import { formatDate } from '../../utils/convertDate';
 
 const OrderDetailsCard = ({ order }: { order: any }) => {
-    console.log(order);
+    const statuses = ["Created", "Pending", "Shipped", "Delivered", "Canceled"];
+    const currentIndex = statuses.indexOf(order?.status);
+
     return (
         <div className="shadow mb-4">
             <header className="flex md:flex-row flex-col item-center justify-between p-4">
-                <div>
+                <div className='px-1 py-1'>
                     <p>Order number: <span>{order?.orderNumber}</span></p>
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
@@ -15,6 +17,24 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                 </div>
             </header>
             <div className='border border-b border-gray-100'></div>
+
+            <div className='w-[70%] mx-auto p-4 flex items-center justify-between w-full'>
+                {statuses.map((status, index) => (
+                    <div key={status} className='flex flex-col items-center w-full'>
+                        <div className={`w-8 h-8 flex items-center justify-center rounded-full border-2 ${index <= currentIndex ? "bg-green-400 border-green-400 text-white" : "bg-gray-200 border-gray-300 text-gray-500"}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </div>
+                        {index < statuses.length - 1 && (
+                            <div className={`h-1 w-full ${index < currentIndex ? "bg-green-400" : "bg-gray-300"}`}></div>
+                        )}
+                        <p className={`mt-2 text-sm ${index <= currentIndex ? "text-green-400 font-bold" : "text-gray-400"}`}>{status}</p>
+                    </div>
+                ))}
+            </div>
+
+
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <div>
                     <h2 className='p-4'>Delivery:</h2>
@@ -49,7 +69,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     </div>
                 </div>
 
-                
+
 
                 <div>
                     <h2 className='p-4'>Payment:</h2>
@@ -67,6 +87,8 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
 
 
             <h2 className='p-4'>Ordered Products:</h2>
+
+
             <div>
                 <div className="flex flex-col gap-2 p-4">
                     {order?.products.map((product: any) => (
@@ -84,6 +106,8 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     ))}
                 </div>
             </div>
+
+
             <div className='border border-b border-gray-100'></div>
 
             <footer className='flex md:flex-col flex-row  justify-end items-end flex-end p-4'>
