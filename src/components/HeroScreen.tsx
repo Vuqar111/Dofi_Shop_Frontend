@@ -3,14 +3,20 @@ import { motion } from "framer-motion";
 
 const HeroScreen = () => {
     return (
-        <div className='relative w-[100%] py-1 md:w-[100%] mx-auto h-[60vh] md:h-[80vh] rounded-[5px] overflow-hidden'>
+        <div className='relative w-full h-[60vh] md:h-[80vh] overflow-hidden'>
             {/* Background Video */}
-            <video autoPlay muted loop className='w-full h-full object-cover'>
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className='absolute top-0 left-0 w-full h-full object-cover'
+            >
                 <source src="https://cdn.shopify.com/videos/c/o/v/b53aad82a4c143d6a02e9a186e65322d.mp4" type="video/mp4" />
             </video>
 
             {/* Hero Content */}
-            <div className='absolute top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%]'>
+            <div className='absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2'>
                 {/* Title */}
                 <motion.h3
                     className='text-white text-2xl sm:text-5xl md:text-6xl font-extrabold'
@@ -23,7 +29,7 @@ const HeroScreen = () => {
 
                 {/* Subtitle */}
                 <motion.p
-                    className='md:block hidden text-white text-sm sm:text-2xl md:text-4xl font-semibold mt-2'
+                    className='hidden md:block text-white text-sm sm:text-2xl md:text-4xl font-semibold mt-2'
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
