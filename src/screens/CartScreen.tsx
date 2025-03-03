@@ -1,12 +1,14 @@
 import Header from '../components/Profile/Header'
 import Footer from '../components/Footer'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 import { useState, useEffect } from "react"
+import { isTokenExpired } from "../utils/tokenValidity"
 
 const CartScreen = () => {
   const [cart, setCart] = useState<any[]>([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart') || '[]')
@@ -15,7 +17,7 @@ const CartScreen = () => {
 
   const subtotal = cart.reduce((acc: number, item: any) => acc + item.salePrice * item.quantity, 0)
   const discount = 0
-  const shippingCost = 10 // Example shipping cost
+  const shippingCost = 10
   const total = subtotal + shippingCost - discount
 
   const handleRemove = (productId: string, color: string) => {
@@ -33,6 +35,17 @@ const CartScreen = () => {
     })
     setCart(updatedCart)
     localStorage.setItem('cart', JSON.stringify(updatedCart))
+  }
+
+  const handleCheckout = () => {
+    const token = localStorage.getItem("token")
+    const tokenExpired = isTokenExpired()
+
+    if (!token || tokenExpired) {
+      navigate("/auth/login?checkout")
+    } else {
+      navigate("/checkout")
+    }
   }
 
   return (
@@ -179,8 +192,8 @@ const CartScreen = () => {
                     <span>{total.toFixed(2)}</span>
                   </div>
                 </div>
-                <div className='w-[100%] bg-green-400 text-white text-center mx-auto py-2 cursor-pointer mt-4'>
-                  <Link to="/checkout">Ödəməyə keç</Link>
+                <div className='w-[100%] bg-green-400 text-white text-center mx-auto py-2 cursor-pointer mt-4' onClick={handleCheckout}>
+                  Ödəməyə keç
                 </div>
               </div>
             </div>

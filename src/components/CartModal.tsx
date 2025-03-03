@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { isTokenExpired } from "../utils/tokenValidity"
 
 const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
   const [cart, setCart] = useState<any[]>([])
+
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart') || '[]')
@@ -25,6 +29,18 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
     })
     setCart(updatedCart)
     localStorage.setItem('cart', JSON.stringify(updatedCart))
+  }
+
+
+  const handleCheckout = () => {
+    const token = localStorage.getItem("token")
+    const tokenExpired = isTokenExpired()
+
+    if (!token || tokenExpired) {
+      navigate("/auth/login?checkout")
+    } else {
+      navigate("/checkout")
+    }
   }
 
   return (
@@ -64,7 +80,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                       <p className="text-gray-400">Hədiyyə</p>
                       <h3 className="font-semibold">{product.name}</h3>
                       <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
-                      <span className="flex items-center justify-between border border-gray-200 mt-2 p-2">
+                      <div className="flex items-center justify-between border border-gray-200 mt-2 p-2 max-w-[100px]">
                         <button
                           className="px-2 cursor-pointer"
                           onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
@@ -79,7 +95,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                         >
                           +
                         </button>
-                      </span>
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -102,9 +118,9 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                 Alış-verişə davam et
               </Link>
             ) : (
-              <Link to="/checkout" className="w-full bg-green-400 text-white py-2 rounded text-center block">
+              <div onClick={handleCheckout} className="cursor-pointer w-full bg-green-400 text-white py-2 rounded text-center block">
                 Ödəməyə keç
-              </Link>
+              </div>
             )}
           </div>
         </motion.div>

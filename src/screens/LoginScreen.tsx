@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { loginUser } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
@@ -9,6 +9,7 @@ import swal from 'sweetalert';
 const LoginScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { signinSuccess, signinError, signinLoading } = useSelector((state: any) => state.auth);
+    const location = useLocation()
 
 
     const [email, setEmail] = useState('');
@@ -99,14 +100,14 @@ const LoginScreen = () => {
                             success={signinSuccess}
                             loading={signinLoading}
                             error={signinError}
-                            path={`/`}
+                            path={location.search.includes('checkout') ? '/checkout' : '/'}
                             message="Uğurlu giriş"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Hesabınız yoxdur? <Link to="/auth/register"  className="text-green-500">Qeydiyyatdan keçin</Link>
+                            Hesabınız yoxdur? <Link to="/auth/register" className="text-green-500">Qeydiyyatdan keçin</Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to="/auth/forgot-password"  className="text-red-500">Parolunu unutmusan?</Link>
+                            <Link to="/auth/forgot-password" className="text-red-500">Parolunu unutmusan?</Link>
                         </span>
                     </div>
                 </form>
