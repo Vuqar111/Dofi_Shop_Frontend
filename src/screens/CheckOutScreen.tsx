@@ -73,7 +73,6 @@ const CheckOutScreen = () => {
                     ...product,
                     productId: product?._id,
                     qty: product.quantity,
-                    color: "Purple",
                     price: product.salePrice,
                 })),
                 payment: {
