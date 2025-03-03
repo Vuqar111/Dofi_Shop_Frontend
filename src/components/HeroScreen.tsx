@@ -16,10 +16,10 @@ const HeroScreen = () => {
             </video>
 
             {/* Hero Content */}
-            <div className='absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2'>
+            <div className='w-full absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2'>
                 {/* Title */}
                 <motion.h3
-                    className='text-white text-2xl sm:text-5xl md:text-6xl font-extrabold'
+                    className='text-white text-5xl sm:text-5xl md:text-6xl font-extrabold'
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -45,7 +45,7 @@ const HeroScreen = () => {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 >
                     <Link to="/shop">
-                        <span className='bg-green-400 text-white py-2 px-8 sm:py-4 sm:px-12 text-xs sm:text-lg rounded-full inline-block'>
+                        <span className='bg-green-400 text-white py-4 px-8 sm:py-4 sm:px-12 text-[16px] sm:text-lg rounded-full inline-block'>
                             Indi Sifariş et
                         </span>
                     </Link>
