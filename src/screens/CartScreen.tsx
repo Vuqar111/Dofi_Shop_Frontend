@@ -164,11 +164,11 @@ const CartScreen = () => {
                 <div className="mt-6">
                   <div className="flex justify-between mb-2 text-sm">
                     <span className="">Məhsul miqdarı:</span>
-                    <span>€{subtotal.toFixed(2)}</span>
+                    <span>{subtotal.toFixed(2)} AZN</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm">
                     <span className="">Çatdırılma:</span>
-                    <span>{shippingCost.toFixed(2)}</span>
+                    <span>{shippingCost.toFixed(2)} AZN</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm">
                     <span className="">Endirim:</span>
