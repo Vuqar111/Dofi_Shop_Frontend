@@ -22,9 +22,10 @@ const CheckOutScreen = () => {
     const [last_name, setLastName] = useState('')
     const [address, setAddress] = useState('')
     const [apartment, setApartmant] = useState('')
-    const [phone, setPhone] = useState('')
     const [postal_code, setPostalCode] = useState('')
     const products = JSON.parse(localStorage.getItem('cart') || '[]')
+
+
 
 
     const [discountCode, setDiscountCode] = useState("");
@@ -33,6 +34,25 @@ const CheckOutScreen = () => {
     const [dloading, setDLoading] = useState(false);
     const [dsuccessMessage, setDSuccessMessage] = useState("");
     const [derrorMessage, setDErrorMessage] = useState("");
+
+
+
+    const [prefix, setPrefix] = useState("050");
+    const [digits, setDigits] = useState("");
+    const [phone, setPhone] = useState("");
+
+    const handleDigitsChange = (e: any) => {
+        const value = e.target.value.replace(/\D/g, ""); // Allow only numbers
+        if (value.length <= 7) {
+            setDigits(value);
+            setPhone(prefix + value); // Concatenate prefix and number
+        }
+    };
+
+    const handlePrefixChange = (e: any) => {
+        setPrefix(e.target.value);
+        setPhone(e.target.value + digits);
+    };
 
 
     const { discount: discountData, loading: discountLoading, error: discountError } = useSelector((state: any) => state.discounts)
@@ -214,21 +234,33 @@ const CheckOutScreen = () => {
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 Əlaqə
                             </label>
-                            <input
-                                type="text"
-                                value={phone}
-                                required={true}
-                                onChange={(e) => setPhone(e.target.value)}
-                                placeholder="Telefon nömrənizi yazın"
-                                className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                            />
+                            <div className="flex">
+                                <select
+                                    value={prefix}
+                                    onChange={handlePrefixChange}
+                                    className="border border-gray-200 bg-transparent py-3 pl-2 pr-4 outline-none focus:border-primary"
+                                >
+                                    <option value="050">050</option>
+                                    <option value="070">070</option>
+                                    <option value="077">077</option>
+                                    <option value="090">090</option>
+                                </select>
+                                <input
+                                    type="text"
+                                    value={digits}
+                                    required
+                                    onChange={handleDigitsChange}
+                                    placeholder="7 rəqəmli nömrə"
+                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                />
+                            </div>
                         </div>
                         <ActionButton
                             content="Sifarişi təsdiqlə"
                             success={createOrderSuccess}
                             loading={createOrderLoading}
                             error={createOrderError}
-                            path={`/`}
+                            path={`/profile/orders`}
                             message="Sifarişiniz təsdiqləndi"
                         />
                     </form>
@@ -246,6 +278,7 @@ const CheckOutScreen = () => {
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
                                         <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div>{product?.salePrice} AZN</div></p>
                                     </div>
                                 </div>
                                 <div>
