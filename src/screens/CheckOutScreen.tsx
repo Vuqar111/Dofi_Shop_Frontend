@@ -241,9 +241,9 @@ const CheckOutScreen = () => {
                                     className="border border-gray-200 bg-transparent py-3 pl-2 pr-4 outline-none focus:border-primary"
                                 >
                                     <option value="050">050</option>
+                                    <option value="055">055</option>
                                     <option value="070">070</option>
                                     <option value="077">077</option>
-                                    <option value="090">090</option>
                                 </select>
                                 <input
                                     type="text"
