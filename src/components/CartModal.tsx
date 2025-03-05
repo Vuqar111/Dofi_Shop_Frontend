@@ -1,36 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { isTokenExpired } from "../utils/tokenValidity"
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from '../redux/store';
+import { removeFromCart, updateQuantity } from '../redux/features/cartSlice'
+
+
 
 const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
-  const [cart, setCart] = useState<any[]>([])
+  const dispatch: AppDispatch = useDispatch();
 
+  const cart = useSelector((state: RootState) => state.cart.items);
   const navigate = useNavigate()
 
 
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart') || '[]')
-    setCart(storedCart)
-  }, [])
+  const handleRemoveFromCart = (product: any) => {
+    dispatch(removeFromCart({ id: product.id, color: product?.color }));
+  };
 
-  const handleRemove = (productId: string) => {
-    const updatedCart = cart.filter((item: any) => item._id !== productId)
-    setCart(updatedCart)
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
+  const handleQuantityChange = (product: any, quantity: number) => {
+    dispatch(updateQuantity({ id: product.id, color: product?.color, quantity }))
   }
-
-  const handleQuantityChange = (productId: string, quantity: number) => {
-    const updatedCart = cart.map((item: any) => {
-      if (item._id === productId) {
-        return { ...item, quantity }
-      }
-      return item
-    })
-    setCart(updatedCart)
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
-  }
-
 
   const handleCheckout = () => {
     const token = localStorage.getItem("token")
@@ -83,7 +74,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                       <div className="flex items-center justify-between border border-gray-200 mt-2 p-2 max-w-[100px]">
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product._id, product.quantity - 1)}
+                          onClick={() => handleQuantityChange(product, product.quantity - 1)}
                           disabled={product.quantity <= 1}
                         >
                           -
@@ -91,7 +82,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                         <span className="px-2">{product.quantity}</span>
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product._id, product.quantity + 1)}
+                          onClick={() => handleQuantityChange(product, product.quantity + 1)}
                         >
                           +
                         </button>
@@ -101,7 +92,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                   <div>
                     <div className="font-semibold">{product.price * product.quantity} AZN</div>
                     <div className='text-right pt-1'>
-                      <button onClick={() => handleRemove(product._id)} className='cursor-pointer'>
+                      <button onClick={() => handleRemoveFromCart(product)} className='cursor-pointer'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FB2C36" className="size-4">
                           <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                         </svg>
