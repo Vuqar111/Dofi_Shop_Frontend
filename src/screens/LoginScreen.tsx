@@ -18,12 +18,10 @@ const LoginScreen = () => {
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-
         try {
             const userData = { email, password };
             await dispatch(loginUser({ userData }));
         } catch (error) {
-            swal('Error!', 'Wrong email or password', 'error');
             console.error(error);
         }
     };

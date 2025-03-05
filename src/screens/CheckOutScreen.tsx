@@ -123,7 +123,7 @@ const CheckOutScreen = () => {
 
 
 
-    const subtotal = products.reduce((acc: number, item: any) => acc + item.salePrice * item.quantity, 0)
+    const subtotal = products.reduce((acc: number, item: any) => acc + item.price * item.quantity, 0)
     const shippingCost = 10
     const discountAmount = (subtotal * value) / 100;
     const total = subtotal + shippingCost - discountAmount
@@ -278,11 +278,11 @@ const CheckOutScreen = () => {
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
                                         <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div>{product?.salePrice} AZN</div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div>{product?.price} AZN</div></p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p>{product.salePrice * product.quantity} AZN</p>
+                                    <p>{product.price * product.quantity} AZN</p>
                                 </div>
                             </div>
                         ))
