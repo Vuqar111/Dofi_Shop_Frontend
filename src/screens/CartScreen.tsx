@@ -92,7 +92,7 @@ const CartScreen = () => {
                       <div className='pl-2'>
                         <h3 className="font-semibold">{product.name}</h3>
                         <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.salePrice} AZN</div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.price} AZN</div></p>
                       </div>
                     </div>
 
@@ -120,7 +120,7 @@ const CartScreen = () => {
                       </span>
                     </div>
 
-                    <div className="font-semibold text-right">{product.quantity * product.salePrice} AZN</div>
+                    <div className="font-semibold text-right">{product.quantity * product.price} AZN</div>
                   </div>
                 </div>
               ))}
@@ -138,7 +138,7 @@ const CartScreen = () => {
                       <div className='pl-2'>
                         <h3 className="font-semibold">{product.name}</h3>
                         <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.salePrice} AZN</div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.price} AZN</div></p>
                         <div className='col-span-1 flex justify-end items-center gap-4 mt-2'>
                           <span className="w-full max-w-[150px] flex items-center justify-between border border-gray-200 p-2">
                             <button
@@ -164,7 +164,7 @@ const CartScreen = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="font-semibold text-right">{product.quantity * product.salePrice} AZN</div>
+                    <div className="font-semibold text-right">{product.quantity * product.price} AZN</div>
                   </div>
                 </div>
               ))}

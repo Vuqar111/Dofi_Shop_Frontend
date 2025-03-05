@@ -7,26 +7,10 @@ import { AppDispatch } from '../../redux/store'
 export const Header = () => {
   const dispatch: AppDispatch = useDispatch();
   const { profile } = useSelector((state: any) => state.profile);
-
-  const [productCount, setProductCount] = useState(0);
-
-  // Fetch cart count from localStorage
-  const updateCartCount = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    setProductCount(cart.length);
-  };
+  const cartProducts = useSelector((state: any) => state.cart?.items);
 
   useEffect(() => {
     dispatch(profileDetails());
-    updateCartCount(); // Initial count
-
-    // Listen for storage changes (when cart updates)
-    const handleStorageChange = () => updateCartCount();
-    window.addEventListener('storage', handleStorageChange);
-
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-    };
   }, [dispatch]);
 
   return (
@@ -51,9 +35,9 @@ export const Header = () => {
             </svg>
 
             {/* Show badge only if productCount > 0 */}
-            {productCount > 0 && (
+            {cartProducts.length > 0 && (
               <span className="absolute top-[-10px] right-[-5px] bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                {productCount}
+                {cartProducts.length}
               </span>
             )}
           </Link>

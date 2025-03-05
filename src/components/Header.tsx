@@ -4,7 +4,6 @@ import { profileDetails } from '../redux/features/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import { motion, AnimatePresence } from 'framer-motion';
-import { listProduct } from '../redux/features/cartSlice';  // Import listProduct action
 
 
 export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
@@ -22,10 +21,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const productCount = cartProducts.length;
 
-
-  console.log(productCount);
     return (
     <React.Fragment>
       <div className="sticky top-0 z-50 bg-white w-[100%] ">
