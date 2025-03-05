@@ -5,13 +5,15 @@ import productsReducer from './features/productSlice';
 import ordersReducer from "./features/orderSlice";
 import profileReducer from './features/profileSlice';
 import discountReducer from "./features/discountSlice";
+import cartReducer from "./features/cartSlice";
 const store = configureStore({  
     reducer: {
       auth: authReducer,
       profile: profileReducer,
       products: productsReducer,
       orders: ordersReducer,
-      discounts: discountReducer
+      discounts: discountReducer,
+      cart: cartReducer
     },
   });
   

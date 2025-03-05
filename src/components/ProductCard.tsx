@@ -1,19 +1,29 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { addToCart } from "../redux/features/cartSlice";
+import { useDispatch } from "react-redux";
+
+
 
 const ProductCard = ({ product }: { product: any }) => {
+  const dispatch = useDispatch();
+
   const [isAdded, setIsAdded] = useState(false);
   const [selectedColor, setSelectedColor] = useState("text-green-500");
-  const handleAddToCart = (productId: string) => {
-    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-    const existingProduct = cart.find((item: any) => item._id === productId);
-    if (existingProduct) {
-      existingProduct.quantity += 1;
-    } else {
-      cart.push({ ...product, quantity: 1, color: selectedColor });
-    }
-    localStorage.setItem("cart", JSON.stringify(cart));
+
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      id: product._id,
+      name: product.name,
+      price: product.salePrice,
+      quantity: 1,
+      color: selectedColor,
+      image: "https://res.cloudinary.com/dslgitrbt/image/upload/v1734264555/story/jwrxjkvokbyg302upbq8.jpg",
+    };
+
+    dispatch(addToCart(cartItem));
     setIsAdded(true);
     setTimeout(() => setIsAdded(false), 2000);
   };
@@ -57,7 +67,7 @@ const ProductCard = ({ product }: { product: any }) => {
               <motion.button
                 key="add"
                 className="text-white bg-green-400 px-3 py-2 flex items-center gap-2 cursor-pointer"
-                onClick={() => handleAddToCart(product._id)}
+                onClick={handleAddToCart}
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}

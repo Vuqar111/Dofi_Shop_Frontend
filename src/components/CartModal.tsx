@@ -99,7 +99,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold">{product.salePrice * product.quantity} AZN</div>
+                    <div className="font-semibold">{product.price * product.quantity} AZN</div>
                     <div className='text-right pt-1'>
                       <button onClick={() => handleRemove(product._id)} className='cursor-pointer'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FB2C36" className="size-4">
