@@ -10,7 +10,16 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../redux/features/cartSlice";
 
 const ProductDetailsScreen = () => {
-  const [isOpened, setIsOpened] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const prevImage = () => {
+    setSelectedIndex((prev) => (prev === 0 ? imageGallery.length - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setSelectedIndex((prev) => (prev === imageGallery.length - 1 ? 0 : prev + 1));
+  };
+
   const [selectedColor, setSelectedColor] = useState('text-green-500')
   const [selectedImage, setSelectedImage] = useState('')
   const [selectedQty, setSelectedQty] = useState(1);
@@ -66,20 +75,40 @@ const ProductDetailsScreen = () => {
   return (
     <>
       <Header />
-      <div className="w-[80%] mx-auto flex flex-col md:flex-row p-8">
-        <div className="w-full md:w-1/2">
-          <img src={selectedImage || imageGallery[0]} alt={product?.name} className="w-full h-auto" />
-          <div className="flex mt-4 space-x-4">
-            {imageGallery?.map((image: string, index: number) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Product ${index}`}
-                className={`w-20 h-20 object-cover cursor-pointer ${selectedImage === image ? 'border-2 border-gray-500' : ''}`}
-                onClick={() => setSelectedImage(image)}
-              />
-            ))}
+      <div className="w-[100%] md:w-[80%] mx-auto flex flex-col md:flex-row p-8">
+        <div className="w-full md:w-1/2 relative">
+          <div className="relative">
+            <img src={imageGallery[selectedIndex]} alt={`Product ${selectedIndex}`} className="w-full h-auto" />
+            <button
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
+              onClick={prevImage}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+
+            </button>
+            <button
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
+              onClick={nextImage}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+
+            </button>
           </div>
+          <div className="flex mt-4 space-x-2 justify-center overflow-x-auto max-w-full px-2">
+        {imageGallery.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Product ${index}`}
+            className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
+            onClick={() => setSelectedIndex(index)}
+          />
+        ))}
+      </div>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
           <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{product?.name}</h1>
@@ -195,7 +224,7 @@ const ProductDetailsScreen = () => {
 
         </div>
       </div>
-      <div className="w-[80%] mx-auto my-8 p-8">
+      <div className="w-[100%] md:w-[80%] mx-auto my-8 p-8">
         <h2 className="text-2xl font-semibold text-gray-600">Ətraflı məlumat</h2>
         <p className="text-sm mt-2">
           {/* Write description of the robot*/}
