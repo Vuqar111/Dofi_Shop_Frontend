@@ -18,7 +18,8 @@ const ProductCard = ({ product }: { product: any }) => {
       id: product._id,
       name: product.name,
       price: product.salePrice,
-      quantity: 1,
+      code: product.code,
+      qty: 1,
       color: selectedColor,
       image: "https://res.cloudinary.com/dslgitrbt/image/upload/v1734264555/story/jwrxjkvokbyg302upbq8.jpg",
     };

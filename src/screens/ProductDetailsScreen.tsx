@@ -62,8 +62,9 @@ const ProductDetailsScreen = () => {
     const cartItem = {
       id: product.id,
       name: product.name,
+      code: product.code,
       price: product.salePrice,
-      quantity: selectedQty,
+      qty: selectedQty,
       color: selectedColor,
     };
 

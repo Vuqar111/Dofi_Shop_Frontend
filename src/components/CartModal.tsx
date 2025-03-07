@@ -19,8 +19,8 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
     dispatch(removeFromCart({ id: product.id, color: product?.color }));
   };
 
-  const handleQuantityChange = (product: any, quantity: number) => {
-    dispatch(updateQuantity({ id: product.id, color: product?.color, quantity }))
+  const handleQuantityChange = (product: any, qty: number) => {
+    dispatch(updateQuantity({ id: product.id, color: product?.color, qty }))
   }
 
   const handleCheckout = () => {
@@ -74,15 +74,15 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                       <div className="flex items-center justify-between border border-gray-200 mt-2 p-2 max-w-[100px]">
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product, product.quantity - 1)}
-                          disabled={product.quantity <= 1}
+                          onClick={() => handleQuantityChange(product, product.qty - 1)}
+                          disabled={product.qty <= 1}
                         >
                           -
                         </button>
-                        <span className="px-2">{product.quantity}</span>
+                        <span className="px-2">{product.qty}</span>
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product, product.quantity + 1)}
+                          onClick={() => handleQuantityChange(product, product.qty + 1)}
                         >
                           +
                         </button>
@@ -90,7 +90,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                     </div>
                   </div>
                   <div>
-                    <div className="font-semibold">{product.price * product.quantity} AZN</div>
+                    <div className="font-semibold">{product.price * product.qty} AZN</div>
                     <div className='text-right pt-1'>
                       <button onClick={() => handleRemoveFromCart(product)} className='cursor-pointer'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FB2C36" className="size-4">

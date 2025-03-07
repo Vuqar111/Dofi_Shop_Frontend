@@ -14,7 +14,7 @@ const CartScreen = () => {
   const cart = useSelector((state: RootState) => state.cart.items);
   const navigate = useNavigate()
 
-  const subtotal = cart.reduce((acc: number, item: any) => acc + item.price * item.quantity, 0)
+  const subtotal = cart.reduce((acc: number, item: any) => acc + item.price * item.qty, 0)
   const discount = 0
   const shippingCost = 10
   const total = subtotal + shippingCost - discount
@@ -24,8 +24,8 @@ const CartScreen = () => {
 
   }
 
-  const handleQuantityChange = (product: any, quantity: number) => {
-    dispatch(updateQuantity({ id: product.id, color: product?.color, quantity }))
+  const handleQuantityChange = (product: any, qty: number) => {
+    dispatch(updateQuantity({ id: product.id, color: product?.color, qty }))
 
   }
 
@@ -92,15 +92,15 @@ const CartScreen = () => {
                       <span className="w-full max-w-[150px] hidden md:flex items-center justify-between border border-gray-200 mt-2 p-2">
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product, product.quantity - 1)}
-                          disabled={product.quantity <= 1}
+                          onClick={() => handleQuantityChange(product, product.qty - 1)}
+                          disabled={product.qty <= 1}
                         >
                           -
                         </button>
-                        <span className="px-2">{product.quantity}</span>
+                        <span className="px-2">{product.qty}</span>
                         <button
                           className="px-2 cursor-pointer"
-                          onClick={() => handleQuantityChange(product, product.quantity + 1)}
+                          onClick={() => handleQuantityChange(product, product.qty + 1)}
                         >
                           +
                         </button>
@@ -112,7 +112,7 @@ const CartScreen = () => {
                       </span>
                     </div>
 
-                    <div className="font-semibold text-right">{product.quantity * product.price} AZN</div>
+                    <div className="font-semibold text-right">{product.qty * product.price} AZN</div>
                   </div>
                 </div>
               ))}
@@ -135,15 +135,15 @@ const CartScreen = () => {
                           <span className="w-full max-w-[150px] flex items-center justify-between border border-gray-200 p-2">
                             <button
                               className="px-2 cursor-pointer"
-                              onClick={() => handleQuantityChange(product, product.quantity - 1)}
-                              disabled={product.quantity <= 1}
+                              onClick={() => handleQuantityChange(product, product.qty - 1)}
+                              disabled={product.qty <= 1}
                             >
                               -
                             </button>
-                            <span className="px-2">{product.quantity}</span>
+                            <span className="px-2">{product.qty}</span>
                             <button
                               className="px-2 cursor-pointer"
-                              onClick={() => handleQuantityChange(product, product.quantity + 1)}
+                              onClick={() => handleQuantityChange(product, product.qty + 1)}
                             >
                               +
                             </button>
@@ -156,7 +156,7 @@ const CartScreen = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="font-semibold text-right">{product.quantity * product.price} AZN</div>
+                    <div className="font-semibold text-right">{product.qty * product.price} AZN</div>
                   </div>
                 </div>
               ))}

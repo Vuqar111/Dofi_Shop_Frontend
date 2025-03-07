@@ -23,7 +23,7 @@ const CheckOutScreen = () => {
     const [address, setAddress] = useState('')
     const [apartment, setApartmant] = useState('')
     const [postal_code, setPostalCode] = useState('')
-    const products = JSON.parse(localStorage.getItem('cart') || '[]')
+    const products = JSON.parse(localStorage.getItem('doofycart') || '[]')
 
 
 
@@ -92,8 +92,9 @@ const CheckOutScreen = () => {
                 products: products.map((product: any) => ({
                     ...product,
                     productId: product?._id,
-                    qty: product.quantity,
-                    price: product.salePrice,
+                    qty: product.qty,
+                    price: product.price,
+                    code: product.code,
                 })),
                 payment: {
                     payment_status,
@@ -123,7 +124,7 @@ const CheckOutScreen = () => {
 
 
 
-    const subtotal = products.reduce((acc: number, item: any) => acc + item.price * item.quantity, 0)
+    const subtotal = products.reduce((acc: number, item: any) => acc + item.price * item.qty, 0)
     const shippingCost = 10
     const discountAmount = (subtotal * value) / 100;
     const total = subtotal + shippingCost - discountAmount
@@ -282,7 +283,7 @@ const CheckOutScreen = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <p>{product.price * product.quantity} AZN</p>
+                                    <p>{product.price * product.qty} AZN</p>
                                 </div>
                             </div>
                         ))

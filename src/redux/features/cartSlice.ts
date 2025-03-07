@@ -4,7 +4,7 @@ interface CartItem {
     id: string;
     name: string;
     price: number;
-    quantity: number;
+    qty: number;
     color: string;
 }
 
@@ -15,7 +15,7 @@ interface CartState {
 
 const loadCartFromLocalStorage = (): CartItem[] => {
     try {
-        const cart = localStorage.getItem("cart");
+        const cart = localStorage.getItem("doofycart");
         return cart ? JSON.parse(cart) : [];
     } catch (error) {
         console.error("Error loading cart from localStorage", error);
@@ -25,7 +25,7 @@ const loadCartFromLocalStorage = (): CartItem[] => {
 
 const saveCartToLocalStorage = (cart: CartItem[]) => {
     try {
-        localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("doofycart", JSON.stringify(cart));
     } catch (error) {
         console.error("Error saving cart to localStorage", error);
     }
@@ -45,7 +45,7 @@ const cartSlice = createSlice({
 
             if (existingProductIndex !== -1) {
                 // Increase quantity if the product with the same color exists
-                state.items[existingProductIndex].quantity += 1;
+                state.items[existingProductIndex].qty += 1;
             } else {
                 // Add as a new entry
                 state.items.push(action.payload);
@@ -60,13 +60,13 @@ const cartSlice = createSlice({
         
             saveCartToLocalStorage(state.items);
         },
-        updateQuantity: (state, action: PayloadAction<{ id: string; color: string; quantity: number }>) => {
+        updateQuantity: (state, action: PayloadAction<{ id: string; color: string; qty: number }>) => {
             const product = state.items.find(
                 (item) => item.id === action.payload.id && item.color === action.payload.color
             );
 
             if (product) {
-                product.quantity = action.payload.quantity;
+                product.qty = action.payload.qty;
             }
 
             saveCartToLocalStorage(state.items);
