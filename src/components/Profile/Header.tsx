@@ -19,7 +19,7 @@ export const Header = () => {
       <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center gap-8">
           <Link to="/">
-            <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
+            <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
           </Link>
         </div>
         <ul className='flex gap-2'>

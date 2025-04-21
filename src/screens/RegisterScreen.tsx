@@ -32,7 +32,7 @@ const RegisterScreen = () => {
         <div className="flex flex-col md:flex-row h-screen bg-gray-100">
             <div className="w-full md:w-1/2 flex flex-col justify-center items-center h-screen p-4 md:p-8 bg-white">
                 <Link to="/">
-                    <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
+                    <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
                 <p className="mb-4">Hesabınızı indicə bir kliklə yaradın</p>
                 <form className="w-full max-w-md" onSubmit={handleRegister}>

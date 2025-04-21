@@ -6,24 +6,24 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "Doofy nədir?",
-      answer: "Doofy, süni intellektlə işləyən, uşaqlar üçün nəzərdə tutulmuş, kiçik ölçülü, lakin böyük şəxsiyyətə sahib bir danışıq öyrənmə robotudur."
+      question: "Dofi nədir?",
+      answer: "Dofi, süni intellektlə işləyən, uşaqlar üçün nəzərdə tutulmuş, kiçik ölçülü, lakin böyük şəxsiyyətə sahib bir danışıq öyrənmə robotudur."
     },
     {
-      question: "Doofy necə işləyir?",
-      answer: "Doofy, uşaqlarla qarşılıqlı əlaqə qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, maraqlı bir öyrənmə təcrübəsi təqdim etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir."
+      question: "Dofi necə işləyir?",
+      answer: "Dofi, uşaqlarla qarşılıqlı əlaqə qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, maraqlı bir öyrənmə təcrübəsi təqdim etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir."
     },
     {
-      question: "Doofy uşaqlar üçün təhlükəsizdirmi?",
-      answer: "Bəli, Doofy təhlükəsizlik nəzərə alınaraq hazırlanıb. O, uşaqlar üçün təhlükəsiz və güvənli bir təcrübə təmin etmək üçün gücləndirilmiş şifrələmə və valideyn nəzarəti funksiyalarına malikdir."
+      question: "Dofi uşaqlar üçün təhlükəsizdirmi?",
+      answer: "Bəli, Dofi təhlükəsizlik nəzərə alınaraq hazırlanıb. O, uşaqlar üçün təhlükəsiz və güvənli bir təcrübə təmin etmək üçün gücləndirilmiş şifrələmə və valideyn nəzarəti funksiyalarına malikdir."
     },
     {
-      question: "Doofy hansı yaş qrupuna uyğundur?",
-      answer: "Doofy 5 yaş və daha böyük uşaqlar üçün uyğundur."
+      question: "Dofi hansı yaş qrupuna uyğundur?",
+      answer: "Dofi 5 yaş və daha böyük uşaqlar üçün uyğundur."
     },
     {
-      question: "Doofy-ni necə ala bilərəm?",
-      answer: "Doofy-ni birbaşa veb saytımızdan ala bilərsiniz. Sadəcə məhsulu səbətinizə əlavə edin və ödəmə prosesinə keçin."
+      question: "Dofi-ni necə ala bilərəm?",
+      answer: "Dofi-ni birbaşa veb saytımızdan ala bilərsiniz. Sadəcə məhsulu səbətinizə əlavə edin və ödəmə prosesinə keçin."
     }
   ];
   

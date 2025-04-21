@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="w-[100%] p-4 md:p-0 md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div>
                     <Link to="/">
-                        <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
+                        <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
                     </Link>                    <div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-[80%] mx-auto mt-4 border-t border-gray-700 pt-4 text-center">
-        <p>&copy; 2025 Doofy. All rights reserved.</p>
+        <p>&copy; 2025 Dofi. All rights reserved.</p>
       </div>
         </div>
     )

@@ -24,7 +24,7 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    Meet Doofy
+                    Meet Dofi
                 </motion.h3>
 
                 {/* Subtitle */}

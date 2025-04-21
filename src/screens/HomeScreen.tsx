@@ -18,7 +18,7 @@ const HomeScreen = () => {
         <Header setIsOpened={setIsOpened} />
         <HeroScreen />
         <div className='w-[100%] mx-auto'>
-          <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>Doofy's Innovative Offerings</h3>
+          <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>Dofi's Innovative Offerings</h3>
           <ProductsScreen />
         </div>
         <ProductAdvertising />

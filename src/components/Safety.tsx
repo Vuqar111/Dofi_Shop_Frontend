@@ -30,7 +30,7 @@ const Safety = () => {
         viewport={{ once: true }}
       >
         Biz təhlükəsizliyə ciddi yanaşırıq. Uşağın məlumatlarının hər bir baytı qapalı sistemimiz daxilində qorunur. <br />
-        Doofy ailə dostu süni intellekt üçün yeni bir standart müəyyənləşdirir.
+        Dofi ailə dostu süni intellekt üçün yeni bir standart müəyyənləşdirir.
       </motion.p>
 
       {/* Features Grid */}

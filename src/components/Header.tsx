@@ -62,7 +62,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
           {/* Center: Logo */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
-            <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
+            <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
           </Link>
 
           {/* Right: Cart Icon */}
@@ -113,7 +113,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
             className="fixed inset-0 bg-white shadow-lg z-50"
           >
             <div className="flex justify-between items-center p-4 border-b border-gray-200">
-              <h3 className='text-4xl font-extrabold text-green-400'>Doofy</h3>
+              <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
               <button onClick={toggleMenu} className="text-2xl">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#FB2C36" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

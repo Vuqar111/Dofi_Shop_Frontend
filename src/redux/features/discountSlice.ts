@@ -18,7 +18,7 @@ export const checkDiscount = createAsyncThunk(
   ) => {
     try {
       const response = await axios.get(
-        `https://doofy-server.vercel.app/api/discounts/check/${code}`,
+        `https://Dofi-server.vercel.app/api/discounts/check/${code}`,
         {
          
         }

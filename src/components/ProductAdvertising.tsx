@@ -34,10 +34,10 @@ const ProductAdvertising = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-500">
-          <span className="text-green-400">Doffy</span> Haqqında
+          <span className="text-green-400">Dofi</span> Haqqında
         </h3>
         <p className="pt-4 opacity-70 text-sm sm:text-base md:text-lg">
-          2017-ci ildə CES sərgisində təqdim olunan Doofy, erkən yaş təhsili üçün hazırlanmış bir robotdur. O, Red Dot 2017 mükafatında ən yüksək mükafata layiq görülüb və dünyanın 60-dan çox ölkəsindən gələn minlərlə rəqibini geridə qoyaraq dizayn və kommunikasiya sahəsində beynəlxalq nüfuza malik mükafatı qazanıb.
+          2017-ci ildə CES sərgisində təqdim olunan Dofi, erkən yaş təhsili üçün hazırlanmış bir robotdur. O, Red Dot 2017 mükafatında ən yüksək mükafata layiq görülüb və dünyanın 60-dan çox ölkəsindən gələn minlərlə rəqibini geridə qoyaraq dizayn və kommunikasiya sahəsində beynəlxalq nüfuza malik mükafatı qazanıb.
         </p>
 
         {/* Features Grid */}

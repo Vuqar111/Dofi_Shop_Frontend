@@ -38,7 +38,7 @@ const ForgotPasswordScreen = () => {
         <div className="flex flex-col md:flex-row h-screen">
             <div className="w-full flex flex-col justify-center items-center h-screen p-4 md:p-8 bg-white">
                 <Link to="/">
-                    <h1 className="text-6xl font-bold text-green-400 mb-2">Doofy</h1>
+                    <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
 
                 {!emailSent ? (
