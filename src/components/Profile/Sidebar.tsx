@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaUser, FaClipboardList, FaShieldAlt, FaSignOutAlt } from "react-icons/fa";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -55,7 +54,7 @@ const Sidebar = () => {
             </svg>
 
           </span>
-          <span className="hidden md:inline">Çıxış et</span>
+          <span className="hidden md:inline">Logout</span>
         </li>
       </ul>
     </div>
