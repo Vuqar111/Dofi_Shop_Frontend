@@ -35,26 +35,21 @@ const Footer = () => {
                 <div>
                     <h3 className="font-bold mb-4">Follow Us</h3>
                     <p className='mb-2 text-sm'>Sabunchu district, 10Q</p>
-                    <p className='mb-2 text-sm'>Email: info@doffy.com</p>
-                    <p className='mb-2 text-sm'>Phone: +50 519 87 54</p>
+                    <p className='mb-2 text-sm'>Email: dofi.robot@gmail.com</p>
+                    <p className='mb-2 text-sm'>Phone: +995 50 519 87 54</p>
                     <ul className="flex space-x-4 mt-4">
                         <li>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" className="w-8 h-8" />
+                            <a href="https://www.tiktok.com/@dofi.kid" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="Tiktok" className="w-8 h-8" />
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" className="w-8 h-8" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/dofikid/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" className="w-8 h-8" />
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/company/dofikid/" target="_blank" rel="noopener noreferrer">
                                 <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
                             </a>
                         </li>

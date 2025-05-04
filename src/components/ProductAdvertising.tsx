@@ -34,15 +34,17 @@ const ProductAdvertising = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-500">
-          <span className="text-green-400">Dofi</span> Haqqında
+          About <span className="text-green-400">Dofi</span>
         </h3>
         <p className="pt-4 opacity-70 text-sm sm:text-base md:text-lg">
-          2017-ci ildə CES sərgisində təqdim olunan Dofi, erkən yaş təhsili üçün hazırlanmış bir robotdur. O, Red Dot 2017 mükafatında ən yüksək mükafata layiq görülüb və dünyanın 60-dan çox ölkəsindən gələn minlərlə rəqibini geridə qoyaraq dizayn və kommunikasiya sahəsində beynəlxalq nüfuza malik mükafatı qazanıb.
+        Our robot is a smart, engaging companion designed to support children's development through voice command interaction, video calling with 
+        parental controls, and dynamic body and facial expressions. It helps kids learn both their native language and English, enjoy interactive 
+        storytelling, and build strong math and logic skills—all while having fun. 
         </p>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-          {[...Array(6)].map((_, index) => (
+          {[...Array(4)].map((_, index) => (
             <motion.div
               key={index}
               className="flex items-center gap-2 bg-gray-100 p-4 rounded-lg w-[100%]"
@@ -56,7 +58,10 @@ const ProductAdvertising = () => {
                 src="https://cdn-icons-png.freepik.com/256/7172/7172577.png?ga=GA1.1.1847706705.1740395403&semt=ais_hybrid"
                 alt=""
               />
-              <p className="text-lg">Intelligent Quotient</p>
+              <p className="text-lg">Cognitive Growth</p>
+              {/*<p>Cognitive Growth</p>
+              <p>Enhanced Problem-Solving</p>
+              <p>Adaptive Learning</p>*/}
             </motion.div>
           ))}
         </div>

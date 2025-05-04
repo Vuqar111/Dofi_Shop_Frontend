@@ -18,7 +18,7 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Suni İntellekt və Təhlükəsizlik
+        Artificial Intelligence and Security
       </motion.h2>
 
       {/* Description */}
@@ -29,8 +29,8 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
       >
-        Biz təhlükəsizliyə ciddi yanaşırıq. Uşağın məlumatlarının hər bir baytı qapalı sistemimiz daxilində qorunur. <br />
-        Dofi ailə dostu süni intellekt üçün yeni bir standart müəyyənləşdirir.
+        We take security seriously. Every byte of your child's data is protected within our closed system. <br /> 
+        Dofi sets a new standard for family-friendly artificial intelligence.
       </motion.p>
 
       {/* Features Grid */}
@@ -38,18 +38,18 @@ const Safety = () => {
         {[
           {
             "img": "https://miko.ai/cdn/shop/files/MiniPDP_Features_Parents.svg?v=1727687496&width=150",
-            "title": "Valideynlər üçün faydalıdır",
-            "description": "Təhlükəsiz zənglərdən real vaxtda irəliləyiş hesabatlarına qədər"
+            "title": "Useful for parents",
+            "description": "From secure calls to real-time progress reports"
           },
           {
             "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Tools.svg?v=1727687496&width=150",
-            "title": "Daha yaxşı valideyn alətləri",
-            "description": "Uşağın təhsil planlarını aydın şəkildə təqdim edən və inkişaf mərhələlərini müəyyən edən Valideyn Tətbiqi"
+            "title": "Better parenting tools",
+            "description": "Parent App that clearly presents child's educational plans and identifies developmental milestones"
           },
           {
             "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Secure.svg?v=1727687496&width=150",
-            "title": "Təhlükəsiz, güvənli və məxfi",
-            "description": "kidSAFE+ COPPA sertifikatlı cihaz, fərdiləşdirilə bilən təhlükəsizlik və məxfilik ayarları ilə"
+            "title": "Safe, secure and private",
+            "description": "kidSAFE+ COPPA certified device with customizable security and privacy settings"
           }
         ].map((item, index) => (
           <motion.div

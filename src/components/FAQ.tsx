@@ -6,24 +6,24 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "Dofi nədir?",
-      answer: "Dofi, süni intellektlə işləyən, uşaqlar üçün nəzərdə tutulmuş, kiçik ölçülü, lakin böyük şəxsiyyətə sahib bir danışıq öyrənmə robotudur."
+      question: "What is Dofi?",
+      answer: "Dofi is an AI-powered talking learning robot designed for children, small in size but big in personality.",
     },
     {
-      question: "Dofi necə işləyir?",
-      answer: "Dofi, uşaqlarla qarşılıqlı əlaqə qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, maraqlı bir öyrənmə təcrübəsi təqdim etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir."
+      question: "How does Dofi work?",
+      answer: "Dofi uses advanced artificial intelligence algorithms to interact with children, teach them new skills, and provide a fun, engaging learning experience."
     },
     {
-      question: "Dofi uşaqlar üçün təhlükəsizdirmi?",
-      answer: "Bəli, Dofi təhlükəsizlik nəzərə alınaraq hazırlanıb. O, uşaqlar üçün təhlükəsiz və güvənli bir təcrübə təmin etmək üçün gücləndirilmiş şifrələmə və valideyn nəzarəti funksiyalarına malikdir."
+      question: "Is Dofi safe for kids?",
+      answer: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids."
     },
     {
-      question: "Dofi hansı yaş qrupuna uyğundur?",
-      answer: "Dofi 5 yaş və daha böyük uşaqlar üçün uyğundur."
+      question: "What age group is Dofi suitable for?",
+      answer: "Dofi is suitable for children between the ages of 3 and 8."
     },
     {
-      question: "Dofi-ni necə ala bilərəm?",
-      answer: "Dofi-ni birbaşa veb saytımızdan ala bilərsiniz. Sadəcə məhsulu səbətinizə əlavə edin və ödəmə prosesinə keçin."
+      question: "How do I pre-order Dofi?",
+      answer: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
     }
   ];
   
@@ -33,7 +33,7 @@ const FAQ = () => {
 
   return (
     <div className="w-[100%] md:w-[80%] mx-auto p-8">
-      <h1 className="text-3xl font-semibold mb-8 text-center">Tez-tez soruşulan suallar</h1>
+      <h1 className="text-3xl font-semibold mb-8 text-center">Frequently asked questions</h1>
       <div className="border border-gray-200">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-200">
