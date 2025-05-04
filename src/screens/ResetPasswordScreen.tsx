@@ -42,18 +42,18 @@ const ResetPasswordScreen = () => {
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
-                <p className="mb-4">Səni yenidən görməyə məmnunuq!</p>
+                <p className="mb-4">We are glad to see you again!</p>
                 <form className="w-full max-w-md" onSubmit={handleResetPassword}>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Parol
+                            Password
                         </label>
                         <div className="relative">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Parolunuzu yazın"
+                                placeholder="Enter password"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -79,13 +79,13 @@ const ResetPasswordScreen = () => {
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Parolu təkrarla
+                            Confirm password
                         </label>
                         <div className="relative">
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                placeholder="Parolunuzu təkrar yazın"
+                                placeholder="Confirm password"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -113,18 +113,18 @@ const ResetPasswordScreen = () => {
 
                     <div className="flex flex-col">
                         <ActionButton
-                            content="Parolu yenilə"
+                            content="Change password"
                             success={resetPasswordSuccess}
                             loading={resetPasswordLoading}
                             error={resetPasswordError}
                             path={`/`}
-                            message="Parolunuz yeniləndi"
+                            message="Password changed."
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Hesabınız yoxdur? <Link to="/auth/register" className="text-green-500">Qeydiyyatdan keçin</Link>
+                            Don't have an account? <Link to="/auth/register" className="text-green-500">Sign up</Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to="/auth/forgot-password" className="text-red-500">Parolunu unutmusan?</Link>
+                            <Link to="/auth/forgot-password" className="text-red-500">Forgot your password?</Link>
                         </span>
                     </div>
                 </form>

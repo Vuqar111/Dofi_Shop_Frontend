@@ -13,9 +13,9 @@ const OrdersScreen = () => {
 
 
   const breadcrumbPaths = [
-    { name: 'Ana Səhifə', href: '/' },
+    { name: 'Homepage', href: '/' },
     { name: 'Profile', href: '/profile' },
-    { name: 'Sifarişlər', href: '/profile/orders' },
+    { name: 'Orders', href: '/profile/orders' },
 ];
 
 
@@ -39,7 +39,7 @@ const OrdersScreen = () => {
     <>
     <BreadCrumb paths={breadcrumbPaths}/>
       <div className=''>
-      <h2 className='pb-4 text-xl md:text-2xl'>Sənin sifarişlərin</h2>
+      <h2 className='pb-4 text-xl md:text-2xl'>Your orders</h2>
         <div className="grid grid-cols-1 ">
           {data?.map((order: any) => (
             <div key={order._id}>

@@ -50,7 +50,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
           <div className="flex justify-between items-center border-b border-gray-200 pb-2 mb-4">
-            <h2 className="text-xl text-gray-700 font-bold">Kart</h2>
+            <h2 className="text-xl text-gray-700 font-bold">Cart</h2>
             <button onClick={() => setIsOpened(false)} className='cursor-pointer'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -59,7 +59,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           </div>
           <div className="flex-grow overflow-y-auto">
             {cart.length === 0 ? (
-              <p>Sənin kartın boşdur</p>
+              <p>Your card is empty</p>
             ) : (
               cart.map((product: any) => (
                 <div key={product._id} className="flex justify-between mb-4 pb-4 border-b border-gray-200">
@@ -106,7 +106,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           <div className="w-full border-gray-200 border-t pt-4">
             {cart.length === 0 ? (
               <Link to="/shop" className="w-full bg-green-400 text-white py-2 rounded text-center block">
-                Alış-verişə davam et
+                Continue shopping
               </Link>
             ) : (
               <div onClick={handleCheckout} className="cursor-pointer w-full bg-green-400 text-white py-2 rounded text-center block">

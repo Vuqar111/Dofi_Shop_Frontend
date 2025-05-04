@@ -146,10 +146,10 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                 ) : (
                   <div className='w-[100%]'>
                     <div className='w-[100%] text-center text-green-400 border border-green-400 px-2 py-2 rounded-[5px]'>
-                      <Link to="/auth/login" onClick={toggleMenu}>Daxil ol</Link>
+                      <Link to="/auth/login" onClick={toggleMenu}>Login</Link>
                     </div>
                     <div className='w-[100%] text-center text-white border border-green-400 bg-green-400 px-2 py-2 rounded-[5px] mt-2'>
-                      <Link to="/auth/register" onClick={toggleMenu}>Qeydiyyatdan keç</Link>
+                      <Link to="/auth/register" onClick={toggleMenu}>Sign up</Link>
                     </div>
                   </div>
                 )}

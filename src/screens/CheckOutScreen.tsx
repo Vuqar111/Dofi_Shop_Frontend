@@ -135,10 +135,10 @@ const CheckOutScreen = () => {
             <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
                 <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
                     <form onSubmit={handleOrder}>
-                        <h2 className="text-2xl font-bold mb-4">Əlaqə</h2>
+                        <h2 className="text-2xl font-bold mb-4">Contact</h2>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                E-poçt
+                                Email
                             </label>
                             <div className="relative">
                                 <input
@@ -156,7 +156,7 @@ const CheckOutScreen = () => {
 
                             <div className=" md:mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Ad
+                                    Name
                                 </label>
                                 <input
                                     type="text"
@@ -170,7 +170,7 @@ const CheckOutScreen = () => {
 
                             <div className="mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Soyad
+                                    Surname
                                 </label>
                                 <input
                                     type="text"
@@ -187,7 +187,7 @@ const CheckOutScreen = () => {
 
                             <div className="mb-2 md:mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Şəhər
+                                    City
                                 </label>
                                 <select
                                     required
@@ -195,7 +195,7 @@ const CheckOutScreen = () => {
 
                                     onChange={(e) => setCity(e.target.value)}
                                 >
-                                    <option value="">Şəhərinizi seçin</option>
+                                    <option value="">Select city</option>
                                     <option value="Bakı">Bakı</option>
                                     <option value="Sumqayıt">Sumqayıt</option>
                                     <option value="Gəncə">Gəncə</option>
@@ -207,7 +207,7 @@ const CheckOutScreen = () => {
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Ünvan
+                                Address
                             </label>
                             <input
                                 type="text"
@@ -220,7 +220,7 @@ const CheckOutScreen = () => {
                         </div>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Bina
+                                Apartment
                             </label>
                             <input
                                 type="text"
@@ -233,7 +233,7 @@ const CheckOutScreen = () => {
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Əlaqə
+                                Contact
                             </label>
                             <div className="flex">
                                 <select
@@ -267,10 +267,10 @@ const CheckOutScreen = () => {
                     </form>
                 </div>
                 <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-6'>
-                    <h2 className="text-2xl font-bold mb-4">Sifariş özəti
+                    <h2 className="text-2xl font-bold mb-4">Order summary
                     </h2>
                     {products?.length === 0 ? (
-                        <p>Sənin kartın boşdur</p>
+                        <p>Your card is empty</p>
                     ) : (
                         products?.map((product: any) => (
                             <div key={product.id} className="flex items-center justify-between mb-4">
@@ -278,8 +278,8 @@ const CheckOutScreen = () => {
                                     <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div>{product?.price} AZN</div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">Price: <div>{product?.price} AZN</div></p>
                                     </div>
                                 </div>
                                 <div>

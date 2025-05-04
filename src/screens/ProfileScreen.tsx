@@ -80,12 +80,12 @@ const ProfileScreen = () => {
 
   return (
     <div className='w-[100%]'>
-      <h2 className='pb-4 text-xl md:text-2xl'>Şəxsi məlumatlar</h2>
+      <h2 className='pb-4 text-xl md:text-2xl'>Personal Informations</h2>
       <form className='' onSubmit={handleUpdateProfile}>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className="md:mb-4">
             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-              Ad və soyad
+              Name and Surname
             </label>
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -93,13 +93,13 @@ const ProfileScreen = () => {
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               type="text"
-              placeholder="Adınızı və soyadınızı yazın"
+              placeholder="Enter your name and surname"
             />
           </div>
 
           <div className="md:mb-4">
             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-              E-poçt
+              Email
             </label>
             <input
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -107,12 +107,12 @@ const ProfileScreen = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              placeholder="E-poçtunuzu yazın"
+              placeholder="Enter your email"
             />
           </div>
 
           <div className="md:mb-4">
-            <label className="mb-2 block font-medium text-black opacity-[0.6]">Əlaqə nömrəsi</label>
+            <label className="mb-2 block font-medium text-black opacity-[0.6]">Contact number</label>
             <div className="flex">
               <select
                 className="w-1/4 rounded-sm border border-gray-200 bg-transparent py-3 px-2 outline-none focus:border-primary"
@@ -137,7 +137,7 @@ const ProfileScreen = () => {
 
           <div className="md:mb-4">
             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-              Rol
+              Role
             </label>
             <select
               className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
@@ -145,20 +145,20 @@ const ProfileScreen = () => {
               value={customer_type}
               onChange={(e) => setCustomerType(e.target.value)}
             >
-              <option value="Individual">Valideyn</option>
-              <option value="Business">Şirkət</option>
+              <option value="Individual">Parent</option>
+              <option value="Business">Company</option>
               <option value="VIP">VIP</option>
             </select>
           </div>
         </div>
 
         <ActionButton
-          content="Yadda saxla"
+          content="Save"
           success={updateProfileSuccess}
           loading={updateProfileLoading}
           error={updateProfileError}
           path={`/profile`}
-          message="Təbriklər"
+          message="Congratulations!"
         />
       </form>
     </div>

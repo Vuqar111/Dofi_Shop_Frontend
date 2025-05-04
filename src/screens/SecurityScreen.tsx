@@ -22,9 +22,9 @@ const SecurityScreen = () => {
 
 
   const breadcrumbPaths = [
-    { name: 'Ana Səhifə', href: '/' },
-    { name: 'Profil', href: '/profile' },
-    { name: 'Təhlükəsizlik', href: '/profile/security' },
+    { name: 'Home page', href: '/' },
+    { name: 'Profile', href: '/profile' },
+    { name: 'Security', href: '/profile/security' },
   ];
 
 
@@ -54,14 +54,14 @@ const SecurityScreen = () => {
   return (
     <div className='w-[100%] '>
       <BreadCrumb paths={breadcrumbPaths} />
-      <h2 className='pb-4 text-2xl'>Təhlükəsizlik</h2>
+      <h2 className='pb-4 text-2xl'>Security</h2>
       <form className='' onSubmit={handleUpdateProfilePassword}>
         <div className='grid grid-cols-1 gap-4'>
 
 
 
           <label className="block font-medium text-black opacity-[0.6]">
-            Mövcud parol
+            Current password
           </label>
           <div className="mb-4 relative">
             <input
@@ -69,7 +69,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setCurrentPassword(e.target.value)}
               type={showPassword ? 'text' : 'password'}
-              placeholder="Mövcud parolunuzu yazın"
+              placeholder="Enter current password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -89,7 +89,7 @@ const SecurityScreen = () => {
           </div>
 
           <label className="block font-medium text-black opacity-[0.6]">
-            Yeni parol
+            New password
           </label>
           <div className="mb-4 relative">
             <input
@@ -97,7 +97,7 @@ const SecurityScreen = () => {
               id="new_password"
               onChange={(e) => setNewPassword(e.target.value)}
               type={showNewPassword ? 'text' : 'password'}
-              placeholder="Yeni parolunuzu yazın"
+              placeholder="Enter new password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -116,7 +116,7 @@ const SecurityScreen = () => {
             </div>
           </div>
           <label className="block font-medium text-black opacity-[0.6]">
-             Parolu təkrar yazın
+            Confirm password
           </label>
           <div className="mb-4 relative">
             <input
@@ -124,7 +124,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setConfirmPassword(e.target.value)}
               type={showConfirmedPassword ? 'text' : 'password'}
-              placeholder="Parolu təkrar yazın"
+              placeholder="Confirm password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -144,12 +144,12 @@ const SecurityScreen = () => {
           </div>
         </div>
         <ActionButton
-          content="Parolu dəyişin"
+          content="Change password"
           success={updateProfilePasswordSuccess}
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
           path={`/auth/login`}
-          message="Parol uğurla dəyişdirildi"
+          message="Password changed successfully."
         />
       </form>
     </div>

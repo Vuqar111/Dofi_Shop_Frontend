@@ -15,10 +15,10 @@ const OrderDetailsScreen = () => {
 
 
     const breadcrumbPaths = [
-        { name: 'Ana Səhifə', href: '/' },
-        { name: 'Profil', href: '/profile' },
-        { name: 'Sifarişlər', href: '/profile/orders' },
-        { name: 'Sifariş', href: '/profile/orders/' },
+        { name: 'Homepage', href: '/' },
+        { name: 'Profile', href: '/profile' },
+        { name: 'Orders', href: '/profile/orders' },
+        { name: 'Order', href: '/profile/orders/' },
     ];
 
     useEffect(() => {

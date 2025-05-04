@@ -226,7 +226,7 @@ const ProductDetailsScreen = () => {
         </div>
       </div>
       <div className="w-[100%] md:w-[80%] mx-auto my-8 p-8">
-        <h2 className="text-2xl font-semibold text-gray-600">Ətraflı məlumat</h2>
+        <h2 className="text-2xl font-semibold text-gray-600">Detailed information</h2>
         <p className="text-sm mt-2">
           {/* Write description of the robot*/}
           A smart and interactive kids' robot designed for ages 1-10, featuring voice commands, educational games, and fun storytelling. It helps children learn, play, and engage safely with parent monitoring and face recognition for security. 😊🤖

@@ -48,7 +48,7 @@ const CartScreen = () => {
         <div className='flex items-center justify-between'>
           <h1 className='text-3xl font-bold my-6'>Sənin səbətin</h1>
           <Link to="/shop" className='opacity-[0.8] underline'>
-            Alış-verişə davam et
+            Continue shopping
           </Link>
         </div>
 
@@ -56,7 +56,7 @@ const CartScreen = () => {
           <div className='text-center mt-8'>
             <p className='text-lg'>Səbətiniz boşdur.</p>
             <Link to="/shop" className='mt-4 inline-block bg-green-400 text-white px-4 py-2 rounded'>
-              Alış-verişə davam et
+              Continue shopping
             </Link>
           </div>
         ) : (
