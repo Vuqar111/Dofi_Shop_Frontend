@@ -46,7 +46,7 @@ const HeroScreen = () => {
                 >
                     <Link to="/shop">
                         <span className='bg-green-400 text-white py-4 px-8 sm:py-4 sm:px-12 text-[16px] sm:text-lg rounded-full inline-block'>
-                            Indi Sifariş et
+                            Pre-order now
                         </span>
                     </Link>
                 </motion.div>
