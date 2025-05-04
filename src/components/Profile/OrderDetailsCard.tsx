@@ -69,7 +69,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     <p>Order code: <span>{order?.orderNumber}</span></p>
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
-                    <span className="px-1 py-1 rounded:sm text:xs">Sifariş tarixi: {formatDate(order?.createdAt)}</span>
+                    <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}</span>
                     <span className={`text-white px-1 py-1 rounded:sm text:xs ${order?.payment?.payment_status === "Canceled" ? "bg-red-400" : "bg-green-400"}`}>
                         {order?.payment?.payment_status}
                     </span>

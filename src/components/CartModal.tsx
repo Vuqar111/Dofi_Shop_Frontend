@@ -68,9 +68,9 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                       <img src={product.image} alt={product.name} className="w-20 h-20 object-cover" />
                     </div>
                     <div className='pl-2'>
-                      <p className="text-gray-400">Hədiyyə</p>
+                      <p className="text-gray-400">Gift</p>
                       <h3 className="font-semibold">{product.name}</h3>
-                      <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
+                      <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
                       <div className="flex items-center justify-between border border-gray-200 mt-2 p-2 max-w-[100px]">
                         <button
                           className="px-2 cursor-pointer"
@@ -110,7 +110,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
               </Link>
             ) : (
               <div onClick={handleCheckout} className="cursor-pointer w-full bg-green-400 text-white py-2 rounded text-center block">
-                Ödəməyə keç
+                Proceed to checkout
               </div>
             )}
           </div>

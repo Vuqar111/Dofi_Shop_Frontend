@@ -46,7 +46,7 @@ const CartScreen = () => {
 
       <div className='w-[100%] md:w-[80%] mx-auto p-4 md:p-8 mb-8'>
         <div className='flex items-center justify-between'>
-          <h1 className='text-3xl font-bold my-6'>Sənin səbətin</h1>
+          <h1 className='text-3xl font-bold my-6'>Your cart</h1>
           <Link to="/shop" className='opacity-[0.8] underline'>
             Continue shopping
           </Link>
@@ -54,7 +54,7 @@ const CartScreen = () => {
 
         {cart.length === 0 ? (
           <div className='text-center mt-8'>
-            <p className='text-lg'>Səbətiniz boşdur.</p>
+            <p className='text-lg'>Your cart is empty.</p>
             <Link to="/shop" className='mt-4 inline-block bg-green-400 text-white px-4 py-2 rounded'>
               Continue shopping
             </Link>
@@ -62,14 +62,14 @@ const CartScreen = () => {
         ) : (
           <>
             <div className='grid-cols-5 gap-4 md:grid hidden'>
-              <div className='col-span-3 opacity-[0.7] text-[12px]'>MƏHSUL</div>
-              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>MİQDAR</div>
-              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>ÜMUMİ</div>
+              <div className='col-span-3 opacity-[0.7] text-[12px]'>Product</div>
+              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>Amount</div>
+              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>Total</div>
             </div>
 
             <div className='grid grid-cols-3 gap-4 md:hidden'>
-              <div className='col-span-2 opacity-[0.7] text-[12px]'>MƏHSUL</div>
-              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>ÜMUMİ</div>
+              <div className='col-span-2 opacity-[0.7] text-[12px]'>Product</div>
+              <div className='col-span-1 opacity-[0.7] text-right text-[12px]'>Total</div>
             </div>
 
             <div className="md:block hidden">
@@ -83,8 +83,8 @@ const CartScreen = () => {
 
                       <div className='pl-2'>
                         <h3 className="font-semibold">{product.name}</h3>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.price} AZN</div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Price: <div className='font-bold'>{product?.price} AZN</div></p>
                       </div>
                     </div>
 
@@ -129,8 +129,8 @@ const CartScreen = () => {
 
                       <div className='pl-2'>
                         <h3 className="font-semibold">{product.name}</h3>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Rəng: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
-                        <p className="text-gray-400 text-sm flex items-center gap-2">Qiymət: <div className='font-bold'>{product?.price} AZN</div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className='w-[16px] h-[16px] bg-green-500 rounded-full'></div></p>
+                        <p className="text-gray-400 text-sm flex items-center gap-2">Price: <div className='font-bold'>{product?.price} AZN</div></p>
                         <div className='col-span-1 flex justify-end items-center gap-4 mt-2'>
                           <span className="w-full max-w-[150px] flex items-center justify-between border border-gray-200 p-2">
                             <button
@@ -165,27 +165,27 @@ const CartScreen = () => {
             <div className='border border-b border-gray-100 mt-5'></div>
             <div className='mt-8 flex flex-col justify-end items-end'>
               <div className='bg-gray-100 w-[100%] md:w-[30%] p-4'>
-                <h2 className="text-xl font-semibold mb-4">Sifariş özəti</h2>
+                <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
                 <div className="mt-6">
                   <div className="flex justify-between mb-2 text-sm">
-                    <span className="">Məhsul miqdarı:</span>
+                    <span className="">Product quantity:</span>
                     <span>{subtotal.toFixed(2)} AZN</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm">
-                    <span className="">Çatdırılma:</span>
+                    <span className="">Delivery:</span>
                     <span>{shippingCost.toFixed(2)} AZN</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm">
-                    <span className="">Endirim:</span>
+                    <span className="">Discount:</span>
                     <span>{discount.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between mb-2 mt-4">
-                    <span className="font-bold">Ümumi miqdar:</span>
+                    <span className="font-bold">Total amount:</span>
                     <span>{total.toFixed(2)}</span>
                   </div>
                 </div>
                 <div className='w-[100%] bg-green-400 text-white text-center mx-auto py-2 cursor-pointer mt-4' onClick={handleCheckout}>
-                  Ödəməyə keç
+                  Proceed to payment
                 </div>
               </div>
             </div>

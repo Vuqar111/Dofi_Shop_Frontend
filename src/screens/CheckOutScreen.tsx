@@ -68,9 +68,9 @@ const CheckOutScreen = () => {
                 setCode(response.payload.code);
                 setValue(response.payload.value);
                 setDiscount(code);
-                setDSuccessMessage("Promokod tətbiq edildi! 🎉");
+                setDSuccessMessage("Promo code applied! 🎉");
             } else {
-                setDErrorMessage("Yanlış promokod!")
+                setDErrorMessage("Wrong promo code")
             }
         } catch (error) {
             setDErrorMessage("An error occured. Please try again")
@@ -145,13 +145,13 @@ const CheckOutScreen = () => {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="E-poçtunuzu yazın"
+                                    placeholder="Enter your email"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
 
-                        <h2 className="text-xl font-bold mb-4">Çatdırılma</h2>
+                        <h2 className="text-xl font-bold mb-4">Delivery</h2>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
                             <div className=" md:mb-4">
@@ -162,7 +162,7 @@ const CheckOutScreen = () => {
                                     type="text"
                                     value={first_name}
                                     onChange={(e) => setFirstName(e.target.value)}
-                                    placeholder="Adınızı yazın"
+                                    placeholder="Enter your name"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
@@ -176,7 +176,7 @@ const CheckOutScreen = () => {
                                     type="text"
                                     value={last_name}
                                     onChange={(e) => setLastName(e.target.value)}
-                                    placeholder="Soyadınızı yazın"
+                                    placeholder="Enter your surname"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
@@ -214,7 +214,7 @@ const CheckOutScreen = () => {
                                 required={true}
                                 value={address}
                                 onChange={(e) => setAddress(e.target.value)}
-                                placeholder="Ünvanınızı yazın"
+                                placeholder="Enter your address"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -226,7 +226,7 @@ const CheckOutScreen = () => {
                                 type="text"
                                 value={apartment}
                                 onChange={(e) => setApartmant(e.target.value)}
-                                placeholder="Binanızı yazın (əgər varsa)"
+                                placeholder="Enter your apartment (if you have)"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -251,18 +251,18 @@ const CheckOutScreen = () => {
                                     value={digits}
                                     required
                                     onChange={handleDigitsChange}
-                                    placeholder="7 rəqəmli nömrə"
+                                    placeholder="7-digit number"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
                         <ActionButton
-                            content="Sifarişi təsdiqlə"
+                            content="Confirm order"
                             success={createOrderSuccess}
                             loading={createOrderLoading}
                             error={createOrderError}
                             path={`/profile/orders`}
-                            message="Sifarişiniz təsdiqləndi"
+                            message="Your order has been confirmed"
                         />
                     </form>
                 </div>
@@ -320,19 +320,19 @@ const CheckOutScreen = () => {
                     </div>
                     <div className="mt-6">
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Məhsul miqdarı:</span>
+                            <span className="">Product quantity:</span>
                             <span>{subtotal.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Çatdırılma:</span>
+                            <span className="">Delivery:</span>
                             <span>{shippingCost.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Endirim:</span>
+                            <span className="">Discount:</span>
                             <span>{discountAmount.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 mt-4">
-                            <span className="font-bold">Ümumi miqdar:</span>
+                            <span className="font-bold">Total amount:</span>
                             <span>{total.toFixed(2)} AZN</span>
                         </div>
                     </div>

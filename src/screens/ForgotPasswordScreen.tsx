@@ -43,17 +43,17 @@ const ForgotPasswordScreen = () => {
 
                 {!emailSent ? (
                     <form className="w-full max-w-md" onSubmit={handleForgotPassword}>
-                        <p className="mb-4 text-center">Parolunu yenilə!</p>
+                        <p className="mb-4 text-center">Change Password!</p>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                E-poçt
+                                Email
                             </label>
                             <div className="relative">
                                 <input
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="E-poçtunuzu yazın"
+                                    placeholder="Enter your email"
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                                 <span className="absolute right-4 top-4">
@@ -66,14 +66,14 @@ const ForgotPasswordScreen = () => {
 
                         <div className="flex flex-col">
                             <ActionButton
-                                content="Parolu yenilə"
+                                content="Change password"
                                 success={forgotPasswordSuccess}
                                 loading={forgotPasswordLoading}
                                 error={forgotPasswordError}
-                                message="Emailinizi yoxlayın"
+                                message="Check your email"
                             />
                             <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                                Hesabınız var? <Link to="/auth/login" className="text-green-500">Daxil ol</Link>
+                                Do you have an account? <Link to="/auth/login" className="text-green-500">Login</Link>
                             </span>
                         </div>
                     </form>
@@ -84,9 +84,9 @@ const ForgotPasswordScreen = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                         </div>
-                        <p className="mb-4 opacity-[0.7]">Parolunuzu sıfırlamaq üçün e-poçtunuza baxın.</p>
+                        <p className="mb-4 opacity-[0.7]">Check your email to reset your password..</p>
                         <Link to="/" className="cursor-pointer bg-green-400 text-white text-center px-8 py-3 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                           Ana səhifəyə geri dön
+                           Return to homepage
                         </Link>
                     </div>
                 )}
