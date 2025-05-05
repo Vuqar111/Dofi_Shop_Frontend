@@ -69,7 +69,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setCurrentPassword(e.target.value)}
               type={showPassword ? 'text' : 'password'}
-              placeholder="Enter current password"
+              placeholder="Enter your current password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -97,7 +97,7 @@ const SecurityScreen = () => {
               id="new_password"
               onChange={(e) => setNewPassword(e.target.value)}
               type={showNewPassword ? 'text' : 'password'}
-              placeholder="Enter new password"
+              placeholder="Enter your new password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -124,7 +124,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setConfirmPassword(e.target.value)}
               type={showConfirmedPassword ? 'text' : 'password'}
-              placeholder="Confirm password"
+              placeholder="Confirm your password"
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -149,7 +149,7 @@ const SecurityScreen = () => {
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
           path={`/auth/login`}
-          message="Password changed successfully."
+          message="Your password has been changed successfully!"
         />
       </form>
     </div>

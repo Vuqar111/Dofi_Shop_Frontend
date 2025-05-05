@@ -293,7 +293,7 @@ const CheckOutScreen = () => {
                             <div className="w-[100%] col-span-3">
                                 <input
                                     type="text"
-                                    placeholder="Promokodu daxil edin"
+                                    placeholder="Enter promo code"
                                     value={discountCode}
                                     onChange={(e) => setDiscountCode(e.target.value)}
                                     className={`w-[100%] bg-white rounded-sm placeholder:text-sm border ${derrorMessage ? "border-red-500" : "border-gray-200"
@@ -312,7 +312,7 @@ const CheckOutScreen = () => {
                                     {dloading ? (
                                         <div className="flex items-center justify-center w-5 h-5 border-2 border-t-transparent border-gray-600 rounded-full animate-spin"></div>
                                     ) : (
-                                        "Yoxla"
+                                        "Check"
                                     )}
                                 </button>
                             </div>

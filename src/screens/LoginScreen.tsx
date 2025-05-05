@@ -99,7 +99,7 @@ const LoginScreen = () => {
                             loading={signinLoading}
                             error={signinError}
                             path={location.search.includes('checkout') ? '/checkout' : '/'}
-                            message="Successful login"
+                            message="You’ve successfully logged in!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
                             Don't have an account? <Link to="/auth/register" className="text-green-500">Sign up</Link>

@@ -96,7 +96,7 @@ const RegisterScreen = () => {
                             loading={registerLoading}
                             error={registerError}
                             path={`/`}
-                            message="Sign up successfully"
+                            message="Your account has been created successfully!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
                             Already have an account? <Link to="/auth/login" className="text-green-500">Login</Link>

@@ -153,12 +153,12 @@ const ProfileScreen = () => {
         </div>
 
         <ActionButton
-          content="Save"
+          content="Update"
           success={updateProfileSuccess}
           loading={updateProfileLoading}
           error={updateProfileError}
           path={`/profile`}
-          message="Congratulations!"
+          message="Profile updated!"
         />
       </form>
     </div>

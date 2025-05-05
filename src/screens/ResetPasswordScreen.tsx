@@ -85,7 +85,7 @@ const ResetPasswordScreen = () => {
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                placeholder="Confirm password"
+                                placeholder="Confirm your password"
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
