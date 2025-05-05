@@ -115,5 +115,4 @@ const RegisterScreen = () => {
         </div>
     )
 }
-
 export default RegisterScreen
