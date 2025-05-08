@@ -38,12 +38,13 @@ const ProductsScreen = () => {
     <>
       <Header />
 
+<div className='min-h-[60vh]'>
       {loading ? (
         <div className='w-[80%] mx-auto my-4'>
           <Loading />
         </div>
       ) : (
-        <div className='w-[100%] md:w-[80%] mx-auto my-6 p-4'>
+        <div className='w-[100%] md:w-[80%] mx-auto my-6 p-4 '>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             {data?.map((product: any) => (
               <div key={product._id}>
@@ -53,7 +54,7 @@ const ProductsScreen = () => {
           </div>
         </div>
       )}
-
+</div>
       <Footer />
     </>
   )

@@ -32,7 +32,7 @@ const CartScreen = () => {
   const handleCheckout = () => {
     const token = localStorage.getItem("token")
     const tokenExpired = isTokenExpired()
-
+    
     if (!token || tokenExpired) {
       navigate("/auth/login?checkout")
     } else {
@@ -44,7 +44,7 @@ const CartScreen = () => {
     <>
       <Header />
 
-      <div className='w-[100%] md:w-[80%] mx-auto p-4 md:p-8 mb-8'>
+      <div className='w-[100%] md:w-[80%] mx-auto p-4 md:p-8 mb-8 min-h-[50vh]'>
         <div className='flex items-center justify-between'>
           <h1 className='text-3xl font-bold my-6'>Your cart</h1>
           <Link to="/shop" className='opacity-[0.8] underline'>
@@ -54,10 +54,8 @@ const CartScreen = () => {
 
         {cart.length === 0 ? (
           <div className='text-center mt-8'>
-            <p className='text-lg'>Your cart is empty.</p>
-            <Link to="/shop" className='mt-4 inline-block bg-green-400 text-white px-4 py-2 rounded'>
-              Continue shopping
-            </Link>
+            <p className='text-lg text-red-400'>Your cart is empty.</p>
+           
           </div>
         ) : (
           <>
