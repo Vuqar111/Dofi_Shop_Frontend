@@ -48,7 +48,7 @@ const ProfileScreen = () => {
     let input = e.target.value.replace(/\D/g, '') // Remove non-numeric characters
     input = input.slice(0, 7) // Ensure max length is 7 digits
 
-    setPhoneDigits(input) // Store only the 7-digit number
+    setPhoneDigits(input) // Store onl 7-digit number
 }
   console.log(phonePrefix);
   console.log(phoneDigits);
