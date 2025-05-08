@@ -166,7 +166,7 @@ const CartScreen = () => {
                 <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
                 <div className="mt-6">
                   <div className="flex justify-between mb-2 text-sm">
-                    <span className="">Product quantity:</span>
+                    <span className="">Product price:</span>
                     <span>{subtotal.toFixed(2)} AZN</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm">
@@ -178,7 +178,7 @@ const CartScreen = () => {
                     <span>{discount.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between mb-2 mt-4">
-                    <span className="font-bold">Total amount:</span>
+                    <span className="font-bold">Total price:</span>
                     <span>{total.toFixed(2)}</span>
                   </div>
                 </div>

@@ -257,7 +257,7 @@ const CheckOutScreen = () => {
                             </div>
                         </div>
                         <ActionButton
-                            content="Confirm order"
+                            content="Confirm Pre-order"
                             success={createOrderSuccess}
                             loading={createOrderLoading}
                             error={createOrderError}
@@ -270,7 +270,7 @@ const CheckOutScreen = () => {
                     <h2 className="text-2xl font-bold mb-4">Order summary
                     </h2>
                     {products?.length === 0 ? (
-                        <p>Your card is empty</p>
+                        <p>Your cart is empty</p>
                     ) : (
                         products?.map((product: any) => (
                             <div key={product.id} className="flex items-center justify-between mb-4">
@@ -320,7 +320,7 @@ const CheckOutScreen = () => {
                     </div>
                     <div className="mt-6">
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Product quantity:</span>
+                            <span className="">Product price:</span>
                             <span>{subtotal.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
@@ -332,7 +332,7 @@ const CheckOutScreen = () => {
                             <span>{discountAmount.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 mt-4">
-                            <span className="font-bold">Total amount:</span>
+                            <span className="font-bold">Total price:</span>
                             <span>{total.toFixed(2)} AZN</span>
                         </div>
                     </div>

@@ -160,15 +160,6 @@ const ProductDetailsScreen = () => {
                 Loaded with learning apps and games.
               </span>
             </li>
-
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/miko_max2.svg?v=1729790395" />
-              </span>
-              <span className="text-gray-500">
-                Award-winning content on Miko Max.
-              </span>
-            </li>
           </ul>
 
 
@@ -219,7 +210,7 @@ const ProductDetailsScreen = () => {
             <div
               className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
             >
-              Buy it now
+              Pre-order now
             </div>
           </Link>
 
@@ -229,13 +220,11 @@ const ProductDetailsScreen = () => {
         <h2 className="text-2xl font-semibold text-gray-600">Detailed information</h2>
         <p className="text-sm mt-2">
           {/* Write description of the robot*/}
-          A smart and interactive kids' robot designed for ages 1-10, featuring voice commands, educational games, and fun storytelling. It helps children learn, play, and engage safely with parent monitoring and face recognition for security. 😊🤖
-          <br /> <br />
-
-          With built-in AI, it can answer questions, teach new skills, and adapt to a child’s interests. For safety, it includes parent monitoring features and face recognition to ensure secure interactions.
-          <br /> <br />
-          This smart robot makes learning exciting while providing a safe and engaging experience for kids. 😊🤖
-
+          An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖
+          <br/><br/>
+          Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.
+          <br/><br/>
+          This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖
         </p>
       </div>
       <div className="my-6">

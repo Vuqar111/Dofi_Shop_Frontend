@@ -39,7 +39,7 @@ const ProductAdvertising = () => {
         <p className="pt-4 opacity-70 text-sm sm:text-base md:text-lg">
         Our robot is a smart, engaging companion designed to support children's development through voice command interaction, video calling with 
         parental controls, and dynamic body and facial expressions. It helps kids learn both their native language and English, enjoy interactive 
-        storytelling, and build strong math and logic skills—all while having fun. 
+        storytelling, and build strong math and logic skills, all while having fun. 
         </p>
 
         {/* Features Grid */}

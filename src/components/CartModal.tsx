@@ -59,7 +59,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           </div>
           <div className="flex-grow overflow-y-auto">
             {cart.length === 0 ? (
-              <p>Your card is empty</p>
+              <p>Your cart is empty</p>
             ) : (
               cart.map((product: any) => (
                 <div key={product._id} className="flex justify-between mb-4 pb-4 border-b border-gray-200">
