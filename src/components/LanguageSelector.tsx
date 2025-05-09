@@ -10,7 +10,9 @@ const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <select onChange={handleChange} defaultValue="en">
+    <select 
+    className='cursor-pointer outline-none'
+    onChange={handleChange} defaultValue="en">
       <option value="en">ENG</option>
       <option value="az">AZE</option>
       <option value="fr">FR</option>

@@ -27,7 +27,7 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1>{t('welcome_message')}</h1>
+                    <h1>{t('hero_page_title')}</h1>
 
                 </motion.h3>
 
@@ -38,7 +38,7 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
                 >
-                    Smart, Safe & Super Fun for Every Kid!
+                    {t('hero_page_subtitle')}
                 </motion.p>
 
                 {/* Button */}
@@ -50,7 +50,7 @@ const HeroScreen = () => {
                 >
                     <Link to="/shop">
                         <span className='bg-green-400 text-white py-4 px-8 sm:py-4 sm:px-12 text-[16px] sm:text-lg rounded-full inline-block'>
-                            Pre-order now
+                            {t('hero_page_button')}
                         </span>
                     </Link>
                 </motion.div>

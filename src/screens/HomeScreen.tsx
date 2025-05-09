@@ -7,10 +7,12 @@ import Footer from '../components/Footer'
 import Safety from '../components/Safety'
 import ProductAdvertising from '../components/ProductAdvertising'
 import FAQ from "../components/FAQ"
+import { useTranslation } from 'react-i18next';
 
 
 const HomeScreen = () => {
   const [isOpened, setIsOpened] = useState(false)
+    const { t } = useTranslation();
 
   return (
     <div className='relative'>
@@ -18,7 +20,9 @@ const HomeScreen = () => {
         <Header setIsOpened={setIsOpened} />
         <HeroScreen />
         <div className='w-[100%] mx-auto'>
-          <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>Dofi in Action</h3>
+          <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>
+             {t('home_screen_products_title')}
+          </h3>
           <ProductsScreen />
         </div>
         <ProductAdvertising />

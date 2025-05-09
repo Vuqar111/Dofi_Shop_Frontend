@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const Safety = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="w-[95%] mx-auto bg-[#EDF0FB] my-8 text-center rounded-[15px] p-8 md:p-12 lg:p-16"
@@ -18,7 +21,7 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Artificial Intelligence and Security
+        {t('safety_page_title')}
       </motion.h2>
 
       {/* Description */}
@@ -29,8 +32,8 @@ const Safety = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
       >
-        We take security seriously. Every byte of your child's data is protected within our closed system. <br /> 
-        Dofi sets a new standard for family-friendly artificial intelligence.
+        {t('safety_page_description')}
+
       </motion.p>
 
       {/* Features Grid */}
@@ -38,18 +41,18 @@ const Safety = () => {
         {[
           {
             "img": "https://miko.ai/cdn/shop/files/MiniPDP_Features_Parents.svg?v=1727687496&width=150",
-            "title": "Useful for parents",
-            "description": "From secure calls to real-time progress reports"
+            "title": t('safety_page_feature_title_part1'),
+            "description": t('safety_page_feature_desciption_part1')
           },
           {
             "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Tools.svg?v=1727687496&width=150",
-            "title": "Better parenting tools",
-            "description": "Parent App that clearly presents child's educational plans and identifies developmental milestones"
+            "title": t('safety_page_feature_title_part2'),
+            "description": t('safety_page_feature_description_part2')
           },
           {
             "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Secure.svg?v=1727687496&width=150",
-            "title": "Safe, secure and private",
-            "description": "kidSAFE+ COPPA certified device with customizable security and privacy settings"
+            "title": t('safety_page_feature_title_part3'),
+            "description": t('safety_page_feature_description_part3')
           }
         ].map((item, index) => (
           <motion.div

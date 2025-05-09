@@ -1,32 +1,36 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const { t } = useTranslation();
+
 
   const faqData = [
     {
-      question: "What is Dofi?",
-      answer: "Dofi is an AI-powered talking learning robot designed for children, small in size but big in personality.",
+      question: t('faq_question_part1'),
+      answer: t('faq_answer_part1'),
     },
     {
-      question: "How does Dofi work?",
-      answer: "Dofi uses advanced artificial intelligence algorithms to interact with children, teach them new skills, and provide a fun, engaging learning experience."
+
+      question: t('faq_question_part2'),
+      answer: t('faq_answer_part2'),
     },
     {
-      question: "Is Dofi safe for kids?",
-      answer: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids."
+      question: t('faq_question_part3'),
+      answer: t('faq_answer_part3'),
     },
     {
-      question: "What age group is Dofi suitable for?",
-      answer: "Dofi is suitable for children between the ages of 3 and 8."
+      question: t('faq_question_part4'),
+      answer: t('faq_answer_part4'),
     },
     {
-      question: "How do I pre-order Dofi?",
-      answer: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
+      question: t('faq_question_part5'),
+      answer: t('faq_answer_part5'),
     }
   ];
-  
+
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index)
   }

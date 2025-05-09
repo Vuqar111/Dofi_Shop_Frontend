@@ -3,11 +3,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { addToCart } from "../redux/features/cartSlice";
 import { useDispatch } from "react-redux";
+import { useTranslation } from 'react-i18next';
 
 
 
 const ProductCard = ({ product }: { product: any }) => {
   const dispatch = useDispatch();
+    const { t } = useTranslation();
 
   const [isAdded, setIsAdded] = useState(false);
   const [selectedColor, setSelectedColor] = useState("text-green-500");
@@ -73,7 +75,10 @@ const ProductCard = ({ product }: { product: any }) => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span>Add to cart</span>
+                <span>
+                      {t('add_to_cart_text')}
+
+                </span>
               </motion.button>
             )}
           </AnimatePresence>
