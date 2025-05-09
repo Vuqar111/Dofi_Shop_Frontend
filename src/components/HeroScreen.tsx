@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const HeroScreen = () => {
+    const { t } = useTranslation();
+
     return (
         <div className='relative w-full h-[60vh] md:h-[80vh] overflow-hidden'>
             {/* Background Video */}
@@ -24,7 +27,8 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    Meet Dofi
+                    <h1>{t('welcome_message')}</h1>
+
                 </motion.h3>
 
                 {/* Subtitle */}
