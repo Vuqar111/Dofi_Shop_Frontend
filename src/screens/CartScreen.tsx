@@ -48,7 +48,7 @@ const CartScreen = () => {
         <div className='flex items-center justify-between'>
           <h1 className='text-3xl font-bold my-6'>Your cart</h1>
           <Link to="/shop" className='opacity-[0.8] underline'>
-            Continue shopping
+            Continue
           </Link>
         </div>
 
