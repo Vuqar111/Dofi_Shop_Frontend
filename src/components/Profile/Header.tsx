@@ -1,13 +1,17 @@
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 import React, { useEffect, useState } from "react";
 import { profileDetails } from '../../redux/features/profileSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '../../redux/store'
+import LanguageSelector from '../LanguageSelector';
 
 export const Header = () => {
   const dispatch: AppDispatch = useDispatch();
   const { profile } = useSelector((state: any) => state.profile);
   const cartProducts = useSelector((state: any) => state.cart?.items);
+  const location = useLocation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
+
 
   useEffect(() => {
     dispatch(profileDetails());

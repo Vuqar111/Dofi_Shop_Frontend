@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { addToCart } from "../redux/features/cartSlice";
@@ -10,6 +10,9 @@ import { useTranslation } from 'react-i18next';
 const ProductCard = ({ product }: { product: any }) => {
   const dispatch = useDispatch();
     const { t } = useTranslation();
+    const location = useLocation();
+    const currentLang = location.pathname.split('/')[1] || 'en';
+
 
   const [isAdded, setIsAdded] = useState(false);
   const [selectedColor, setSelectedColor] = useState("text-green-500");
@@ -33,7 +36,7 @@ const ProductCard = ({ product }: { product: any }) => {
 
   return (
     <div className="bg-white">
-      <Link to={`/shop/${product?.slug}`}>
+      <Link to={`${currentLang}/shop/${product?.slug}`}>
         <div className="min-h-[400px] bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img
             className="w-48 h-48 object-contain"
@@ -77,7 +80,6 @@ const ProductCard = ({ product }: { product: any }) => {
               >
                 <span>
                       {t('add_to_cart_text')}
-
                 </span>
               </motion.button>
             )}

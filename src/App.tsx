@@ -35,10 +35,7 @@ const App = () => {
     i18n.changeLanguage(currentLang);
   }, [currentLang, i18n]);
 
-  // Language change handler
-  const handleLanguageChange = (lang: string) => {
-    navigate(`/${lang}`);
-  };
+
 
   return loading ? (
     <Loader />

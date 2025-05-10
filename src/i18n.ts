@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
         translation: {
+            // Home Screen
             hero_page_title: "Welcome",
             hero_page_subtitle: 'Smart, Safe & Super Fun for Every Kid!',
             hero_page_button: "Pre-order now",
@@ -30,11 +31,14 @@ const resources = {
             faq_question_part2: "How does Dofi work?",
             faq_answer_part2: "Dofi uses advanced artificial intelligence algorithms to interact with children, teach them new skills, and provide a fun, engaging learning experience.",
             faq_question_part3: "Is Dofi safe for kids?",
-            faq_answer_part4: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids.",
-            faq_question_part5: "What age group is Dofi suitable for?",
-            faq_answer_part5: "Dofi is suitable for children between the ages of 3 and 8.",
-            faq_question_part6: "How do I pre-order Dofi?",
-            faq_answer_part6: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
+            faq_answer_part3: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids.",
+            faq_question_part4: "What age group is Dofi suitable for?",
+            faq_answer_part4: "Dofi is suitable for children between the ages of 3 and 8.",
+            faq_question_part5: "How do I pre-order Dofi?",
+            faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
+
+
+            // Product Details Screen
         },
     },
     az: {
