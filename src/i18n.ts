@@ -6,8 +6,6 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
     en: {
         translation: {
-
-            // Home Screen
             hero_page_title: "Welcome!",
             hero_page_subtitle: 'Smart, Safe & Super Fun for Every Kid!',
             hero_page_button: "Pre-order now",
@@ -35,8 +33,6 @@ const resources = {
             faq_question_part4: "What age group is Dofi suitable for?",
             faq_answer_part4: "Dofi is suitable for children between the ages of 3 and 8.",
             faq_question_part5: "How do I pre-order Dofi?",
-            faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
-            // Product Details Screen
             faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
         },
     },
