@@ -29,11 +29,11 @@ const resources = {
             faq_question_part2: "How does Dofi work?",
             faq_answer_part2: "Dofi uses advanced artificial intelligence algorithms to interact with children, teach them new skills, and provide a fun, engaging learning experience.",
             faq_question_part3: "Is Dofi safe for kids?",
-            faq_answer_part4: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids.",
-            faq_question_part5: "What age group is Dofi suitable for?",
-            faq_answer_part5: "Dofi is suitable for children between the ages of 3 and 8.",
-            faq_question_part6: "How do I pre-order Dofi?",
-            faq_answer_part6: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
+            faq_answer_part3: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids.",
+            faq_question_part4: "What age group is Dofi suitable for?",
+            faq_answer_part4: "Dofi is suitable for children between the ages of 3 and 8.",
+            faq_question_part5: "How do I pre-order Dofi?",
+            faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout."
         },
     },
     az: {
@@ -61,11 +61,11 @@ const resources = {
             faq_question_part2: "Dofi necə işləyir?",
             faq_answer_part2: "Dofi uşaqlarla ünsiyyət qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, cəlbedici öyrənmə təcrübəsi təmin etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir.",
             faq_question_part3: "Dofi uşaqlar üçün təhlükəsizdir mi?",
-            faq_answer_part4: "Bəli, Dofi təhlükəsizlik nəzərə alınmaqla hazırlanmışdır. Uşaqlar üçün təhlükəsiz və təhlükəsiz təcrübə təmin etmək üçün təkmilləşdirilmiş şifrələmə və valideyn nəzarətinə malikdir.",
-            faq_question_part5: "Dofi hansı yaş qrupu üçün uyğundur?",
-            faq_answer_part5: "Dofi 3-8 yaş arası uşaqlar üçün uyğundur.",
-            faq_question_part6: "Dofi-ni necə əvvəlcədən sifariş edə bilərəm?",
-            faq_answer_part6: "Dofi-ni birbaşa saytımızdan öncədən sifariş edə bilərsiniz. Sadəcə olaraq məhsulu səbətinizə əlavə edin və ödənişə davam edin."
+            faq_answer_part3: "Bəli, Dofi təhlükəsizlik nəzərə alınmaqla hazırlanmışdır. Uşaqlar üçün təhlükəsiz və təhlükəsiz təcrübə təmin etmək üçün təkmilləşdirilmiş şifrələmə və valideyn nəzarətinə malikdir.",
+            faq_question_pat4: "Dofi hansı yaş qrupu üçün uyğundur?",
+            faq_answer_part4: "Dofi 3-8 yaş arası uşaqlar üçün uyğundur.",
+            faq_question_part5: "Dofi-ni necə əvvəlcədən sifariş edə bilərəm?",
+            faq_answer_part5: "Dofi-ni birbaşa saytımızdan öncədən sifariş edə bilərsiniz. Sadəcə olaraq məhsulu səbətinizə əlavə edin və ödənişə davam edin."
         },
     },
     fr: {
@@ -93,11 +93,11 @@ const resources = {
         faq_question_part2: "Comment fonctionne Dofi?",
         faq_answer_part2: "Dofi utilise des algorithmes d'intelligence artificielle avancés pour interagir avec les enfants, leur enseigner de nouvelles compétences et leur offrir une expérience d'apprentissage ludique et stimulante.",
         faq_question_part3: "Dofi est-il sûr pour les enfants?",
-        faq_answer_part4: "Oui, Dofi est conçu pour la sécurité. Il dispose d'un cryptage amélioré et d'un contrôle parental pour garantir une expérience sûre et sécurisée aux enfants.",
-        faq_question_part5: "À quelle tranche d'âge Dofi est-il adapté?",
-        faq_answer_part5: "Dofi est adapté aux enfants de 3 à 8 ans.",
-        faq_question_part6: "Comment précommander Dofi?",
-        faq_answer_part6: "Vous pouvez précommander Dofi directement sur notre site web. Ajoutez simplement le produit à votre panier et passez à la caisse."
+        faq_answer_part3: "Oui, Dofi est conçu pour la sécurité. Il dispose d'un cryptage amélioré et d'un contrôle parental pour garantir une expérience sûre et sécurisée aux enfants.",
+        faq_question_part4: "À quelle tranche d'âge Dofi est-il adapté?",
+        faq_answer_part4: "Dofi est adapté aux enfants de 3 à 8 ans.",
+        faq_question_part5: "Comment précommander Dofi?",
+        faq_answer_part5: "Vous pouvez précommander Dofi directement sur notre site web. Ajoutez simplement le produit à votre panier et passez à la caisse."
     },
     tr: {
         translation: {
@@ -124,11 +124,11 @@ const resources = {
             faq_question_part2: "Dofi nasıl çalışır?",
             faq_answer_part2: "Dofi, çocuklarla etkileşim kurmak, onlara yeni beceriler öğretmek ve eğlenceli, ilgi çekici bir öğrenme deneyimi sağlamak için gelişmiş yapay zeka algoritmaları kullanır.",
             faq_question_part3: "Dofi çocuklar için güvenli midir?",
-            faq_answer_part4: "Evet, Dofi güvenlik düşünülerek tasarlanmıştır. Çocuklar için güvenli ve emniyetli bir deneyim sağlamak için gelişmiş şifreleme ve ebeveyn kontrollerine sahiptir.",
-            faq_question_part5: "Dofi hangi yaş grubu için uygundur?",
-            faq_answer_part5: "Dofi 3 ila 8 yaş arasındaki çocuklar için uygundur.",
-            faq_question_part6: "Dofi'yi nasıl ön sipariş edebilirim?",
-            faq_answer_part6: "Dofi'yi doğrudan web sitemizden ön sipariş edebilirsiniz. Ürünü sepetinize eklemeniz ve ödeme işlemine geçmeniz yeterlidir."
+            faq_answer_part3: "Evet, Dofi güvenlik düşünülerek tasarlanmıştır. Çocuklar için güvenli ve emniyetli bir deneyim sağlamak için gelişmiş şifreleme ve ebeveyn kontrollerine sahiptir.",
+            faq_question_part4: "Dofi hangi yaş grubu için uygundur?",
+            faq_answer_part4: "Dofi 3 ila 8 yaş arasındaki çocuklar için uygundur.",
+            faq_question_part5: "Dofi'yi nasıl ön sipariş edebilirim?",
+            faq_answer_part5: "Dofi'yi doğrudan web sitemizden ön sipariş edebilirsiniz. Ürünü sepetinize eklemeniz ve ödeme işlemine geçmeniz yeterlidir."
         },
     },
 };
