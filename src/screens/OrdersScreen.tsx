@@ -5,9 +5,12 @@ import { orderList } from '../redux/features/orderSlice'
 import { AppDispatch } from '../redux/store'
 import Loading from '../components/Loader'
 import BreadCrumb from "../components/BreadCrumb";
+import { useTranslation } from 'react-i18next';
 
 const OrdersScreen = () => {
+
   const dispatch: AppDispatch = useDispatch()
+  const { t } = useTranslation();
   const { loading, error, orders: data } = useSelector((state: any) => state.orders)
 
 

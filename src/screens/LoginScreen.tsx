@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
 import { useState } from "react";
-import swal from 'sweetalert';
 
 const LoginScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { signinSuccess, signinError, signinLoading } = useSelector((state: any) => state.auth);
     const location = useLocation()
+    const currentLang = location.pathname.split('/')[1] || 'en';
 
 
     const [email, setEmail] = useState('');
@@ -102,10 +102,10 @@ const LoginScreen = () => {
                             message="You’ve successfully logged in!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Don't have an account? <Link to="/auth/register" className="text-green-500">Sign up</Link>
+                            Don't have an account? <Link to={`/${currentLang}/auth/register`} className="text-green-500">Sign up</Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to="/auth/forgot-password" className="text-red-500">Forgot your password?</Link>
+                            <Link to={`/${currentLang}/auth/forgot-password`} className="text-red-500">Forgot your password?</Link>
                         </span>
                     </div>
                 </form>

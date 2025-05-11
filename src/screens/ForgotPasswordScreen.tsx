@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom'
 import { forgotPassword } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
@@ -9,9 +9,12 @@ import swal from 'sweetalert';
 const ForgotPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { forgotPasswordSuccess, forgotPasswordError, forgotPasswordLoading } = useSelector((state: any) => state.auth);
+    const location = useLocation();
 
     const [email, setEmail] = useState('');
     const [emailSent, setEmailSent] = useState(false);
+    const currentLang = location.pathname.split('/')[1] || 'en';
+
 
     const handleForgotPassword = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -73,7 +76,7 @@ const ForgotPasswordScreen = () => {
                                 message="Check your email"
                             />
                             <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                                Do you have an account? <Link to="/auth/login" className="text-green-500">Login</Link>
+                                Do you have an account? <Link to={`/${currentLang}/auth/login`} className="text-green-500">Login</Link>
                             </span>
                         </div>
                     </form>

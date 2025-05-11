@@ -5,11 +5,13 @@ import swal from 'sweetalert'
 import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
 import BreadCrumb from "../components/BreadCrumb";
+import { useTranslation } from 'react-i18next';
 
 
 const SecurityScreen = () => {
 
   const dispatch: AppDispatch = useDispatch()
+  const { t } = useTranslation();
   const { updateProfilePasswordSuccess, updateProfilePasswordLoading, updateProfilePasswordError } = useSelector((state: any) => state.profile)
 
   const [current_password, setCurrentPassword] = useState<string | undefined>('')
@@ -54,14 +56,14 @@ const SecurityScreen = () => {
   return (
     <div className='w-[100%] '>
       <BreadCrumb paths={breadcrumbPaths} />
-      <h2 className='pb-4 text-2xl'>Security</h2>
+      <h2 className='pb-4 text-2xl'>{t('profile_security_page_title')}</h2>
       <form className='' onSubmit={handleUpdateProfilePassword}>
         <div className='grid grid-cols-1 gap-4'>
 
 
 
           <label className="block font-medium text-black opacity-[0.6]">
-            Current password
+            {t('profile_security_form_label1')}
           </label>
           <div className="mb-4 relative">
             <input
@@ -69,7 +71,8 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setCurrentPassword(e.target.value)}
               type={showPassword ? 'text' : 'password'}
-              placeholder="Enter your current password"
+              placeholder={t('profile_security_form_placeholder1')}
+
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -89,7 +92,8 @@ const SecurityScreen = () => {
           </div>
 
           <label className="block font-medium text-black opacity-[0.6]">
-            New password
+                        {t('profile_security_form_label2')}
+
           </label>
           <div className="mb-4 relative">
             <input
@@ -97,7 +101,7 @@ const SecurityScreen = () => {
               id="new_password"
               onChange={(e) => setNewPassword(e.target.value)}
               type={showNewPassword ? 'text' : 'password'}
-              placeholder="Enter your new password"
+              placeholder={t('profile_security_form_placeholder2')}
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -116,7 +120,7 @@ const SecurityScreen = () => {
             </div>
           </div>
           <label className="block font-medium text-black opacity-[0.6]">
-            Confirm password
+                        {t('profile_security_form_label3')}
           </label>
           <div className="mb-4 relative">
             <input
@@ -124,7 +128,7 @@ const SecurityScreen = () => {
               id="current_password"
               onChange={(e) => setConfirmPassword(e.target.value)}
               type={showConfirmedPassword ? 'text' : 'password'}
-              placeholder="Confirm your password"
+              placeholder={t('profile_security_form_placeholder3')}
             />
             <div
               className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -144,7 +148,7 @@ const SecurityScreen = () => {
           </div>
         </div>
         <ActionButton
-          content="Change password"
+          content={t('profile_security_form_button')}
           success={updateProfilePasswordSuccess}
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}

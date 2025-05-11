@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { registerUser } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
@@ -9,12 +9,16 @@ import swal from 'sweetalert';
 const RegisterScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { registerSuccess, registerError, registerLoading } = useSelector((state: any) => state.auth);
+    const location = useLocation()
+    const currentLang = location.pathname.split('/')[1] || 'en';
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [customer_type, setCustomerType] = useState('Individual');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+
+
 
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -99,7 +103,7 @@ const RegisterScreen = () => {
                             message="Your account has been created successfully!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Already have an account? <Link to="/auth/login" className="text-green-500">Login</Link>
+                            Already have an account? <Link to={`/${currentLang}/auth/register`} className="text-green-500">Login</Link>
                         </span>
                     </div>
                 </form>
