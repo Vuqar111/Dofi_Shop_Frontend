@@ -16,9 +16,9 @@ const OrdersScreen = () => {
 
 
   const breadcrumbPaths = [
-    { name: 'Homepage', href: '/' },
-    { name: 'Profile', href: '/profile' },
-    { name: 'Orders', href: '/profile/orders' },
+    { name: t('breadcrumb_home'), href: '/' },
+    { name: t('breadcrumb_profile'), href: '/profile' },
+    { name: t('breadcrumb_orders'), href: '/profile/orders' },
 ];
 
 
@@ -42,7 +42,9 @@ const OrdersScreen = () => {
     <>
     <BreadCrumb paths={breadcrumbPaths}/>
       <div className=''>
-      <h2 className='pb-4 text-xl md:text-2xl'>Your orders</h2>
+      <h2 className='pb-4 text-xl md:text-2xl'>
+        {t('profile_orders_page_title')}
+      </h2>
         <div className="grid grid-cols-1 ">
           {data?.map((order: any) => (
             <div key={order._id}>

@@ -1,6 +1,11 @@
 import { formatDate } from '../../utils/convertDate';
+import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 
 const OrderDetailsCard = ({ order }: { order: any }) => {
+    const location = useLocation();
+    const { t } = useTranslation();
+    const currentLang = location.pathname.split('/')[1] || 'en';
 
 
     const allStatuses = ["Created", "Pending", "Shipped", "Delivered"];
@@ -66,10 +71,10 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
         <div className="shadow mb-4">
             <header className="flex md:flex-row flex-col item-center justify-between p-4">
                 <div className='px-1 py-1'>
-                    <p>Order code: <span>{order?.orderNumber}</span></p>
+                    <p> {t('profile_order_card_part1')}: {" "} <span>{order?.orderNumber}</span></p>
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
-                    <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}</span>
+                    <span className="px-1 py-1 rounded:sm text:xs"> {t('profile_order_card_part2')}: {" "} {formatDate(order?.createdAt)}</span>
                     <span className={`text-white px-1 py-1 rounded:sm text:xs ${order?.payment?.payment_status === "Canceled" ? "bg-red-400" : "bg-green-400"}`}>
                         {order?.payment?.payment_status}
                     </span>
@@ -121,52 +126,52 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                 <div>
-                    <h2 className='p-4'>Delivery:</h2>
+                    <h2 className='p-4'> {t('profile_orders_details_part1')}: {" "}</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>Country: <span className='opacity-[0.7]'>{order?.delivery?.country}</span></p>
+                            <p>{t('profile_orders_details_part2')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.country}</span></p>
                         </label>
                         <label>
-                            <p>City: <span className='opacity-[0.7]'>{order?.delivery?.city}</span></p>
+                            <p>{t('profile_orders_details_part3')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.city}</span></p>
                         </label>
                         <label>
-                            <p>Address: <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
+                            <p>{t('profile_orders_details_part4')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <h2 className='p-4'>Contact:</h2>
+                    <h2 className='p-4'>{t('profile_orders_details_part5')}: {" "}</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>Name: <span className='opacity-[0.7]'>{order?.delivery?.first_name}</span></p>
+                            <p>{t('profile_orders_details_part6')}: {" "}<span className='opacity-[0.7]'>{order?.delivery?.first_name} {" "} {order?.delivery?.last_name}</span></p>
+                        </label>
+                        
+                        <label>
+                            <p>{t('profile_orders_details_part7')}: {" "}<span className='opacity-[0.7]'>{order?.delivery?.email}</span></p>
                         </label>
                         <label>
-                            <p>Surname: <span className='opacity-[0.7]'>{order?.delivery?.last_name}</span></p>
-                        </label>
-                        <label>
-                            <p>Email: <span className='opacity-[0.7]'>{order?.delivery?.email}</span></p>
-                        </label>
-                        <label>
-                            <p>Telephone: <span className='opacity-[0.7]'>{order?.delivery?.phone}</span></p>
+                            <p>{t('profile_orders_details_part8')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.phone}</span></p>
                         </label>
                     </div>
                 </div>
 
                 <div>
-                    <h2 className='p-4'>Payment:</h2>
+                    <h2 className='p-4'>{t('profile_orders_details_part9')}: {" "}</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
-                            <p>Payment status: <span className='opacity-[0.7]'>{order?.payment?.payment_status}</span></p>
+                            <p>{t('profile_orders_details_part10')}: {" "} <span className='opacity-[0.7]'>{order?.payment?.payment_status}</span></p>
                         </label>
                         <label>
-                            <p>Payment type: <span className='opacity-[0.7]'>{order?.payment?.payment_type}</span></p>
+                            <p>{t('profile_orders_details_part11')}: {" "} <span className='opacity-[0.7]'>{order?.payment?.payment_type}</span></p>
                         </label>
                     </div>
                 </div>
             </div>
 
-            <h2 className='p-4 mt-6'>Ordered products:</h2>
+            <h2 className='p-4 mt-6'>
+                {t('profile_orders_details_part12')}: {" "}
+            </h2>
 
             <div>
                 <div className="w-full flex flex-col gap-2 p-4">
@@ -180,14 +185,14 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                                 </div>
                             </div>
                             <div>
-                                    <p>{product.price} AZN</p>
-                                </div>
-                                <div>
-                                    <p>x {product.qty}</p>
-                                </div>
-                                <div>
-                                    <p>{product.totalPrice} AZN</p>
-                                </div>
+                                <p>{product.price} AZN</p>
+                            </div>
+                            <div>
+                                <p>x {product.qty}</p>
+                            </div>
+                            <div>
+                                <p>{product.totalPrice} AZN</p>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -196,12 +201,18 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
             <div className='border border-b border-gray-100'></div>
 
             <footer className='flex md:flex-col flex-row justify-end items-end flex-end p-4'>
-                <h2 className='pb-1'>Quantity: <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
+                <h2 className='pb-1'>
+                    {t('profile_orders_details_part13')}: {" "}
+                     <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
                 {order?.discount && (
-                <h2 className='pb-1'>Discount code: <span className='font-semibold'>{order?.discount}</span></h2>
+                    <h2 className='pb-1'>
+                        {t('profile_orders_details_part14')}: {" "}
+                         <span className='font-semibold'>{order?.discount}</span></h2>
                 )}
-                <h2 className='pb-1'>Delivery: <span className='font-semibold'>0 AZN</span></h2>
-                <h2>Total amount: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
+                <h2 className='pb-1'>
+                    {t('profile_orders_details_part16')}: {" "}
+                     <span className='font-semibold'>0 AZN</span></h2>
+                <h2>{t('profile_orders_details_part15')}: {" "} <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
             </footer>
         </div>
     )

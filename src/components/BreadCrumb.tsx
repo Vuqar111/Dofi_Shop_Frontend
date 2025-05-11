@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
  const Breadcrumb = ({ paths }: {paths: any}) => {
+      const { t } = useTranslation();
     return (
         <nav aria-label="breadcrumb" className='mb-4'>
             <ol className="flex space-x-2 text-sm text-gray-500">

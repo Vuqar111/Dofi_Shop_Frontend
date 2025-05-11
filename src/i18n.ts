@@ -49,7 +49,33 @@ const resources = {
 
             // Profile Orders
             profile_orders_page_title: "Your orders",
-            profile_orders_table_part1: "",
+            profile_order_card_part1: "Order code",
+            profile_order_card_part2: "Order date",
+            profile_order_card_part3: "Detailed information",
+            profile_order_card_part4: "Total amount",
+
+
+
+            // Profile Order Details Card
+            profile_orders_details_part1: "Delivery",
+            profile_orders_details_part2: "Country",
+            profile_orders_details_part3: "City",
+            profile_orders_details_part4: "Address",
+            profile_orders_details_part5: "Contact",
+            profile_orders_details_part6: "Full name",
+            profile_orders_details_part7: "Email",
+            profile_orders_details_part8: "Phone",
+            profile_orders_details_part9: "Payment",
+            profile_orders_details_part10: "P.status",
+            profile_orders_details_part11: "P.type",
+            profile_orders_details_part12: "Ordered products",
+            profile_orders_details_part13: "Quantity",
+            profile_orders_details_part14: "Delivery",
+            profile_orders_details_part15: "Total amount",
+            profile_orders_details_part16: "Disocunt",
+
+
+
 
             // Profile Security
             profile_security_page_title: "Security",
@@ -67,8 +93,19 @@ const resources = {
             sidebar_title_profile: "Profile",
             sidebar_title_orders: "Orders",
             sidebar_title_security: "Security",
-            sidebar_title_logout: "Log out"
-        
+            sidebar_title_logout: "Log out",
+
+
+
+
+
+            // Breadcrumb
+            breadcrumb_home: "Home",
+            breadcrumb_profile: "Profile",
+            breadcrumb_orders: "Orders",
+            breadcrumb_order: "Order",
+            breadcrumb_security: "Security"
+
         },
     },
     az: {
@@ -117,7 +154,34 @@ const resources = {
 
 
 
-              // Profile Security
+            // Profile Orders
+            profile_orders_page_title: "Sənin sifarişlərin",
+            profile_order_card_part1: "Sifariş kodu",
+            profile_order_card_part2: "Sifariş tarixi",
+            profile_order_card_part3: "Sifariş detalı",
+            profile_order_card_part4: "Ümumi miqdar",
+
+
+            // Profile Order Details Card
+            profile_orders_details_part1: "Çatdırılma",
+            profile_orders_details_part2: "Ölkə",
+            profile_orders_details_part3: "Şəhər",
+            profile_orders_details_part4: "Ünvan",
+            profile_orders_details_part5: "Əlaqə",
+            profile_orders_details_part6: "Ad soyad",
+            profile_orders_details_part7: "E-poçt",
+            profile_orders_details_part8: "Telefon nömrəsi",
+            profile_orders_details_part9: "Ödəniş",
+            profile_orders_details_part10: "Ödəniş statusu",
+            profile_orders_details_part11: "Ödəniş növü",
+            profile_orders_details_part12: "Sifariş olunan məhsullar",
+            profile_orders_details_part13: "Miqdar",
+            profile_orders_details_part14: "Çatdırılma",
+            profile_orders_details_part15: "Ümumi miqdar",
+            profile_orders_details_part16: "Endirim",
+
+
+            // Profile Security
             profile_security_page_title: "Təhlükəsizlik",
             profile_security_form_label1: "Mövcud şifrə",
             profile_security_form_placeholder1: "Mövcud şifrəni yazın",
@@ -128,7 +192,7 @@ const resources = {
             profile_security_form_button: "Parolu dəyişin",
 
 
-            
+
             // Sidebar
             sidebar_title_profile: "Profil",
             sidebar_title_orders: "Sifarişlər",
@@ -168,7 +232,7 @@ const resources = {
             faq_question_part5: "Comment précommander Dofi?",
             faq_answer_part5: "Vous pouvez précommander Dofi directement sur notre site web. Ajoutez simplement le produit à votre panier et passez à la caisse.",
 
-              // Profile
+            // Profile
             profile_page_title: "Personal informations",
             profile_page_form_label1: "Name and Surname",
             profile_page_form_label2: "Email",
@@ -181,7 +245,33 @@ const resources = {
 
 
 
-              // Profile Security
+            // Profile Orders
+            profile_orders_page_title: "Your orders",
+            profile_order_card_part1: "Order code",
+            profile_order_card_part2: "Order date",
+            profile_order_card_part3: "Detailed information",
+            profile_order_card_part4: "Total amount",
+
+
+            // Profile Order details card
+            profile_orders_details_part1: "Delivery",
+            profile_orders_details_part2: "Country",
+            profile_orders_details_part3: "City",
+            profile_orders_details_part4: "Address",
+            profile_orders_details_part5: "Contact",
+            profile_orders_details_part6: "Full name",
+            profile_orders_details_part7: "Email",
+            profile_orders_details_part8: "Phone",
+            profile_orders_details_part9: "Payment",
+            profile_orders_details_part10: "P.status",
+            profile_orders_details_part11: "P.type",
+            profile_orders_details_part12: "Ordered products",
+            profile_orders_details_part13: "Quantity",
+            profile_orders_details_part14: "Delivery",
+            profile_orders_details_part15: "Total amount",
+
+
+            // Profile Security
             profile_security_page_title: "Security",
             profile_security_form_label1: "Current password",
             profile_security_form_placeholder1: "Enter your current password",
@@ -225,7 +315,7 @@ const resources = {
             faq_question_part5: "Dofi'yi nasıl ön sipariş edebilirim?",
             faq_answer_part5: "Dofi'yi doğrudan web sitemizden ön sipariş edebilirsiniz. Ürünü sepetinize eklemeniz ve ödeme işlemine geçmeniz yeterlidir.",
 
-              // Profile
+            // Profile
             profile_page_title: "Personal informations",
             profile_page_form_label1: "Name and Surname",
             profile_page_form_label2: "Email",
@@ -238,7 +328,33 @@ const resources = {
 
 
 
-              // Profile Security
+
+            // Profile Orders
+            profile_orders_page_title: "Your orders",
+            profile_order_card_part1: "Order code",
+            profile_order_card_part2: "Order date",
+            profile_order_card_part3: "Detailed information",
+            profile_order_card_part4: "Total amount",
+
+
+            // Profile Order Details Card
+            profile_orders_details_part1: "Delivery",
+            profile_orders_details_part2: "Country",
+            profile_orders_details_part3: "City",
+            profile_orders_details_part4: "Address",
+            profile_orders_details_part5: "Contact",
+            profile_orders_details_part6: "Full name",
+            profile_orders_details_part7: "Email",
+            profile_orders_details_part8: "Phone",
+            profile_orders_details_part9: "Payment",
+            profile_orders_details_part10: "P.status",
+            profile_orders_details_part11: "P.type",
+            profile_orders_details_part12: "Ordered products",
+            profile_orders_details_part13: "Quantity",
+            profile_orders_details_part14: "Delivery",
+            profile_orders_details_part15: "Total amount",
+
+            // Profile Security
             profile_security_page_title: "Security",
             profile_security_form_label1: "Current password",
             profile_security_form_placeholder1: "Enter your current password",

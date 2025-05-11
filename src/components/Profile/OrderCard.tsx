@@ -1,16 +1,22 @@
-import {Link} from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import { formatDate } from '../../utils/convertDate';
+import { useTranslation } from 'react-i18next';
 
-const OrderCard = ({order}: {order:any}) => {
+const OrderCard = ({ order }: { order: any }) => {
+    const location = useLocation();
+  const { t } = useTranslation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
+
   return (
     <div className="shadow mb-4">
       <header className="flex md:flex-row flex-col item-center justify-between p-4">
         <div>
-          <p>Order code: <span>{order?.orderNumber}</span></p>
+          <p>        {t('profile_order_card_part1')}: {" "}
+            <span>{order?.orderNumber}</span></p>
         </div>
         <div className="flex md:flex-row flex-col gap-2">
-        <span className="px-1 py-1 rounded:sm text:xs">Order date: {formatDate(order?.createdAt)}
-        </span>
+          <span className="px-1 py-1 rounded:sm text:xs"> {t('profile_order_card_part2')}: {" "} {formatDate(order?.createdAt)}
+          </span>
           <span className="bg-green-400 text-white px-1 py-1 rounded:sm text:xs">{order?.payment?.payment_status}</span>
           <span className="bg-orange-400 text-white px-1 py-1 rounded:sm text:sm">{order?.status}</span>
         </div>
@@ -31,9 +37,9 @@ const OrderCard = ({order}: {order:any}) => {
       </div>
       <footer className='p-4 flex md:flex-row flex-col md:items-center justify-between'>
         <h2 className='text-green-500'>
-          <Link to={`/profile/orders/${order?._id}`}>Detailed Information</Link>
+          <Link to={`/${currentLang}/profile/orders/${order?._id}`}>{t('profile_order_card_part3')}</Link>
         </h2>
-        <h2 className='md:pt-0 pt-4'>Total amount: <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
+        <h2 className='md:pt-0 pt-4'>{t('profile_order_card_part4')}: {" "} <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
       </footer>
     </div>
   )
