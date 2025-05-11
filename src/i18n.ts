@@ -35,7 +35,6 @@ const resources = {
             faq_question_part5: "How do I pre-order Dofi?",
             faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
 
-
             // Profile
             profile_page_title: "Personal informations",
             profile_page_form_label1: "Name and Surname",
@@ -52,9 +51,7 @@ const resources = {
             profile_order_card_part1: "Order code",
             profile_order_card_part2: "Order date",
             profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
-
+            profile_order_card_part4: "Total price",
 
             // Profile Order Details Card
             profile_orders_details_part1: "Delivery",
@@ -66,16 +63,13 @@ const resources = {
             profile_orders_details_part7: "Email",
             profile_orders_details_part8: "Phone",
             profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
+            profile_orders_details_part10: "Payment status",
+            profile_orders_details_part11: "Payment type",
             profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
+            profile_orders_details_part13: "Price",
             profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
-            profile_orders_details_part16: "Disocunt",
-
-
-
+            profile_orders_details_part15: "Total price",
+            profile_orders_details_part16: "Discount",
 
             // Profile Security
             profile_security_page_title: "Security",
@@ -87,17 +81,11 @@ const resources = {
             profile_security_form_placeholder3: "Confirm your password",
             profile_security_form_button: "Change password",
 
-
-
             // Sidebar
             sidebar_title_profile: "Profile",
             sidebar_title_orders: "Orders",
             sidebar_title_security: "Security",
             sidebar_title_logout: "Log out",
-
-
-
-
 
             // Breadcrumb
             breadcrumb_home: "Home",
@@ -105,7 +93,6 @@ const resources = {
             breadcrumb_orders: "Orders",
             breadcrumb_order: "Order",
             breadcrumb_security: "Security"
-
         },
     },
     az: {
@@ -134,12 +121,10 @@ const resources = {
             faq_answer_part2: "Dofi uşaqlarla ünsiyyət qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, cəlbedici öyrənmə təcrübəsi təmin etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir.",
             faq_question_part3: "Dofi uşaqlar üçün təhlükəsizdir mi?",
             faq_answer_part3: "Bəli, Dofi təhlükəsizlik nəzərə alınmaqla hazırlanmışdır. Uşaqlar üçün təhlükəsiz və təhlükəsiz təcrübə təmin etmək üçün təkmilləşdirilmiş şifrələmə və valideyn nəzarətinə malikdir.",
-            faq_question_pat4: "Dofi hansı yaş qrupu üçün uyğundur?",
+            faq_question_part4: "Dofi hansı yaş qrupu üçün uyğundur?",
             faq_answer_part4: "Dofi 3-8 yaş arası uşaqlar üçün uyğundur.",
             faq_question_part5: "Dofi-ni necə əvvəlcədən sifariş edə bilərəm?",
             faq_answer_part5: "Dofi-ni birbaşa saytımızdan öncədən sifariş edə bilərsiniz. Sadəcə olaraq məhsulu səbətinizə əlavə edin və ödənişə davam edin.",
-
-
 
             // Profile
             profile_page_title: "Şəxsi məlumatlar",
@@ -152,15 +137,12 @@ const resources = {
             profile_page_rol_val2: "Valideyn",
             profile_page_rol_val3: "VIP",
 
-
-
             // Profile Orders
             profile_orders_page_title: "Sənin sifarişlərin",
             profile_order_card_part1: "Sifariş kodu",
             profile_order_card_part2: "Sifariş tarixi",
-            profile_order_card_part3: "Sifariş detalı",
-            profile_order_card_part4: "Ümumi miqdar",
-
+            profile_order_card_part3: "Sifariş detalları",
+            profile_order_card_part4: "Ümumi qiymət",
 
             // Profile Order Details Card
             profile_orders_details_part1: "Çatdırılma",
@@ -168,38 +150,40 @@ const resources = {
             profile_orders_details_part3: "Şəhər",
             profile_orders_details_part4: "Ünvan",
             profile_orders_details_part5: "Əlaqə",
-            profile_orders_details_part6: "Ad soyad",
+            profile_orders_details_part6: "Ad və soyad",
             profile_orders_details_part7: "E-poçt",
             profile_orders_details_part8: "Telefon nömrəsi",
             profile_orders_details_part9: "Ödəniş",
             profile_orders_details_part10: "Ödəniş statusu",
             profile_orders_details_part11: "Ödəniş növü",
             profile_orders_details_part12: "Sifariş olunan məhsullar",
-            profile_orders_details_part13: "Miqdar",
+            profile_orders_details_part13: "Qiymət",
             profile_orders_details_part14: "Çatdırılma",
-            profile_orders_details_part15: "Ümumi miqdar",
+            profile_orders_details_part15: "Ümumi qiymət",
             profile_orders_details_part16: "Endirim",
-
 
             // Profile Security
             profile_security_page_title: "Təhlükəsizlik",
             profile_security_form_label1: "Mövcud şifrə",
-            profile_security_form_placeholder1: "Mövcud şifrəni yazın",
+            profile_security_form_placeholder1: "Mövcud şifrənizi yazın",
             profile_security_form_label2: "Yeni şifrə",
-            profile_security_form_placeholder2: "Yeni şifrəni yazın",
-            profile_security_form_label3: "Parolu təsdiqlə",
+            profile_security_form_placeholder2: "Yeni şifrənizi yazın",
+            profile_security_form_label3: "Parolunuzu təsdiqləyin",
             profile_security_form_placeholder3: "Parolunuzu təsdiq edin",
-            profile_security_form_button: "Parolu dəyişin",
-
-
+            profile_security_form_button: "Parolunuzu dəyişin",
 
             // Sidebar
             sidebar_title_profile: "Profil",
             sidebar_title_orders: "Sifarişlər",
             sidebar_title_security: "Təhlükəsizlik",
-            sidebar_title_logout: "Çıxış et"
+            sidebar_title_logout: "Çıxış et",
 
-
+            // Breadcrumb
+            breadcrumb_home: "Ana Səhifə",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Sifarişlər",
+            breadcrumb_order: "Sifariş verin",
+            breadcrumb_security: "Təhlükəsizlik"
         },
     },
     fr: {
@@ -233,56 +217,63 @@ const resources = {
             faq_answer_part5: "Vous pouvez précommander Dofi directement sur notre site web. Ajoutez simplement le produit à votre panier et passez à la caisse.",
 
             // Profile
-            profile_page_title: "Personal informations",
-            profile_page_form_label1: "Name and Surname",
-            profile_page_form_label2: "Email",
-            profile_page_form_label3: "Contact number",
-            profile_page_form_label4: "Role",
-            profile_page_form_button: "Update",
-            profile_page_rol_val1: "Şirkət",
-            profile_page_rol_val2: "Valideyn",
+            profile_page_title: "Informations personnelles",
+            profile_page_form_label1: "Nom et prénom",
+            profile_page_form_label2: "E-mail",
+            profile_page_form_label3: "Numéro de téléphone",
+            profile_page_form_label4: "Rôle",
+            profile_page_form_button: "Mise à jour",
+            profile_page_rol_val1: "Entreprise",
+            profile_page_rol_val2: "Maison mère",
             profile_page_rol_val3: "VIP",
 
-
-
             // Profile Orders
-            profile_orders_page_title: "Your orders",
-            profile_order_card_part1: "Order code",
-            profile_order_card_part2: "Order date",
-            profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
+            profile_orders_page_title: "Vos commandes",
+            profile_order_card_part1: "Code de commande",
+            profile_order_card_part2: "Date de commande",
+            profile_order_card_part3: "Informations détaillées",
+            profile_order_card_part4: "Prix total",
 
             // Profile Order details card
-            profile_orders_details_part1: "Delivery",
-            profile_orders_details_part2: "Country",
-            profile_orders_details_part3: "City",
-            profile_orders_details_part4: "Address",
+            profile_orders_details_part1: "Livraison",
+            profile_orders_details_part2: "Pays",
+            profile_orders_details_part3: "Ville",
+            profile_orders_details_part4: "Adresse",
             profile_orders_details_part5: "Contact",
-            profile_orders_details_part6: "Full name",
-            profile_orders_details_part7: "Email",
-            profile_orders_details_part8: "Phone",
-            profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
-            profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
-            profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
-
+            profile_orders_details_part6: "Nom complet",
+            profile_orders_details_part7: "E-mail",
+            profile_orders_details_part8: "Téléphone",
+            profile_orders_details_part9: "Paiement",
+            profile_orders_details_part10: "Statut du paiement",
+            profile_orders_details_part11: "Type de paiement",
+            profile_orders_details_part12: "Produits commandés",
+            profile_orders_details_part13: "Prix",
+            profile_orders_details_part14: "Livraison",
+            profile_orders_details_part15: "Prix total",
 
             // Profile Security
-            profile_security_page_title: "Security",
-            profile_security_form_label1: "Current password",
-            profile_security_form_placeholder1: "Enter your current password",
-            profile_security_form_label2: "New password",
-            profile_security_form_placeholder2: "Enter your new password",
-            profile_security_form_label3: "Confirm password",
-            profile_security_form_placeholder3: "Confirm your password",
-            profile_security_form_button: "Change password",
+            profile_security_page_title: "Sécurité",
+            profile_security_form_label1: "Mot de passe actuel",
+            profile_security_form_placeholder1: "Saisissez votre mot de passe actuel",
+            profile_security_form_label2: "Nouveau mot de passe",
+            profile_security_form_placeholder2: "Saisissez votre nouveau mot de passe",
+            profile_security_form_label3: "Confirmer le mot de passe",
+            profile_security_form_placeholder3: "Confirmer votre mot de passe",
+            profile_security_form_button: "Modifier le mot de passe",
 
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Ordres",
+            sidebar_title_security: "Sécurité",
+            sidebar_title_logout: "Se déconnecter",
+
+            // Breadcrumb
+            breadcrumb_home: "Maison",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Ordres",
+            breadcrumb_order: "Commande",
+            breadcrumb_security: "Sécurité"
         },
-
     },
     tr: {
         translation: {
@@ -316,54 +307,62 @@ const resources = {
             faq_answer_part5: "Dofi'yi doğrudan web sitemizden ön sipariş edebilirsiniz. Ürünü sepetinize eklemeniz ve ödeme işlemine geçmeniz yeterlidir.",
 
             // Profile
-            profile_page_title: "Personal informations",
-            profile_page_form_label1: "Name and Surname",
-            profile_page_form_label2: "Email",
-            profile_page_form_label3: "Contact number",
-            profile_page_form_label4: "Role",
-            profile_page_form_button: "Update",
-            profile_page_rol_val1: "Şirkət",
-            profile_page_rol_val2: "Valideyn",
+            profile_page_title: "Kişisel bilgiler",
+            profile_page_form_label1: "Adı ve Soyadı",
+            profile_page_form_label2: "E-posta",
+            profile_page_form_label3: "İletişim numarası",
+            profile_page_form_label4: "Rol",
+            profile_page_form_button: "Güncelleme",
+            profile_page_rol_val1: "Şirket",
+            profile_page_rol_val2: "Ebeveyn",
             profile_page_rol_val3: "VIP",
 
-
-
-
             // Profile Orders
-            profile_orders_page_title: "Your orders",
-            profile_order_card_part1: "Order code",
-            profile_order_card_part2: "Order date",
-            profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
+            profile_orders_page_title: "Siparişleriniz",
+            profile_order_card_part1: "Sipariş kodu",
+            profile_order_card_part2: "Sipariş tarihi",
+            profile_order_card_part3: "Ayrıntılı bilgi",
+            profile_order_card_part4: "Toplam fiyat",
 
             // Profile Order Details Card
-            profile_orders_details_part1: "Delivery",
-            profile_orders_details_part2: "Country",
-            profile_orders_details_part3: "City",
-            profile_orders_details_part4: "Address",
-            profile_orders_details_part5: "Contact",
-            profile_orders_details_part6: "Full name",
-            profile_orders_details_part7: "Email",
-            profile_orders_details_part8: "Phone",
-            profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
-            profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
-            profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
+            profile_orders_details_part1: "Teslimat",
+            profile_orders_details_part2: "Ülke",
+            profile_orders_details_part3: "Şehir",
+            profile_orders_details_part4: "Adres",
+            profile_orders_details_part5: "İletişim",
+            profile_orders_details_part6: "Tam ad",
+            profile_orders_details_part7: "E-posta",
+            profile_orders_details_part8: "Telefon",
+            profile_orders_details_part9: "Ödeme",
+            profile_orders_details_part10: "Ödeme durumu",
+            profile_orders_details_part11: "Ödeme türü",
+            profile_orders_details_part12: "Sipariş edilen ürünler",
+            profile_orders_details_part13: "Fiyat",
+            profile_orders_details_part14: "Teslimat",
+            profile_orders_details_part15: "Toplam fiyat",
 
             // Profile Security
-            profile_security_page_title: "Security",
-            profile_security_form_label1: "Current password",
-            profile_security_form_placeholder1: "Enter your current password",
-            profile_security_form_label2: "New password",
-            profile_security_form_placeholder2: "Enter your new password",
-            profile_security_form_label3: "Confirm password",
-            profile_security_form_placeholder3: "Confirm your password",
-            profile_security_form_button: "Change password",
+            profile_security_page_title: "Güvenlik",
+            profile_security_form_label1: "Mevcut şifre",
+            profile_security_form_placeholder1: "Mevcut şifrenizi girin",
+            profile_security_form_label2: "Yeni şifre",
+            profile_security_form_placeholder2: "Yeni şifrenizi girin",
+            profile_security_form_label3: "Şifreyi onayla",
+            profile_security_form_placeholder3: "Şifrenizi onayla",
+            profile_security_form_button: "Şifreyi değiştir",
 
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Siparişler",
+            sidebar_title_security: "Güvenlik",
+            sidebar_title_logout: "Çıkış yap",
+
+            // Breadcrumb
+            breadcrumb_home: "Ana Sayfa",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Siparişler",
+            breadcrumb_order: "Sipariş edin",
+            breadcrumb_security: "Güvenlik"
         },
     },
 };
