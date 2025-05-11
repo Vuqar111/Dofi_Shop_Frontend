@@ -5,21 +5,28 @@ import { orderDetails } from '../redux/features/orderSlice'
 import { AppDispatch } from '../redux/store'
 import Loading from '../components/Loader'
 import BreadCrumb from "../components/BreadCrumb";
+import { useTranslation } from 'react-i18next';
 
 
 const OrderDetailsScreen = () => {
     const dispatch: AppDispatch = useDispatch()
     const { fetchOrderDetailsLoading: loading, fetchOrderDetailsError: error, fetchOrderDetails: data } = useSelector((state: any) => state.orders)
+  const { t } = useTranslation();
 
     const id = window.location.pathname.split('/')[3]
 
 
+
+
+
     const breadcrumbPaths = [
-        { name: 'Homepage', href: '/' },
-        { name: 'Profile', href: '/profile' },
-        { name: 'Orders', href: '/profile/orders' },
-        { name: 'Order', href: '/profile/orders/' },
-    ];
+    { name: t('breadcrumb_home'), href: '/' },
+    { name: t('breadcrumb_profile'), href: '/profile' },
+    { name: t('breadcrumb_orders'), href: '/profile/orders' },
+    { name: t('breadcrumb_order'), href: '/profile/orders' },
+
+];
+
 
     useEffect(() => {
         dispatch(

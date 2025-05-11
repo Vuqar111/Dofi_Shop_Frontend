@@ -24,6 +24,10 @@ const resources = {
             safety_page_feature_description_part2: "Parent App that clearly presents child's educational plans and identifies developmental milestones",
             safety_page_feature_title_part3: "Safe, secure and private",
             safety_page_feature_description_part3: "kidSAFE+ COPPA certified device with customizable security and privacy settings",
+
+
+            // FAQ
+            faq_title: "Frequently Asked Questions",
             faq_question_part1: "What is Dofi?",
             faq_answer_part1: "Dofi is an AI-powered talking learning robot designed for children, small in size but big in personality.",
             faq_question_part2: "How does Dofi work?",
@@ -104,7 +108,43 @@ const resources = {
             breadcrumb_profile: "Profile",
             breadcrumb_orders: "Orders",
             breadcrumb_order: "Order",
-            breadcrumb_security: "Security"
+            breadcrumb_security: "Security",
+
+
+
+            // Footer
+            footer_title1: "Products",
+            footer_part1: "Dofi Pro",
+            footer_part2: "Dofi Pro mini",
+            footer_part3: "Dofi mini",
+            footer_part4: "Bag for Dofi",
+            footer_title2: "Shipping & Policy",
+            footer_part5: "About",
+            footer_part6: "Shipping information",
+            footer_part7: "Return Policy",
+            footer_part8: "Privacy Policy",
+            footer_part9: "Terms of Service",
+            footer_title3: "Follow us",
+            footer_part10: "Email",
+            footer_part11: "Phone",
+            footer_part12: "All Rights Reserved",
+
+
+
+            // Product details
+            product_details_part1: "Color",
+            product_details_part2: "Quantity",
+            product_details_part3: "Add to cart",
+            product_details_part4: "Pre-order now",
+            product_details_part5: "Detailed information",
+
+
+
+            order_summary_title: "Order summary",
+            order_summary_part1: "Color",
+            order_summary_part2: ""
+            
+
 
         },
     },
@@ -128,6 +168,8 @@ const resources = {
             safety_page_feature_description_part2: "Uşağın təhsil planlarını aydın şəkildə təqdim edən və inkişaf mərhələlərini müəyyən edən Valideyn Proqramı",
             safety_page_feature_title_part3: "Təhlükəsiz, təhlükəsiz və şəxsi",
             safety_page_feature_description_part3: "Fərdiləşdirilə bilən təhlükəsizlik və məxfilik parametrləri ilə kidSAFE+ COPPA sertifikatlı cihaz",
+
+            faq_title: "Tez-tez soruşulan suallar",
             faq_question_part1: "Dofi nədir?",
             faq_answer_part1: "Dofi uşaqlar üçün nəzərdə tutulmuş, kiçik ölçülü, lakin şəxsiyyət baxımından böyük olan süni intellektlə işləyən danışan öyrənmə robotudur.",
             faq_question_part2: "Dofi necə işləyir?",
@@ -197,7 +239,48 @@ const resources = {
             sidebar_title_profile: "Profil",
             sidebar_title_orders: "Sifarişlər",
             sidebar_title_security: "Təhlükəsizlik",
-            sidebar_title_logout: "Çıxış et"
+            sidebar_title_logout: "Çıxış et",
+
+
+
+            // Breadcrumb
+            breadcrumb_home: "Ana səhifə",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Sifarişlər",
+            breadcrumb_order: "Sifariş",
+            breadcrumb_security: "Təhlükəsizlik",
+
+
+
+            // Footer
+            footer_title1: "Məhsullar",
+            footer_part1: "Dofi Pro",
+            footer_part2: "Dofi Pro mini",
+            footer_part3: "Dofi mini",
+            footer_part4: "Dofi çantası",
+            footer_title2: "Çatdırılma & Siyasət",
+            footer_part5: "Haqqında",
+            footer_part6: "Çatdırılma",
+            footer_part7: "Qaytarılma siyasəti",
+            footer_part8: "Məxfiləşdirmə siyasəti",
+            footer_part9: "Terms of service",
+            footer_title3: "Bizi izlə",
+            footer_part10: "E-poçt",
+            footer_part11: "Əlaqə",
+            footer_part12: "Bütün hüquqlar qorunur",
+
+
+
+
+
+            
+            // Product details
+            product_details_part1: "Rəng",
+            product_details_part2: "Say",
+            product_details_part3: "Karta əlavə et",
+            product_details_part4: "Ön sifariş et",
+            product_details_part5: "Detallı məlumat",
+            
 
 
         },
@@ -221,6 +304,8 @@ const resources = {
             safety_page_feature_description_part2: "Application parentale présentant clairement le projet éducatif de l'enfant et identifiant les étapes de son développement.",
             safety_page_feature_title_part3: "Sûr, sécurisé et privé",
             safety_page_feature_description_part3: "Appareil certifié kidSAFE+ COPPA avec paramètres de sécurité et de confidentialité personnalisables.",
+
+            faq_title: "Frequently Asked Questions",
             faq_question_part1: "Qu'est-ce que Dofi?",
             faq_answer_part1: "Dofi est un robot d'apprentissage parlant, alimenté par l'IA, conçu pour les enfants. Petit par la taille, mais doté d'une grande personnalité.",
             faq_question_part2: "Comment fonctionne Dofi?",
@@ -281,6 +366,44 @@ const resources = {
             profile_security_form_placeholder3: "Confirm your password",
             profile_security_form_button: "Change password",
 
+
+            // Breadcrumb
+            breadcrumb_home: "Home",
+            breadcrumb_profile: "Profile",
+            breadcrumb_orders: "Orders",
+            breadcrumb_order: "Order",
+            breadcrumb_security: "Security",
+
+
+            // Footer
+            footer_title1: "Products",
+            footer_part1: "Dofi Pro",
+            footer_part2: "Dofi Pro mini",
+            footer_part3: "Dofi mini",
+            footer_title2: "Shipping & Policy",
+            footer_part4: "About",
+            footer_part5: "Shipping information",
+            footer_part6: "Return Policy",
+            footer_part7: "Privacy Policy",
+            footer_part8: "Terms of Service",
+            footer_title3: "Follow us",
+            footer_part9: "Email",
+            footer_part10: "Phone",
+            footer_part11: "All Rights Reserved",
+
+
+
+
+            
+            // Product details
+            product_details_part1: "Color",
+            product_details_part2: "Quantity",
+            product_details_part3: "Add to cart",
+            product_details_part4: "Pre-order now",
+            product_details_part5: "Detailed information",
+            
+
+
         },
 
     },
@@ -304,6 +427,8 @@ const resources = {
             safety_page_feature_description_part2: "Çocuğun eğitim planlarını açıkça sunan ve gelişimsel dönüm noktalarını belirleyen Ebeveyn Uygulaması",
             safety_page_feature_title_part3: "Güvenli, emniyetli ve özel",
             safety_page_feature_description_part3: "kidSAFE+ COPPA sertifikalı, özelleştirilebilir güvenlik ve gizlilik ayarlarına sahip cihaz",
+
+            faq_title: "Frequently Asked Questions",
             faq_question_part1: "Dofi nedir?",
             faq_answer_part1: "Dofi, çocuklar için tasarlanmış, yapay zeka destekli, konuşan bir öğrenme robotudur; boyutu küçük ama kişiliği büyüktür.",
             faq_question_part2: "Dofi nasıl çalışır?",
@@ -363,6 +488,47 @@ const resources = {
             profile_security_form_label3: "Confirm password",
             profile_security_form_placeholder3: "Confirm your password",
             profile_security_form_button: "Change password",
+
+
+
+            // Breadcrumb
+            breadcrumb_home: "Home",
+            breadcrumb_profile: "Profile",
+            breadcrumb_orders: "Orders",
+            breadcrumb_order: "Order",
+            breadcrumb_security: "Security",
+
+
+
+            // Footer
+            footer_title1: "Products",
+            footer_part1: "Dofi Pro",
+            footer_part2: "Dofi Pro mini",
+            footer_part3: "Dofi mini",
+            footer_title2: "Shipping & Policy",
+            footer_part4: "About",
+            footer_part5: "Shipping information",
+            footer_part6: "Return Policy",
+            footer_part7: "Privacy Policy",
+            footer_part8: "Terms of Service",
+            footer_title3: "Follow us",
+            footer_part9: "Email",
+            footer_part10: "Phone",
+            footer_part11: "All Rights Reserved",
+
+
+
+
+
+            
+            // Product details
+            product_details_part1: "Color",
+            product_details_part2: "Quantity",
+            product_details_part3: "Add to cart",
+            product_details_part4: "Pre-order now",
+            product_details_part5: "Detailed information",
+            
+
 
         },
     },

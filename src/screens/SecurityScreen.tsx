@@ -23,11 +23,17 @@ const SecurityScreen = () => {
   const [showConfirmedPassword, setShowConfirmedPassword] = useState(false);
 
 
+
+
+
+  
   const breadcrumbPaths = [
-    { name: 'Home page', href: '/' },
-    { name: 'Profile', href: '/profile' },
-    { name: 'Security', href: '/profile/security' },
-  ];
+    { name: t('breadcrumb_home'), href: '/' },
+    { name: t('breadcrumb_profile'), href: '/profile' },
+    { name: t('breadcrumb_security'), href: '/profile/security' },
+];
+
+
 
 
   const handleUpdateProfilePassword = async (e: React.FormEvent) => {

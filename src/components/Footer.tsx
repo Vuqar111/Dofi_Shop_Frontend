@@ -1,7 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
+        const location = useLocation();
+
+      const currentLang = location.pathname.split('/')[1] || 'en';
+
     return (
         <div className="bg-black text-white px-4 py-8">
             <div className="w-[100%] p-4 md:p-0 md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -12,31 +17,44 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h3 className="font-bold mb-4">Products</h3>
+                    <h3 className="font-bold mb-4">
+                        {t('footer_title1')}
+                    </h3>
                     <ul>
-                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for boys</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for girls</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Bag for robots</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/shop" className="hover:underline">Robot for daun</Link></li>
+
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
+                            {t('footer_part1')}
+                        </Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
+                            {t('footer_part2')}
+                        </Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
+                            {t('footer_part3')}
+                        </Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
+                            {t('footer_part4')}
+                        </Link></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 className="font-bold mb-4">Shipping & Policy</h3>
+                    <h3 className="font-bold mb-4">
+                        {t('footer_title2')}
+                    </h3>
                     <ul>
-                        <li className='mb-2 text-sm'><Link to="/about" className="hover:underline">About</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/shipping" className="hover:underline">Shipping Information</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/returns" className="hover:underline">Return Policy</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
-                        <li className='mb-2 text-sm'><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/about`} className="hover:underline">{t('footer_part5')}</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shipping`} className="hover:underline">{t('footer_part6')}</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/returns`} className="hover:underline">{t('footer_part7')}</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/privacy`} className="hover:underline">{t('footer_part8')}</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/terms`} className="hover:underline">{t('footer_part9')}</Link></li>
                     </ul>
                 </div>
 
                 {/* Social Media Accounts */}
                 <div>
-                    <h3 className="font-bold mb-4">Follow Us</h3>
+                    <h3 className="font-bold mb-4">{t('footer_title3')}</h3>
                     <p className='mb-2 text-sm'>Sabunchu district, 10Q</p>
-                    <p className='mb-2 text-sm'>Email: dofi.robot@gmail.com</p>
-                    <p className='mb-2 text-sm'>Phone: +995 50 519 87 54</p>
+                    <p className='mb-2 text-sm'>{t('footer_part10')}: dofi.robot@gmail.com</p>
+                    <p className='mb-2 text-sm'>{t('footer_part11')}: +995 50 519 87 54</p>
                     <ul className="flex space-x-4 mt-4">
                         <li>
                             <a href="https://www.tiktok.com/@dofi.kid" target="_blank" rel="noopener noreferrer">
@@ -57,8 +75,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className="w-[80%] mx-auto mt-4 border-t border-gray-700 pt-4 text-center">
-        <p>&copy; 2025 Dofi. All rights reserved.</p>
-      </div>
+                <p>&copy; 2025 Dofi. {t('footer_part12')}</p>
+            </div>
         </div>
     )
 }

@@ -6,11 +6,15 @@ import { productDetails } from "../redux/features/productSlice"
 import swal from 'sweetalert'
 import FAQ from "../components/FAQ"
 import Footer from "../components/Footer"
-import { Link } from "react-router-dom";
 import { addToCart } from "../redux/features/cartSlice";
+import { useTranslation } from 'react-i18next';
+import { Link,useLocation } from 'react-router-dom';
 
 const ProductDetailsScreen = () => {
+  const location = useLocation();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const { t } = useTranslation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
   const prevImage = () => {
     setSelectedIndex((prev) => (prev === 0 ? imageGallery.length - 1 : prev - 1));
@@ -58,7 +62,6 @@ const ProductDetailsScreen = () => {
   };
   const handleAddToCart = () => {
     if (!product) return;
-
     const cartItem = {
       id: product.id,
       name: product.name,
@@ -100,16 +103,16 @@ const ProductDetailsScreen = () => {
             </button>
           </div>
           <div className="flex mt-4 space-x-2 justify-center overflow-x-auto max-w-full px-2">
-        {imageGallery.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Product ${index}`}
-            className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
-            onClick={() => setSelectedIndex(index)}
-          />
-        ))}
-      </div>
+            {imageGallery.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Product ${index}`}
+                className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
+                onClick={() => setSelectedIndex(index)}
+              />
+            ))}
+          </div>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
           <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{product?.name}</h1>
@@ -164,7 +167,9 @@ const ProductDetailsScreen = () => {
 
 
           <div className="mb-4">
-            <label className="mb-4">Color</label>
+            <label className="mb-4">
+              {t('product_details_part1')}
+            </label>
             <div className="w-full flex gap-4 mt-4">
               {["text-green-500", "text-blue-500", "text-orange-500", "text-red-500", "text-gray-500"].map((color) => (
                 <div
@@ -178,7 +183,9 @@ const ProductDetailsScreen = () => {
             </div>
 
           </div>
-          <label className="mt-8">Quantity</label>
+          <label className="mt-8">
+            {t('product_details_part2')}
+          </label>
           <div className="grid grid-cols-5 gap-4 mt-4">
             <div className="col-span-2 flex items-center justify-between border border-gray-200">
               <button
@@ -201,29 +208,31 @@ const ProductDetailsScreen = () => {
 
               className="w-[100%] col-span-3 cursor-pointer border-solid border-[1px] border-green-400 text-center  bg-white text-green-400 py-2 px-4 rounded"
             >
-              Add to cart
+              {t('product_details_part3')}
             </div>
           </div>
 
 
-          <Link to="/checkout">
+          <Link to={`/${currentLang}/checkout`}>
             <div
               className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
             >
-              Pre-order now
+              {t('product_details_part4')}
             </div>
           </Link>
 
         </div>
       </div>
       <div className="w-[100%] md:w-[80%] mx-auto my-8 p-8">
-        <h2 className="text-2xl font-semibold text-gray-600">Detailed information</h2>
+        <h2 className="text-2xl font-semibold text-gray-600">
+          {t('product_details_part5')}
+        </h2>
         <p className="text-sm mt-2">
           {/* Write description of the robot*/}
           An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖
-          <br/><br/>
+          <br /><br />
           Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.
-          <br/><br/>
+          <br /><br />
           This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖
         </p>
       </div>

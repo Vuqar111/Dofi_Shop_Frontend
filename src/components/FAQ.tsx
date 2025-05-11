@@ -37,7 +37,10 @@ const FAQ = () => {
 
   return (
     <div className="w-[100%] md:w-[80%] mx-auto p-8">
-      <h1 className="text-3xl font-semibold mb-8 text-center">Frequently asked questions</h1>
+      <h1 className="text-3xl font-semibold mb-8 text-center">
+        {t('faq_title')}
+
+      </h1>
       <div className="border border-gray-200">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-200">

@@ -6,9 +6,18 @@ import { AppDispatch } from '../redux/store'
 import Header from '../components/Profile/Header'
 import ActionButton from "../partials/ActionButton"
 import swal from 'sweetalert'
+import { useTranslation } from 'react-i18next';
+import { Link,useLocation } from 'react-router-dom';
 
 
 const CheckOutScreen = () => {
+
+    const location = useLocation();
+  const { t } = useTranslation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
+
+
+
     const dispatch: AppDispatch = useDispatch()
     const { createOrderSuccess, createOrderLoading, createOrderError } = useSelector((state: any) => state.orders)
 

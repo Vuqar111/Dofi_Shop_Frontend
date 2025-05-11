@@ -36,7 +36,7 @@ const ProductCard = ({ product }: { product: any }) => {
 
   return (
     <div className="bg-white">
-      <Link to={`${currentLang}/shop/${product?.slug}`}>
+      <Link to={`/${currentLang}/shop/${product?.slug}`}>
         <div className="min-h-[400px] bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img
             className="w-48 h-48 object-contain"
