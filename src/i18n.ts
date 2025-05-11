@@ -39,7 +39,6 @@ const resources = {
             faq_question_part5: "How do I pre-order Dofi?",
             faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
 
-
             // Profile
             profile_page_title: "Personal informations",
             profile_page_form_label1: "Name and Surname",
@@ -56,9 +55,7 @@ const resources = {
             profile_order_card_part1: "Order code",
             profile_order_card_part2: "Order date",
             profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
-
+            profile_order_card_part4: "Total price",
 
             // Profile Order Details Card
             profile_orders_details_part1: "Delivery",
@@ -70,16 +67,13 @@ const resources = {
             profile_orders_details_part7: "Email",
             profile_orders_details_part8: "Phone",
             profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
+            profile_orders_details_part10: "Payment status",
+            profile_orders_details_part11: "Payment type",
             profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
+            profile_orders_details_part13: "Price",
             profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
-            profile_orders_details_part16: "Disocunt",
-
-
-
+            profile_orders_details_part15: "Total price",
+            profile_orders_details_part16: "Discount",
 
             // Profile Security
             profile_security_page_title: "Security",
@@ -91,23 +85,18 @@ const resources = {
             profile_security_form_placeholder3: "Confirm your password",
             profile_security_form_button: "Change password",
 
-
-
             // Sidebar
             sidebar_title_profile: "Profile",
             sidebar_title_orders: "Orders",
             sidebar_title_security: "Security",
             sidebar_title_logout: "Log out",
 
-
-
-
-
             // Breadcrumb
             breadcrumb_home: "Home",
             breadcrumb_profile: "Profile",
             breadcrumb_orders: "Orders",
             breadcrumb_order: "Order",
+<<<<<<< HEAD
             breadcrumb_security: "Security",
 
 
@@ -146,6 +135,9 @@ const resources = {
             
 
 
+=======
+            breadcrumb_security: "Security"
+>>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
         },
     },
     az: {
@@ -176,12 +168,10 @@ const resources = {
             faq_answer_part2: "Dofi uşaqlarla ünsiyyət qurmaq, onlara yeni bacarıqlar öyrətmək və əyləncəli, cəlbedici öyrənmə təcrübəsi təmin etmək üçün qabaqcıl süni intellekt alqoritmlərindən istifadə edir.",
             faq_question_part3: "Dofi uşaqlar üçün təhlükəsizdir mi?",
             faq_answer_part3: "Bəli, Dofi təhlükəsizlik nəzərə alınmaqla hazırlanmışdır. Uşaqlar üçün təhlükəsiz və təhlükəsiz təcrübə təmin etmək üçün təkmilləşdirilmiş şifrələmə və valideyn nəzarətinə malikdir.",
-            faq_question_pat4: "Dofi hansı yaş qrupu üçün uyğundur?",
+            faq_question_part4: "Dofi hansı yaş qrupu üçün uyğundur?",
             faq_answer_part4: "Dofi 3-8 yaş arası uşaqlar üçün uyğundur.",
             faq_question_part5: "Dofi-ni necə əvvəlcədən sifariş edə bilərəm?",
             faq_answer_part5: "Dofi-ni birbaşa saytımızdan öncədən sifariş edə bilərsiniz. Sadəcə olaraq məhsulu səbətinizə əlavə edin və ödənişə davam edin.",
-
-
 
             // Profile
             profile_page_title: "Şəxsi məlumatlar",
@@ -194,15 +184,12 @@ const resources = {
             profile_page_rol_val2: "Valideyn",
             profile_page_rol_val3: "VIP",
 
-
-
             // Profile Orders
             profile_orders_page_title: "Sənin sifarişlərin",
             profile_order_card_part1: "Sifariş kodu",
             profile_order_card_part2: "Sifariş tarixi",
-            profile_order_card_part3: "Sifariş detalı",
-            profile_order_card_part4: "Ümumi miqdar",
-
+            profile_order_card_part3: "Sifariş detalları",
+            profile_order_card_part4: "Ümumi qiymət",
 
             // Profile Order Details Card
             profile_orders_details_part1: "Çatdırılma",
@@ -210,36 +197,34 @@ const resources = {
             profile_orders_details_part3: "Şəhər",
             profile_orders_details_part4: "Ünvan",
             profile_orders_details_part5: "Əlaqə",
-            profile_orders_details_part6: "Ad soyad",
+            profile_orders_details_part6: "Ad və soyad",
             profile_orders_details_part7: "E-poçt",
             profile_orders_details_part8: "Telefon nömrəsi",
             profile_orders_details_part9: "Ödəniş",
             profile_orders_details_part10: "Ödəniş statusu",
             profile_orders_details_part11: "Ödəniş növü",
             profile_orders_details_part12: "Sifariş olunan məhsullar",
-            profile_orders_details_part13: "Miqdar",
+            profile_orders_details_part13: "Qiymət",
             profile_orders_details_part14: "Çatdırılma",
-            profile_orders_details_part15: "Ümumi miqdar",
+            profile_orders_details_part15: "Ümumi qiymət",
             profile_orders_details_part16: "Endirim",
-
 
             // Profile Security
             profile_security_page_title: "Təhlükəsizlik",
             profile_security_form_label1: "Mövcud şifrə",
-            profile_security_form_placeholder1: "Mövcud şifrəni yazın",
+            profile_security_form_placeholder1: "Mövcud şifrənizi yazın",
             profile_security_form_label2: "Yeni şifrə",
-            profile_security_form_placeholder2: "Yeni şifrəni yazın",
-            profile_security_form_label3: "Parolu təsdiqlə",
+            profile_security_form_placeholder2: "Yeni şifrənizi yazın",
+            profile_security_form_label3: "Parolunuzu təsdiqləyin",
             profile_security_form_placeholder3: "Parolunuzu təsdiq edin",
-            profile_security_form_button: "Parolu dəyişin",
-
-
+            profile_security_form_button: "Parolunuzu dəyişin",
 
             // Sidebar
             sidebar_title_profile: "Profil",
             sidebar_title_orders: "Sifarişlər",
             sidebar_title_security: "Təhlükəsizlik",
             sidebar_title_logout: "Çıxış et",
+<<<<<<< HEAD
 
 
 
@@ -282,7 +267,15 @@ const resources = {
             product_details_part5: "Detallı məlumat",
             
 
+=======
+>>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
 
+            // Breadcrumb
+            breadcrumb_home: "Ana Səhifə",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Sifarişlər",
+            breadcrumb_order: "Sifariş verin",
+            breadcrumb_security: "Təhlükəsizlik"
         },
     },
     fr: {
@@ -318,54 +311,51 @@ const resources = {
             faq_answer_part5: "Vous pouvez précommander Dofi directement sur notre site web. Ajoutez simplement le produit à votre panier et passez à la caisse.",
 
             // Profile
-            profile_page_title: "Personal informations",
-            profile_page_form_label1: "Name and Surname",
-            profile_page_form_label2: "Email",
-            profile_page_form_label3: "Contact number",
-            profile_page_form_label4: "Role",
-            profile_page_form_button: "Update",
-            profile_page_rol_val1: "Şirkət",
-            profile_page_rol_val2: "Valideyn",
+            profile_page_title: "Informations personnelles",
+            profile_page_form_label1: "Nom et prénom",
+            profile_page_form_label2: "E-mail",
+            profile_page_form_label3: "Numéro de téléphone",
+            profile_page_form_label4: "Rôle",
+            profile_page_form_button: "Mise à jour",
+            profile_page_rol_val1: "Entreprise",
+            profile_page_rol_val2: "Maison mère",
             profile_page_rol_val3: "VIP",
 
-
-
             // Profile Orders
-            profile_orders_page_title: "Your orders",
-            profile_order_card_part1: "Order code",
-            profile_order_card_part2: "Order date",
-            profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
+            profile_orders_page_title: "Vos commandes",
+            profile_order_card_part1: "Code de commande",
+            profile_order_card_part2: "Date de commande",
+            profile_order_card_part3: "Informations détaillées",
+            profile_order_card_part4: "Prix total",
 
             // Profile Order details card
-            profile_orders_details_part1: "Delivery",
-            profile_orders_details_part2: "Country",
-            profile_orders_details_part3: "City",
-            profile_orders_details_part4: "Address",
+            profile_orders_details_part1: "Livraison",
+            profile_orders_details_part2: "Pays",
+            profile_orders_details_part3: "Ville",
+            profile_orders_details_part4: "Adresse",
             profile_orders_details_part5: "Contact",
-            profile_orders_details_part6: "Full name",
-            profile_orders_details_part7: "Email",
-            profile_orders_details_part8: "Phone",
-            profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
-            profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
-            profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
-
+            profile_orders_details_part6: "Nom complet",
+            profile_orders_details_part7: "E-mail",
+            profile_orders_details_part8: "Téléphone",
+            profile_orders_details_part9: "Paiement",
+            profile_orders_details_part10: "Statut du paiement",
+            profile_orders_details_part11: "Type de paiement",
+            profile_orders_details_part12: "Produits commandés",
+            profile_orders_details_part13: "Prix",
+            profile_orders_details_part14: "Livraison",
+            profile_orders_details_part15: "Prix total",
 
             // Profile Security
-            profile_security_page_title: "Security",
-            profile_security_form_label1: "Current password",
-            profile_security_form_placeholder1: "Enter your current password",
-            profile_security_form_label2: "New password",
-            profile_security_form_placeholder2: "Enter your new password",
-            profile_security_form_label3: "Confirm password",
-            profile_security_form_placeholder3: "Confirm your password",
-            profile_security_form_button: "Change password",
+            profile_security_page_title: "Sécurité",
+            profile_security_form_label1: "Mot de passe actuel",
+            profile_security_form_placeholder1: "Saisissez votre mot de passe actuel",
+            profile_security_form_label2: "Nouveau mot de passe",
+            profile_security_form_placeholder2: "Saisissez votre nouveau mot de passe",
+            profile_security_form_label3: "Confirmer le mot de passe",
+            profile_security_form_placeholder3: "Confirmer votre mot de passe",
+            profile_security_form_button: "Modifier le mot de passe",
 
+<<<<<<< HEAD
 
             // Breadcrumb
             breadcrumb_home: "Home",
@@ -404,8 +394,21 @@ const resources = {
             
 
 
-        },
+=======
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Ordres",
+            sidebar_title_security: "Sécurité",
+            sidebar_title_logout: "Se déconnecter",
 
+            // Breadcrumb
+            breadcrumb_home: "Maison",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Ordres",
+            breadcrumb_order: "Commande",
+            breadcrumb_security: "Sécurité"
+>>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
+        },
     },
     tr: {
         translation: {
@@ -441,54 +444,51 @@ const resources = {
             faq_answer_part5: "Dofi'yi doğrudan web sitemizden ön sipariş edebilirsiniz. Ürünü sepetinize eklemeniz ve ödeme işlemine geçmeniz yeterlidir.",
 
             // Profile
-            profile_page_title: "Personal informations",
-            profile_page_form_label1: "Name and Surname",
-            profile_page_form_label2: "Email",
-            profile_page_form_label3: "Contact number",
-            profile_page_form_label4: "Role",
-            profile_page_form_button: "Update",
-            profile_page_rol_val1: "Şirkət",
-            profile_page_rol_val2: "Valideyn",
+            profile_page_title: "Kişisel bilgiler",
+            profile_page_form_label1: "Adı ve Soyadı",
+            profile_page_form_label2: "E-posta",
+            profile_page_form_label3: "İletişim numarası",
+            profile_page_form_label4: "Rol",
+            profile_page_form_button: "Güncelleme",
+            profile_page_rol_val1: "Şirket",
+            profile_page_rol_val2: "Ebeveyn",
             profile_page_rol_val3: "VIP",
 
-
-
-
             // Profile Orders
-            profile_orders_page_title: "Your orders",
-            profile_order_card_part1: "Order code",
-            profile_order_card_part2: "Order date",
-            profile_order_card_part3: "Detailed information",
-            profile_order_card_part4: "Total amount",
-
+            profile_orders_page_title: "Siparişleriniz",
+            profile_order_card_part1: "Sipariş kodu",
+            profile_order_card_part2: "Sipariş tarihi",
+            profile_order_card_part3: "Ayrıntılı bilgi",
+            profile_order_card_part4: "Toplam fiyat",
 
             // Profile Order Details Card
-            profile_orders_details_part1: "Delivery",
-            profile_orders_details_part2: "Country",
-            profile_orders_details_part3: "City",
-            profile_orders_details_part4: "Address",
-            profile_orders_details_part5: "Contact",
-            profile_orders_details_part6: "Full name",
-            profile_orders_details_part7: "Email",
-            profile_orders_details_part8: "Phone",
-            profile_orders_details_part9: "Payment",
-            profile_orders_details_part10: "P.status",
-            profile_orders_details_part11: "P.type",
-            profile_orders_details_part12: "Ordered products",
-            profile_orders_details_part13: "Quantity",
-            profile_orders_details_part14: "Delivery",
-            profile_orders_details_part15: "Total amount",
+            profile_orders_details_part1: "Teslimat",
+            profile_orders_details_part2: "Ülke",
+            profile_orders_details_part3: "Şehir",
+            profile_orders_details_part4: "Adres",
+            profile_orders_details_part5: "İletişim",
+            profile_orders_details_part6: "Tam ad",
+            profile_orders_details_part7: "E-posta",
+            profile_orders_details_part8: "Telefon",
+            profile_orders_details_part9: "Ödeme",
+            profile_orders_details_part10: "Ödeme durumu",
+            profile_orders_details_part11: "Ödeme türü",
+            profile_orders_details_part12: "Sipariş edilen ürünler",
+            profile_orders_details_part13: "Fiyat",
+            profile_orders_details_part14: "Teslimat",
+            profile_orders_details_part15: "Toplam fiyat",
 
             // Profile Security
-            profile_security_page_title: "Security",
-            profile_security_form_label1: "Current password",
-            profile_security_form_placeholder1: "Enter your current password",
-            profile_security_form_label2: "New password",
-            profile_security_form_placeholder2: "Enter your new password",
-            profile_security_form_label3: "Confirm password",
-            profile_security_form_placeholder3: "Confirm your password",
-            profile_security_form_button: "Change password",
+            profile_security_page_title: "Güvenlik",
+            profile_security_form_label1: "Mevcut şifre",
+            profile_security_form_placeholder1: "Mevcut şifrenizi girin",
+            profile_security_form_label2: "Yeni şifre",
+            profile_security_form_placeholder2: "Yeni şifrenizi girin",
+            profile_security_form_label3: "Şifreyi onayla",
+            profile_security_form_placeholder3: "Şifrenizi onayla",
+            profile_security_form_button: "Şifreyi değiştir",
 
+<<<<<<< HEAD
 
 
             // Breadcrumb
@@ -530,8 +530,295 @@ const resources = {
             
 
 
+=======
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Siparişler",
+            sidebar_title_security: "Güvenlik",
+            sidebar_title_logout: "Çıkış yap",
+
+            // Breadcrumb
+            breadcrumb_home: "Ana Sayfa",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Siparişler",
+            breadcrumb_order: "Sipariş edin",
+            breadcrumb_security: "Güvenlik"
+>>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
         },
     },
+    de: {
+        translation: {
+          hero_page_title: "Willkommen!",
+          hero_page_subtitle: "Intelligent, sicher & super spaßig für jedes Kind!",
+          hero_page_button: "Jetzt vorbestellen",
+          home_screen_products_title: "Dofi im Einsatz",
+          add_to_cart_text: "In den Warenkorb",
+          about_title: "Über uns",
+          about_description: "Unser Roboter ist ein intelligenter, interaktiver Begleiter, der die Entwicklung von Kindern durch Sprachbefehle, Videoanrufe mit elterlicher Kontrolle sowie dynamische Körper- und Gesichtsausdrücke unterstützt. Er hilft Kindern, sowohl ihre Muttersprache als auch Englisch zu lernen, genießt interaktive Geschichten und stärkt ihre Mathematik- und Logikfähigkeiten – und das alles mit viel Spaß.",
+          about_feature_part1: "Kognitive Entwicklung",
+          about_feature_part2: "Verbessertes Problemlösen",
+          about_feature_part3: "Adaptives Lernen",
+          safety_page_title: "Künstliche Intelligenz und Sicherheit",
+          safety_page_description: "Wir nehmen Sicherheit ernst. Jedes Byte der Daten Ihres Kindes ist in unserem geschlossenen System geschützt. Dofi setzt neue Maßstäbe für familienfreundliche KI.",
+          safety_page_feature_title_part1: "Nützlich für Eltern",
+          safety_page_feature_desciption_part1: "Von sicheren Anrufen bis zu Echtzeit-Fortschrittsberichten",
+          safety_page_feature_title_part2: "Bessere Erziehungswerkzeuge",
+          safety_page_feature_description_part2: "Eltern-App mit klaren Bildungsplänen und Entwicklungszielen",
+          safety_page_feature_title_part3: "Sicher, geschützt und privat",
+          safety_page_feature_description_part3: "kidSAFE+ COPPA-zertifiziertes Gerät mit anpassbaren Sicherheits- und Datenschutzeinstellungen",
+          faq_question_part1: "Was ist Dofi?",
+          faq_answer_part1: "Dofi ist ein KI-gestützter sprechender Lernroboter für Kinder – klein in der Größe, aber groß in der Persönlichkeit.",
+          faq_question_part2: "Wie funktioniert Dofi?",
+          faq_answer_part2: "Dofi verwendet fortschrittliche KI-Algorithmen, um mit Kindern zu interagieren, ihnen neue Fähigkeiten beizubringen und ein unterhaltsames, ansprechendes Lernerlebnis zu bieten.",
+          faq_question_part3: "Ist Dofi sicher für Kinder?",
+          faq_answer_part3: "Ja, Dofi wurde mit Blick auf Sicherheit entwickelt. Es verfügt über starke Verschlüsselung und elterliche Kontrolle für ein sicheres Erlebnis.",
+          faq_question_part4: "Für welches Alter ist Dofi geeignet?",
+          faq_answer_part4: "Dofi ist für Kinder im Alter von 3 bis 8 Jahren geeignet.",
+          faq_question_part5: "Wie kann ich Dofi vorbestellen?",
+          faq_answer_part5: "Sie können Dofi direkt über unsere Website vorbestellen. Einfach das Produkt in den Warenkorb legen und zur Kasse gehen.",
+      
+          // Profile
+          profile_page_title: "Persönliche Informationen",
+          profile_page_form_label1: "Vor- und Nachname",
+          profile_page_form_label2: "E-Mail",
+          profile_page_form_label3: "Kontakttelefon",
+          profile_page_form_label4: "Rolle",
+          profile_page_form_button: "Aktualisieren",
+          profile_page_rol_val1: "Unternehmen",
+          profile_page_rol_val2: "Elternteil",
+          profile_page_rol_val3: "VIP",
+      
+          // Profile Orders
+          profile_orders_page_title: "Ihre Bestellungen",
+          profile_order_card_part1: "Bestellcode",
+          profile_order_card_part2: "Bestelldatum",
+          profile_order_card_part3: "Details",
+          profile_order_card_part4: "Gesamtpreis",
+      
+          // Profile Order Details Card
+          profile_orders_details_part1: "Lieferung",
+          profile_orders_details_part2: "Land",
+          profile_orders_details_part3: "Stadt",
+          profile_orders_details_part4: "Adresse",
+          profile_orders_details_part5: "Kontakt",
+          profile_orders_details_part6: "Vollständiger Name",
+          profile_orders_details_part7: "E-Mail",
+          profile_orders_details_part8: "Telefon",
+          profile_orders_details_part9: "Zahlung",
+          profile_orders_details_part10: "Zahlungsstatus",
+          profile_orders_details_part11: "Zahlungsart",
+          profile_orders_details_part12: "Bestellte Produkte",
+          profile_orders_details_part13: "Preis",
+          profile_orders_details_part14: "Lieferung",
+          profile_orders_details_part15: "Gesamtpreis",
+          profile_orders_details_part16: "Rabatt",
+      
+          // Profile Security
+          profile_security_page_title: "Sicherheit",
+          profile_security_form_label1: "Aktuelles Passwort",
+          profile_security_form_placeholder1: "Geben Sie Ihr aktuelles Passwort ein",
+          profile_security_form_label2: "Neues Passwort",
+          profile_security_form_placeholder2: "Geben Sie Ihr neues Passwort ein",
+          profile_security_form_label3: "Passwort bestätigen",
+          profile_security_form_placeholder3: "Bestätigen Sie Ihr Passwort",
+          profile_security_form_button: "Passwort ändern",
+      
+          // Sidebar
+          sidebar_title_profile: "Profil",
+          sidebar_title_orders: "Bestellungen",
+          sidebar_title_security: "Sicherheit",
+          sidebar_title_logout: "Abmelden",
+      
+          // Breadcrumb
+          breadcrumb_home: "Startseite",
+          breadcrumb_profile: "Profil",
+          breadcrumb_orders: "Bestellungen",
+          breadcrumb_order: "Bestellung",
+          breadcrumb_security: "Sicherheit"
+        },
+      },
+      es: {
+        translation: {
+          hero_page_title: "¡Bienvenido!",
+          hero_page_subtitle: "¡Inteligente, seguro y súper divertido para cada niño!",
+          hero_page_button: "Preordenar ahora",
+          home_screen_products_title: "Dofi en acción",
+          add_to_cart_text: "Agregar al carrito",
+          about_title: "Acerca de",
+          about_description: "Nuestro robot es un compañero inteligente e interactivo diseñado para apoyar el desarrollo de los niños mediante comandos de voz, videollamadas con controles parentales y expresiones corporales y faciales dinámicas. Ayuda a los niños a aprender su idioma nativo y el inglés, disfrutar de cuentos interactivos y fortalecer sus habilidades matemáticas y lógicas, todo mientras se divierten.",
+          about_feature_part1: "Crecimiento cognitivo",
+          about_feature_part2: "Mejora en la resolución de problemas",
+          about_feature_part3: "Aprendizaje adaptativo",
+          safety_page_title: "Inteligencia artificial y seguridad",
+          safety_page_description: "Nos tomamos la seguridad en serio. Cada byte de los datos de su hijo está protegido dentro de nuestro sistema cerrado. Dofi establece un nuevo estándar para la inteligencia artificial familiar.",
+          safety_page_feature_title_part1: "Útil para los padres",
+          safety_page_feature_desciption_part1: "Desde llamadas seguras hasta informes de progreso en tiempo real",
+          safety_page_feature_title_part2: "Mejores herramientas para padres",
+          safety_page_feature_description_part2: "Aplicación para padres que muestra claramente los planes educativos del niño e identifica hitos de desarrollo",
+          safety_page_feature_title_part3: "Seguro, protegido y privado",
+          safety_page_feature_description_part3: "Dispositivo certificado por kidSAFE+ y COPPA con configuraciones de seguridad y privacidad personalizables",
+          faq_question_part1: "¿Qué es Dofi?",
+          faq_answer_part1: "Dofi es un robot educativo parlante impulsado por inteligencia artificial, diseñado para niños, pequeño en tamaño pero grande en personalidad.",
+          faq_question_part2: "¿Cómo funciona Dofi?",
+          faq_answer_part2: "Dofi utiliza algoritmos avanzados de inteligencia artificial para interactuar con los niños, enseñarles nuevas habilidades y brindarles una experiencia de aprendizaje divertida y atractiva.",
+          faq_question_part3: "¿Es seguro Dofi para los niños?",
+          faq_answer_part3: "Sí, Dofi está diseñado con la seguridad en mente. Cuenta con cifrado avanzado y controles parentales para garantizar una experiencia segura.",
+          faq_question_part4: "¿Para qué edad es adecuado Dofi?",
+          faq_answer_part4: "Dofi es adecuado para niños de entre 3 y 8 años.",
+          faq_question_part5: "¿Cómo puedo preordenar Dofi?",
+          faq_answer_part5: "Puede preordenar Dofi directamente desde nuestro sitio web. Simplemente agregue el producto al carrito y continúe con la compra.",
+      
+          // Profile
+          profile_page_title: "Información personal",
+          profile_page_form_label1: "Nombre y apellido",
+          profile_page_form_label2: "Correo electrónico",
+          profile_page_form_label3: "Número de contacto",
+          profile_page_form_label4: "Rol",
+          profile_page_form_button: "Actualizar",
+          profile_page_rol_val1: "Empresa",
+          profile_page_rol_val2: "Padre/madre",
+          profile_page_rol_val3: "VIP",
+      
+          // Profile Orders
+          profile_orders_page_title: "Tus pedidos",
+          profile_order_card_part1: "Código del pedido",
+          profile_order_card_part2: "Fecha del pedido",
+          profile_order_card_part3: "Información detallada",
+          profile_order_card_part4: "Precio total",
+      
+          // Profile Order Details Card
+          profile_orders_details_part1: "Entrega",
+          profile_orders_details_part2: "País",
+          profile_orders_details_part3: "Ciudad",
+          profile_orders_details_part4: "Dirección",
+          profile_orders_details_part5: "Contacto",
+          profile_orders_details_part6: "Nombre completo",
+          profile_orders_details_part7: "Correo electrónico",
+          profile_orders_details_part8: "Teléfono",
+          profile_orders_details_part9: "Pago",
+          profile_orders_details_part10: "Estado del pago",
+          profile_orders_details_part11: "Tipo de pago",
+          profile_orders_details_part12: "Productos pedidos",
+          profile_orders_details_part13: "Precio",
+          profile_orders_details_part14: "Entrega",
+          profile_orders_details_part15: "Precio total",
+          profile_orders_details_part16: "Descuento",
+      
+          // Profile Security
+          profile_security_page_title: "Seguridad",
+          profile_security_form_label1: "Contraseña actual",
+          profile_security_form_placeholder1: "Ingrese su contraseña actual",
+          profile_security_form_label2: "Nueva contraseña",
+          profile_security_form_placeholder2: "Ingrese su nueva contraseña",
+          profile_security_form_label3: "Confirmar contraseña",
+          profile_security_form_placeholder3: "Confirme su contraseña",
+          profile_security_form_button: "Cambiar contraseña",
+      
+          // Sidebar
+          sidebar_title_profile: "Perfil",
+          sidebar_title_orders: "Pedidos",
+          sidebar_title_security: "Seguridad",
+          sidebar_title_logout: "Cerrar sesión",
+      
+          // Breadcrumb
+          breadcrumb_home: "Inicio",
+          breadcrumb_profile: "Perfil",
+          breadcrumb_orders: "Pedidos",
+          breadcrumb_order: "Pedido",
+          breadcrumb_security: "Seguridad"
+        },
+      },
+      it: {
+        translation: {
+          hero_page_title: "Benvenuto!",
+          hero_page_subtitle: "Intelligente, sicuro e super divertente per ogni bambino!",
+          hero_page_button: "Preordina ora",
+          home_screen_products_title: "Dofi in azione",
+          add_to_cart_text: "Aggiungi al carrello",
+          about_title: "Chi siamo",
+          about_description: "Il nostro robot è un compagno intelligente e coinvolgente progettato per supportare lo sviluppo dei bambini tramite comandi vocali, videochiamate con controlli parentali ed espressioni dinamiche del corpo e del viso. Aiuta i bambini a imparare la loro lingua madre e l'inglese, godersi storie interattive e sviluppare solide competenze in matematica e logica, il tutto divertendosi.",
+          about_feature_part1: "Crescita cognitiva",
+          about_feature_part2: "Risoluzione dei problemi migliorata",
+          about_feature_part3: "Apprendimento adattivo",
+          safety_page_title: "Intelligenza artificiale e sicurezza",
+          safety_page_description: "Prendiamo la sicurezza molto sul serio. Ogni byte dei dati di tuo figlio è protetto all'interno del nostro sistema chiuso. Dofi stabilisce un nuovo standard per l'intelligenza artificiale a misura di famiglia.",
+          safety_page_feature_title_part1: "Utile per i genitori",
+          safety_page_feature_desciption_part1: "Dalle chiamate sicure ai report in tempo reale sui progressi",
+          safety_page_feature_title_part2: "Strumenti migliori per genitori",
+          safety_page_feature_description_part2: "App per genitori che mostra chiaramente i piani educativi del bambino e individua le tappe dello sviluppo",
+          safety_page_feature_title_part3: "Sicuro, protetto e privato",
+          safety_page_feature_description_part3: "Dispositivo certificato kidSAFE+ COPPA con impostazioni di sicurezza e privacy personalizzabili",
+          faq_question_part1: "Cos'è Dofi?",
+          faq_answer_part1: "Dofi è un robot educativo parlante basato su intelligenza artificiale, progettato per i bambini: piccolo di dimensioni, ma con una grande personalità.",
+          faq_question_part2: "Come funziona Dofi?",
+          faq_answer_part2: "Dofi utilizza algoritmi avanzati di intelligenza artificiale per interagire con i bambini, insegnare loro nuove competenze e offrire un'esperienza di apprendimento divertente e coinvolgente.",
+          faq_question_part3: "Dofi è sicuro per i bambini?",
+          faq_answer_part3: "Sì, Dofi è progettato tenendo conto della sicurezza. Include crittografia avanzata e controlli parentali per garantire un'esperienza sicura.",
+          faq_question_part4: "Per quale fascia d'età è adatto Dofi?",
+          faq_answer_part4: "Dofi è adatto a bambini tra i 3 e gli 8 anni.",
+          faq_question_part5: "Come posso preordinare Dofi?",
+          faq_answer_part5: "Puoi preordinare Dofi direttamente dal nostro sito web. Basta aggiungerlo al carrello e procedere al pagamento.",
+      
+          // Profile
+          profile_page_title: "Informazioni personali",
+          profile_page_form_label1: "Nome e cognome",
+          profile_page_form_label2: "Email",
+          profile_page_form_label3: "Numero di contatto",
+          profile_page_form_label4: "Ruolo",
+          profile_page_form_button: "Aggiorna",
+          profile_page_rol_val1: "Azienda",
+          profile_page_rol_val2: "Genitore",
+          profile_page_rol_val3: "VIP",
+      
+          // Profile Orders
+          profile_orders_page_title: "I tuoi ordini",
+          profile_order_card_part1: "Codice ordine",
+          profile_order_card_part2: "Data dell'ordine",
+          profile_order_card_part3: "Informazioni dettagliate",
+          profile_order_card_part4: "Prezzo totale",
+      
+          // Profile Order Details Card
+          profile_orders_details_part1: "Consegna",
+          profile_orders_details_part2: "Paese",
+          profile_orders_details_part3: "Città",
+          profile_orders_details_part4: "Indirizzo",
+          profile_orders_details_part5: "Contatto",
+          profile_orders_details_part6: "Nome completo",
+          profile_orders_details_part7: "Email",
+          profile_orders_details_part8: "Telefono",
+          profile_orders_details_part9: "Pagamento",
+          profile_orders_details_part10: "Stato del pagamento",
+          profile_orders_details_part11: "Metodo di pagamento",
+          profile_orders_details_part12: "Prodotti ordinati",
+          profile_orders_details_part13: "Prezzo",
+          profile_orders_details_part14: "Consegna",
+          profile_orders_details_part15: "Prezzo totale",
+          profile_orders_details_part16: "Sconto",
+      
+          // Profile Security
+          profile_security_page_title: "Sicurezza",
+          profile_security_form_label1: "Password attuale",
+          profile_security_form_placeholder1: "Inserisci la password attuale",
+          profile_security_form_label2: "Nuova password",
+          profile_security_form_placeholder2: "Inserisci la nuova password",
+          profile_security_form_label3: "Conferma password",
+          profile_security_form_placeholder3: "Conferma la nuova password",
+          profile_security_form_button: "Cambia password",
+      
+          // Sidebar
+          sidebar_title_profile: "Profilo",
+          sidebar_title_orders: "Ordini",
+          sidebar_title_security: "Sicurezza",
+          sidebar_title_logout: "Disconnetti",
+      
+          // Breadcrumb
+          breadcrumb_home: "Home",
+          breadcrumb_profile: "Profilo",
+          breadcrumb_orders: "Ordini",
+          breadcrumb_order: "Ordine",
+          breadcrumb_security: "Sicurezza"
+        }
+      }      
 };
 
 i18n
