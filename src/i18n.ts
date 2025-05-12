@@ -503,6 +503,7 @@ const resources = {
             about_feature_part2: "高级问题解决能力",
             about_feature_part3: "自适应学习",
           
+            // Safety Page
             safety_page_title: "人工智能与安全",
             safety_page_description: "我们非常重视安全。您孩子的每一字节数据都在我们的封闭系统中受到保护。Dofi正在为家庭友好型人工智能树立新标准。",
             safety_page_feature_title_part1: "对家长有益",
@@ -512,6 +513,7 @@ const resources = {
             safety_page_feature_title_part3: "安全、可靠和私密",
             safety_page_feature_description_part3: "kidSAFE+ COPPA认证设备，拥有可定制的安全和隐私设置",
           
+            // FAQ
             faq_title: "常见问题",
             faq_question_part1: "Dofi是什么？",
             faq_answer_part1: "Dofi是一款为儿童设计的人工智能驱动的会说话的学习机器人，体积小巧但个性十足。",
@@ -524,6 +526,7 @@ const resources = {
             faq_question_part5: "我该如何预购Dofi？",
             faq_answer_part5: "您可以直接在我们的网站上预购Dofi。只需将产品添加到购物车并完成支付即可。",
           
+            // Profile
             profile_page_title: "个人信息",
             profile_page_form_label1: "姓名",
             profile_page_form_label2: "电子邮箱",
@@ -534,12 +537,14 @@ const resources = {
             profile_page_rol_val2: "家长",
             profile_page_rol_val3: "VIP",
           
+            // Profile Order
             profile_orders_page_title: "您的订单",
             profile_order_card_part1: "订单编号",
             profile_order_card_part2: "订单日期",
             profile_order_card_part3: "详细信息",
             profile_order_card_part4: "总价",
           
+            // Profile Order Details
             profile_orders_details_part1: "配送",
             profile_orders_details_part2: "国家",
             profile_orders_details_part3: "城市",
@@ -556,6 +561,7 @@ const resources = {
             profile_orders_details_part14: "配送",
             profile_orders_details_part15: "总价",
           
+            // Profile Security
             profile_security_page_title: "安全设置",
             profile_security_form_label1: "当前密码",
             profile_security_form_placeholder1: "输入当前密码",
@@ -565,12 +571,14 @@ const resources = {
             profile_security_form_placeholder3: "确认新密码",
             profile_security_form_button: "更改密码",
           
+            // Breadcrumb
             breadcrumb_home: "主页",
             breadcrumb_profile: "个人资料",
             breadcrumb_orders: "订单",
             breadcrumb_order: "下订单",
             breadcrumb_security: "安全",
           
+            // Footer
             footer_title1: "产品",
             footer_part1: "Dofi Pro",
             footer_part2: "Dofi Pro mini",
@@ -587,6 +595,7 @@ const resources = {
             footer_part11: "联系我们",
             footer_part12: "版权所有",
           
+            // Product Details
             product_details_part1: "颜色",
             product_details_part2: "数量",
             product_details_part3: "加入购物车",
