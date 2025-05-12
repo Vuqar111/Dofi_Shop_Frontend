@@ -96,7 +96,6 @@ const resources = {
             breadcrumb_profile: "Profile",
             breadcrumb_orders: "Orders",
             breadcrumb_order: "Order",
-<<<<<<< HEAD
             breadcrumb_security: "Security",
 
 
@@ -131,13 +130,8 @@ const resources = {
 
             order_summary_title: "Order summary",
             order_summary_part1: "Color",
-            order_summary_part2: ""
-            
-
-
-=======
-            breadcrumb_security: "Security"
->>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
+            order_summary_part2: "",
+    
         },
     },
     az: {
@@ -224,7 +218,6 @@ const resources = {
             sidebar_title_orders: "Sifarişlər",
             sidebar_title_security: "Təhlükəsizlik",
             sidebar_title_logout: "Çıxış et",
-<<<<<<< HEAD
 
 
 
@@ -267,15 +260,8 @@ const resources = {
             product_details_part5: "Detallı məlumat",
             
 
-=======
->>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
 
-            // Breadcrumb
-            breadcrumb_home: "Ana Səhifə",
-            breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Sifarişlər",
-            breadcrumb_order: "Sifariş verin",
-            breadcrumb_security: "Təhlükəsizlik"
+          
         },
     },
     fr: {
@@ -355,7 +341,6 @@ const resources = {
             profile_security_form_placeholder3: "Confirmer votre mot de passe",
             profile_security_form_button: "Modifier le mot de passe",
 
-<<<<<<< HEAD
 
             // Breadcrumb
             breadcrumb_home: "Home",
@@ -394,20 +379,6 @@ const resources = {
             
 
 
-=======
-            // Sidebar
-            sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Ordres",
-            sidebar_title_security: "Sécurité",
-            sidebar_title_logout: "Se déconnecter",
-
-            // Breadcrumb
-            breadcrumb_home: "Maison",
-            breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Ordres",
-            breadcrumb_order: "Commande",
-            breadcrumb_security: "Sécurité"
->>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
         },
     },
     tr: {
@@ -488,7 +459,6 @@ const resources = {
             profile_security_form_placeholder3: "Şifrenizi onayla",
             profile_security_form_button: "Şifreyi değiştir",
 
-<<<<<<< HEAD
 
 
             // Breadcrumb
@@ -530,20 +500,6 @@ const resources = {
             
 
 
-=======
-            // Sidebar
-            sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Siparişler",
-            sidebar_title_security: "Güvenlik",
-            sidebar_title_logout: "Çıkış yap",
-
-            // Breadcrumb
-            breadcrumb_home: "Ana Sayfa",
-            breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Siparişler",
-            breadcrumb_order: "Sipariş edin",
-            breadcrumb_security: "Güvenlik"
->>>>>>> eaba945a23bae13239dbc7240901a3d74172ab18
         },
     },
     de: {
