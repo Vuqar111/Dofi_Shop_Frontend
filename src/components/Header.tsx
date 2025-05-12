@@ -131,7 +131,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
             <ul className='flex flex-col items-start gap-4 p-4'>
               <li className='grid grid-cols-2 gap-4  w-[100%] text-center pb-4'>
                 <div>
-                  <Link to="/shop">
+                  <Link to={`/${currentLang}/shop`}>
                     <div className='flex items-center justify-center'>
                       <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_mini.png?v=1718185082" alt='' />
                     </div>
@@ -140,7 +140,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                 </div>
 
                 <div>
-                  <Link to="/shop">
+                  <Link to={`/${currentLang}/shop`}>
                     <div className='flex items-center justify-center'>
                       <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_miko3.png?v=1718185082" alt='' />
                     </div>
@@ -154,10 +154,10 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                 ) : (
                   <div className='w-[100%]'>
                     <div className='w-[100%] text-center text-green-400 border border-green-400 px-2 py-2 rounded-[5px]'>
-                      <Link to="/auth/login" onClick={toggleMenu}>Login</Link>
+                      <Link to={`/${currentLang}/auth/login`} onClick={toggleMenu}>Login</Link>
                     </div>
                     <div className='w-[100%] text-center text-white border border-green-400 bg-green-400 px-2 py-2 rounded-[5px] mt-2'>
-                      <Link to="/auth/register" onClick={toggleMenu}>Sign up</Link>
+                      <Link  to={`/${currentLang}/auth/register`} onClick={toggleMenu}>Sign up</Link>
                     </div>
                   </div>
                 )}

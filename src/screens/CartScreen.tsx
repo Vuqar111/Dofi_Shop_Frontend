@@ -1,6 +1,6 @@
 import Header from '../components/Profile/Header'
 import Footer from '../components/Footer'
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 import { useState, useEffect } from "react"
@@ -13,6 +13,10 @@ const CartScreen = () => {
   const dispatch: AppDispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart.items);
   const navigate = useNavigate()
+
+  const location = useLocation();
+
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
   const subtotal = cart.reduce((acc: number, item: any) => acc + item.price * item.qty, 0)
   const discount = 0
@@ -32,7 +36,7 @@ const CartScreen = () => {
   const handleCheckout = () => {
     const token = localStorage.getItem("token")
     const tokenExpired = isTokenExpired()
-    
+
     if (!token || tokenExpired) {
       navigate("/auth/login?checkout")
     } else {
@@ -47,7 +51,7 @@ const CartScreen = () => {
       <div className='w-[100%] md:w-[80%] mx-auto p-4 md:p-8 mb-8 min-h-[50vh]'>
         <div className='flex items-center justify-between'>
           <h1 className='text-3xl font-bold my-6'>Your cart</h1>
-          <Link to="/shop" className='opacity-[0.8] underline'>
+          <Link to={`/${currentLang}/shop`} className='opacity-[0.8] underline'>
             Continue
           </Link>
         </div>
@@ -55,7 +59,7 @@ const CartScreen = () => {
         {cart.length === 0 ? (
           <div className='text-center mt-8'>
             <p className='text-lg text-red-400'>Your cart is empty.</p>
-           
+
           </div>
         ) : (
           <>

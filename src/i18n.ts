@@ -25,7 +25,6 @@ const resources = {
             safety_page_feature_title_part3: "Safe, secure and private",
             safety_page_feature_description_part3: "kidSAFE+ COPPA certified device with customizable security and privacy settings",
 
-
             // FAQ
             faq_title: "Frequently Asked Questions",
             faq_question_part1: "What is Dofi?",
@@ -98,8 +97,6 @@ const resources = {
             breadcrumb_order: "Order",
             breadcrumb_security: "Security",
 
-
-
             // Footer
             footer_title1: "Products",
             footer_part1: "Dofi Pro",
@@ -117,8 +114,6 @@ const resources = {
             footer_part11: "Phone",
             footer_part12: "All Rights Reserved",
 
-
-
             // Product details
             product_details_part1: "Color",
             product_details_part2: "Quantity",
@@ -126,11 +121,17 @@ const resources = {
             product_details_part4: "Pre-order now",
             product_details_part5: "Detailed information",
 
-
-
+            // Order Summary
             order_summary_title: "Order summary",
             order_summary_part1: "Color",
             order_summary_part2: "",
+
+
+            // Card modal
+            card_modal_title: "Cart",
+            cart_modal_footer: "Proceed to checkout",
+            cart_modal_message1: "Continue to shopping",
+            cart_modal_message2: "Your cart is empty"
     
         },
     },
@@ -228,8 +229,6 @@ const resources = {
             breadcrumb_order: "Sifariş",
             breadcrumb_security: "Təhlükəsizlik",
 
-
-
             // Footer
             footer_title1: "Məhsullar",
             footer_part1: "Dofi Pro",
@@ -241,24 +240,27 @@ const resources = {
             footer_part6: "Çatdırılma",
             footer_part7: "Qaytarılma siyasəti",
             footer_part8: "Məxfiləşdirmə siyasəti",
-            footer_part9: "Terms of service",
-            footer_title3: "Bizi izlə",
+            footer_part9: "Xidmət şərtləri",
+            footer_title3: "Bizi izləyin",
             footer_part10: "E-poçt",
             footer_part11: "Əlaqə",
             footer_part12: "Bütün hüquqlar qorunur",
 
-
-
-
-
-            
             // Product details
             product_details_part1: "Rəng",
             product_details_part2: "Say",
             product_details_part3: "Karta əlavə et",
             product_details_part4: "Ön sifariş et",
             product_details_part5: "Detallı məlumat",
-            
+
+
+
+
+            // Card modal
+            card_modal_title: "Səbət",
+            cart_modal_footer: "Sifarişi tamamla",
+            cart_modal_message1: "Alış-verişə davam et",
+            cart_modal_message2: "Sənin səbətin boşdur"
 
 
           
@@ -284,7 +286,7 @@ const resources = {
             safety_page_feature_title_part3: "Sûr, sécurisé et privé",
             safety_page_feature_description_part3: "Appareil certifié kidSAFE+ COPPA avec paramètres de sécurité et de confidentialité personnalisables.",
 
-            faq_title: "Frequently Asked Questions",
+            faq_title: "Questions fréquemment posées",
             faq_question_part1: "Qu'est-ce que Dofi?",
             faq_answer_part1: "Dofi est un robot d'apprentissage parlant, alimenté par l'IA, conçu pour les enfants. Petit par la taille, mais doté d'une grande personnalité.",
             faq_question_part2: "Comment fonctionne Dofi?",
@@ -320,9 +322,9 @@ const resources = {
             profile_orders_details_part3: "Ville",
             profile_orders_details_part4: "Adresse",
             profile_orders_details_part5: "Contact",
-            profile_orders_details_part6: "Nom complet",
+            profile_orders_details_part6: "Nom et prénom",
             profile_orders_details_part7: "E-mail",
-            profile_orders_details_part8: "Téléphone",
+            profile_orders_details_part8: "Numéro de téléphone",
             profile_orders_details_part9: "Paiement",
             profile_orders_details_part10: "Statut du paiement",
             profile_orders_details_part11: "Type de paiement",
@@ -330,6 +332,7 @@ const resources = {
             profile_orders_details_part13: "Prix",
             profile_orders_details_part14: "Livraison",
             profile_orders_details_part15: "Prix total",
+            profile_orders_details_part16: "Remise",
 
             // Profile Security
             profile_security_page_title: "Sécurité",
@@ -341,44 +344,47 @@ const resources = {
             profile_security_form_placeholder3: "Confirmer votre mot de passe",
             profile_security_form_button: "Modifier le mot de passe",
 
-
             // Breadcrumb
-            breadcrumb_home: "Home",
-            breadcrumb_profile: "Profile",
-            breadcrumb_orders: "Orders",
-            breadcrumb_order: "Order",
-            breadcrumb_security: "Security",
-
-
+            breadcrumb_home: "Maison",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Ordres",
+            breadcrumb_order: "Commande",
+            breadcrumb_security: "Sécurité",
+            
             // Footer
-            footer_title1: "Products",
+            footer_title1: "Produits",
             footer_part1: "Dofi Pro",
             footer_part2: "Dofi Pro mini",
             footer_part3: "Dofi mini",
-            footer_title2: "Shipping & Policy",
-            footer_part4: "About",
-            footer_part5: "Shipping information",
-            footer_part6: "Return Policy",
-            footer_part7: "Privacy Policy",
-            footer_part8: "Terms of Service",
-            footer_title3: "Follow us",
-            footer_part9: "Email",
-            footer_part10: "Phone",
-            footer_part11: "All Rights Reserved",
+            footer_part4: "Sac Dofi",
+            footer_title2: "Livraison et Politiques",
+            footer_part5: "À propos",
+            footer_part6: "Livraison",
+            footer_part7: "Politique de retour",
+            footer_part8: "Politique de confidentialité",
+            footer_part9: "Conditions d'utilisation",
+            footer_title3: "Suivez-nous",
+            footer_part10: "E-mail",
+            footer_part11: "Contact",
+            footer_part12: "Tous droits réservés",
 
-
-
-
-            
             // Product details
-            product_details_part1: "Color",
-            product_details_part2: "Quantity",
-            product_details_part3: "Add to cart",
-            product_details_part4: "Pre-order now",
-            product_details_part5: "Detailed information",
+            product_details_part1: "Couleur",
+            product_details_part2: "Quantité",
+            product_details_part3: "Ajouter au panier",
+            product_details_part4: "Précommander maintenant",
+            product_details_part5: "Informations détaillées",
             
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Ordres",
+            sidebar_title_security: "Sécurité",
+            sidebar_title_logout: "Se déconnecter",
 
-
+            // Order Summary
+            order_summary_title: "Récapitulatif de la commande",
+            order_summary_part1: "Couleur",
+            order_summary_part2: ""
         },
     },
     tr: {
@@ -402,7 +408,7 @@ const resources = {
             safety_page_feature_title_part3: "Güvenli, emniyetli ve özel",
             safety_page_feature_description_part3: "kidSAFE+ COPPA sertifikalı, özelleştirilebilir güvenlik ve gizlilik ayarlarına sahip cihaz",
 
-            faq_title: "Frequently Asked Questions",
+            faq_title: "Sıkça Sorulan Sorular",
             faq_question_part1: "Dofi nedir?",
             faq_answer_part1: "Dofi, çocuklar için tasarlanmış, yapay zeka destekli, konuşan bir öğrenme robotudur; boyutu küçük ama kişiliği büyüktür.",
             faq_question_part2: "Dofi nasıl çalışır?",
@@ -459,48 +465,170 @@ const resources = {
             profile_security_form_placeholder3: "Şifrenizi onayla",
             profile_security_form_button: "Şifreyi değiştir",
 
-
-
             // Breadcrumb
-            breadcrumb_home: "Home",
-            breadcrumb_profile: "Profile",
-            breadcrumb_orders: "Orders",
-            breadcrumb_order: "Order",
-            breadcrumb_security: "Security",
-
-
+            breadcrumb_home: "Ana Sayfa",
+            breadcrumb_profile: "Profil",
+            breadcrumb_orders: "Siparişler",
+            breadcrumb_order: "Sipariş edin",
+            breadcrumb_security: "Güvenlik",
 
             // Footer
-            footer_title1: "Products",
+            footer_title1: "Ürünler",
             footer_part1: "Dofi Pro",
             footer_part2: "Dofi Pro mini",
             footer_part3: "Dofi mini",
-            footer_title2: "Shipping & Policy",
-            footer_part4: "About",
-            footer_part5: "Shipping information",
-            footer_part6: "Return Policy",
-            footer_part7: "Privacy Policy",
-            footer_part8: "Terms of Service",
-            footer_title3: "Follow us",
-            footer_part9: "Email",
-            footer_part10: "Phone",
-            footer_part11: "All Rights Reserved",
-
-
-
-
-
+            footer_part4: "Dofi çantası",
+            footer_title2: "Kargo & Politikalar",
+            footer_part5: "Hakkımızda",
+            footer_part6: "Kargo",
+            footer_part7: "İade Politikası",
+            footer_part8: "Gizlilik Politikası",
+            footer_part9: "Hizmet Şartları",
+            footer_title3: "Bizi Takip Edin",
+            footer_part10: "E-posta",
+            footer_part11: "İletişim",
+            footer_part12: "Tüm haklar saklıdır",
             
             // Product details
-            product_details_part1: "Color",
-            product_details_part2: "Quantity",
-            product_details_part3: "Add to cart",
-            product_details_part4: "Pre-order now",
-            product_details_part5: "Detailed information",
+            product_details_part1: "Renk",
+            product_details_part2: "Miktar",
+            product_details_part3: "Sepete ekle",
+            product_details_part4: "Şimdi ön sipariş ver",
+            product_details_part5: "Ayrıntılı bilgi",
             
+            // Sidebar
+            sidebar_title_profile: "Profil",
+            sidebar_title_orders: "Siparişler",
+            sidebar_title_security: "Güvenlik",
+            sidebar_title_logout: "Çıkış yap",
 
-
+            // Order Summary
+            order_summary_title: "Sipariş özeti",
+            order_summary_part1: "Renk",
+            order_summary_part2: ""
         },
+    },
+    cn: {
+        translation: {
+            hero_page_title: "你好！",
+            hero_page_subtitle: "为每个孩子带来智能、安全和无限乐趣！",
+            hero_page_button: "立即预购",
+            home_screen_products_title: "Dofi在行动",
+            add_to_cart_text: "加入购物车",
+            about_description: "我们的机器人是一位智能、有趣的伙伴，通过语音指令互动、配有家长控制的视频通话以及动态的肢体和面部表情，支持孩子们的成长。它帮助孩子学习母语和英语，享受互动故事讲述，并在玩乐中培养强大的数学和逻辑能力。",
+            about_feature_part1: "认知发展",
+            about_feature_part2: "高级问题解决能力",
+            about_feature_part3: "自适应学习",
+          
+            // Safety Page
+            safety_page_title: "人工智能与安全",
+            safety_page_description: "我们非常重视安全。您孩子的每一字节数据都在我们的封闭系统中受到保护。Dofi正在为家庭友好型人工智能树立新标准。",
+            safety_page_feature_title_part1: "对家长有益",
+            safety_page_feature_desciption_part1: "从安全通话到实时进度报告",
+            safety_page_feature_title_part2: "更强大的育儿工具",
+            safety_page_feature_description_part2: "家长应用程序清晰展示孩子的学习计划并识别成长里程碑",
+            safety_page_feature_title_part3: "安全、可靠和私密",
+            safety_page_feature_description_part3: "kidSAFE+ COPPA认证设备，拥有可定制的安全和隐私设置",
+          
+            // FAQ
+            faq_title: "常见问题",
+            faq_question_part1: "Dofi是什么？",
+            faq_answer_part1: "Dofi是一款为儿童设计的人工智能驱动的会说话的学习机器人，体积小巧但个性十足。",
+            faq_question_part2: "Dofi是如何工作的？",
+            faq_answer_part2: "Dofi通过先进的人工智能算法与孩子互动，教授新技能，提供有趣且引人入胜的学习体验。",
+            faq_question_part3: "Dofi对儿童安全吗？",
+            faq_answer_part3: "是的，Dofi在设计时充分考虑了安全性，配备高级加密和家长控制功能，为孩子们提供安全的使用体验。",
+            faq_question_part4: "Dofi适合哪个年龄段的孩子？",
+            faq_answer_part4: "Dofi适合3至8岁的儿童。",
+            faq_question_part5: "我该如何预购Dofi？",
+            faq_answer_part5: "您可以直接在我们的网站上预购Dofi。只需将产品添加到购物车并完成支付即可。",
+          
+            // Profile
+            profile_page_title: "个人信息",
+            profile_page_form_label1: "姓名",
+            profile_page_form_label2: "电子邮箱",
+            profile_page_form_label3: "联系电话",
+            profile_page_form_label4: "角色",
+            profile_page_form_button: "更新",
+            profile_page_rol_val1: "公司",
+            profile_page_rol_val2: "家长",
+            profile_page_rol_val3: "VIP",
+          
+            // Profile Order
+            profile_orders_page_title: "您的订单",
+            profile_order_card_part1: "订单编号",
+            profile_order_card_part2: "订单日期",
+            profile_order_card_part3: "详细信息",
+            profile_order_card_part4: "总价",
+          
+            // Profile Order Details
+            profile_orders_details_part1: "配送",
+            profile_orders_details_part2: "国家",
+            profile_orders_details_part3: "城市",
+            profile_orders_details_part4: "地址",
+            profile_orders_details_part5: "联系方式",
+            profile_orders_details_part6: "全名",
+            profile_orders_details_part7: "邮箱",
+            profile_orders_details_part8: "电话",
+            profile_orders_details_part9: "付款",
+            profile_orders_details_part10: "付款状态",
+            profile_orders_details_part11: "支付方式",
+            profile_orders_details_part12: "订购商品",
+            profile_orders_details_part13: "价格",
+            profile_orders_details_part14: "配送",
+            profile_orders_details_part15: "总价",
+          
+            // Profile Security
+            profile_security_page_title: "安全设置",
+            profile_security_form_label1: "当前密码",
+            profile_security_form_placeholder1: "输入当前密码",
+            profile_security_form_label2: "新密码",
+            profile_security_form_placeholder2: "输入新密码",
+            profile_security_form_label3: "确认密码",
+            profile_security_form_placeholder3: "确认新密码",
+            profile_security_form_button: "更改密码",
+          
+            // Breadcrumb
+            breadcrumb_home: "主页",
+            breadcrumb_profile: "个人资料",
+            breadcrumb_orders: "订单",
+            breadcrumb_order: "下订单",
+            breadcrumb_security: "安全",
+          
+            // Footer
+            footer_title1: "产品",
+            footer_part1: "Dofi Pro",
+            footer_part2: "Dofi Pro mini",
+            footer_part3: "Dofi mini",
+            footer_part4: "Dofi背包",
+            footer_title2: "运输与政策",
+            footer_part5: "关于我们",
+            footer_part6: "运输",
+            footer_part7: "退货政策",
+            footer_part8: "隐私政策",
+            footer_part9: "服务条款",
+            footer_title3: "关注我们",
+            footer_part10: "邮箱",
+            footer_part11: "联系我们",
+            footer_part12: "版权所有",
+          
+            // Product Details
+            product_details_part1: "颜色",
+            product_details_part2: "数量",
+            product_details_part3: "加入购物车",
+            product_details_part4: "立即预购",
+            product_details_part5: "详细信息",
+
+            // Sidebar
+            sidebar_title_profile: "个人资料",
+            sidebar_title_orders: "订单",
+            sidebar_title_security: "安全设置",
+            sidebar_title_logout: "退出登录",
+            // Order Summary
+            order_summary_title: "订单摘要",
+            order_summary_part1: "颜色",
+            order_summary_part2: ""
+          },          
     },
     de: {
         translation: {
@@ -522,6 +650,8 @@ const resources = {
           safety_page_feature_description_part2: "Eltern-App mit klaren Bildungsplänen und Entwicklungszielen",
           safety_page_feature_title_part3: "Sicher, geschützt und privat",
           safety_page_feature_description_part3: "kidSAFE+ COPPA-zertifiziertes Gerät mit anpassbaren Sicherheits- und Datenschutzeinstellungen",
+
+          faq_title: "Häufig gestellte Fragen",
           faq_question_part1: "Was ist Dofi?",
           faq_answer_part1: "Dofi ist ein KI-gestützter sprechender Lernroboter für Kinder – klein in der Größe, aber groß in der Persönlichkeit.",
           faq_question_part2: "Wie funktioniert Dofi?",
@@ -590,7 +720,36 @@ const resources = {
           breadcrumb_profile: "Profil",
           breadcrumb_orders: "Bestellungen",
           breadcrumb_order: "Bestellung",
-          breadcrumb_security: "Sicherheit"
+          breadcrumb_security: "Sicherheit",
+          
+          // Footer
+          footer_title1: "Produkte",
+          footer_part1: "Dofi Pro",
+          footer_part2: "Dofi Pro mini",
+          footer_part3: "Dofi mini",
+          footer_part4: "Dofi Tasche",
+          footer_title2: "Versand & Richtlinien",
+          footer_part5: "Über uns",
+          footer_part6: "Lieferung",
+          footer_part7: "Rückgaberecht",
+          footer_part8: "Datenschutzrichtlinie",
+          footer_part9: "Nutzungsbedingungen",
+          footer_title3: "Folgen Sie uns",
+          footer_part10: "E-Mail",
+          footer_part11: "Kontakt",
+          footer_part12: "Alle Rechte vorbehalten",
+
+          // Product details
+          product_details_part1: "Farbe",
+          product_details_part2: "Menge",
+          product_details_part3: "In den Warenkorb",
+          product_details_part4: "Jetzt vorbestellen",
+          product_details_part5: "Detaillierte Informationen",
+
+          // Order Summary
+          order_summary_title: "Bestellübersicht",
+          order_summary_part1: "Farbe",
+          order_summary_part2: ""
         },
       },
       es: {
@@ -613,6 +772,8 @@ const resources = {
           safety_page_feature_description_part2: "Aplicación para padres que muestra claramente los planes educativos del niño e identifica hitos de desarrollo",
           safety_page_feature_title_part3: "Seguro, protegido y privado",
           safety_page_feature_description_part3: "Dispositivo certificado por kidSAFE+ y COPPA con configuraciones de seguridad y privacidad personalizables",
+          
+          faq_title: "Preguntas frecuentes",
           faq_question_part1: "¿Qué es Dofi?",
           faq_answer_part1: "Dofi es un robot educativo parlante impulsado por inteligencia artificial, diseñado para niños, pequeño en tamaño pero grande en personalidad.",
           faq_question_part2: "¿Cómo funciona Dofi?",
@@ -681,7 +842,36 @@ const resources = {
           breadcrumb_profile: "Perfil",
           breadcrumb_orders: "Pedidos",
           breadcrumb_order: "Pedido",
-          breadcrumb_security: "Seguridad"
+          breadcrumb_security: "Seguridad",
+
+          // Footer
+          footer_title1: "Productos",
+          footer_part1: "Dofi Pro",
+          footer_part2: "Dofi Pro mini",
+          footer_part3: "Dofi mini",
+          footer_part4: "Bolsa Dofi",
+          footer_title2: "Envío y Políticas",
+          footer_part5: "Acerca de",
+          footer_part6: "Envío",
+          footer_part7: "Política de devoluciones",
+          footer_part8: "Política de privacidad",
+          footer_part9: "Términos del servicio",
+          footer_title3: "Síguenos",
+          footer_part10: "Correo electrónico",
+          footer_part11: "Contacto",
+          footer_part12: "Todos los derechos reservados",
+
+          // Product details
+          product_details_part1: "Color",
+          product_details_part2: "Cantidad",
+          product_details_part3: "Agregar al carrito",
+          product_details_part4: "Preordenar ahora",
+          product_details_part5: "Información detallada",
+
+          // Order Summary
+          order_summary_title: "Resumen del pedido",
+          order_summary_part1: "Color",
+          order_summary_part2: ""
         },
       },
       it: {
@@ -704,6 +894,8 @@ const resources = {
           safety_page_feature_description_part2: "App per genitori che mostra chiaramente i piani educativi del bambino e individua le tappe dello sviluppo",
           safety_page_feature_title_part3: "Sicuro, protetto e privato",
           safety_page_feature_description_part3: "Dispositivo certificato kidSAFE+ COPPA con impostazioni di sicurezza e privacy personalizzabili",
+          
+          faq_title: "Domande frequenti",
           faq_question_part1: "Cos'è Dofi?",
           faq_answer_part1: "Dofi è un robot educativo parlante basato su intelligenza artificiale, progettato per i bambini: piccolo di dimensioni, ma con una grande personalità.",
           faq_question_part2: "Come funziona Dofi?",
@@ -772,7 +964,36 @@ const resources = {
           breadcrumb_profile: "Profilo",
           breadcrumb_orders: "Ordini",
           breadcrumb_order: "Ordine",
-          breadcrumb_security: "Sicurezza"
+          breadcrumb_security: "Sicurezza",
+
+          // Footer
+          footer_title1: "Prodotti",
+          footer_part1: "Dofi Pro",
+          footer_part2: "Dofi Pro mini",
+          footer_part3: "Dofi mini",
+          footer_part4: "Borsa Dofi",
+          footer_title2: "Spedizione e Politiche",
+          footer_part5: "Chi siamo",
+          footer_part6: "Spedizione",
+          footer_part7: "Politica di reso",
+          footer_part8: "Informativa sulla privacy",
+          footer_part9: "Termini di servizio",
+          footer_title3: "Seguici",
+          footer_part10: "Email",
+          footer_part11: "Contatto",
+          footer_part12: "Tutti i diritti riservati",
+
+          // Product details
+          product_details_part1: "Colore",
+          product_details_part2: "Quantità",
+          product_details_part3: "Aggiungi al carrello",
+          product_details_part4: "Preordina ora",
+          product_details_part5: "Informazioni dettagliate",
+
+          // Order Summary
+          order_summary_title: "Riepilogo ordine",
+          order_summary_part1: "Colore",
+          order_summary_part2: ""
         }
       }      
 };

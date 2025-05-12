@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 
 const HeroScreen = () => {
     const { t } = useTranslation();
+    const location = useLocation();
+
+    const currentLang = location.pathname.split('/')[1] || 'en';
+
 
     return (
         <div className='relative w-full h-[60vh] md:h-[80vh] overflow-hidden'>
@@ -48,7 +52,7 @@ const HeroScreen = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                 >
-                    <Link to="/shop">
+                    <Link to={`/${currentLang}/shop`}>
                         <span className='bg-green-400 text-white py-4 px-8 sm:py-4 sm:px-12 text-[16px] sm:text-lg rounded-full inline-block'>
                             {t('hero_page_button')}
                         </span>

@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation} from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { isTokenExpired } from "../utils/tokenValidity"
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../redux/store';
 import { removeFromCart, updateQuantity } from '../redux/features/cartSlice'
+import { useTranslation } from 'react-i18next';
 
 
 
 const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
   const dispatch: AppDispatch = useDispatch();
+  const { t } = useTranslation();
 
   const cart = useSelector((state: RootState) => state.cart.items);
   const navigate = useNavigate()
+
+    const location = useLocation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
 
   const handleRemoveFromCart = (product: any) => {
@@ -28,9 +33,9 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
     const tokenExpired = isTokenExpired()
 
     if (!token || tokenExpired) {
-      navigate("/auth/login?checkout")
+      navigate(`/${currentLang}/auth/login?checkout`)
     } else {
-      navigate("/checkout")
+      navigate(`/${currentLang}/checkout`)
     }
   }
 
@@ -59,7 +64,9 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           </div>
           <div className="flex-grow overflow-y-auto">
             {cart.length === 0 ? (
-              <p>Your cart is empty</p>
+              <p>
+                {t('cart_modal_message2')}
+              </p>
             ) : (
               cart.map((product: any) => (
                 <div key={product._id} className="flex justify-between mb-4 pb-4 border-b border-gray-200">
@@ -105,12 +112,12 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
           </div>
           <div className="w-full border-gray-200 border-t pt-4">
             {cart.length === 0 ? (
-              <Link to="/shop" className="w-full bg-green-400 text-white py-2 rounded text-center block">
-                Continue shopping
+              <Link to={`/${currentLang}/shop`} className="w-full bg-green-400 text-white py-2 rounded text-center block">
+                {t('cart_modal_message1')}
               </Link>
             ) : (
               <div onClick={handleCheckout} className="cursor-pointer w-full bg-green-400 text-white py-2 rounded text-center block">
-                Proceed to checkout
+               {t('cart_modal_footer')}
               </div>
             )}
           </div>
