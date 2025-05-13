@@ -1,0 +1,28 @@
+{
+  "robot-for-senan": {
+    "name": "Simsiz qulaqlıqlar",
+    "description": "Yüksək keyfiyyətli səs və səs-küyün azaldılması.",
+    "features": [
+      {
+        "name": "İnsanabənzər toxunuşa malik süni intellektlə işləyən robot.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Təkmilləşdirilmiş şifrələmə təhlükəsizliyi təmin edir, Valideyn nəzarəti.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Dərs deyən və qulaq asan interaktiv robot.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "STEAM yönümlü öyrənməyə cəlb edir.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Təhsil proqramları və oyunlarla yüklənmişdir.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  }
+}

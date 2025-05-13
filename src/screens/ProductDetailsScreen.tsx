@@ -8,7 +8,7 @@ import FAQ from "../components/FAQ"
 import Footer from "../components/Footer"
 import { addToCart } from "../redux/features/cartSlice";
 import { useTranslation } from 'react-i18next';
-import { Link,useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const ProductDetailsScreen = () => {
   const location = useLocation();
@@ -31,7 +31,7 @@ const ProductDetailsScreen = () => {
   const dispatch: AppDispatch = useDispatch()
   const { product, productError, productLoading } = useSelector((state: any) => state.products)
 
-  const slug = window.location.pathname.split('/')[2]
+  const slug = window.location.pathname.split('/')[3]
   useEffect(() => {
     dispatch(productDetails({ slug }))
   }, [dispatch, slug])
@@ -41,6 +41,13 @@ const ProductDetailsScreen = () => {
       setSelectedImage(product.images[0])
     }
   }, [product])
+
+
+  const name = t(`products.${slug}.name`);
+  const description = t(`products.${slug}.description`);
+
+
+
 
   const imageGallery = [
     "https://miko.ai/cdn/shop/files/Copy_of_Miko_3-product-1.webp?v=1735102234&width=713",
@@ -115,7 +122,7 @@ const ProductDetailsScreen = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 md:pl-8">
-          <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{product?.name}</h1>
+          <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{name}</h1>
           <p className="text-2xl text-black mb-4">${product?.salePrice} USD</p>
           <p className="text-sm text-gray-500 mb-4">Shipping calculated at checkout</p>
           <ul>

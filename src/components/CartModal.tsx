@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate, useLocation} from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { isTokenExpired } from "../utils/tokenValidity"
 import { useDispatch, useSelector } from 'react-redux'
@@ -16,7 +16,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
   const cart = useSelector((state: RootState) => state.cart.items);
   const navigate = useNavigate()
 
-    const location = useLocation();
+  const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'en';
 
 
@@ -117,7 +117,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
               </Link>
             ) : (
               <div onClick={handleCheckout} className="cursor-pointer w-full bg-green-400 text-white py-2 rounded text-center block">
-               {t('cart_modal_footer')}
+                {t('cart_modal_footer')}
               </div>
             )}
           </div>

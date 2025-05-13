@@ -1,0 +1,28 @@
+{
+  "robot-for-senan": {
+    "name": "Wireless Headphones",
+    "description": "An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖",
+    "features": [
+      {
+        "name": "AI-powered robot with a human-like touch.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Enhanced encryption ensures safety, Parental control.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Interactive robot that teaches and listens.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "Engages with STEAM-focused learning.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Loaded with learning apps and games.",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ] 
+  }
+}
