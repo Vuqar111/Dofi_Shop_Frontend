@@ -19,6 +19,9 @@ const resources = {
             about_feature_part1: "Cognitive Growth",
             about_feature_part2: "Enhanced Problem-Solving",
             about_feature_part3: "Adaptive Learning",
+            about_feature_part4: "Personalized Feedback",
+
+
             safety_page_title: "Artificial Intelligence and Security",
             safety_page_description: "We take security seriously. Every byte of your child's data is protected within our closed system. Dofi sets a new standard for family-friendly artificial intelligence.",
             safety_page_feature_title_part1: "Useful for parents",
@@ -243,6 +246,8 @@ const resources = {
             about_feature_part1: "Məntiqi artım",
             about_feature_part2: "Təkmilləşdirilmiş Problemlərin Həlli",
             about_feature_part3: "Adaptiv Öyrənmə",
+            about_feature_part4: "Personalized Feedback",
+
 
             safety_page_title: "Süni İntellekt və Təhlükəsizlik",
             safety_page_description: "Biz təhlükəsizliyə ciddi yanaşırıq. Övladınızın məlumatlarının hər baytı bizim qapalı sistemimiz çərçivəsində qorunur. Dofi ailə dostu süni intellekt üçün yeni standart müəyyən edir.",

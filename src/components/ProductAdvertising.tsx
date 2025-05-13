@@ -60,11 +60,8 @@ const ProductAdvertising = () => {
                 alt=""
               />
               <p className="text-lg">
-                {t('about_feature_part1')}
+                {t(`about_feature_part${index+1}`)}
               </p>
-              {/*<p>Cognitive Growth</p>
-              <p>Enhanced Problem-Solving</p>
-              <p>Adaptive Learning</p>*/}
             </motion.div>
           ))}
         </div>
