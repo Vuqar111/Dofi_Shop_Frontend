@@ -28,7 +28,7 @@ const CheckOutScreen = () => {
     const [payment_status, setPaymentStatus] = useState("Paid");
     const [payment_type, setPaymentType] = useState("Cart");
     const [discount, setDiscount] = useState("");
-    const [country, setCountry] = useState('Azərbaycan');
+    const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
     const [address, setAddress] = useState('')
     const [apartment, setApartmant] = useState('')
@@ -43,6 +43,15 @@ const CheckOutScreen = () => {
 
     const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
     const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)
+
+
+
+    useEffect(() => {
+        if (profile) {
+            setFullName(profile.fullName || '')
+            setEmail(profile.email || '')
+        }
+    }, [profile])
 
 
 
@@ -202,7 +211,7 @@ const CheckOutScreen = () => {
                                     required
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
 
-                                    onChange={(e) => setCity(e.target.value)}
+                                    onChange={(e) => setCountry(e.target.value)}
                                 >
                                     <option value="">
                                         {t('order_checkout_part17')}
@@ -315,7 +324,7 @@ const CheckOutScreen = () => {
                                     <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part2')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
                                     </div>
                                 </div>
                                 <div>

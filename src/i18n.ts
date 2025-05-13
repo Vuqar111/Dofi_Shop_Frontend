@@ -579,7 +579,14 @@ const resources = {
             // Order Summary
             order_summary_title: "Récapitulatif de la commande",
             order_summary_part1: "Couleur",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         },
     },
     tr: {
@@ -700,7 +707,14 @@ const resources = {
             // Order Summary
             order_summary_title: "Sipariş özeti",
             order_summary_part1: "Renk",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         },
     },
     cn: {
@@ -822,7 +836,14 @@ const resources = {
             // Order Summary
             order_summary_title: "订单摘要",
             order_summary_part1: "颜色",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         },
     },
     de: {
@@ -944,7 +965,14 @@ const resources = {
             // Order Summary
             order_summary_title: "Bestellübersicht",
             order_summary_part1: "Farbe",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         },
     },
     es: {
@@ -1066,7 +1094,14 @@ const resources = {
             // Order Summary
             order_summary_title: "Resumen del pedido",
             order_summary_part1: "Color",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         },
     },
     it: {
@@ -1188,7 +1223,14 @@ const resources = {
             // Order Summary
             order_summary_title: "Riepilogo ordine",
             order_summary_part1: "Colore",
-            order_summary_part2: ""
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
         }
     }
 };

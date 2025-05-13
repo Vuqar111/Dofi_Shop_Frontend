@@ -79,7 +79,7 @@ const ProductDetailsScreen = () => {
 
     dispatch(addToCart(cartItem)); // Use Redux action
 
-    swal(t('modal_success_message_title'), t('modal_success_message_description'), t('modal_success_button'));
+    swal(t('modal_success_message_title'), t('modal_success_message_description'), "success");
   };
 
   return (
