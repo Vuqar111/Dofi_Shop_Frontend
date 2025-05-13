@@ -24,7 +24,7 @@ export const Header = () => {
       <div className="sticky top-0 z-50 bg-white w-[100%] ">
       <div className="w-[100%] md:w-[80%] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center gap-8">
-          <Link to="/">
+          <Link to={`/${currentLang}`}>
             <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
           </Link>
         </div>

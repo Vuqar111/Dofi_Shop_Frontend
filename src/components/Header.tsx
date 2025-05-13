@@ -64,7 +64,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
           </button>
 
           {/* Center: Logo */}
-          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
+          <Link to={`/${currentLang}`} className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
             <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
           </Link>
 

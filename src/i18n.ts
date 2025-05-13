@@ -225,6 +225,8 @@ const resources = {
             hero_page_button: "Ön sifariş et",
             home_screen_products_title: "Dofi Fəaliyyətdədir",
             add_to_cart_text: "Səbətə əlavə et",
+
+            about_title: "Haqqında",
             about_description: "Robotumuz səsli əmrlə qarşılıqlı əlaqə, valideyn nəzarəti ilə video zəng, dinamik bədən və üz ifadələri vasitəsilə uşaqların inkişafını dəstəkləmək üçün nəzərdə tutulmuş ağıllı, cəlbedici yoldaşdır. O, uşaqlara həm ana dilini, həm də ingilis dilini öyrənməyə, interaktiv hekayələrdən həzz almağa və əylənərkən güclü riyaziyyat və məntiq bacarıqlarını inkişaf etdirməyə kömək edir.",
             about_feature_part1: "Məntiqi artım",
             about_feature_part2: "Təkmilləşdirilmiş Problemlərin Həlli",

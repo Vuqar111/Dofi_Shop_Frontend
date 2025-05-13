@@ -125,7 +125,7 @@ const CheckOutScreen = () => {
                     email,
                     country,
                     city,
-                    fullName,
+                    full_name: fullName,
                     address,
                     apartment,
                     phone,
@@ -316,7 +316,6 @@ const CheckOutScreen = () => {
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
                                         <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part2')}: <div>{product?.price} AZN</div></p>
                                     </div>
                                 </div>
                                 <div>
