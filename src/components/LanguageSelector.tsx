@@ -1,18 +1,29 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const LanguageSelector: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
-    navigate(`/${lang}`);
+    const pathParts = location.pathname.split('/');
+
+    // Replace the first segment (language)
+    pathParts[1] = lang;
+
+    // Navigate to the new path
+    navigate(pathParts.join('/'));
   };
 
+  const currentLang = location.pathname.split('/')[1] || 'en';
+
   return (
-    <select 
-    className='cursor-pointer outline-none'
-    onChange={handleChange} defaultValue="en">
+    <select
+      className='cursor-pointer outline-none'
+      onChange={handleChange}
+      defaultValue={currentLang}
+    >
       <option value="en">ENG</option>
       <option value="az">AZE</option>
       <option value="fr">FR</option>

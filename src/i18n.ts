@@ -123,18 +123,95 @@ const resources = {
             product_details_part3: "Add to cart",
             product_details_part4: "Pre-order now",
             product_details_part5: "Detailed information",
+            product_details_part6: "Shipping calculated at checkout",
+
+
+            // Order checkout
+            order_checkout_part1: "Contact",
+            order_checkout_part2: "Email",
+            order_checkout_part3: "Enter your email",
+            order_checkout_part4: "Full name",
+            order_checkout_part5: "Write the full name",
+            order_checkout_part6: "Choose the country",
+            order_checkout_part7: "Choose the city",
+            order_checkout_part8: "Select the city",
+            order_checkout_part9: "Address",
+            order_checkout_part10: "Enter your address",
+            order_checkout_part11: "Apartment",
+            order_checkout_part12: "Enter your apartment",
+            order_checkout_part13: "Contact",
+            order_checkout_part14: "7 digit number",
+            order_checkout_part15: "Confirm pre-order",
+            order_checkout_part16: "Delivery",
+            order_checkout_part17: "Select the country",
 
             // Order Summary
             order_summary_title: "Order summary",
             order_summary_part1: "Color",
-            order_summary_part2: "",
+            order_summary_part2: "Price",
+            order_summary_part3: "Enter promo code",
+            order_summary_part4: "Check",
+            order_summary_part5: "Product price",
+            order_summary_part6: "Delivery",
+            order_summary_part7: "Discount",
+            order_summary_part8: "Total price",
+            order_summary_part9: "Your cart is empty",
 
 
             // Card modal
             card_modal_title: "Cart",
             cart_modal_footer: "Proceed to checkout",
             cart_modal_message1: "Continue to shopping",
-            cart_modal_message2: "Your cart is empty"
+            cart_modal_message2: "Your cart is empty",
+
+
+            // Register
+            register_page_title: "Create your account now with just one click",
+            register_page_label1: "Name and Surname",
+            register_page_input1: "Enter your name and surname",
+            register_page_label2: "Email",
+            register_page_input2: "Write the email",
+            register_page_label3: "Pasword",
+            register_page_input3: "Write the password",
+            register_page_button: "Sign up",
+            register_page_footer1: "Already have an account",
+            register_page_footer2: "Sign in",
+
+
+            // Login
+            login_page_title: "We are glad to see you again",
+            login_page_label1: "Email",
+            login_page_input1: "Write the email",
+            login_page_label2: "Password",
+            login_page_input2: 'Write the password',
+            login_page_button: "Login",
+            login_page_footer1: "Don't have an account",
+            login_page_footer2: "Sign Up",
+            login_page_footer3: "Forgot your password",
+
+
+
+            // Forgot
+            forgot_page_title: "Repair your password",
+            forgot_page_label1: "Email",
+            forgot_page_input1: "Enter your email",
+            forgot_page_button: "Change password",
+            forgot_page_footer1: "Do you have an account",
+            forgot_page_footer2: "Login",
+
+
+
+
+            // Cart
+            cart_page_part1: "Your cart",
+            cart_page_part2: "Continue",
+            cart_page_part3: "Product",
+            cart_page_part4: "Amount",
+            cart_page_part5: "Total",
+            cart_page_part6: "Proceed to payment"
+
+
+
 
         },
     },
@@ -258,6 +335,7 @@ const resources = {
             product_details_part3: "Karta əlavə et",
             product_details_part4: "Ön sifariş et",
             product_details_part5: "Detallı məlumat",
+            product_details_part6: "Çatdırılma hesablanacaq",
 
 
 
@@ -266,7 +344,43 @@ const resources = {
             card_modal_title: "Səbət",
             cart_modal_footer: "Sifarişi tamamla",
             cart_modal_message1: "Alış-verişə davam et",
-            cart_modal_message2: "Sənin səbətin boşdur"
+            cart_modal_message2: "Sənin səbətin boşdur",
+
+
+
+            // Register
+            register_page_title: "Sadəcə bir toxunuşla hesabınızı yaradın",
+            register_page_label1: "Ad və Soyad",
+            register_page_input1: "Adınızı və soyadınızı daxil edin",
+            register_page_label2: "Email",
+            register_page_input2: "Email yazın",
+            register_page_label3: "Şifrə",
+            register_page_input3: "Şifrəni yazın",
+            register_page_button: "Qeydiyyatdan keç",
+            register_page_footer1: "Artıq hesabınız var?",
+            register_page_footer2: "Daxil olun",
+
+
+            // Login
+            login_page_title: "Sizi yenidən görməyə şadıq",
+            login_page_label1: "E-poçt",
+            login_page_input1: "Email yazın",
+            login_page_label2: "Şifrə",
+            login_page_input2: "Şifrəni yazın",
+            login_page_button: "Daxil olun",
+            login_page_footer1: "Hesabınız yoxdur?",
+            login_page_footer2: "Qeydiyyatdan keçin",
+            login_page_footer3: "Şifrəni unutmusunuz?",
+
+
+
+            // Login
+            forgot_page_title: "Parolu təmin et",
+            forgot_page_label1: "E-poçt",
+            forgot_page_input1: "E-poçtu daxil edin",
+            forgot_page_button: "Şifrəni dəyiş",
+            forgot_page_footer1: "Hesabınız var?",
+            forgot_page_footer2: "Daxil ol"
 
 
 

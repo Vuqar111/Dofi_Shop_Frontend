@@ -1,4 +1,4 @@
-import { Link,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { addToCart } from "../redux/features/cartSlice";
@@ -9,9 +9,9 @@ import { useTranslation } from 'react-i18next';
 
 const ProductCard = ({ product }: { product: any }) => {
   const dispatch = useDispatch();
-    const { t } = useTranslation();
-    const location = useLocation();
-    const currentLang = location.pathname.split('/')[1] || 'en';
+  const { t } = useTranslation();
+  const location = useLocation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
 
   const [isAdded, setIsAdded] = useState(false);
@@ -48,7 +48,7 @@ const ProductCard = ({ product }: { product: any }) => {
       <div className="mt-3">
         <h3 className="text-lg font-semibold">{product?.name}</h3>
         <p className="opacity-70 text-sm">
-          AI-powered conversational learning robot for kids that is small in size but big on personality.
+          {t(`products.${product?.slug}.info`)}
         </p>
         <div className="mt-3 flex items-center justify-between">
           <div className="text-lg font-medium">{product?.salePrice} AZN</div>
@@ -79,7 +79,7 @@ const ProductCard = ({ product }: { product: any }) => {
                 transition={{ duration: 0.3 }}
               >
                 <span>
-                      {t('add_to_cart_text')}
+                  {t('add_to_cart_text')}
                 </span>
               </motion.button>
             )}

@@ -1,6 +1,7 @@
 {
   "robot-for-senan": {
-    "name": "Wireless Headphones",
+    "name": "Smart kids robot",
+    "info": "AI-powered conversational learning robot for kids that is small in size but big on personality.",
     "description": "An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖",
     "features": [
       {

@@ -5,12 +5,19 @@ import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
 import { useState } from "react";
 import swal from 'sweetalert';
+import { useTranslation } from 'react-i18next';
+
 
 const RegisterScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { registerSuccess, registerError, registerLoading } = useSelector((state: any) => state.auth);
+
+
     const location = useLocation()
     const currentLang = location.pathname.split('/')[1] || 'en';
+
+    const { t } = useTranslation();
+
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -38,34 +45,36 @@ const RegisterScreen = () => {
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
-                <p className="mb-4">Create your account now with just one click</p>
+                <p className="mb-4">
+                    {t('register_page_title')}
+                </p>
                 <form className="w-full max-w-md" onSubmit={handleRegister}>
                     <div className="mb-4">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Name and Surname
+                            {t('register_page_label1')}
                         </label>
                         <input
                             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             id="fullname"
                             onChange={(e) => setFullName(e.target.value)}
                             type="text"
-                            placeholder="Enter your name and surname"
+                            placeholder={t('register_page_input1')}
                         />
                     </div>
                     <div className="mb-4">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Email
+                            {t('register_page_label2')}
                         </label>
                         <input
                             className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             id="email"
                             onChange={(e) => setEmail(e.target.value)}
                             type="email"
-                            placeholder="Enter your email"
+                            placeholder={t('register_page_input2')}
                         />
                     </div>
                     <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                        Password
+                        {t('register_page_label3')}
                     </label>
                     <div className="mb-6 relative">
 
@@ -74,7 +83,7 @@ const RegisterScreen = () => {
                             id="password"
                             type={showPassword ? 'text' : 'password'}
                             onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Enter your password"
+                            placeholder={t('register_page_input3')}
                         />
                         <div
                             className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
@@ -95,7 +104,7 @@ const RegisterScreen = () => {
                     </div>
                     <div className="flex flex-col">
                         <ActionButton
-                            content="Sign up"
+                            content={t('register_page_button')}
                             success={registerSuccess}
                             loading={registerLoading}
                             error={registerError}
@@ -103,7 +112,7 @@ const RegisterScreen = () => {
                             message="Your account has been created successfully!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Already have an account? <Link to={`/${currentLang}/auth/register`} className="text-green-500">Login</Link>
+                        {t('register_page_footer1')} <Link to={`/${currentLang}/auth/login`} className="text-green-500">{t('register_page_footer2')}</Link>
                         </span>
                     </div>
                 </form>

@@ -1,38 +1,48 @@
 import { orderCreate } from "../redux/features/orderSlice"
 import { checkDiscount } from "../redux/features/discountSlice";
 import { useDispatch, useSelector } from 'react-redux'
-import { useState } from 'react'
+import { profileDetails } from "../redux/features/profileSlice";
+import { useState, useEffect } from 'react'
 import { AppDispatch } from '../redux/store'
 import Header from '../components/Profile/Header'
 import ActionButton from "../partials/ActionButton"
 import swal from 'sweetalert'
 import { useTranslation } from 'react-i18next';
-import { Link,useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const CheckOutScreen = () => {
 
     const location = useLocation();
-  const { t } = useTranslation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+    const { t } = useTranslation();
+    const currentLang = location.pathname.split('/')[1] || 'en';
 
 
 
     const dispatch: AppDispatch = useDispatch()
+    const { profile, loading } = useSelector((state: any) => state.profile)
+
+
     const { createOrderSuccess, createOrderLoading, createOrderError } = useSelector((state: any) => state.orders)
 
     const [payment_status, setPaymentStatus] = useState("Paid");
     const [payment_type, setPaymentType] = useState("Cart");
     const [discount, setDiscount] = useState("");
-    const [email, setEmail] = useState('');
     const [country, setCountry] = useState('Azərbaycan');
     const [city, setCity] = useState('');
-    const [first_name, setFirstName] = useState('')
-    const [last_name, setLastName] = useState('')
     const [address, setAddress] = useState('')
     const [apartment, setApartmant] = useState('')
     const [postal_code, setPostalCode] = useState('')
     const products = JSON.parse(localStorage.getItem('doofycart') || '[]')
+
+
+    useEffect(() => {
+        dispatch(profileDetails())
+    }, [dispatch])
+
+
+    const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
+    const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)
 
 
 
@@ -115,8 +125,7 @@ const CheckOutScreen = () => {
                     email,
                     country,
                     city,
-                    first_name,
-                    last_name,
+                    fullName,
                     address,
                     apartment,
                     phone,
@@ -144,59 +153,50 @@ const CheckOutScreen = () => {
             <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
                 <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
                     <form onSubmit={handleOrder}>
-                        <h2 className="text-2xl font-bold mb-4">Contact</h2>
+                        <h2 className="text-2xl font-bold mb-4">
+                            {t('order_checkout_part1')}
+                        </h2>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Email
+                                {t('order_checkout_part2')}
                             </label>
                             <div className="relative">
                                 <input
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Enter your email"
+                                    placeholder={t('order_checkout_part3')}
+                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                />
+                            </div>
+
+                            <div className="my-4">
+                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                    {t('order_checkout_part4')}
+                                </label>
+                                <input
+                                    type="text"
+                                    value={fullName}
+                                    onChange={(e) => setFullName(e.target.value)}
+                                    placeholder={t('order_checkout_part5')}
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
 
-                        <h2 className="text-xl font-bold mb-4">Delivery</h2>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-
-                            <div className=" md:mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    value={first_name}
-                                    onChange={(e) => setFirstName(e.target.value)}
-                                    placeholder="Enter your name"
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
-                            </div>
 
 
-                            <div className="mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    Surname
-                                </label>
-                                <input
-                                    type="text"
-                                    value={last_name}
-                                    onChange={(e) => setLastName(e.target.value)}
-                                    placeholder="Enter your surname"
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
-                            </div>
-                        </div>
+                        <h2 className="text-xl font-bold my-4">
+                            {t('order_checkout_part16')}
+                        </h2>
+
 
                         <div className='grid grid-cols-1  md:gap-4'>
 
 
-                            <div className="mb-2 md:mb-4">
+                            <div className="mb-2">
                                 <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    City
+                                    {t('order_checkout_part6')}
                                 </label>
                                 <select
                                     required
@@ -204,7 +204,34 @@ const CheckOutScreen = () => {
 
                                     onChange={(e) => setCity(e.target.value)}
                                 >
-                                    <option value="">Select city</option>
+                                    <option value="">
+                                        {t('order_checkout_part17')}
+                                    </option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="France">France</option>
+                                    <option value="Italy">Italy</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div className="mb-2 md:mb-4">
+                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                    {t('order_checkout_part7')}
+                                </label>
+                                <select
+                                    required
+                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+
+                                    onChange={(e) => setCity(e.target.value)}
+                                >
+                                    <option value="">
+                                        {t('order_checkout_part8')}
+                                    </option>
                                     <option value="Bakı">Bakı</option>
                                     <option value="Sumqayıt">Sumqayıt</option>
                                     <option value="Gəncə">Gəncə</option>
@@ -216,33 +243,33 @@ const CheckOutScreen = () => {
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Address
+                                {t('order_checkout_part9')}
                             </label>
                             <input
                                 type="text"
                                 required={true}
                                 value={address}
                                 onChange={(e) => setAddress(e.target.value)}
-                                placeholder="Enter your address"
+                                placeholder={t('order_checkout_part10')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Apartment
+                                {t('order_checkout_part11')}
                             </label>
                             <input
                                 type="text"
                                 value={apartment}
                                 onChange={(e) => setApartmant(e.target.value)}
-                                placeholder="Enter your apartment (if you have)"
+                                placeholder={t('order_checkout_part12')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
 
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Contact
+                                {t('order_checkout_part13')}
                             </label>
                             <div className="flex">
                                 <select
@@ -260,26 +287,27 @@ const CheckOutScreen = () => {
                                     value={digits}
                                     required
                                     onChange={handleDigitsChange}
-                                    placeholder="7-digit number"
+                                    placeholder={t('order_checkout_part14')}
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                             </div>
                         </div>
                         <ActionButton
-                            content="Confirm Pre-order"
+                            content={t('order_checkout_part15')}
                             success={createOrderSuccess}
                             loading={createOrderLoading}
                             error={createOrderError}
-                            path={`/profile/orders`}
+                            path={`/${currentLang}/profile/orders`}
                             message="Your order has been confirmed"
                         />
                     </form>
                 </div>
                 <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-6'>
-                    <h2 className="text-2xl font-bold mb-4">Order summary
+                    <h2 className="text-2xl font-bold mb-4">
+                        {t('order_summary_title')}
                     </h2>
                     {products?.length === 0 ? (
-                        <p>Your cart is empty</p>
+                        <p> {t('order_summary_part9')}</p>
                     ) : (
                         products?.map((product: any) => (
                             <div key={product.id} className="flex items-center justify-between mb-4">
@@ -287,8 +315,8 @@ const CheckOutScreen = () => {
                                     <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Color: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">Price: <div>{product?.price} AZN</div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part2')}: <div>{product?.price} AZN</div></p>
                                     </div>
                                 </div>
                                 <div>
@@ -302,7 +330,7 @@ const CheckOutScreen = () => {
                             <div className="w-[100%] col-span-3">
                                 <input
                                     type="text"
-                                    placeholder="Enter promo code"
+                                    placeholder={t('order_summary_part3')}
                                     value={discountCode}
                                     onChange={(e) => setDiscountCode(e.target.value)}
                                     className={`w-[100%] bg-white rounded-sm placeholder:text-sm border ${derrorMessage ? "border-red-500" : "border-gray-200"
@@ -321,7 +349,7 @@ const CheckOutScreen = () => {
                                     {dloading ? (
                                         <div className="flex items-center justify-center w-5 h-5 border-2 border-t-transparent border-gray-600 rounded-full animate-spin"></div>
                                     ) : (
-                                        "Check"
+                                        t('order_summary_part4')
                                     )}
                                 </button>
                             </div>
@@ -329,19 +357,19 @@ const CheckOutScreen = () => {
                     </div>
                     <div className="mt-6">
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Product price:</span>
+                            <span className=""> {t('order_summary_part5')}:</span>
                             <span>{subtotal.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Delivery:</span>
+                            <span className=""> {t('order_summary_part6')}:</span>
                             <span>{shippingCost.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 text-sm">
-                            <span className="">Discount:</span>
+                            <span className=""> {t('order_summary_part7')}:</span>
                             <span>{discountAmount.toFixed(2)} AZN</span>
                         </div>
                         <div className="flex justify-between mb-2 mt-4">
-                            <span className="font-bold">Total price:</span>
+                            <span className="font-bold"> {t('order_summary_part8')}:</span>
                             <span>{total.toFixed(2)} AZN</span>
                         </div>
                     </div>

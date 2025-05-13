@@ -1,6 +1,7 @@
 {
   "robot-for-senan": {
-    "name": "Simsiz qulaqlıqlar",
+    "name": "Smart Kids robot",
+    "info": "Uşaqlar üçün nəzərdə tutulmuş, süni intellektlə işləyən, danışa bilən və öyrədən kiçik ölçülü, lakin böyük xarakterə sahib robot.",
     "description": "Yüksək keyfiyyətli səs və səs-küyün azaldılması.",
     "features": [
       {

@@ -42,10 +42,9 @@ const ProductDetailsScreen = () => {
     }
   }, [product])
 
-
   const name = t(`products.${slug}.name`);
   const description = t(`products.${slug}.description`);
-
+  const features = t(`products.${slug}.features`, { returnObjects: true }) as Array<{ name: string; icon: string }>;
 
 
 
@@ -97,7 +96,6 @@ const ProductDetailsScreen = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
-
             </button>
             <button
               className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
@@ -106,7 +104,6 @@ const ProductDetailsScreen = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
               </svg>
-
             </button>
           </div>
           <div className="flex mt-4 space-x-2 justify-center overflow-x-auto max-w-full px-2">
@@ -124,55 +121,19 @@ const ProductDetailsScreen = () => {
         <div className="w-full md:w-1/2 md:pl-8">
           <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{name}</h1>
           <p className="text-2xl text-black mb-4">${product?.salePrice} USD</p>
-          <p className="text-sm text-gray-500 mb-4">Shipping calculated at checkout</p>
+          <p className="text-sm text-gray-500 mb-4"> {t('product_details_part6')}</p>
           <ul>
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505" />
-              </span>
-              <span className="text-gray-500">
-                AI-powered robot with a human-like touch.
-              </span>
-            </li>
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505" />
-              </span>
-              <span className="text-gray-500">
-                Enhanced encryption ensures safety, Parental control.
-              </span>
-            </li>
-
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397" />
-              </span>
-              <span className="text-gray-500">
-                Interactive robot that teaches and listens.
-              </span>
-            </li>
-
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634" />
-              </span>
-              <span className="text-gray-500">
-                Engages with STEAM-focused learning.
-              </span>
-            </li>
-
-
-            <li className="flex items-center gap-4 mb-2">
-              <span>
-                <img className="w-[30px] h-[30px]" src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634" />
-              </span>
-              <span className="text-gray-500">
-                Loaded with learning apps and games.
-              </span>
-            </li>
+            {features?.map((feature: any, index: any) => (
+              <li key={index} className="flex items-center gap-4 mb-2">
+                <span>
+                  <img className="w-[30px] h-[30px]" src={feature.icon} alt="" />
+                </span>
+                <span className="text-gray-500">
+                  {feature.name}
+                </span>
+              </li>
+            ))}
           </ul>
-
-
           <div className="mb-4">
             <label className="mb-4">
               {t('product_details_part1')}
@@ -235,12 +196,7 @@ const ProductDetailsScreen = () => {
           {t('product_details_part5')}
         </h2>
         <p className="text-sm mt-2">
-          {/* Write description of the robot*/}
-          An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖
-          <br /><br />
-          Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.
-          <br /><br />
-          This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖
+          {t(`products.${slug}.description`)}
         </p>
       </div>
       <div className="my-6">

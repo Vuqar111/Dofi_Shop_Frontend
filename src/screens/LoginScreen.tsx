@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const LoginScreen = () => {
     const dispatch: AppDispatch = useDispatch();
@@ -11,6 +12,7 @@ const LoginScreen = () => {
     const location = useLocation()
     const currentLang = location.pathname.split('/')[1] || 'en';
 
+    const { t } = useTranslation();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -27,26 +29,24 @@ const LoginScreen = () => {
     };
 
 
-
-
     return (
         <div className="flex flex-col md:flex-row h-screen">
             <div className="w-full flex flex-col justify-center items-center h-screen p-4 md:p-8 bg-white">
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
-                <p className="mb-4">We are glad to see you again!</p>
+                <p className="mb-4">{t('login_page_title')}</p>
                 <form className="w-full max-w-md" onSubmit={handleLogin}>
                     <div className="mb-4">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Email
+                            {t('login_page_label1')}
                         </label>
                         <div className="relative">
                             <input
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email"
+                                placeholder={t('login_page_input1')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -54,20 +54,19 @@ const LoginScreen = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                                 </svg>
-
                             </span>
                         </div>
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Password
+                            {t('login_page_label2')}
                         </label>
                         <div className="relative">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Enter your password"
+                                placeholder={t('login_page_input2')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -94,7 +93,7 @@ const LoginScreen = () => {
 
                     <div className="flex flex-col">
                         <ActionButton
-                            content="Login"
+                            content={t('login_page_button')}
                             success={signinSuccess}
                             loading={signinLoading}
                             error={signinError}
@@ -102,10 +101,14 @@ const LoginScreen = () => {
                             message="You’ve successfully logged in!"
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Don't have an account? <Link to={`/${currentLang}/auth/register`} className="text-green-500">Sign up</Link>
+                            {t('login_page_footer1')} <Link to={`/${currentLang}/auth/register`} className="text-green-500">
+                            {t('login_page_footer2')}
+                            </Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to={`/${currentLang}/auth/forgot-password`} className="text-red-500">Forgot your password?</Link>
+                            <Link to={`/${currentLang}/auth/forgot-password`} className="text-red-500">
+                            {t('login_page_footer3')}
+                            </Link>
                         </span>
                     </div>
                 </form>

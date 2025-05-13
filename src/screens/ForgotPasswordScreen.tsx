@@ -1,10 +1,13 @@
-import { Link,useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { forgotPassword } from "../redux/features/authSlice";
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/SecondaryActionButton";
 import { useState, useEffect } from "react";
 import swal from 'sweetalert';
+import { useTranslation } from 'react-i18next';
+
+
 
 const ForgotPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
@@ -14,6 +17,10 @@ const ForgotPasswordScreen = () => {
     const [email, setEmail] = useState('');
     const [emailSent, setEmailSent] = useState(false);
     const currentLang = location.pathname.split('/')[1] || 'en';
+
+
+
+    const { t } = useTranslation();
 
 
     const handleForgotPassword = async (e: React.FormEvent) => {
@@ -46,17 +53,19 @@ const ForgotPasswordScreen = () => {
 
                 {!emailSent ? (
                     <form className="w-full max-w-md" onSubmit={handleForgotPassword}>
-                        <p className="mb-4 text-center">Change Password!</p>
+                        <p className="mb-4 text-center">
+                            {t('forgot_page_title')}
+                        </p>
                         <div className="mb-4">
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                Email
+                                {t('forgot_page_label1')}
                             </label>
                             <div className="relative">
                                 <input
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Enter your email"
+                                    placeholder={t('forgot_page_input1')}
                                     className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                                 />
                                 <span className="absolute right-4 top-4">
@@ -69,14 +78,16 @@ const ForgotPasswordScreen = () => {
 
                         <div className="flex flex-col">
                             <ActionButton
-                                content="Change password"
+                                content={t('forgot_page_button')}
                                 success={forgotPasswordSuccess}
                                 loading={forgotPasswordLoading}
                                 error={forgotPasswordError}
                                 message="Check your email"
                             />
                             <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                                Do you have an account? <Link to={`/${currentLang}/auth/login`} className="text-green-500">Login</Link>
+                                {t('forgot_page_footer1')} <Link to={`/${currentLang}/auth/login`} className="text-green-500">
+                                    {t('forgot_page_footer2')}
+                                </Link>
                             </span>
                         </div>
                     </form>
@@ -89,7 +100,7 @@ const ForgotPasswordScreen = () => {
                         </div>
                         <p className="mb-4 opacity-[0.7]">Check your email to reset your password..</p>
                         <Link to="/" className="cursor-pointer bg-green-400 text-white text-center px-8 py-3 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                           Return to homepage
+                            Return to homepage
                         </Link>
                     </div>
                 )}

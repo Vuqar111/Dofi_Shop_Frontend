@@ -6,13 +6,15 @@ import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
 import BreadCrumb from "../components/BreadCrumb";
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const SecurityScreen = () => {
-
+  const location = useLocation();
   const dispatch: AppDispatch = useDispatch()
   const { t } = useTranslation();
   const { updateProfilePasswordSuccess, updateProfilePasswordLoading, updateProfilePasswordError } = useSelector((state: any) => state.profile)
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
   const [current_password, setCurrentPassword] = useState<string | undefined>('')
   const [new_password, setNewPassword] = useState<string | undefined>('')
@@ -158,7 +160,7 @@ const SecurityScreen = () => {
           success={updateProfilePasswordSuccess}
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
-          path={`/auth/login`}
+          path={`${currentLang}/auth/login`}
           message="Your password has been changed successfully!"
         />
       </form>
