@@ -340,6 +340,40 @@ const resources = {
 
 
 
+             // Order checkout
+            order_checkout_part1: "Əlaqə",
+            order_checkout_part2: "E-poçt",
+            order_checkout_part3: "E-poçt daxil edin",
+            order_checkout_part4: "Ad və soyad",
+            order_checkout_part5: "Adınızı daxil edin",
+            order_checkout_part6: "Ölkə seçin",
+            order_checkout_part7: "Şəhər seçin",
+            order_checkout_part8: "Şəhər seçin",
+            order_checkout_part9: "Ünvan",
+            order_checkout_part10: "Ünvanı daxil edin",
+            order_checkout_part11: "Bina",
+            order_checkout_part12: "Binanı daxil edin",
+            order_checkout_part13: "Əlaqə",
+            order_checkout_part14: "7 rəqəmli nömrə",
+            order_checkout_part15: "Ön sifariş et",
+            order_checkout_part16: "Çatdırılma",
+            order_checkout_part17: "Ölkə seçin",
+
+            // Order Summary
+            order_summary_title: "Sifariş özəti",
+            order_summary_part1: "Rəng",
+            order_summary_part2: "Qiymət",
+            order_summary_part3: "Promo kodu əlavə edin",
+            order_summary_part4: "Yoxla",
+            order_summary_part5: "Məhsul qiyməti",
+            order_summary_part6: "Çatdırılma",
+            order_summary_part7: "Endirim",
+            order_summary_part8: "Ümumi qiymət",
+            order_summary_part9: "Sənin səbətin boşdur",
+
+
+
+
             // Card modal
             card_modal_title: "Səbət",
             cart_modal_footer: "Sifarişi tamamla",
