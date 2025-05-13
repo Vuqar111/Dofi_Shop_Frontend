@@ -380,7 +380,17 @@ const resources = {
             forgot_page_input1: "E-poçtu daxil edin",
             forgot_page_button: "Şifrəni dəyiş",
             forgot_page_footer1: "Hesabınız var?",
-            forgot_page_footer2: "Daxil ol"
+            forgot_page_footer2: "Daxil ol",
+
+
+
+            // Cart
+            cart_page_part1: "Səbət",
+            cart_page_part2: "Davam et",
+            cart_page_part3: "Məhsul",
+            cart_page_part4: "Miqdar",
+            cart_page_part5: "Ümumi miqdar",
+            cart_page_part6: "Ödənişə doğru irəlilə"
 
 
 

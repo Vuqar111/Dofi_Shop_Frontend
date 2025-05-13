@@ -41,7 +41,7 @@ const CartScreen = () => {
     if (!token || tokenExpired) {
       navigate(`${currentLang}/auth/login?checkout`)
     } else {
-      navigate("/checkout")
+      navigate(`/${currentLang}/checkout`)
     }
   }
 
