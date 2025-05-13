@@ -134,7 +134,7 @@ const CheckOutScreen = () => {
             }
             await dispatch(orderCreate({ createdOrder }))
         } catch (error) {
-            swal('Error!', 'Wrong email or password', 'error')
+            swal(t('modal_error_message_title'), t('modal_error_message_description'), t('modal_error_message_title'))
             console.error(error)
         }
     }

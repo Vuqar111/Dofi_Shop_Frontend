@@ -13,7 +13,7 @@ const OrderDetailsScreen = () => {
     const { fetchOrderDetailsLoading: loading, fetchOrderDetailsError: error, fetchOrderDetails: data } = useSelector((state: any) => state.orders)
   const { t } = useTranslation();
 
-    const id = window.location.pathname.split('/')[3]
+    const id = window.location.pathname.split('/')[4]
 
 
 

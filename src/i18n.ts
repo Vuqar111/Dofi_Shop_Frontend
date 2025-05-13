@@ -208,7 +208,19 @@ const resources = {
             cart_page_part3: "Product",
             cart_page_part4: "Amount",
             cart_page_part5: "Total",
-            cart_page_part6: "Proceed to payment"
+            cart_page_part6: "Proceed to payment",
+
+
+
+
+
+
+            modal_success_message_title: "Success",
+            modal_success_message_description: "Product added to cart",
+            modal_success_button: "Close",
+            modal_error_message_title: "Error",
+            modal_error_message_description: "Error occured",
+            modal_error_button: "Close"
 
 
 
@@ -426,7 +438,19 @@ const resources = {
             cart_page_part3: "Məhsul",
             cart_page_part4: "Miqdar",
             cart_page_part5: "Ümumi miqdar",
-            cart_page_part6: "Ödənişə doğru irəlilə"
+            cart_page_part6: "Ödənişə doğru irəlilə",
+
+
+
+
+            
+            modal_success_message_title: "Uğurlu",
+            modal_success_message_description: "Məhsul əlavə olundu",
+            modal_success_button: "Bağla",
+            modal_error_message_title: "Xəta",
+            modal_error_message_description: "Xəta baş verdi",
+            modal_error_button: "Bağla"
+
 
 
 
