@@ -109,7 +109,7 @@ const RegisterScreen = () => {
                             loading={registerLoading}
                             error={registerError}
                             path={`/`}
-                            message="Your account has been created successfully!"
+                            message={t('modal_register_message_description')}
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
                         {t('register_page_footer1')} <Link to={`/${currentLang}/auth/login`} className="text-green-500">{t('register_page_footer2')}</Link>

@@ -1,6 +1,8 @@
 import Swal from 'sweetalert2';
 import { useEffect } from 'react';
 import swal from 'sweetalert';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Button = ({
   content,
@@ -18,10 +20,14 @@ const Button = ({
   message: string
 }) => {
 
+  
+      const location = useLocation();
+      const { t } = useTranslation();
+
 
   useEffect(() => {
     if (success) {
-      swal('Success!', message, 'success').then(() => {
+      swal(t('modal_success_message_title'), message, 'success').then(() => {
         window.location.replace(path);
       });
     }

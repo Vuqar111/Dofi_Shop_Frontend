@@ -28,12 +28,12 @@ const SecurityScreen = () => {
 
 
 
-  
+
   const breadcrumbPaths = [
     { name: t('breadcrumb_home'), href: '/' },
     { name: t('breadcrumb_profile'), href: '/profile' },
     { name: t('breadcrumb_security'), href: '/profile/security' },
-];
+  ];
 
 
 
@@ -42,7 +42,7 @@ const SecurityScreen = () => {
     e.preventDefault()
 
     if (new_password !== confirm_password) {
-      swal('Error!', 'Passwords do not match', 'error')
+      swal(t('modal_error_message_title'), t('modal_error_message_description'), 'error')
       return
     }
 
@@ -100,7 +100,7 @@ const SecurityScreen = () => {
           </div>
 
           <label className="block font-medium text-black opacity-[0.6]">
-                        {t('profile_security_form_label2')}
+            {t('profile_security_form_label2')}
 
           </label>
           <div className="mb-4 relative">
@@ -128,7 +128,7 @@ const SecurityScreen = () => {
             </div>
           </div>
           <label className="block font-medium text-black opacity-[0.6]">
-                        {t('profile_security_form_label3')}
+            {t('profile_security_form_label3')}
           </label>
           <div className="mb-4 relative">
             <input
@@ -161,7 +161,7 @@ const SecurityScreen = () => {
           loading={updateProfilePasswordLoading}
           error={updateProfilePasswordError}
           path={`${currentLang}/auth/login`}
-          message="Your password has been changed successfully!"
+          message={t('profile_security_modal_desc')}
         />
       </form>
     </div>

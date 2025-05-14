@@ -54,6 +54,8 @@ const resources = {
             profile_page_rol_val1: "Company",
             profile_page_rol_val2: "Parent",
             profile_page_rol_val3: "VIP",
+            profile_page_modal_desc: "Your profile has been updated successfully",
+
 
             // Profile Orders
             profile_orders_page_title: "Your orders",
@@ -89,6 +91,7 @@ const resources = {
             profile_security_form_label3: "Confirm password",
             profile_security_form_placeholder3: "Confirm your password",
             profile_security_form_button: "Change password",
+            profile_security_modal_desc: "Your password successfully updated",
 
             // Sidebar
             sidebar_title_profile: "Profile",
@@ -147,6 +150,7 @@ const resources = {
             order_checkout_part15: "Confirm pre-order",
             order_checkout_part16: "Delivery",
             order_checkout_part17: "Select the country",
+            order_checkout_part18: "Your order created as pre-order",
 
             // Order Summary
             order_summary_title: "Order summary",
@@ -223,8 +227,10 @@ const resources = {
             modal_success_button: "Close",
             modal_error_message_title: "Error",
             modal_error_message_description: "Error occured",
-            modal_error_button: "Close"
-
+            modal_error_button: "Close",
+            modal_login_message_title: "Success",
+            modal_login_message_description: "You've succesfully logged!",
+            modal_register_message_description: "You've succesfully registered"
 
 
 
@@ -280,6 +286,7 @@ const resources = {
             profile_page_rol_val1: "Şirkət",
             profile_page_rol_val2: "Valideyn",
             profile_page_rol_val3: "VIP",
+            profile_page_modal_desc: "Profilin uğurla yeniləndi",
 
             // Profile Orders
             profile_orders_page_title: "Sənin sifarişlərin",
@@ -315,6 +322,8 @@ const resources = {
             profile_security_form_label3: "Parolunuzu təsdiqləyin",
             profile_security_form_placeholder3: "Parolunuzu təsdiq edin",
             profile_security_form_button: "Parolunuzu dəyişin",
+            profile_security_modal_desc: "Sənin şifrən uğurla dəyişdirildi",
+
 
             // Sidebar
             sidebar_title_profile: "Profil",
@@ -377,6 +386,7 @@ const resources = {
             order_checkout_part15: "Ön sifariş et",
             order_checkout_part16: "Çatdırılma",
             order_checkout_part17: "Ölkə seçin",
+            order_checkout_part18: "Sənin sifarişin yaradıldı",
 
             // Order Summary
             order_summary_title: "Sifariş özəti",
@@ -448,13 +458,17 @@ const resources = {
 
 
 
-            
+            // Modal
             modal_success_message_title: "Uğurlu",
             modal_success_message_description: "Məhsul əlavə olundu",
             modal_success_button: "Bağla",
             modal_error_message_title: "Xəta",
             modal_error_message_description: "Xəta baş verdi",
-            modal_error_button: "Bağla"
+            modal_error_button: "Bağla",
+            modal_login_message_title: "Uğurlu",
+            modal_login_message_description: "Siz uğurla daxil oldunuz!",
+            modal_register_message_description: "Siz uğurla qeydiyyatdan keçdiniz!"
+
 
 
 

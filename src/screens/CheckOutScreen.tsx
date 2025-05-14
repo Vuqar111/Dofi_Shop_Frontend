@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { profileDetails } from "../redux/features/profileSlice";
 import { useState, useEffect } from 'react'
 import { AppDispatch } from '../redux/store'
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import Header from '../components/Profile/Header'
 import ActionButton from "../partials/ActionButton"
 import swal from 'sweetalert'
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-
 
 const CheckOutScreen = () => {
 
@@ -68,6 +69,8 @@ const CheckOutScreen = () => {
     const [prefix, setPrefix] = useState("050");
     const [digits, setDigits] = useState("");
     const [phone, setPhone] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState('');
+
 
     const handleDigitsChange = (e: any) => {
         const value = e.target.value.replace(/\D/g, ""); // Allow only numbers
@@ -143,7 +146,7 @@ const CheckOutScreen = () => {
             }
             await dispatch(orderCreate({ createdOrder }))
         } catch (error) {
-            swal(t('modal_error_message_title'), t('modal_error_message_description'), t('modal_error_message_title'))
+            swal(t('modal_error_message_title'), t('modal_error_message_description'), 'error')
             console.error(error)
         }
     }
@@ -280,26 +283,17 @@ const CheckOutScreen = () => {
                             <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                 {t('order_checkout_part13')}
                             </label>
-                            <div className="flex">
-                                <select
-                                    value={prefix}
-                                    onChange={handlePrefixChange}
-                                    className="border border-gray-200 bg-transparent py-3 pl-2 pr-4 outline-none focus:border-primary"
-                                >
-                                    <option value="050">050</option>
-                                    <option value="055">055</option>
-                                    <option value="070">070</option>
-                                    <option value="077">077</option>
-                                </select>
-                                <input
-                                    type="text"
-                                    value={digits}
-                                    required
-                                    onChange={handleDigitsChange}
-                                    placeholder={t('order_checkout_part14')}
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
-                            </div>
+                            <PhoneInput
+                                country={'az'} // default country (Azerbaijan)
+                                value={phoneNumber}
+                                onChange={(value) => setPhoneNumber(value)}
+                                enableSearch={true}
+                                inputClass="!w-full !rounded-sm !border !border-gray-200 !bg-transparent !py-3 !pl-10 !pr-10 !text-sm !h-[50px]"
+                                containerClass="!w-full"
+                                buttonClass="!border-none !bg-transparent"
+                                inputStyle={{ width: '100%' }}
+                                placeholder={t('order_checkout_part14')}
+                            />
                         </div>
                         <ActionButton
                             content={t('order_checkout_part15')}
@@ -307,7 +301,7 @@ const CheckOutScreen = () => {
                             loading={createOrderLoading}
                             error={createOrderError}
                             path={`/${currentLang}/profile/orders`}
-                            message="Your order has been confirmed"
+                            message={t('order_checkout_part17')}
                         />
                     </form>
                 </div>
@@ -324,7 +318,7 @@ const CheckOutScreen = () => {
                                     <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
-                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part2')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                        <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
                                     </div>
                                 </div>
                                 <div>

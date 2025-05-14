@@ -6,6 +6,8 @@ import { AppDispatch } from '../redux/store'
 import ActionButton from "../partials/ActionButton"
 import Loading from '../components/Loader'
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+
 
 
 
@@ -14,6 +16,9 @@ const ProfileScreen = () => {
     const { t } = useTranslation();
 
   const { profile, loading, error, updateProfileSuccess, updateProfileLoading, updateProfileError } = useSelector((state: any) => state.profile)
+  
+  const location = useLocation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
 
   const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
   const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)
@@ -65,7 +70,7 @@ const ProfileScreen = () => {
       }
       await dispatch(updateProfile({ updatedProfile }))
     } catch (error) {
-      swal('Error!', 'Wrong email or password', 'error')
+      swal(t('modal_error_message_title'), t('modal_error_message_description'),'error')
       console.error(error)
     }
   }
@@ -169,8 +174,9 @@ const ProfileScreen = () => {
           success={updateProfileSuccess}
           loading={updateProfileLoading}
           error={updateProfileError}
-          path={`/profile`}
-          message="Profile updated!"
+          path={`/${currentLang}/profile`}
+         message={t('order_checkout_part17')}
+
         />
       </form>
     </div>
