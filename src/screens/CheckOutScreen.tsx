@@ -65,51 +65,38 @@ const CheckOutScreen = () => {
     const [derrorMessage, setDErrorMessage] = useState("");
 
 
-
-    const [prefix, setPrefix] = useState("050");
-    const [digits, setDigits] = useState("");
-    const [phone, setPhone] = useState("");
     const [phoneNumber, setPhoneNumber] = useState('');
 
 
-    const handleDigitsChange = (e: any) => {
-        const value = e.target.value.replace(/\D/g, ""); // Allow only numbers
-        if (value.length <= 7) {
-            setDigits(value);
-            setPhone(prefix + value); // Concatenate prefix and number
-        }
-    };
-
-    const handlePrefixChange = (e: any) => {
-        setPrefix(e.target.value);
-        setPhone(e.target.value + digits);
-    };
-
+  
 
     const { discount: discountData, loading: discountLoading, error: discountError } = useSelector((state: any) => state.discounts)
 
     const handleCheckDiscount = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setDLoading(true);
-        setDErrorMessage("");
-        setDSuccessMessage("");
-        try {
-            const response = await dispatch(checkDiscount({ code: discountCode }));
-            if (!discountError && response?.payload) {
-                setCode(response.payload.code);
-                setValue(response.payload.value);
-                setDiscount(code);
-                setDSuccessMessage("Promo code applied! 🎉");
-            } else {
-                setDErrorMessage("Wrong promo code")
-            }
-        } catch (error) {
-            setDErrorMessage("An error occured. Please try again")
-            console.error(error);
-        } finally {
-            setDLoading(false);
+    e.preventDefault();
+    setDLoading(true);
+    setDErrorMessage("");
+    setDSuccessMessage("");
+
+    try {
+        const response = await dispatch(checkDiscount({ code: discountCode }));
+        const payload = response?.payload;
+
+        if (payload?.code && discountCode) {
+            setCode(payload.code);
+            setValue(payload.value);
+            setDiscount(payload.code); // or discountCode
+            setDSuccessMessage(payload.message || "Discount applied!");
+        } else {
+            setDErrorMessage(payload.message || "Wrong promo code!");
         }
-    };
+    } catch (error) {
+        setDErrorMessage("An error occurred. Please try again.");
+        console.error(error);
+    } finally {
+        setDLoading(false);
+    }
+};
 
 
 
@@ -140,7 +127,7 @@ const CheckOutScreen = () => {
                     full_name: fullName,
                     address,
                     apartment,
-                    phone,
+                    phone: phoneNumber,
                     postal_code
                 }
             }
@@ -301,7 +288,7 @@ const CheckOutScreen = () => {
                             loading={createOrderLoading}
                             error={createOrderError}
                             path={`/${currentLang}/profile/orders`}
-                            message={t('order_checkout_part17')}
+                            message={t('order_checkout_part18')}
                         />
                     </form>
                 </div>
