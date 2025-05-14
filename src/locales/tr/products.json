@@ -1,0 +1,56 @@
+{
+  "robot-for-senan": {
+    "name": "Çocuklar için Akıllı Robot",
+    "info": "AI Destekli Akıllı Robotumuz, çocukların öğrenmesini, yaratıcılığını ve duygusal gelişimini geliştirmek için tasarlanmış etkileşimli bir arkadaştır. Ses tanıma, hareket, eğitici oyunlar ve görüntülü görüşme ile bu robot, bilişsel gelişimi teşvik ederken öğrenmeyi eğlenceli hale getirir.",
+    "description": "Bu akıllı robot, her çocuğun öğrenme hızına uyum sağlayarak hikaye anlatımı, matematik egzersizleri ve dil öğrenimi (Voscreen ve Duolingo tarzı) yoluyla kişiselleştirilmiş eğitim sunar. İfadeli yüz ve hareket yetenekleri etkileşimleri gerçekçi hale getirirken, yerleşik oyunlar (yazım, saklambaç, üç taş) etkileşimi garanti eder. Ebeveynler görüntülü görüşmelerle bağlantıda kalabilir ve eşlik eden uygulama aracılığıyla oyun süresini izleyebilir. Teknolojiyi ve etkileşimli öğrenmeyi seven çocuklar için mükemmel!",
+    "features": [
+      {
+        "name": "İnsan benzeri dokunuşa sahip yapay zeka destekli robot",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Gelişmiş şifreleme güvenliği, Ebeveyn kontrolünü sağlar",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Öğreten ve dinleyen etkileşimli robot",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "STEAM odaklı öğrenmeyle etkileşime girer",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Öğrenme uygulamaları ve oyunlarla dolu",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  },
+  "daun-kids-robot": {
+    "name": "Daun Çoçuklar için Akıllı Robot",
+    "info": "Özellikle gelişimsel farklılıkları olan çocuklar (Down sendromu gibi) için tasarlanan bu uyarlanabilir akıllı robot, basitleştirilmiş komutlar, duyusal dostu oyunlar ve duygusal destek özellikleriyle nazik, etkileşimli öğrenme sağlar.",
+    "description": "Daun Kids Akıllı Robotu, çocukların eğlenceli ve stressiz bir şekilde iletişim, motor becerileri ve bilişsel yeteneklerini güçlendirmelerine yardımcı olan kapsayıcı öğrenmeye odaklanır. Bu robot, görüntülü görüşmeler ve ilerleme takibiyle ebeveynleri bağlantıda tutarken özgüveni ve bağımsızlığı teşvik eder. Özel gereksinimli çocukların eğitimi ve neşeli oyunlar için mükemmel bir arkadaş!",       
+    "features": [
+      {
+        "name": "Kolay etkileşim için basitleştirilmiş sesli komutlar",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Yavaş tempolu öğrenme modülleri (matematik, dil)",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Çocuğun ruh haline yanıt vermek için duygu tanıma",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "Duyusal oyunlar (yumuşak saklambaç, ses eşleştirme)",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Güvenli, rehberli oyun için ebeveyn kontrol uygulaması",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  }
+}

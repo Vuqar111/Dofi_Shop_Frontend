@@ -1,0 +1,56 @@
+{
+  "robot-for-senan": {
+    "name": "儿童智能机器人",
+    "info": "我们这款 AI 驱动的智能机器人是一款互动式伴侣，旨在提升儿童的学习能力、创造力和情感发展。这款机器人具备语音识别、动作识别、益智游戏和视频通话功能，让学习充满乐趣，同时促进认知发展。",
+    "description": "这款智能机器人能够适应每个孩子的学习节奏，通过讲故事、数学练习和语言学习（类似 Voscreen 和 Duolingo 风格）提供个性化教育。其富有表现力的面部表情和动作能力使互动栩栩如生，内置游戏（拼写、捉迷藏、井字棋）则确保了孩子的参与度。家长可以通过视频通话保持联系，并通过配套应用程序监控游戏时间。非常适合热爱科技和互动学习的孩子！",
+    "features": [
+      {
+        "name": "拥有类人触感的 AI 机器人",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "增强加密技术确保安全，家长控制",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "互动机器人，寓教于乐",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "参与 STEAM 学习",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "丰富的学习应用和游戏",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  },
+  "daun-kids-robot": {
+    "name": "Daun Kids 智能机器人",
+    "info": "这款自适应智能机器人专为发育障碍儿童（例如唐氏综合症）设计，提供温和的互动式学习体验，并配备简化的指令、感官友好型游戏和情感支持功能。",
+    "description": "Daun Kids 智能机器人专注于包容性学习，帮助儿童以轻松有趣、轻松自在的方式提升沟通能力、运动技能和认知能力。这款机器人能够增强孩子的自信心和独立性，同时通过视频通话和进度追踪与家长保持联系。它是特殊教育和快乐玩耍的完美伴侣！",
+    "features": [
+      {
+        "name": "简化的语音指令，轻松互动",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "慢节奏学习模块（数学、语言）",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "情绪识别，可根据孩子的情绪做出反应",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "感官游戏（温和的捉迷藏、声音匹配）",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "家长控制应用程序，确保安全引导式游戏",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  }
+}

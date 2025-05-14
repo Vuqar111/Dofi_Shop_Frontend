@@ -32,7 +32,6 @@ const LanguageSelector: React.FC = () => {
       <option value="cn">CN</option>
       <option value="de">DE</option>
       <option value="es">ES</option>
-      <option value="it">IT</option>
     </select>
   );
 };

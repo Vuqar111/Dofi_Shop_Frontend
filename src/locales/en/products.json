@@ -1,54 +1,54 @@
 {
   "robot-for-senan": {
-    "name": "Smart kids robot",
-    "info": "AI-powered conversational learning robot for kids that is small in size but big on personality.",
-    "description": "An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖",
+    "name": "Smart Robot for Kids",
+    "info": "Our AI-Powered Smart Robot is an interactive companion designed to enhance children's learning, creativity, and emotional development. With voice recognition, movement, educational games, and video calling, this robot makes learning fun while fostering cognitive growth.",
+    "description": "This intelligent robot adapts to each child’s learning pace, offering personalized education through storytelling, math exercises, and language learning (Voscreen & Duolingo-style). Its expressive face and motion abilities make interactions lifelike, while built-in games (spelling, hide-and-seek, tic-tac-toe) ensure engagement. Parents can stay connected via video calls and monitor playtime through the companion app. Perfect for kids who love technology and interactive learning!",
     "features": [
       {
-        "name": "AI-powered robot with a human-like touch.",
+        "name": "AI-powered robot with a human-like touch",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
       },
       {
-        "name": "Enhanced encryption ensures safety, Parental control.",
+        "name": "Enhanced encryption ensures safety, Parental control",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
       },
       {
-        "name": "Interactive robot that teaches and listens.",
+        "name": "Interactive robot that teaches and listens",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       },
       {
-        "name": "Engages with STEAM-focused learning.",
+        "name": "Engages with STEAM-focused learning",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
       },
       {
-        "name": "Loaded with learning apps and games.",
+        "name": "Loaded with learning apps and games",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
       }
     ]
   },
   "daun-kids-robot": {
-    "name": "Smart kids robot",
-    "info": "AI-powered conversational learning robot for kids that is small in size but big on personality.",
-    "description": "An intelligent and engaging robot for children aged 3 to 8, equipped with voice control, educational games, and entertaining stories. It supports learning, play, and interaction in a secure environment with features like parental supervision and facial recognition. 😊🤖Powered by AI, it responds to questions, teaches new skills, and tailors content based on each child’s interests. Safety is prioritized through built-in parental controls and face recognition to ensure trusted interactions.This innovative robot turns learning into a fun and safe adventure for young kids. 😊🤖",
+    "name": "Smart Robot for Daun Kids",
+    "info": "Specially designed for children with developmental differences (such as Down syndrome), this adaptive smart robot provides gentle, interactive learning with simplified commands, sensory-friendly games, and emotional support features.",
+    "description": "The Daun Kids Smart Robot focuses on inclusive learning, helping children strengthen communication, motor skills, and cognitive abilities in a fun, stress-free way. This robot encourages confidence and independence while keeping parents connected through video calls and progress tracking. A perfect companion for special needs education & joyful play!",       
     "features": [
       {
-        "name": "AI-powered robot with a human-like touch.",
+        "name": "Simplified voice commands for easy interaction",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
       },
       {
-        "name": "Enhanced encryption ensures safety, Parental control.",
+        "name": "Slow-paced learning modules (math, language)",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
       },
       {
-        "name": "Interactive robot that teaches and listens.",
+        "name": "Emotion-recognition to respond to a child’s mood",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       },
       {
-        "name": "Engages with STEAM-focused learning.",
+        "name": "Sensory games (gentle hide-and-seek, sound-matching)",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
       },
       {
-        "name": "Loaded with learning apps and games.",
+        "name": "Parental control app for safe, guided play",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
       }
     ]

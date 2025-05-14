@@ -1,54 +1,54 @@
 {
   "robot-for-senan": {
-    "name": "Smart Kids robot",
-    "info": "Uşaqlar üçün nəzərdə tutulmuş, süni intellektlə işləyən, danışa bilən və öyrədən kiçik ölçülü, lakin böyük xarakterə sahib robot.",
-    "description": "Yüksək keyfiyyətli səs və səs-küyün azaldılması.",
+    "name": "Ağıllı uşaq robotu",
+    "info": "Süni intellektlə işləyən Ağıllı Robotumuz uşaqların öyrənmə, yaradıcılıq və emosional inkişafını artırmaq üçün nəzərdə tutulmuş interaktiv yoldaşdır. Səsin tanınması, hərəkəti, öyrədici oyunları və video zəngləri ilə bu robot koqnitiv inkişafı təşviq edərkən öyrənməyi əyləncəli edir.",
+    "description": "Bu ağıllı robot hər bir uşağın öyrənmə tempinə uyğunlaşır, nağıl, riyaziyyat məşqləri və dil öyrənməsi (Voscreen və Duolinqo üslubu) vasitəsilə fərdiləşdirilmiş təhsil təklif edir. Onun ifadəli siması və hərəkət qabiliyyəti qarşılıqlı əlaqəni canlı edir, daxili oyunlar (imla, gizlənqaç, tic-tac-toe) əlaqəni təmin edir. Valideynlər video zənglər vasitəsilə əlaqə saxlaya və köməkçi proqram vasitəsilə oyun vaxtına nəzarət edə bilərlər. Texnologiyanı və interaktiv öyrənməyi sevən uşaqlar üçün mükəmməldir!",
     "features": [
       {
-        "name": "İnsanabənzər toxunuşa malik süni intellektlə işləyən robot.",
+        "name": "İnsanabənzər toxunuşa malik süni intellektlə işləyən robot",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
       },
       {
-        "name": "Təkmilləşdirilmiş şifrələmə təhlükəsizliyi təmin edir, Valideyn nəzarəti.",
+        "name": "Təkmilləşdirilmiş şifrələmə təhlükəsizliyi təmin edir, Valideyn nəzarəti",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
       },
       {
-        "name": "Dərs deyən və qulaq asan interaktiv robot.",
+        "name": "Dərs deyən və qulaq asan interaktiv robot",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       },
       {
-        "name": "STEAM yönümlü öyrənməyə cəlb edir.",
+        "name": "STEAM yönümlü öyrənməyə cəlb edir",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
       },
       {
-        "name": "Təhsil proqramları və oyunlarla yüklənmişdir.",
+        "name": "Təhsil proqramları və oyunlarla yüklənmişdir",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
       }
     ]
   },
   "daun-kids-robot": {
-    "name": "Smart Kids robot",
-    "info": "Uşaqlar üçün nəzərdə tutulmuş, süni intellektlə işləyən, danışa bilən və öyrədən kiçik ölçülü, lakin böyük xarakterə sahib robot.",
-    "description": "Yüksək keyfiyyətli səs və səs-küyün azaldılması.",
+    "name": "Daun Uşaqlar üçün Robot",
+    "info": "İnkişaf fərqləri olan uşaqlar üçün (məsələn, Daun sindromu) xüsusi olaraq hazırlanmış bu adaptiv ağıllı robot sadələşdirilmiş əmrlər, sensora uyğun oyunlar və emosional dəstək funksiyaları ilə zərif, interaktiv öyrənmə təmin edir.",
+    "description": "Daun Kids Ağıllı Robotu inklüziv öyrənməyə diqqət yetirir, uşaqlara əyləncəli, stresssiz şəkildə ünsiyyət, motor bacarıqları və idrak qabiliyyətlərini gücləndirməyə kömək edir. Bu robot valideynləri video zənglər və tərəqqinin izlənməsi vasitəsilə əlaqə saxlayarkən özünə inam və müstəqilliyi təşviq edir. Xüsusi ehtiyacları olan təhsil və şən oyun üçün mükəmməl yoldaş!",
     "features": [
       {
-        "name": "İnsanabənzər toxunuşa malik süni intellektlə işləyən robot.",
+        "name": "Asan qarşılıqlı əlaqə üçün sadələşdirilmiş səs əmrləri",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
       },
       {
-        "name": "Təkmilləşdirilmiş şifrələmə təhlükəsizliyi təmin edir, Valideyn nəzarəti.",
+        "name": "Yavaş templi təlim modulları (riyaziyyat, dil)",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
       },
       {
-        "name": "Dərs deyən və qulaq asan interaktiv robot.",
+        "name": "Uşağın əhval-ruhiyyəsinə cavab vermək üçün emosiyaların tanınması",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       },
       {
-        "name": "STEAM yönümlü öyrənməyə cəlb edir.",
+        "name": "Sensor oyunlar (zərif gizlənqaç, səs uyğunluğu)",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
       },
       {
-        "name": "Təhsil proqramları və oyunlarla yüklənmişdir.",
+        "name": "Təhlükəsiz, idarə olunan oyun üçün valideyn nəzarəti proqramı",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
       }
     ]

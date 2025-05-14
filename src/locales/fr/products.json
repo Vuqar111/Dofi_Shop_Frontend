@@ -1,0 +1,56 @@
+{
+  "robot-for-senan": {
+    "name": "Robot intelligent pour enfants",
+    "info": "Notre robot intelligent, doté d'IA, est un compagnon interactif conçu pour favoriser l'apprentissage, la créativité et le développement émotionnel des enfants. Grâce à la reconnaissance vocale, aux mouvements, aux jeux éducatifs et aux appels vidéo, ce robot rend l'apprentissage ludique tout en favorisant le développement cognitif.",
+    "description": "Ce robot intelligent s'adapte au rythme d'apprentissage de chaque enfant et offre un apprentissage personnalisé grâce à des histoires, des exercices de mathématiques et l'apprentissage des langues (style Voscreen et Duolingo). Son visage expressif et ses capacités de mouvement rendent les interactions plus réalistes, tandis que les jeux intégrés (orthographe, cache-cache, morpion) garantissent l'engagement. Les parents peuvent rester connectés par appels vidéo et surveiller les temps de jeu grâce à l'application compagnon. Parfait pour les enfants qui aiment la technologie et l'apprentissage interactif!",
+    "features": [
+      {
+        "name": "Robot doté d'IA et d'un toucher proche de l'humain",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Cryptage amélioré pour plus de sécurité, contrôle parental",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Robot interactif qui enseigne et écoute",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "S'engage dans un apprentissage axé sur les STEAM",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Complet avec des applications et des jeux d'apprentissage",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  },
+  "daun-kids-robot": {
+    "name": "Robot intelligent pour enfants Daun",
+    "info": "Spécialement conçu pour les enfants présentant des troubles du développement (comme la trisomie 21), ce robot intelligent adaptatif offre un apprentissage interactif et en douceur grâce à des commandes simplifiées, des jeux sensoriels et des fonctions de soutien émotionnel.",
+    "description": "Le robot intelligent Daun Kids privilégie l'apprentissage inclusif et aide les enfants à développer leur communication, leurs capacités motrices et cognitives de manière ludique et sans stress. Ce robot favorise la confiance et l'indépendance tout en permettant aux parents de rester connectés grâce aux appels vidéo et au suivi des progrès. Un compagnon idéal pour l'éducation spécialisée et le jeu ludique!",
+    "features": [
+      {
+        "name": "Commandes vocales simplifiées pour une interaction facile",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+      },
+      {
+        "name": "Modules d'apprentissage lents (mathématiques, langage)",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+      },
+      {
+        "name": "Reconnaissance des émotions pour s'adapter à l'humeur de l'enfant",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+      },
+      {
+        "name": "Jeux sensoriels (cache-cache délicat, association de sons)",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+      },
+      {
+        "name": "Application de contrôle parental pour un jeu guidé et sécurisé",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      }
+    ]
+  }
+}

@@ -433,6 +433,9 @@ const resources = {
     },
     tr: {
         translation: {
+
+            products: require('./locales/tr/products.json'),
+
             hero_page_title: "Hoş geldiniz!",
             hero_page_subtitle: "Akıllı, Güvenli ve Her Çocuk İçin Süper Eğlenceli!",
             hero_page_button: "Şimdi ön sipariş ver",
@@ -627,6 +630,9 @@ const resources = {
     },
     ar: {
         translation: {
+
+            products: require('./locales/ar/products.json'),
+
             hero_page_title: "مرحباً بك!",
             hero_page_subtitle: "ذكي، آمن، وممتع للغاية لكل طفل!",
             hero_page_button: "الطلب المسبق الآن",
@@ -837,6 +843,9 @@ const resources = {
     },
     fr: {
         translation: {
+
+            products: require('./locales/fr/products.json'),
+
             hero_page_title: "Bienvenue !",
             hero_page_subtitle: "Intelligent, sûr et super amusant pour chaque enfant !",
             hero_page_button: "Précommandez maintenant",
@@ -1031,6 +1040,9 @@ const resources = {
     },
     cn: {
         translation: {
+
+            products: require('./locales/cn/products.json'),
+
             hero_page_title: "欢迎！",
             hero_page_subtitle: "每个孩子的智能、安全又超级有趣的伙伴！",
             hero_page_button: "立即预订",
@@ -1242,6 +1254,9 @@ const resources = {
     },
     de: {
         translation: {
+
+            products: require('./locales/de/products.json'),
+
             hero_page_title: "Willkommen!",
             hero_page_subtitle: "Intelligent, sicher & super spaßig für jedes Kind!",
             hero_page_button: "Jetzt vorbestellen",
@@ -1453,6 +1468,9 @@ const resources = {
     },
     es: {
         translation: {
+
+            products: require('./locales/es/products.json'),
+
             hero_page_title: "¡Bienvenido!",
             hero_page_subtitle: "Inteligente, Seguro y Súper Divertido para Cada Niño!",
             hero_page_button: "Pre-pedido ahora",
@@ -1660,216 +1678,6 @@ const resources = {
             modal_login_message_description: "¡Has iniciado sesión con éxito!",
             modal_register_message_description: "¡Te has registrado con éxito!",
           },
-    },
-    it: {
-        translation: {
-        hero_page_title: "Benvenuto!",
-        hero_page_subtitle: "Intelligente, Sicuro e Super Divertente per Ogni Bambino!",
-        hero_page_button: "Pre-ordina ora",
-        home_screen_products_title: "Dofi In Azione",
-        add_to_cart_text: "Aggiungi al carrello",
-        about_title: "Informazioni",
-        about_description: "Il nostro robot è un compagno intelligente e coinvolgente progettato per supportare lo sviluppo dei bambini attraverso l'interazione tramite comandi vocali, videochiamate con controlli parentali ed espressioni dinamiche del corpo e del viso. Aiuta i bambini ad imparare sia la loro lingua madre che l'inglese, godersi racconti interattivi e sviluppare abilità matematiche e logiche, il tutto mentre si divertono.",
-        about_feature_part1: "Crescita Cognitiva",
-        about_feature_part2: "Risoluzione dei Problemi Migliorata",
-        about_feature_part3: "Apprendimento Adattivo",
-        about_feature_part4: "Feedback Personalizzato",
-
-        safety_page_title: "Intelligenza Artificiale e Sicurezza",
-        safety_page_description: "Prendiamo la sicurezza sul serio. Ogni byte dei dati del tuo bambino è protetto all'interno del nostro sistema chiuso. Dofi stabilisce un nuovo standard per l'intelligenza artificiale a misura di famiglia.",
-        safety_page_feature_title_part1: "Utile per i genitori",
-        safety_page_feature_desciption_part1: "Dalle chiamate sicure ai report in tempo reale sui progressi",
-        safety_page_feature_title_part2: "Migliori strumenti per i genitori",
-        safety_page_feature_description_part2: "App per genitori che presenta chiaramente i piani educativi del bambino e identifica i traguardi nello sviluppo",
-        safety_page_feature_title_part3: "Sicuro, protetto e privato",
-        safety_page_feature_description_part3: "Dispositivo certificato kidSAFE+ COPPA con impostazioni di sicurezza e privacy personalizzabili",
-
-        // FAQ
-        faq_title: "Domande Frequenti",
-        faq_question_part1: "Cos'è Dofi?",
-        faq_answer_part1: "Dofi è un robot di apprendimento intelligente, alimentato da IA, progettato per i bambini, piccolo di dimensioni ma grande nella personalità.",
-        faq_question_part2: "Come funziona Dofi?",
-        faq_answer_part2: "Dofi utilizza algoritmi avanzati di intelligenza artificiale per interagire con i bambini, insegnare loro nuove abilità e fornire un'esperienza di apprendimento divertente e coinvolgente.",
-        faq_question_part3: "Dofi è sicuro per i bambini?",
-        faq_answer_part3: "Sì, Dofi è progettato con la sicurezza in mente. Ha crittografia avanzata e controlli parentali per garantire un'esperienza sicura e protetta per i bambini.",
-        faq_question_part4: "Per quale fascia di età è adatto Dofi?",
-        faq_answer_part4: "Dofi è adatto per i bambini tra i 3 e gli 8 anni.",
-        faq_question_part5: "Come posso pre-ordinare Dofi?",
-        faq_answer_part5: "Puoi pre-ordinare Dofi direttamente dal nostro sito web. Aggiungi il prodotto al carrello e procedi al pagamento.",
-
-        // Profile
-        profile_page_title: "Informazioni personali",
-        profile_page_form_label1: "Nome e Cognome",
-        profile_page_form_label2: "Email",
-        profile_page_form_label3: "Numero di contatto",
-        profile_page_form_label4: "Ruolo",
-        profile_page_form_button: "Aggiorna",
-        profile_page_rol_val1: "Azienda",
-        profile_page_rol_val2: "Genitore",
-        profile_page_rol_val3: "VIP",
-        profile_page_modal_desc: "Il tuo profilo è stato aggiornato con successo",
-
-        // Profile Orders
-        profile_orders_page_title: "I tuoi ordini",
-        profile_order_card_part1: "Codice ordine",
-        profile_order_card_part2: "Data dell'ordine",
-        profile_order_card_part3: "Informazioni dettagliate",
-        profile_order_card_part4: "Prezzo totale",
-
-        // Profile Order Details Card
-        profile_orders_details_part1: "Consegna",
-        profile_orders_details_part2: "Paese",
-        profile_orders_details_part3: "Città",
-        profile_orders_details_part4: "Indirizzo",
-        profile_orders_details_part5: "Contatto",
-        profile_orders_details_part6: "Nome completo",
-        profile_orders_details_part7: "Email",
-        profile_orders_details_part8: "Telefono",
-        profile_orders_details_part9: "Pagamento",
-        profile_orders_details_part10: "Stato del pagamento",
-        profile_orders_details_part11: "Tipo di pagamento",
-        profile_orders_details_part12: "Prodotti ordinati",
-        profile_orders_details_part13: "Prezzo",
-        profile_orders_details_part14: "Consegna",
-        profile_orders_details_part15: "Prezzo totale",
-        profile_orders_details_part16: "Sconto",
-
-        // Profile Security
-        profile_security_page_title: "Sicurezza",
-        profile_security_form_label1: "Password attuale",
-        profile_security_form_placeholder1: "Inserisci la tua password attuale",
-        profile_security_form_label2: "Nuova password",
-        profile_security_form_placeholder2: "Inserisci la tua nuova password",
-        profile_security_form_label3: "Conferma password",
-        profile_security_form_placeholder3: "Conferma la tua password",
-        profile_security_form_button: "Cambia password",
-        profile_security_modal_desc: "La tua password è stata aggiornata con successo!",
-
-        // Sidebar
-        sidebar_title_profile: "Profilo",
-        sidebar_title_orders: "Ordini",
-        sidebar_title_security: "Sicurezza",
-        sidebar_title_logout: "Esci",
-
-        // Breadcrumb
-        breadcrumb_home: "Home",
-        breadcrumb_profile: "Profilo",
-        breadcrumb_orders: "Ordini",
-        breadcrumb_order: "Ordine",
-        breadcrumb_security: "Sicurezza",
-
-        // Footer
-        footer_title1: "Prodotti",
-        footer_part1: "Dofi Pro",
-        footer_part2: "Dofi Pro mini",
-        footer_part3: "Dofi mini",
-        footer_part4: "Borsa per Dofi",
-        footer_title2: "Spedizione e Politiche",
-        footer_part5: "Informazioni",
-        footer_part6: "Informazioni sulla spedizione",
-        footer_part7: "Politica di reso",
-        footer_part8: "Privacy Policy",
-        footer_part9: "Termini di servizio",
-        footer_title3: "Seguici",
-        footer_part10: "Email",
-        footer_part11: "Telefono",
-        footer_part12: "Tutti i diritti riservati",
-
-        // Product details
-        product_details_part1: "Colore",
-        product_details_part2: "Quantità",
-        product_details_part3: "Aggiungi al carrello",
-        product_details_part4: "Pre-ordina ora",
-        product_details_part5: "Informazioni dettagliate",
-        product_details_part6: "Spedizione calcolata al checkout",
-
-        // Order checkout
-        order_checkout_part1: "Contatto",
-        order_checkout_part2: "Email",
-        order_checkout_part3: "Inserisci la tua email",
-        order_checkout_part4: "Nome completo",
-        order_checkout_part5: "Scrivi il nome completo",
-        order_checkout_part6: "Scegli il tuo paese",
-        order_checkout_part7: "Scegli la tua città",
-        order_checkout_part8: "Seleziona la tua città",
-        order_checkout_part9: "Indirizzo",
-        order_checkout_part10: "Inserisci il tuo indirizzo",
-        order_checkout_part11: "Appartamento",
-        order_checkout_part12: "Inserisci il tuo appartamento",
-        order_checkout_part13: "Contatto",
-        order_checkout_part14: "Numero di 7 cifre",
-        order_checkout_part15: "Conferma pre-ordine",
-        order_checkout_part16: "Consegna",
-        order_checkout_part17: "Seleziona il tuo paese",
-        order_checkout_part18: "Il tuo ordine è stato creato come pre-ordine",
-
-        // Order Summary
-        order_summary_title: "Riepilogo ordine",
-        order_summary_part1: "Colore",
-        order_summary_part2: "Prezzo",
-        order_summary_part3: "Inserisci il codice promozionale",
-        order_summary_part4: "Verifica",
-        order_summary_part5: "Prezzo prodotto",
-        order_summary_part6: "Consegna",
-        order_summary_part7: "Sconto",
-        order_summary_part8: "Prezzo totale",
-        order_summary_part9: "Il tuo carrello è vuoto",
-
-        // Card modal
-        card_modal_title: "Carrello",
-        cart_modal_footer: "Procedi al checkout",
-        cart_modal_message1: "Continua a fare shopping",
-        cart_modal_message2: "Il tuo carrello è vuoto",
-
-        // Register
-        register_page_title: "Crea il tuo account ora con un clic",
-        register_page_label1: "Nome e Cognome",
-        register_page_input1: "Inserisci il tuo nome e cognome",
-        register_page_label2: "Email",
-        register_page_input2: "Inserisci la tua email",
-        register_page_label3: "Password",
-        register_page_input3: "Inserisci la tua password",
-        register_page_button: "Registrati",
-        register_page_footer1: "Hai già un account",
-        register_page_footer2: "Accedi",
-
-        // Login
-        login_page_title: "Siamo felici di vederti di nuovo!",
-        login_page_label1: "Email",
-        login_page_input1: "Inserisci la tua email",
-        login_page_label2: "Password",
-        login_page_input2: "Inserisci la tua password",
-        login_page_button: "Accedi",
-        login_page_footer1: "Non hai un account?",
-        login_page_footer2: "Registrati",
-        login_page_footer3: "Hai dimenticato la tua password",
-
-        // Forgot
-        forgot_page_title: "Ripara la tua password",
-        forgot_page_label1: "Email",
-        forgot_page_input1: "Inserisci la tua email",
-        forgot_page_button: "Cambia password",
-        forgot_page_footer1: "Hai già un account?",
-        forgot_page_footer2: "Accedi",
-
-        // Cart
-        cart_page_part1: "Il tuo carrello",
-        cart_page_part2: "Continua",
-        cart_page_part3: "Prodotto",
-        cart_page_part4: "Quantità",
-        cart_page_part5: "Prezzo totale",
-        cart_page_part6: "Procedi al pagamento",
-
-        modal_success_message_title: "Successo",
-        modal_success_message_description: "Prodotto aggiunto al carrello",
-        modal_success_button: "Chiudi",
-        modal_error_message_title: "Errore",
-        modal_error_message_description: "Si è verificato un errore",
-        modal_error_button: "Chiudi",
-        modal_login_message_title: "Successo",
-        modal_login_message_description: "Ti sei loggato con successo!",
-        modal_register_message_description: "Ti sei registrato con successo",
-        }
     }
 };
 
