@@ -26,8 +26,9 @@ const LanguageSelector: React.FC = () => {
     >
       <option value="en">ENG</option>
       <option value="az">AZE</option>
-      <option value="fr">FR</option>
       <option value="tr">TR</option>
+      <option value="ar">AR</option>
+      <option value="fr">FR</option>
       <option value="cn">CN</option>
       <option value="de">DE</option>
       <option value="es">ES</option>
