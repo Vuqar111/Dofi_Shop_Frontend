@@ -85,7 +85,7 @@ const CheckOutScreen = () => {
         if (payload?.code && discountCode) {
             setCode(payload.code);
             setValue(payload.value);
-            setDiscount(payload.code); // or discountCode
+            setDiscount(payload.code); 
             setDSuccessMessage(payload.message || "Discount applied!");
         } else {
             setDErrorMessage(payload.message || "Wrong promo code!");
