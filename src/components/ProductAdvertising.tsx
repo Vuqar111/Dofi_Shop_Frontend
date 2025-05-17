@@ -37,7 +37,7 @@ const ProductAdvertising = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-500">
-          {t('about_title')} <span className="text-green-400">Dofi</span>
+          <span className="text-green-400">Dofi</span> {t('about_title')} 
         </h3>
         <p className="pt-4 opacity-70 text-sm sm:text-base md:text-lg">
         {t('about_description')}
