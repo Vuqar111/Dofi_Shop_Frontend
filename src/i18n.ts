@@ -214,7 +214,16 @@ const resources = {
             modal_error_button: "Close",
             modal_login_message_title: "Success",
             modal_login_message_description: "You've succesfully logged!",
-            modal_register_message_description: "You've succesfully registered"
+            modal_register_message_description: "You've succesfully registered",
+
+
+
+
+            // About
+            about_page_title: "Hello, World",
+            about_page_title2: "We're Dofi",
+            about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
+            about_page_info: "Dofi began as a spark of curiosity between Vugar and Sanan - a shared dream to build a robot that felt alive. With Leyla crafting its playful personality through UI/UX, Huseyn & Valida shaping its iconic 3D form, and a community of mentors lighting the way, Dofi slowly winked into existence. This robot isn’t just ours; it’s a mosaic of late-night ideas, stubborn problem-solving, and the kind of magic that happens when the right people come together."
         },
     },
     az: {
@@ -428,7 +437,19 @@ const resources = {
             modal_error_button: "Bağla",
             modal_login_message_title: "Uğurlu!",
             modal_login_message_description: "Siz uğurla daxil oldunuz!",
-            modal_register_message_description: "Siz uğurla qeydiyyatdan keçdiniz!"
+            modal_register_message_description: "Siz uğurla qeydiyyatdan keçdiniz!",
+
+
+
+
+
+
+            
+            // About
+            about_page_title: "Salam, World",
+            about_page_title2: "Biz Dofiyik",
+            about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
+            about_page_info: "Dofi began as a spark of curiosity between Vugar and Sanan - a shared dream to build a robot that felt alive. With Leyla crafting its playful personality through UI/UX, Huseyn & Valida shaping its iconic 3D form, and a community of mentors lighting the way, Dofi slowly winked into existence. This robot isn’t just ours; it’s a mosaic of late-night ideas, stubborn problem-solving, and the kind of magic that happens when the right people come together."
         },
     },
     tr: {
