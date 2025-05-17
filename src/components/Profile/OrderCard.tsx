@@ -28,7 +28,7 @@ const OrderCard = ({ order }: { order: any }) => {
             <div key={product._id} className="border p-2 border-gray-200">
               <div className="flex items-center justify-center">
                 <div>
-                  <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
+                  <img src={product?.image}  alt={product.name} className="w-16 h-16 object-cover" />
                 </div>
               </div>
             </div>

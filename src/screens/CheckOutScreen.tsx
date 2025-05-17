@@ -110,6 +110,7 @@ const CheckOutScreen = () => {
                 products: products.map((product: any) => ({
                     ...product,
                     productId: product?._id,
+                    image: product?.image,
                     qty: product.qty,
                     price: product.price,
                     code: product.code,
@@ -145,7 +146,6 @@ const CheckOutScreen = () => {
     const shippingCost = 10
     const discountAmount = (subtotal * value) / 100;
     const total = subtotal + shippingCost - discountAmount
-
     return (
         <>
             <Header />
@@ -302,7 +302,7 @@ const CheckOutScreen = () => {
                         products?.map((product: any) => (
                             <div key={product.id} className="flex items-center justify-between mb-4">
                                 <div className='flex gap-2'>
-                                    <img src={product.image} alt={product.name} className="w-16 h-16 object-cover rounded-[10px]" />
+                                    <img src={product.image} alt={product.name} className="w-16 h-20 object-cover rounded-[10px]" />
                                     <div>
                                         <h3 className="font-semibold">{product.name}</h3>
                                         <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>

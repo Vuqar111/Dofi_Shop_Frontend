@@ -26,7 +26,7 @@ const ProductCard = ({ product }: { product: any }) => {
       code: product.code,
       qty: 1,
       color: selectedColor,
-      image: "https://res.cloudinary.com/dslgitrbt/image/upload/v1734264555/story/jwrxjkvokbyg302upbq8.jpg",
+      image: product?.image,
     };
 
     dispatch(addToCart(cartItem));
@@ -40,7 +40,7 @@ const ProductCard = ({ product }: { product: any }) => {
         <div className="min-h-[400px] bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img
             className="w-48 h-48 object-contain"
-            src="https://cdn.shopify.com/s/files/1/0685/0383/0762/files/ministore_mini_2.png?v=1732308855"
+            src={product?.image}
             alt={product?.name}
           />
         </div>

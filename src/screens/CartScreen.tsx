@@ -94,7 +94,7 @@ const CartScreen = () => {
                   <div className='grid grid-cols-5 items-center mt-4'>
                     <div className='col-span-3 flex gap-2'>
                       <div className='border p-2 border-gray-200 flex items-center justify-center'>
-                        <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
+                        <img src={product?.image} alt={product.name} className="w-16 h-16 object-cover" />
                       </div>
 
                       <div className='pl-2'>
