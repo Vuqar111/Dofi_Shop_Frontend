@@ -211,15 +211,15 @@ const CheckOutScreen = () => {
                                     <option value="">
                                         {t('order_checkout_part17')}
                                     </option>
-                                    <option value="Azerbaijan">Azerbaijan</option>
-                                    <option value="Turkey">Turkey</option>
-                                    <option value="USA">USA</option>
-                                    <option value="Russia">Russia</option>
+                                    <option value="Turkey">Azerbaijan</option>
+                                    <option value="USA">Turkey</option>
+                                    <option value="Russia">China</option>
                                     <option value="France">France</option>
-                                    <option value="Italy">Italy</option>
-
+                                    <option value="Russia">Germany</option>
+                                    <option value="Italy">Spain</option>
+                                    <option value="Azerbaijan">USA</option>
+                                    <option value="Russia">Saudi Arabia</option>
                                 </select>
-
                             </div>
 
 
