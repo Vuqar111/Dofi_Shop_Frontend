@@ -149,7 +149,12 @@ const CheckOutScreen = () => {
     return (
         <>
             <Header />
-            <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
+            {products?.length === 0 ? (
+<div className="w-[80%] h-[80vh] flex items-center justify-center mx-auto">
+    <Link to={`/${currentLang}/shop`} className="text-white bg-green-400 px-2 py-4">Continue to shopping</Link>
+    </div>
+            ) : (
+<div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
                 <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
                     <form onSubmit={handleOrder}>
                         <h2 className="text-2xl font-bold mb-4">
@@ -364,6 +369,8 @@ const CheckOutScreen = () => {
                     </div>
                 </div>
             </div>
+            )}
+            
         </>
     )
 }
