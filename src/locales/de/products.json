@@ -1,5 +1,5 @@
 {
-  "robot-for-senan": {
+  "dofi-mini": {
     "name": "Smarter Roboter für Kinder",
     "info": "Unser KI-gestützter Smart-Roboter ist ein interaktiver Begleiter, der das Lernen, die Kreativität und die emotionale Entwicklung von Kindern fördert. Mit Spracherkennung, Bewegungserkennung, Lernspielen und Videoanrufen macht dieser Roboter das Lernen zum Vergnügen und fördert gleichzeitig die kognitive Entwicklung.",
     "description": "Dieser intelligente Roboter passt sich dem Lerntempo jedes Kindes an und bietet personalisierten Unterricht durch Geschichtenerzählen, Matheübungen und Sprachenlernen (im Voscreen- und Duolingo-Stil). Sein ausdrucksstarkes Gesicht und seine Bewegungsfähigkeiten sorgen für lebensechte Interaktionen, während integrierte Spiele (Buchstabieren, Verstecken, Tic-Tac-Toe) für aktives Lernen sorgen. Eltern können über Videoanrufe in Verbindung bleiben und die Spielzeit über die Begleit-App überwachen. Perfekt für Kinder, die Technologie und interaktives Lernen lieben!",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "daun-kids-robot": {
+  "dofi-pro": {
     "name": "Smarter Roboter für Daun Kids",
     "info": "Dieser adaptive Smart-Roboter wurde speziell für Kinder mit Entwicklungsstörungen (wie z. B. Down-Syndrom) entwickelt und bietet sanftes, interaktives Lernen mit vereinfachten Befehlen, sensorisch ansprechenden Spielen und emotionaler Unterstützung.",
     "description": "Der Daun Kids Smart-Roboter konzentriert sich auf inklusives Lernen und hilft Kindern, ihre Kommunikation, Motorik und kognitiven Fähigkeiten spielerisch und stressfrei zu stärken. Dieser Roboter fördert Selbstvertrauen und Unabhängigkeit und hält Eltern gleichzeitig über Videoanrufe und Fortschrittsverfolgung in Verbindung. Ein perfekter Begleiter für die Sonderpädagogik und spielerisches Spielen!",

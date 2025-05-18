@@ -1,5 +1,5 @@
 {
-  "robot-for-senan": {
+  "dofi-mini": {
     "name": "Ağıllı uşaq robotu",
     "info": "Süni intellektlə işləyən Ağıllı Robotumuz uşaqların öyrənmə, yaradıcılıq və emosional inkişafını artırmaq üçün nəzərdə tutulmuş interaktiv yoldaşdır. Səsin tanınması, hərəkəti, öyrədici oyunları və video zəngləri ilə bu robot koqnitiv inkişafı təşviq edərkən öyrənməyi əyləncəli edir.",
     "description": "Bu ağıllı robot hər bir uşağın öyrənmə tempinə uyğunlaşır, nağıl, riyaziyyat məşqləri və dil öyrənməsi (Voscreen və Duolinqo üslubu) vasitəsilə fərdiləşdirilmiş təhsil təklif edir. Onun ifadəli siması və hərəkət qabiliyyəti qarşılıqlı əlaqəni canlı edir, daxili oyunlar (imla, gizlənqaç, tic-tac-toe) əlaqəni təmin edir. Valideynlər video zənglər vasitəsilə əlaqə saxlaya və köməkçi proqram vasitəsilə oyun vaxtına nəzarət edə bilərlər. Texnologiyanı və interaktiv öyrənməyi sevən uşaqlar üçün mükəmməldir!",
@@ -26,7 +26,7 @@
       }
     ]
   },
-  "daun-kids-robot": {
+  "dofi-pro": {
     "name": "Daun Uşaqlar üçün Robot",
     "info": "İnkişaf fərqləri olan uşaqlar üçün (məsələn, Daun sindromu) xüsusi olaraq hazırlanmış bu adaptiv ağıllı robot sadələşdirilmiş əmrlər, sensora uyğun oyunlar və emosional dəstək funksiyaları ilə zərif, interaktiv öyrənmə təmin edir.",
     "description": "Daun Kids Ağıllı Robotu inklüziv öyrənməyə diqqət yetirir, uşaqlara əyləncəli, stresssiz şəkildə ünsiyyət, motor bacarıqları və idrak qabiliyyətlərini gücləndirməyə kömək edir. Bu robot valideynləri video zənglər və tərəqqinin izlənməsi vasitəsilə əlaqə saxlayarkən özünə inam və müstəqilliyi təşviq edir. Xüsusi ehtiyacları olan təhsil və şən oyun üçün mükəmməl yoldaş!",

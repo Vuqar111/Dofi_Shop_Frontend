@@ -146,7 +146,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                         <label>
                             <p>{t('profile_orders_details_part6')}: {" "}<span className='opacity-[0.7]'>{order?.delivery?.full_name}</span></p>
                         </label>
-                        
+
                         <label>
                             <p>{t('profile_orders_details_part7')}: {" "}<span className='opacity-[0.7]'>{order?.delivery?.email}</span></p>
                         </label>
@@ -178,7 +178,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     {order?.products.map((product: any) => (
                         <div key={product._id} className="w-full grid md:grid-cols-4 gap-4 items-center">
                             <div className='flex gap-2'>
-                                <img src="https://strgimgr.umico.az/sized/280/924395-149dddc4a23ff41e4d2c834b88b9568f.jpg" alt={product.name} className="w-16 h-16 object-cover" />
+                                <img src={product?.image} alt={product.name} className="w-16 h-20 object-cover" />
                                 <div>
                                     <h3 className="font-semibold">{product.name}</h3>
                                     <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
@@ -199,19 +199,18 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
             </div>
 
             <div className='border border-b border-gray-100'></div>
-
             <footer className='flex md:flex-col flex-row justify-end items-end flex-end p-4'>
                 <h2 className='pb-1'>
                     {t('profile_orders_details_part13')}: {" "}
-                     <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
+                    <span className='font-semibold'>{order?.subTotalCost} AZN</span></h2>
                 {order?.discount && (
                     <h2 className='pb-1'>
-                        {t('profile_orders_details_part14')}: {" "}
-                         <span className='font-semibold'>{order?.discount}</span></h2>
+                        {t('profile_orders_details_part16')}: {" "}
+                        <span className='font-semibold'>{order?.discount}</span></h2>
                 )}
                 <h2 className='pb-1'>
-                    {t('profile_orders_details_part16')}: {" "}
-                     <span className='font-semibold'>0 AZN</span></h2>
+                    {t('profile_orders_details_part14')}: {" "}
+                    <span className='font-semibold'>10 AZN</span></h2>
                 <h2>{t('profile_orders_details_part15')}: {" "} <span className='font-semibold'>{order?.totalEstimate} AZN</span></h2>
             </footer>
         </div>
