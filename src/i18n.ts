@@ -441,7 +441,7 @@ const resources = {
             about_page_title2: "Biz Dofi'yik",
             about_page_description: "Hər böyük robotun arxasında maraqlı bir zəkâ və xəyalpərəstlərdən ibarət bir komanda dayanır. Dofi'nin necə yarandığını və ona ürək verən insanları öyrənin.",
             about_page_info: "Dofi, Vüqar və Sənan arasında yaranan bir maraq qığılcımı ilə başladı – canlı kimi hiss olunan bir robot yaratmaq arzusu ilə. Onun oynaq xarakteri Ləman tərəfindən UI/UX vasitəsilə formalaşdırıldı, Hüseyn və Valida onun ikonik 3D formasını yaratdı və mentorlar icması yola işıq saldı. Dofi yavaş-yavaş həyat tapdı. Bu robot təkcə bizim deyil; o, gecəyarısı ideyalarının, inadkar problem həll etmənin və doğru insanların bir araya gəldikdə yaranan sehrin mozaikasıdır.",
-            },
+        },
     },
     tr: {
         translation: {
@@ -643,7 +643,7 @@ const resources = {
             about_page_title2: "Biz Dofi'yiz",
             about_page_description: "Her harika robotun arkasında meraklı bir zihin ve hayalperest bir ekip vardır. Dofi'nin nasıl hayata geçtiğini ve ona kalp veren insanları öğrenin.",
             about_page_info: "Dofi, Vugar ve Sanan arasında merak kıvılcımıyla başlayan - canlı hissi veren bir robot inşa etme hayaliydi. Laman’ın arayüz tasarımıyla ona eğlenceli bir kişilik katması, Huseyn ve Valida’nın ikonik 3D formunu şekillendirmesi ve yol gösteren bir mentor topluluğuyla Dofi yavaş yavaş hayata göz kırptı. Bu robot sadece bizim değil; o, geç saatlerde ortaya çıkan fikirlerin, inatçı problem çözmenin ve doğru insanların bir araya geldiğinde oluşan sihrin bir mozaiğidir.",
-            },
+        },
     },
     ar: {
         translation: {
@@ -661,7 +661,7 @@ const resources = {
             about_feature_part2: "تحسين حل المشكلات",
             about_feature_part3: "التعلم التكيفي",
             about_feature_part4: "التغذية الراجعة المخصصة",
-          
+
             safety_page_title: "الذكاء الاصطناعي والأمان",
             safety_page_description: "نحن نأخذ الأمان على محمل الجد. كل بايت من بيانات طفلك محمي ضمن نظامنا المغلق. دوفي يحدد معيارًا جديدًا للذكاء الاصطناعي الصديق للعائلة.",
             safety_page_feature_title_part1: "مفيد للآباء",
@@ -670,7 +670,7 @@ const resources = {
             safety_page_feature_description_part2: "تطبيق للآباء يعرض خطط تعلم الأطفال بوضوح ويحدد الإنجازات في تطورهم",
             safety_page_feature_title_part3: "آمن، محمي، وخاص",
             safety_page_feature_description_part3: "جهاز معتمد kidSAFE+ COPPA مع إعدادات أمان وخصوصية قابلة للتخصيص",
-          
+
             // FAQ
             faq_title: "الأسئلة المتكررة",
             faq_question_part1: "ما هو دوفي؟",
@@ -683,7 +683,7 @@ const resources = {
             faq_answer_part4: "دوفي مناسب للأطفال الذين تتراوح أعمارهم بين 3 و 8 سنوات.",
             faq_question_part5: "كيف يمكنني طلب دوفي مسبقًا؟",
             faq_answer_part5: "يمكنك طلب دوفي مسبقًا مباشرة من خلال موقعنا الإلكتروني. أضف المنتج إلى السلة واستكمل الدفع.",
-          
+
             // Profile
             profile_page_title: "معلومات شخصية",
             profile_page_form_label1: "الاسم الكامل",
@@ -695,14 +695,14 @@ const resources = {
             profile_page_rol_val2: "أب",
             profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "تم تحديث ملفك الشخصي بنجاح",
-          
+
             // Profile Orders
             profile_orders_page_title: "طلباتك",
             profile_order_card_part1: "رمز الطلب",
             profile_order_card_part2: "تاريخ الطلب",
             profile_order_card_part3: "تفاصيل الطلب",
             profile_order_card_part4: "السعر الإجمالي",
-          
+
             // Profile Order Details Card
             profile_orders_details_part1: "الشحن",
             profile_orders_details_part2: "الدولة",
@@ -720,7 +720,7 @@ const resources = {
             profile_orders_details_part14: "الشحن",
             profile_orders_details_part15: "السعر الإجمالي",
             profile_orders_details_part16: "الخصم",
-          
+
             // Profile Security
             profile_security_page_title: "الأمان",
             profile_security_form_label1: "كلمة المرور الحالية",
@@ -731,20 +731,20 @@ const resources = {
             profile_security_form_placeholder3: "تأكيد كلمة المرور",
             profile_security_form_button: "تغيير كلمة المرور",
             profile_security_modal_desc: "تم تحديث كلمة المرور بنجاح!",
-          
+
             // Sidebar
             sidebar_title_profile: "الملف الشخصي",
             sidebar_title_orders: "الطلبات",
             sidebar_title_security: "الأمان",
             sidebar_title_logout: "تسجيل الخروج",
-          
+
             // Breadcrumb
             breadcrumb_home: "الرئيسية",
             breadcrumb_profile: "الملف الشخصي",
             breadcrumb_orders: "الطلبات",
             breadcrumb_order: "الطلب",
             breadcrumb_security: "الأمان",
-          
+
             // Footer
             footer_title1: "المنتجات",
             footer_part1: "دوفي برو",
@@ -761,7 +761,7 @@ const resources = {
             footer_part10: "البريد الإلكتروني",
             footer_part11: "رقم الهاتف",
             footer_part12: "جميع الحقوق محفوظة",
-          
+
             // Product details
             product_details_part1: "اللون",
             product_details_part2: "الكمية",
@@ -769,7 +769,7 @@ const resources = {
             product_details_part4: "الطلب المسبق الآن",
             product_details_part5: "تفاصيل المنتج",
             product_details_part6: "سيتم احتساب الشحن عند إتمام الطلب",
-          
+
             // Order checkout
             order_checkout_part1: "التواصل",
             order_checkout_part2: "البريد الإلكتروني",
@@ -789,7 +789,7 @@ const resources = {
             order_checkout_part16: "الشحن",
             order_checkout_part17: "اختار دولتك",
             order_checkout_part18: "تم إنشاء طلبك كطلب مسبق",
-          
+
             // Order Summary
             order_summary_title: "ملخص الطلب",
             order_summary_part1: "اللون",
@@ -801,13 +801,13 @@ const resources = {
             order_summary_part7: "الخصم",
             order_summary_part8: "السعر الإجمالي",
             order_summary_part9: "سلتك فارغة",
-          
+
             // Card modal
             card_modal_title: "السلة",
             cart_modal_footer: "تابع إلى الدفع",
             cart_modal_message1: "متابعة التسوق",
             cart_modal_message2: "سلتك فارغة",
-          
+
             // Register
             register_page_title: "أنشئ حسابك الآن بنقرة واحدة",
             register_page_label1: "الاسم الكامل",
@@ -819,7 +819,7 @@ const resources = {
             register_page_button: "تسجيل",
             register_page_footer1: "هل لديك حساب بالفعل؟",
             register_page_footer2: "تسجيل الدخول",
-          
+
             // Login
             login_page_title: "سعداء لرؤيتك مرة أخرى!",
             login_page_label1: "البريد الإلكتروني",
@@ -830,7 +830,7 @@ const resources = {
             login_page_footer1: "ليس لديك حساب؟",
             login_page_footer2: "سجل الآن",
             login_page_footer3: "نسيت كلمة المرور؟",
-          
+
             // Forgot
             forgot_page_title: "استرجاع كلمة المرور",
             forgot_page_label1: "البريد الإلكتروني",
@@ -838,7 +838,7 @@ const resources = {
             forgot_page_button: "تغيير كلمة المرور",
             forgot_page_footer1: "هل لديك حساب؟",
             forgot_page_footer2: "تسجيل الدخول",
-          
+
             // Cart
             cart_page_part1: "سلتك",
             cart_page_part2: "تابع",
@@ -846,7 +846,7 @@ const resources = {
             cart_page_part4: "الكمية",
             cart_page_part5: "السعر الإجمالي",
             cart_page_part6: "تابع إلى الدفع",
-          
+
             modal_success_message_title: "نجاح",
             modal_success_message_description: "تم إضافة المنتج إلى السلة",
             modal_success_button: "إغلاق",
@@ -1521,7 +1521,7 @@ const resources = {
             about_feature_part2: "Mejora de la Resolución de Problemas",
             about_feature_part3: "Aprendizaje Adaptativo",
             about_feature_part4: "Retroalimentación Personalizada",
-          
+
             safety_page_title: "Inteligencia Artificial y Seguridad",
             safety_page_description: "Nos tomamos la seguridad en serio. Cada byte de datos de tu hijo está protegido dentro de nuestro sistema cerrado. Dofi establece un nuevo estándar para la inteligencia artificial amigable para la familia.",
             safety_page_feature_title_part1: "Útil para los padres",
@@ -1530,7 +1530,7 @@ const resources = {
             safety_page_feature_description_part2: "Aplicación para padres que presenta claramente los planes educativos de los niños e identifica hitos en su desarrollo",
             safety_page_feature_title_part3: "Seguro, protegido y privado",
             safety_page_feature_description_part3: "Dispositivo certificado kidSAFE+ COPPA con configuraciones de seguridad y privacidad personalizables",
-          
+
             // FAQ
             faq_title: "Preguntas Frecuentes",
             faq_question_part1: "¿Qué es Dofi?",
@@ -1543,7 +1543,7 @@ const resources = {
             faq_answer_part4: "Dofi es adecuado para niños entre 3 y 8 años.",
             faq_question_part5: "¿Cómo puedo hacer un pre-pedido de Dofi?",
             faq_answer_part5: "Puedes hacer un pre-pedido de Dofi directamente en nuestro sitio web. Agrega el producto al carrito y continúa con el pago.",
-          
+
             // Profile
             profile_page_title: "Información Personal",
             profile_page_form_label1: "Nombre Completo",
@@ -1555,14 +1555,14 @@ const resources = {
             profile_page_rol_val2: "Padre",
             profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Tu perfil ha sido actualizado con éxito",
-          
+
             // Profile Orders
             profile_orders_page_title: "Tus Pedidos",
             profile_order_card_part1: "Código del pedido",
             profile_order_card_part2: "Fecha del pedido",
             profile_order_card_part3: "Detalles del pedido",
             profile_order_card_part4: "Precio total",
-          
+
             // Profile Order Details Card
             profile_orders_details_part1: "Envío",
             profile_orders_details_part2: "País",
@@ -1580,7 +1580,7 @@ const resources = {
             profile_orders_details_part14: "Envío",
             profile_orders_details_part15: "Precio total",
             profile_orders_details_part16: "Descuento",
-          
+
             // Profile Security
             profile_security_page_title: "Seguridad",
             profile_security_form_label1: "Contraseña actual",
@@ -1591,20 +1591,20 @@ const resources = {
             profile_security_form_placeholder3: "Confirma tu contraseña",
             profile_security_form_button: "Cambiar contraseña",
             profile_security_modal_desc: "¡Tu contraseña ha sido actualizada con éxito!",
-          
+
             // Sidebar
             sidebar_title_profile: "Perfil",
             sidebar_title_orders: "Pedidos",
             sidebar_title_security: "Seguridad",
             sidebar_title_logout: "Cerrar sesión",
-          
+
             // Breadcrumb
             breadcrumb_home: "Inicio",
             breadcrumb_profile: "Perfil",
             breadcrumb_orders: "Pedidos",
             breadcrumb_order: "Pedido",
             breadcrumb_security: "Seguridad",
-          
+
             // Footer
             footer_title1: "Productos",
             footer_part1: "Dofi Pro",
@@ -1621,7 +1621,7 @@ const resources = {
             footer_part10: "Correo Electrónico",
             footer_part11: "Teléfono",
             footer_part12: "Todos los derechos reservados",
-          
+
             // Product details
             product_details_part1: "Color",
             product_details_part2: "Cantidad",
@@ -1629,7 +1629,7 @@ const resources = {
             product_details_part4: "Pre-pedido ahora",
             product_details_part5: "Detalles del producto",
             product_details_part6: "Envío calculado al finalizar la compra",
-          
+
             // Order checkout
             order_checkout_part1: "Contacto",
             order_checkout_part2: "Correo electrónico",
@@ -1649,7 +1649,7 @@ const resources = {
             order_checkout_part16: "Envío",
             order_checkout_part17: "Selecciona tu país",
             order_checkout_part18: "Tu pedido ha sido creado como pre-pedido",
-          
+
             // Order Summary
             order_summary_title: "Resumen del Pedido",
             order_summary_part1: "Color",
@@ -1661,13 +1661,13 @@ const resources = {
             order_summary_part7: "Descuento",
             order_summary_part8: "Precio total",
             order_summary_part9: "Tu carrito está vacío",
-          
+
             // Card modal
             card_modal_title: "Carrito",
             cart_modal_footer: "Proceder al pago",
             cart_modal_message1: "Seguir comprando",
             cart_modal_message2: "Tu carrito está vacío",
-          
+
             // Register
             register_page_title: "Crea tu cuenta ahora con un clic",
             register_page_label1: "Nombre completo",
@@ -1679,7 +1679,7 @@ const resources = {
             register_page_button: "Registrarse",
             register_page_footer1: "¿Ya tienes una cuenta?",
             register_page_footer2: "Iniciar sesión",
-          
+
             // Login
             login_page_title: "¡Nos alegra verte de nuevo!",
             login_page_label1: "Correo electrónico",
@@ -1690,7 +1690,7 @@ const resources = {
             login_page_footer1: "¿No tienes cuenta?",
             login_page_footer2: "Regístrate",
             login_page_footer3: "¿Olvidaste tu contraseña?",
-          
+
             // Forgot
             forgot_page_title: "Recupera tu contraseña",
             forgot_page_label1: "Correo electrónico",
@@ -1698,7 +1698,7 @@ const resources = {
             forgot_page_button: "Cambiar contraseña",
             forgot_page_footer1: "¿Ya tienes cuenta?",
             forgot_page_footer2: "Iniciar sesión",
-          
+
             // Cart
             cart_page_part1: "Tu carrito",
             cart_page_part2: "Seguir",
@@ -1706,7 +1706,7 @@ const resources = {
             cart_page_part4: "Cantidad",
             cart_page_part5: "Precio total",
             cart_page_part6: "Proceder al pago",
-          
+
             // Modal
             modal_success_message_title: "Éxito",
             modal_success_message_description: "Producto agregado al carrito",
@@ -1723,7 +1723,7 @@ const resources = {
             about_page_title2: "Somos Dofi",
             about_page_description: "Detrás de cada gran robot hay una mente curiosa y un equipo de soñadores. Descubre cómo nació Dofi—y las personas que le dieron un corazón.",
             about_page_info: "Dofi comenzó como una chispa de curiosidad entre Vugar y Sanan: un sueño compartido de construir un robot que se sintiera vivo. Con Laman diseñando su personalidad juguetona a través del UI/UX, Huseyn y Valida dándole forma a su icónica figura 3D, y una comunidad de mentores guiando el camino, Dofi fue cobrando vida poco a poco. Este robot no es solo nuestro; es un mosaico de ideas nocturnas, soluciones tercas a problemas y la magia que surge cuando las personas correctas se unen.",
-          },
+        },
     }
 };
 

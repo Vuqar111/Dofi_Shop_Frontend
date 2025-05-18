@@ -11,6 +11,9 @@ import ActionButton from "../partials/ActionButton"
 import swal from 'sweetalert'
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+import { countryList } from "../utils/countryList";
+
+
 
 const CheckOutScreen = () => {
 
@@ -97,6 +100,11 @@ const CheckOutScreen = () => {
             setDLoading(false);
         }
     };
+
+
+
+
+    const selectedCountry = countryList.find(c => c.name === country);
 
 
 
@@ -193,11 +201,7 @@ const CheckOutScreen = () => {
                             <h2 className="text-xl font-bold my-4">
                                 {t('order_checkout_part16')}
                             </h2>
-
-
                             <div className='grid grid-cols-1  md:gap-4'>
-
-
                                 <div className="mb-2">
                                     <label className="mb-2 block font-medium text-black opacity-[0.6]">
                                         {t('order_checkout_part6')}
@@ -217,9 +221,7 @@ const CheckOutScreen = () => {
                                         <option value="Russia">Russia</option>
                                         <option value="France">France</option>
                                         <option value="Italy">Italy</option>
-
                                     </select>
-
                                 </div>
 
 
@@ -236,13 +238,15 @@ const CheckOutScreen = () => {
                                         <option value="">
                                             {t('order_checkout_part8')}
                                         </option>
-                                        <option value="Bakı">Bakı</option>
-                                        <option value="Sumqayıt">Sumqayıt</option>
-                                        <option value="Gəncə">Gəncə</option>
+
+                                        {selectedCountry?.cities.map((city: string) => (
+                                            <option key={city} value={city}>
+                                                {city}
+                                            </option>
+                                        ))}
+
                                     </select>
-
                                 </div>
-
                             </div>
 
                             <div className="mb-4">

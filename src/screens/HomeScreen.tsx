@@ -19,7 +19,7 @@ const HomeScreen = () => {
       <div>
         <Header setIsOpened={setIsOpened} />
         <HeroScreen />
-        <div className='w-[100%] mx-auto'>
+        <div className='w-[80%] mx-auto'>
           <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>
              {t('home_screen_products_title')}
           </h3>

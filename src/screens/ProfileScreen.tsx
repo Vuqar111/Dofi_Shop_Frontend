@@ -7,7 +7,8 @@ import ActionButton from "../partials/ActionButton"
 import Loading from '../components/Loader'
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 
 
@@ -123,6 +124,7 @@ const ProfileScreen = () => {
                              {t('profile_page_form_label3')}
 
             </label>
+            
             <div className="flex">
               <select
                 className="w-1/4 rounded-sm border border-gray-200 bg-transparent py-3 px-2 outline-none focus:border-primary"
@@ -144,29 +146,6 @@ const ProfileScreen = () => {
             </div>
           </div>
 
-
-          <div className="md:mb-4">
-            <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                           {t('profile_page_form_label4')}
-
-            </label>
-            <select
-              className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-              id="customerType"
-              value={customer_type}
-              onChange={(e) => setCustomerType(e.target.value)}
-            >
-              <option value="Individual">
-                {t('profile_page_rol_val1')}
-              </option>
-              <option value="Business">
-                   {t('profile_page_rol_val2')}
-              </option>
-              <option value="VIP">
-                   {t('profile_page_rol_val3')}
-              </option>
-            </select>
-          </div>
         </div>
 
         <ActionButton
