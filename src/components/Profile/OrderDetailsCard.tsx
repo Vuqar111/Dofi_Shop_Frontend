@@ -137,6 +137,9 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                         <label>
                             <p>{t('profile_orders_details_part4')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
                         </label>
+                         <label>
+                            <p>{t('profile_orders_details_part_5')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.postal_code}</span></p>
+                        </label>
                     </div>
                 </div>
 

@@ -1,221 +1,389 @@
-import { orderCreate } from "../redux/features/orderSlice"
+import { orderCreate } from "../redux/features/orderSlice";
 import { checkDiscount } from "../redux/features/discountSlice";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { profileDetails } from "../redux/features/profileSlice";
-import { useState, useEffect } from 'react'
-import { AppDispatch } from '../redux/store'
+import { useState, useEffect, useMemo } from 'react';
+import { AppDispatch } from '../redux/store';
+import type { RootState } from '../redux/store'; // Add this import
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import Header from '../components/Profile/Header'
-import ActionButton from "../partials/ActionButton"
-import swal from 'sweetalert'
+import Header from '../components/Profile/Header';
+import ActionButton from "../partials/ActionButton";
+import swal from 'sweetalert';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { countryList } from "../utils/countryList";
 
+// TypeScript interfaces
+interface FormData {
+    fullName: string;
+    email: string;
+    country: string;
+    city: string;
+    address: string;
+    apartment: string;
+    postalCode: string;
+    phoneNumber: string;
+    paymentMethod: 'Cart' | 'PayOnDelivery';
+    paymentStatus: 'Paid' | 'Pending';
+}
 
+interface FormErrors {
+    fullName?: string;
+    email?: string;
+    country?: string;
+    city?: string;
+    address?: string;
+    phoneNumber?: string;
+    postalCode?: string;
+}
+
+interface DiscountMessage {
+    success: string;
+    error: string;
+}
+
+interface Product {
+    _id?: string;
+    id?: string;
+    name: string;
+    price: number;
+    qty: number;
+    image: string;
+    color?: string;
+    code?: string;
+}
+
+// Form validation helpers
+const validateEmail = (email: any) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
+const validatePhone = (phone: any) => {
+    return phone && phone.length >= 6;
+};
+
+const validateRequiredField = (field: any) => {
+    return field && field.trim() !== '';
+};
 
 const CheckOutScreen = () => {
-
     const location = useLocation();
+    const navigate = useNavigate();
     const { t } = useTranslation();
     const currentLang = location.pathname.split('/')[1] || 'en';
 
+    const dispatch = useDispatch<AppDispatch>();
+    const { profile, loading: profileLoading } = useSelector((state: RootState) => state.profile);
+    const { createOrderSuccess, createOrderLoading, createOrderError } = useSelector((state: RootState) => state.orders);
+    const { discount: discountData, loading: disscountLoading } = useSelector((state: RootState) => state.discounts);
 
+    // Form state
+    const [formData, setFormData] = useState<FormData>({
+        fullName: '',
+        email: '',
+        country: '',
+        city: '',
+        address: '',
+        apartment: '',
+        postalCode: '',
+        phoneNumber: '',
+        paymentMethod: 'Cart',
+        paymentStatus: 'Paid'
+    });
 
-    const dispatch: AppDispatch = useDispatch()
-    const { profile, loading } = useSelector((state: any) => state.profile)
+    // Form validation state
+    const [formErrors, setFormErrors] = useState<FormErrors>({});
+    const [touched, setTouched] = useState<Record<string, boolean>>({});
 
+    // Discount state
+    const [discountCode, setDiscountCode] = useState("");
+    const [discountMessage, setDiscountMessage] = useState<DiscountMessage>({ success: "", error: "" });
+    const [discountLoading, setDiscountLoading] = useState(false);
 
-    const { createOrderSuccess, createOrderLoading, createOrderError } = useSelector((state: any) => state.orders)
+    // Cart data from localStorage - use useMemo to prevent unnecessary re-renders
+    const products = useMemo<Product[]>(() => {
+        try {
+            return JSON.parse(localStorage.getItem('doofycart') || '[]');
+        } catch (error) {
+            console.error("Error parsing cart data:", error);
+            return [];
+        }
+    }, []);
 
-    const [payment_status, setPaymentStatus] = useState("Paid");
-    const [payment_type, setPaymentType] = useState("Cart");
-    const [discount, setDiscount] = useState("");
-    const [country, setCountry] = useState('');
-    const [city, setCity] = useState('');
-    const [address, setAddress] = useState('')
-    const [apartment, setApartmant] = useState('')
-    const [postal_code, setPostalCode] = useState('')
-    const products = JSON.parse(localStorage.getItem('doofycart') || '[]')
-
-
+    // Load user profile
     useEffect(() => {
-        dispatch(profileDetails())
-    }, [dispatch])
+        dispatch(profileDetails());
+    }, [dispatch]);
 
-
-    const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
-    const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)
-
-
-
+    // Set form data from profile when available
     useEffect(() => {
         if (profile) {
-            setFullName(profile.fullName || '')
-            setEmail(profile.email || '')
+            setFormData(prev => ({
+                ...prev,
+                fullName: profile.fullName || '',
+                email: profile.email || '',
+            }));
         }
-    }, [profile])
+    }, [profile]);
 
+    // Handle form input changes
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
 
+        // Mark field as touched
+        setTouched({
+            ...touched,
+            [name]: true
+        });
+    };
 
+    // Handle phone input changes (separate because of the component used)
+    const handlePhoneChange = (value: string) => {
+        setFormData({
+            ...formData,
+            phoneNumber: value
+        });
 
-    const [discountCode, setDiscountCode] = useState("");
-    const [code, setCode] = useState("");
-    const [value, setValue] = useState(0);
-    const [dloading, setDLoading] = useState(false);
-    const [dsuccessMessage, setDSuccessMessage] = useState("");
-    const [derrorMessage, setDErrorMessage] = useState("");
+        setTouched({
+            ...touched,
+            phoneNumber: true
+        });
+    };
 
+    // Payment method selection
+    const handlePaymentMethodChange = (method: 'Cart' | 'PayOnDelivery') => {
+        setFormData({
+            ...formData,
+            paymentMethod: method,
+            paymentStatus: method === 'PayOnDelivery' ? 'Pending' : 'Paid'
+        });
+    };
 
-    const [phoneNumber, setPhoneNumber] = useState('');
+    // Validate form on submit
+    const validateForm = (): boolean => {
+        const errors: FormErrors = {};
 
+        if (!validateRequiredField(formData.fullName)) errors.fullName = t('validation_required');
+        if (!validateEmail(formData.email)) errors.email = t('validation_invalid_email');
+        if (!validateRequiredField(formData.country)) errors.country = t('validation_required');
+        if (!validateRequiredField(formData.city)) errors.city = t('validation_required');
+        if (!validateRequiredField(formData.address)) errors.address = t('validation_required');
+        if (!validatePhone(formData.phoneNumber)) errors.phoneNumber = t('validation_invalid_phone');
 
+        setFormErrors(errors);
+        setTouched({
+            fullName: true,
+            email: true,
+            country: true,
+            city: true,
+            address: true,
+            phoneNumber: true,
+            postalCode: true,
+            apartment: true
+        });
 
+        return Object.keys(errors).length === 0;
+    };
 
-    const { discount: discountData, loading: discountLoading, error: discountError } = useSelector((state: any) => state.discounts)
-
+    // Handle discount code check
     const handleCheckDiscount = async (e: React.FormEvent) => {
         e.preventDefault();
-        setDLoading(true);
-        setDErrorMessage("");
-        setDSuccessMessage("");
+        if (!discountCode.trim()) return;
+
+        setDiscountLoading(true);
+        setDiscountMessage({ success: "", error: "" });
 
         try {
             const response = await dispatch(checkDiscount({ code: discountCode }));
             const payload = response?.payload;
 
-            if (payload?.code && discountCode) {
-                setCode(payload.code);
-                setValue(payload.value);
-                setDiscount(payload.code);
-                setDSuccessMessage(payload.message || "Discount applied!");
+            if (payload?.code) {
+                setDiscountMessage({
+                    success: payload.message || t('discount_applied'),
+                    error: ""
+                });
             } else {
-                setDErrorMessage(payload.message || "Wrong promo code!");
+                setDiscountMessage({
+                    success: "",
+                    error: payload?.message || t('invalid_discount')
+                });
             }
         } catch (error) {
-            setDErrorMessage("An error occurred. Please try again.");
-            console.error(error);
+            setDiscountMessage({
+                success: "",
+                error: t('error_occurred')
+            });
+            console.error("Discount error:", error);
         } finally {
-            setDLoading(false);
+            setDiscountLoading(false);
         }
     };
 
-
-
-
-    const selectedCountry = countryList.find(c => c.name === country);
-
-
-
-
+    // Handle order submission
     const handleOrder = async (e: React.FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
+
+        // If cart is empty, don't proceed
+        if (products.length === 0) {
+            swal(t('cart_empty_title'), t('cart_empty_message'), 'warning');
+            return;
+        }
+
+        // Validate form
+        if (!validateForm()) {
+            return;
+        }
+
         try {
-            const createdOrder = {
-                customerId: email,
+            const orderData = {
+                customerId: formData.email,
                 status: "Created",
-                products: products.map((product: any) => ({
-                    ...product,
+                products: products.map((product) => ({
                     productId: product?._id,
                     image: product?.image,
+                    name: product?.name,
                     qty: product.qty,
                     price: product.price,
                     code: product.code,
+                    color: product?.color
                 })),
                 payment: {
-                    payment_status,
-                    payment_type
+                    payment_status: formData.paymentStatus,
+                    payment_type: formData.paymentMethod
                 },
                 discount: discountData?.code,
-                email,
+                email: formData.email,
                 delivery: {
-                    email,
-                    country,
-                    city,
-                    full_name: fullName,
-                    address,
-                    apartment,
-                    phone: phoneNumber,
-                    postal_code
+                    email: formData.email,
+                    country: formData.country,
+                    city: formData.city,
+                    full_name: formData.fullName,
+                    address: formData.address,
+                    apartment: formData.apartment,
+                    phone: formData.phoneNumber,
+                    postal_code: formData.postalCode
                 }
+            };
+
+            await dispatch(orderCreate({ createdOrder: orderData }));
+
+            // If order was created successfully, clear cart
+            if (createOrderSuccess) {
+                localStorage.removeItem('doofycart');
             }
-            await dispatch(orderCreate({ createdOrder }))
-            localStorage.removeItem('doofycart')
         } catch (error) {
-            swal(t('modal_error_message_title'), t('modal_error_message_description'), 'error')
-            console.error(error)
+            swal(t('modal_error_message_title'), t('modal_error_message_description'), 'error');
+            console.error("Order creation error:", error);
         }
-    }
+    };
 
+    // Get available cities for selected country
+    const availableCities = useMemo(() => {
+        const selectedCountry = countryList.find(c => c.name === formData.country);
+        return selectedCountry?.cities || [];
+    }, [formData.country]);
 
+    // Cart calculations
+    const { subtotal, shippingCost, discountAmount, total } = useMemo(() => {
+        const subtotal = products.reduce((acc, item) => acc + item.price * item.qty, 0);
+        const shippingCost = 10; // Could be calculated based on location, weight, etc.
+        const discountValue = discountData?.value || 0;
+        const discountAmount = (subtotal * discountValue) / 100;
+        return {
+            subtotal,
+            shippingCost,
+            discountAmount,
+            total: subtotal + shippingCost - discountAmount
+        };
+    }, [products, discountData]);
 
+    // Display error message for form fields
+    const getErrorMessage = (field: keyof FormErrors) => {
+        return touched[field] && formErrors[field] ? (
+            <span className="text-red-500 text-xs mt-1">{formErrors[field]}</span>
+        ) : null;
+    };
 
-    const subtotal = products.reduce((acc: number, item: any) => acc + item.price * item.qty, 0)
-    const shippingCost = 10
-    const discountAmount = (subtotal * value) / 100;
-    const total = subtotal + shippingCost - discountAmount
+    // If no products in cart, redirect to cart page
+    useEffect(() => {
+        if (products.length === 0 && !createOrderSuccess) {
+            swal(t('cart_empty_title'), t('redirecting_to_cart'), 'info')
+                .then(() => navigate(`/${currentLang}/cart`));
+        }
+    }, [products, navigate, currentLang, createOrderSuccess, t]);
+
     return (
         <>
             <Header />
-            {products?.length === 0 ? (
-                <div className="w-[80%] h-[80vh] flex items-center justify-center mx-auto">
-                    <Link to={`/${currentLang}/shop`} className="text-white bg-green-400 px-2 py-4">Continue to shopping</Link>
-                </div>
-            ) : (
-                <div className='flex md:flex-row flex-col-reverse flex-col w-[100%] p-4 md:p-0 md:w-[80%] mx-auto mt-4'>
-                    <div className='w-3/3 md:w-2/3 p-2 md:p-8'>
-                        <form onSubmit={handleOrder}>
-                            <h2 className="text-2xl font-bold mb-4">
-                                {t('order_checkout_part1')}
-                            </h2>
+
+            <div className="flex md:flex-row flex-col-reverse w-full p-4 md:p-0 md:w-4/5 lg:w-3/4 mx-auto mt-4">
+                {/* Checkout form */}
+                <div className="w-full md:w-2/3 md:py-8">
+                    <form onSubmit={handleOrder}>
+                        <h2 className="text-2xl font-bold mb-6">{t('order_checkout_parttitle')}</h2>
+
+                        {/* Contact Information */}
+                        <div className="mb-6">
+                            <h3 className="text-lg font-semibold mb-4">{t('order_checkout_part1')}</h3>
+
                             <div className="mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                <label className="mb-2 block font-medium text-black opacity-60">
                                     {t('order_checkout_part2')}
                                 </label>
                                 <div className="relative">
                                     <input
                                         type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
                                         placeholder={t('order_checkout_part3')}
-                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                        className={`w-full rounded-sm placeholder:text-sm border ${touched.email && formErrors.email ? 'border-red-500' : 'border-gray-200'
+                                            } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
                                     />
-                                </div>
-
-                                <div className="my-4">
-                                    <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                        {t('order_checkout_part4')}
-                                    </label>
-                                    <input
-                                        type="text"
-                                        value={fullName}
-                                        onChange={(e) => setFullName(e.target.value)}
-                                        placeholder={t('order_checkout_part5')}
-                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                    />
+                                    {getErrorMessage('email')}
                                 </div>
                             </div>
 
+                            <div className="mb-4">
+                                <label className="mb-2 block font-medium text-black opacity-60">
+                                    {t('order_checkout_part4')}
+                                </label>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleInputChange}
+                                    placeholder={t('order_checkout_part5')}
+                                    className={`w-full rounded-sm placeholder:text-sm border ${touched.fullName && formErrors.fullName ? 'border-red-500' : 'border-gray-200'
+                                        } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
+                                />
+                                {getErrorMessage('fullName')}
+                            </div>
+                        </div>
 
+                        {/* Shipping Information */}
+                        <div className="mb-6">
+                            <h3 className="text-lg font-semibold mb-4">{t('order_checkout_part16')}</h3>
 
-                            <h2 className="text-xl font-bold my-4">
-                                {t('order_checkout_part16')}
-                            </h2>
-                            <div className='grid grid-cols-1  md:gap-4'>
-                                <div className="mb-2">
-                                    <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="mb-4">
+                                    <label className="mb-2 block font-medium text-black opacity-60">
                                         {t('order_checkout_part6')}
                                     </label>
                                     <select
-                                        required
-                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-
-                                        onChange={(e) => setCountry(e.target.value)}
+                                        name="country"
+                                        value={formData.country}
+                                        onChange={handleInputChange}
+                                        className={`w-full rounded-sm placeholder:text-sm border ${touched.country && formErrors.country ? 'border-red-500' : 'border-gray-200'
+                                            } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
                                     >
-                                        <option value="">
-                                            {t('order_checkout_part17')}
-                                        </option>
+                                        <option value="">{t('order_checkout_part17')}</option>
                                         <option value="Azerbaijan">Azerbaijan</option>
                                         <option value="Turkey">Turkey</option>
                                         <option value="USA">USA</option>
@@ -223,161 +391,208 @@ const CheckOutScreen = () => {
                                         <option value="France">France</option>
                                         <option value="Italy">Italy</option>
                                     </select>
+                                    {getErrorMessage('country')}
                                 </div>
 
-
-                                <div className="mb-2 md:mb-4">
-                                    <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                <div className="mb-4">
+                                    <label className="mb-2 block font-medium text-black opacity-60">
                                         {t('order_checkout_part7')}
                                     </label>
                                     <select
-                                        required
-                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-
-                                        onChange={(e) => setCity(e.target.value)}
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={handleInputChange}
+                                        disabled={!formData.country}
+                                        className={`w-full rounded-sm placeholder:text-sm border ${touched.city && formErrors.city ? 'border-red-500' : 'border-gray-200'
+                                            } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none ${!formData.country ? 'bg-gray-100 cursor-not-allowed' : ''
+                                            }`}
                                     >
-                                        <option value="">
-                                            {t('order_checkout_part8')}
-                                        </option>
-
-                                        {selectedCountry?.cities.map((city: string) => (
+                                        <option value="">{t('order_checkout_part8')}</option>
+                                        {availableCities.map((city) => (
                                             <option key={city} value={city}>
                                                 {city}
                                             </option>
                                         ))}
-
                                     </select>
+                                    {getErrorMessage('city')}
                                 </div>
                             </div>
 
                             <div className="mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                                <label className="mb-2 block font-medium text-black opacity-60">
                                     {t('order_checkout_part9')}
                                 </label>
                                 <input
                                     type="text"
-                                    required={true}
-                                    value={address}
-                                    onChange={(e) => setAddress(e.target.value)}
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleInputChange}
                                     placeholder={t('order_checkout_part10')}
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                    className={`w-full rounded-sm placeholder:text-sm border ${touched.address && formErrors.address ? 'border-red-500' : 'border-gray-200'
+                                        } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
                                 />
-                            </div>
-                            <div className="mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                    {t('order_checkout_part11')}
-                                </label>
-                                <input
-                                    type="text"
-                                    value={apartment}
-                                    onChange={(e) => setApartmant(e.target.value)}
-                                    placeholder={t('order_checkout_part12')}
-                                    className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                />
+                                {getErrorMessage('address')}
                             </div>
 
-                            <div className="mb-4">
-                                <label className="mb-2 block font-medium text-black opacity-[0.6]">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="mb-4">
+                                    <label className="mb-2 block font-medium text-black opacity-60">
+                                        {t('order_checkout_part11')}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="apartment"
+                                        value={formData.apartment}
+                                        onChange={handleInputChange}
+                                        placeholder={t('order_checkout_part12')}
+                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <label className="mb-2 block font-medium text-black opacity-60">
+                                        {t('order_checkout_part19')}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="postalCode"
+                                        value={formData.postalCode}
+                                        onChange={handleInputChange}
+                                        placeholder={t('order_checkout_part20')}
+                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="mb-6">
+                                <label className="mb-2 block font-medium text-black opacity-60">
                                     {t('order_checkout_part13')}
                                 </label>
                                 <PhoneInput
-                                    country={'az'} // default country (Azerbaijan)
-                                    value={phoneNumber}
-                                    onChange={(value) => setPhoneNumber(value)}
+                                    country={'az'}
+                                    value={formData.phoneNumber}
+                                    onChange={handlePhoneChange}
                                     enableSearch={true}
-                                    inputClass="!w-full !rounded-sm !border !border-gray-200 !bg-transparent !py-3 !pl-10 !pr-10 !text-sm !h-[50px]"
+                                    inputClass={`!w-full !rounded-sm !border ${touched.phoneNumber && formErrors.phoneNumber ? '!border-red-500' : '!border-gray-200'
+                                        } !bg-transparent !py-3 !pl-10 !pr-10 !text-sm !h-[50px]`}
                                     containerClass="!w-full"
                                     buttonClass="!border-none !bg-transparent"
                                     inputStyle={{ width: '100%' }}
                                     placeholder={t('order_checkout_part14')}
                                 />
+                                {getErrorMessage('phoneNumber')}
                             </div>
-                            <ActionButton
-                                content={t('order_checkout_part15')}
-                                success={createOrderSuccess}
-                                loading={createOrderLoading}
-                                error={createOrderError}
-                                path={`/${currentLang}/profile/orders`}
-                                message={t('order_checkout_part18')}
-                            />
-                        </form>
-                    </div>
-                    <div className='w:3/3 md:w-1/3 bg-gray-100 p-4 md:p-6'>
-                        <h2 className="text-2xl font-bold mb-4">
-                            {t('order_summary_title')}
-                        </h2>
-                        {products?.length === 0 ? (
-                            <p> {t('order_summary_part9')}</p>
-                        ) : (
-                            products?.map((product: any) => (
-                                <div key={product.id} className="flex items-center justify-between mb-4">
-                                    <div className='flex gap-2'>
-                                        <img src={product.image} alt={product.name} className="w-16 h-20 object-cover rounded-[10px]" />
+                        </div>
+                        <ActionButton
+                            content={t('order_checkout_part15')}
+                            success={createOrderSuccess}
+                            loading={createOrderLoading}
+                            error={createOrderError}
+                            path={`/${currentLang}/profile/orders`}
+                            message={t('order_checkout_part18')}
+                        />
+                    </form>
+                </div>
+
+                {/* Order Summary */}
+                <div className="w-full md:w-1/3 bg-gray-100 p-4 md:p-6 rounded-lg mb-6 md:mb-0 md:ml-6 self-start sticky top-4">
+                    <h2 className="text-2xl font-bold mb-4">{t('order_summary_title')}</h2>
+
+                    {products.length === 0 ? (
+                        <p className="text-gray-500">{t('order_summary_part9')}</p>
+                    ) : (
+                        <div className="max-h-64 overflow-y-auto mb-4 pr-2">
+                            {products.map((product) => (
+                                <div key={product._id || product.id} className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200 last:border-0">
+                                    <div className="flex gap-2">
+                                        <img src={product.image} alt={product.name} className="w-16 h-20 object-cover rounded-lg" />
                                         <div>
                                             <h3 className="font-semibold">{product.name}</h3>
-                                            <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                            <p className="text-gray-500 text-sm">{t('product_details_part2')}: {product.qty}</p>
+                                            <p className="text-gray-500 text-sm flex items-center gap-2">
+                                                {t('order_summary_part1')}:
+                                                <div className={`w-4 h-4 bg-${product?.color?.replace("text-", "")} rounded-full`}></div>
+                                            </p>
                                         </div>
                                     </div>
                                     <div>
-                                        <p>{product.price * product.qty} AZN</p>
+                                        <p className="font-medium">{(product.price * product.qty).toFixed(2)} AZN</p>
                                     </div>
                                 </div>
-                            ))
-                        )}
-                        <div className="mt-4">
-                            <form className="w-[100%] grid grid-cols-1 md:grid-cols-4 md:gap-4" onSubmit={handleCheckDiscount}>
-                                <div className="w-[100%] col-span-3">
-                                    <input
-                                        type="text"
-                                        placeholder={t('order_summary_part3')}
-                                        value={discountCode}
-                                        onChange={(e) => setDiscountCode(e.target.value)}
-                                        className={`w-[100%] bg-white rounded-sm placeholder:text-sm border ${derrorMessage ? "border-red-500" : "border-gray-200"
-                                            } bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
-                                    />
-                                    {derrorMessage && <p className="text-red-500 text-sm mt-1">{derrorMessage}</p>}
-                                    {dsuccessMessage && <p className="text-green-400 text-sm mt-1">{dsuccessMessage}</p>}
-                                </div>
-
-                                <div className="w-[100%]  w-full md:col-span-1 md:mt-0 mt-2">
-                                    <button
-                                        type="submit"
-                                        disabled={dloading}
-                                        className={`rounded-[5px] w-[100%]  py-3 flex items-center justify-center  ${dloading ? "bg-gray-300 text-black" : "bg-green-400 text-white cursor-pointer"}`}
-                                    >
-                                        {dloading ? (
-                                            <div className="flex items-center justify-center w-5 h-5 border-2 border-t-transparent border-gray-600 rounded-full animate-spin"></div>
-                                        ) : (
-                                            t('order_summary_part4')
-                                        )}
-                                    </button>
-                                </div>
-                            </form>
+                            ))}
                         </div>
-                        <div className="mt-6">
+                    )}
+
+                    {/* Discount Code */}
+                    <div className="mt-4 mb-6">
+                        <form className="grid grid-cols-3 gap-2" onSubmit={handleCheckDiscount}>
+                            <div className="col-span-2">
+                                <input
+                                    type="text"
+                                    placeholder={t('order_summary_part3')}
+                                    value={discountCode}
+                                    onChange={(e) => setDiscountCode(e.target.value)}
+                                    className={`w-full bg-white rounded-sm placeholder:text-sm border ${discountMessage.error ? "border-red-500" : "border-gray-200"
+                                        } bg-transparent py-3 pl-3 pr-3 outline-none focus:border-primary focus-visible:shadow-none`}
+                                />
+                                {discountMessage.error && (
+                                    <p className="text-red-500 text-xs mt-1">{discountMessage.error}</p>
+                                )}
+                                {discountMessage.success && (
+                                    <p className="text-green-500 text-xs mt-1">{discountMessage.success}</p>
+                                )}
+                            </div>
+
+                            <div className="col-span-1">
+                                <button
+                                    type="submit"
+                                    disabled={discountLoading || !discountCode.trim()}
+                                    className={`rounded-md w-full py-3 flex items-center justify-center ${discountLoading || !discountCode.trim()
+                                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                        : "bg-green-500 text-white hover:bg-green-600 transition-colors"
+                                        }`}
+                                >
+                                    {discountLoading ? (
+                                        <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
+                                    ) : (
+                                        t('order_summary_part4')
+                                    )}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    {/* Order Totals */}
+                    <div className="mt-6 border-t border-gray-300 pt-4">
+                        <div className="flex justify-between mb-2 text-sm">
+                            <span className="text-gray-600">{t('order_summary_part5')}:</span>
+                            <span>{subtotal.toFixed(2)} AZN</span>
+                        </div>
+                        <div className="flex justify-between mb-2 text-sm">
+                            <span className="text-gray-600">{t('order_summary_part6')}:</span>
+                            <span>{shippingCost.toFixed(2)} AZN</span>
+                        </div>
+                        {discountAmount > 0 && (
                             <div className="flex justify-between mb-2 text-sm">
-                                <span className=""> {t('order_summary_part5')}:</span>
-                                <span>{subtotal.toFixed(2)} AZN</span>
+                                <span className="text-gray-600">{t('order_summary_part7')}:</span>
+                                <span className="text-green-500">-{discountAmount.toFixed(2)} AZN</span>
                             </div>
-                            <div className="flex justify-between mb-2 text-sm">
-                                <span className=""> {t('order_summary_part6')}:</span>
-                                <span>{shippingCost.toFixed(2)} AZN</span>
-                            </div>
-                            <div className="flex justify-between mb-2 text-sm">
-                                <span className=""> {t('order_summary_part7')}:</span>
-                                <span>{discountAmount.toFixed(2)} AZN</span>
-                            </div>
-                            <div className="flex justify-between mb-2 mt-4">
-                                <span className="font-bold"> {t('order_summary_part8')}:</span>
-                                <span>{total.toFixed(2)} AZN</span>
-                            </div>
+                        )}
+                        <div className="flex justify-between mt-4 pt-3 border-t border-gray-300">
+                            <span className="font-bold text-lg">{t('order_summary_part8')}:</span>
+                            <span className="font-bold text-lg">{total.toFixed(2)} AZN</span>
                         </div>
                     </div>
-                </div>
-            )}
 
+                    {formData.paymentMethod === 'PayOnDelivery' && (
+                        <div className="mt-4 bg-yellow-50 p-3 rounded border border-yellow-200 text-sm">
+                            <p className="font-medium text-yellow-700">{t('payment_on_delivery_notice')}</p>
+                        </div>
+                    )}
+                </div>
+            </div>
         </>
-    )
-}
+    );
+};
 
 export default CheckOutScreen

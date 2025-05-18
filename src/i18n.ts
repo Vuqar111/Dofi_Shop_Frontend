@@ -130,6 +130,7 @@ const resources = {
             product_details_part6: "Shipping calculated at checkout",
 
             // Order checkout
+            order_checkout_parttitle: "Pre-order page",
             order_checkout_part1: "Contact",
             order_checkout_part2: "Email",
             order_checkout_part3: "Enter your email",
@@ -142,12 +143,14 @@ const resources = {
             order_checkout_part10: "Enter your address",
             order_checkout_part11: "Apartment",
             order_checkout_part12: "Enter your apartment",
-            order_checkout_part13: "Contact",
+            order_checkout_part13: "Phone number",
             order_checkout_part14: "7 digit number",
             order_checkout_part15: "Confirm pre-order",
             order_checkout_part16: "Delivery",
             order_checkout_part17: "Select your country",
             order_checkout_part18: "Your order created as pre-order",
+            order_checkout_part19: "Postal code",
+            order_checkout_part20: "Enter postal code",
 
             // Order Summary
             order_summary_title: "Order summary",

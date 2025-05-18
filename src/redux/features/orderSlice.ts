@@ -2,6 +2,9 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { API_URL } from '../../utils/config';
 import { OrderState } from '../../types/slices/orderSlice';
+import { clearCart } from "./cartSlice";
+import { AppDispatch } from '../store';
+import { useDispatch } from 'react-redux';
 
 const initialState: OrderState = {
   orders: null,
@@ -43,11 +46,13 @@ export const orderList = createAsyncThunk(
   }
 );
 
+
+
 export const orderCreate = createAsyncThunk(
   'orders/orderCreate',
   async (
-    { createdOrder, }: { createdOrder: any },
-    { rejectWithValue }
+    { createdOrder }: { createdOrder: any },
+    { dispatch, rejectWithValue }
   ) => {
     try {
       const token = localStorage.getItem('token');
@@ -60,15 +65,23 @@ export const orderCreate = createAsyncThunk(
           },
         }
       );
-      localStorage.removeItem("doofycart");
+
+      // ✅ Clear the cart after successful order creation
+      dispatch(clearCart());
+
       return response.data;
     } catch (error: any) {
       return rejectWithValue(
-        error.response.data.message || 'Failed to create order'
+        error.response?.data?.message || 'Failed to create order'
       );
     }
   }
 );
+
+
+
+
+
 
 export const orderDetails = createAsyncThunk(
   'orders/orderDetails',
