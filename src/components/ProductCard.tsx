@@ -47,9 +47,9 @@ const ProductCard = ({ product }: { product: any }) => {
       </Link>
       <div className="mt-3">
         <h3 className="text-lg font-semibold">{product?.name}</h3>
-        <p className="opacity-70 text-sm min-h-[100px]">
-          {t(`products.${product?.slug}.info`)}
-        </p>
+       <p className="flex-1 opacity-70 text-sm h-24 overflow-hidden">
+  {t(`products.${product?.slug}.info`)}
+</p>
         <div className="mt-3 flex items-center justify-between">
           <div className="text-lg font-medium">{product?.salePrice} AZN</div>
 
