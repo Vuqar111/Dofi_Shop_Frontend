@@ -141,6 +141,7 @@ const CheckOutScreen = () => {
                 }
             }
             await dispatch(orderCreate({ createdOrder }))
+            localStorage.removeItem('doofycart')
         } catch (error) {
             swal(t('modal_error_message_title'), t('modal_error_message_description'), 'error')
             console.error(error)
