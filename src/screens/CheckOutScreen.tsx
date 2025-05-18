@@ -169,12 +169,12 @@ const CheckOutScreen = () => {
     const validateForm = (): boolean => {
         const errors: FormErrors = {};
 
-        if (!validateRequiredField(formData.fullName)) errors.fullName = t('validation_required');
-        if (!validateEmail(formData.email)) errors.email = t('validation_invalid_email');
-        if (!validateRequiredField(formData.country)) errors.country = t('validation_required');
-        if (!validateRequiredField(formData.city)) errors.city = t('validation_required');
-        if (!validateRequiredField(formData.address)) errors.address = t('validation_required');
-        if (!validatePhone(formData.phoneNumber)) errors.phoneNumber = t('validation_invalid_phone');
+        if (!validateRequiredField(formData.fullName)) errors.fullName = t('validation_fullName');
+        if (!validateEmail(formData.email)) errors.email = t('validation_email');
+        if (!validateRequiredField(formData.country)) errors.country = t('validation_country');
+        if (!validateRequiredField(formData.city)) errors.city = t('validation_city');
+        if (!validateRequiredField(formData.address)) errors.address = t('validation_address');
+        if (!validatePhone(formData.phoneNumber)) errors.phoneNumber = t('validation_phone');
 
         setFormErrors(errors);
         setTouched({

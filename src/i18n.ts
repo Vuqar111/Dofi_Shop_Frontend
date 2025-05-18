@@ -219,11 +219,28 @@ const resources = {
             modal_login_message_description: "You've succesfully logged!",
             modal_register_message_description: "You've succesfully registered",
 
+
+
+            // Validation messages
+            validation_email: "Email is required",
+            validation_email_invalid: "Email is invalid",
+            validation_password: "Password is required",
+            validation_fullName: "Name is required",
+            validation_phone: "Phone number is required",
+            validation_address: "Address is required",
+            validation_country: "Country is required",
+            validation_city: "City is required",
+
+
             // About
             about_page_title: "Hello, World",
             about_page_title2: "We're Dofi",
             about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
-            about_page_info: "Dofi began as a spark of curiosity between Vugar and Sanan - a shared dream to build a robot that felt alive. With Laman crafting its playful personality through UI/UX, Huseyn & Valida shaping its iconic 3D form, and a community of mentors lighting the way, Dofi slowly winked into existence. This robot isn’t just ours; it’s a mosaic of late-night ideas, stubborn problem-solving, and the kind of magic that happens when the right people come together."
+            about_page_info: "Dofi began as a spark of curiosity between Vugar and Sanan - a shared dream to build a robot that felt alive. With Laman crafting its playful personality through UI/UX, Huseyn & Valida shaping its iconic 3D form, and a community of mentors lighting the way, Dofi slowly winked into existence. This robot isn’t just ours; it’s a mosaic of late-night ideas, stubborn problem-solving, and the kind of magic that happens when the right people come together.",
+
+
+
+
         },
     },
     az: {
