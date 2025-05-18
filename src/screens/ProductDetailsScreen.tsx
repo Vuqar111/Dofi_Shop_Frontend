@@ -73,6 +73,7 @@ const ProductDetailsScreen = () => {
       name: product.name,
       code: product.code,
       price: product.salePrice,
+      image: product.image,
       qty: selectedQty,
       color: selectedColor,
     };
@@ -80,6 +81,26 @@ const ProductDetailsScreen = () => {
     dispatch(addToCart(cartItem)); // Use Redux action
 
     swal(t('modal_success_message_title'), t('modal_success_message_description'), "success");
+  };
+
+
+
+    const handleCheckout = () => {
+    if (!product) return;
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      code: product.code,
+      price: product.salePrice,
+      image: product.image,
+      qty: selectedQty,
+      color: selectedColor,
+    };
+
+    dispatch(addToCart(cartItem)); // Use Redux action
+
+    // Redirect to checkout page
+    window.location.href = `/${currentLang}/checkout`;
   };
 
   return (
@@ -181,13 +202,14 @@ const ProductDetailsScreen = () => {
           </div>
 
 
-          <Link to={`/${currentLang}/checkout`}>
+          
             <div
+            onClick={handleCheckout}
               className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
             >
               {t('product_details_part4')}
             </div>
-          </Link>
+          
 
         </div>
       </div>
