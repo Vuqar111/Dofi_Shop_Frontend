@@ -48,11 +48,7 @@ const resources = {
             profile_page_form_label1: "Name and Surname",
             profile_page_form_label2: "Email",
             profile_page_form_label3: "Contact number",
-            profile_page_form_label4: "Role",
             profile_page_form_button: "Update",
-            profile_page_rol_val1: "Company",
-            profile_page_rol_val2: "Parent",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Your profile has been successfully updated",
 
             // Profile Orders
@@ -287,11 +283,7 @@ const resources = {
             profile_page_form_label1: "Ad və soyad",
             profile_page_form_label2: "E-poçt",
             profile_page_form_label3: "Əlaqə nömrəsi",
-            profile_page_form_label4: "Rol",
             profile_page_form_button: "Yenilə",
-            profile_page_rol_val1: "Şirkət",
-            profile_page_rol_val2: "Valideyn",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Profiliniz uğurla yeniləndi",
 
             // Profile Orders
@@ -369,6 +361,7 @@ const resources = {
             product_details_part6: "Çatdırılma hesablanacaq",
 
             // Order checkout
+            order_checkout_parttitle: "Ön sifariş səhifəsi",
             order_checkout_part1: "Əlaqə",
             order_checkout_part2: "E-poçt",
             order_checkout_part3: "E-poçtunuzu daxil edin",
@@ -505,11 +498,7 @@ const resources = {
             profile_page_form_label1: "Ad Soyad",
             profile_page_form_label2: "E-posta",
             profile_page_form_label3: "İletişim numarası",
-            profile_page_form_label4: "Rol",
             profile_page_form_button: "Güncelle",
-            profile_page_rol_val1: "Şirket",
-            profile_page_rol_val2: "Veli",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Profiliniz başarıyla güncellendi",
 
             profile_orders_page_title: "Siparişleriniz",
@@ -579,6 +568,7 @@ const resources = {
             product_details_part5: "Detaylı bilgi",
             product_details_part6: "Kargo ödeme sırasında hesaplanır",
 
+            order_checkout_parttitle: "Ön sipariş sayfası",
             order_checkout_part1: "İletişim",
             order_checkout_part2: "E-posta",
             order_checkout_part3: "E-postanızı girin",
@@ -709,11 +699,7 @@ const resources = {
             profile_page_form_label1: "الاسم الكامل",
             profile_page_form_label2: "البريد الإلكتروني",
             profile_page_form_label3: "رقم الاتصال",
-            profile_page_form_label4: "الدور",
             profile_page_form_button: "تحديث",
-            profile_page_rol_val1: "شركة",
-            profile_page_rol_val2: "أب",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "تم تحديث ملفك الشخصي بنجاح",
 
             // Profile Orders
@@ -790,7 +776,8 @@ const resources = {
             product_details_part5: "تفاصيل المنتج",
             product_details_part6: "سيتم احتساب الشحن عند إتمام الطلب",
 
-            // Order checkout
+            // Order 
+            order_checkout_parttitle: "صفحة الطلب المسبق",
             order_checkout_part1: "التواصل",
             order_checkout_part2: "البريد الإلكتروني",
             order_checkout_part3: "أدخل بريدك الإلكتروني",
@@ -925,11 +912,7 @@ const resources = {
             profile_page_form_label1: "Nom et prénom",
             profile_page_form_label2: "Email",
             profile_page_form_label3: "Numéro de contact",
-            profile_page_form_label4: "Rôle",
             profile_page_form_button: "Mettre à jour",
-            profile_page_rol_val1: "Entreprise",
-            profile_page_rol_val2: "Parent",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Votre profil a été mis à jour avec succès",
 
             profile_orders_page_title: "Vos commandes",
@@ -999,6 +982,7 @@ const resources = {
             product_details_part5: "Informations détaillées",
             product_details_part6: "Livraison calculée à la caisse",
 
+            order_checkout_parttitle: "Page de précommande",
             order_checkout_part1: "Contact",
             order_checkout_part2: "Email",
             order_checkout_part3: "Entrez votre email",
@@ -1129,11 +1113,7 @@ const resources = {
             profile_page_form_label1: "姓名",
             profile_page_form_label2: "电子邮箱",
             profile_page_form_label3: "联系电话",
-            profile_page_form_label4: "角色",
             profile_page_form_button: "更新",
-            profile_page_rol_val1: "企业",
-            profile_page_rol_val2: "家长",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "您的资料已成功更新",
 
             // 订单相关
@@ -1211,6 +1191,7 @@ const resources = {
             product_details_part6: "运费结算时计算",
 
             // 订单结算
+            order_checkout_parttitle: "预购页面",
             order_checkout_part1: "联系方式",
             order_checkout_part2: "电子邮箱",
             order_checkout_part3: "输入您的邮箱",
@@ -1349,11 +1330,7 @@ const resources = {
             profile_page_form_label1: "Vor- und Nachname",
             profile_page_form_label2: "E-Mail",
             profile_page_form_label3: "Telefonnummer",
-            profile_page_form_label4: "Rolle",
             profile_page_form_button: "Aktualisieren",
-            profile_page_rol_val1: "Unternehmen",
-            profile_page_rol_val2: "Elternteil",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Ihr Profil wurde erfolgreich aktualisiert",
 
             // Bestellungen
@@ -1431,6 +1408,7 @@ const resources = {
             product_details_part6: "Versandkosten an der Kasse",
 
             // Bestellvorgang
+            order_checkout_parttitle: "Vorbestellungsseite",
             order_checkout_part1: "Kontakt",
             order_checkout_part2: "E-Mail",
             order_checkout_part3: "Ihre E-Mail eingeben",
@@ -1569,11 +1547,7 @@ const resources = {
             profile_page_form_label1: "Nombre Completo",
             profile_page_form_label2: "Correo Electrónico",
             profile_page_form_label3: "Número de Contacto",
-            profile_page_form_label4: "Rol",
             profile_page_form_button: "Actualizar",
-            profile_page_rol_val1: "Empresa",
-            profile_page_rol_val2: "Padre",
-            profile_page_rol_val3: "VIP",
             profile_page_modal_desc: "Tu perfil ha sido actualizado con éxito",
 
             // Profile Orders
@@ -1651,6 +1625,7 @@ const resources = {
             product_details_part6: "Envío calculado al finalizar la compra",
 
             // Order checkout
+            order_checkout_parttitle: "Página de pedido anticipado",
             order_checkout_part1: "Contacto",
             order_checkout_part2: "Correo electrónico",
             order_checkout_part3: "Introduce tu correo electrónico",

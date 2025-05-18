@@ -54,30 +54,26 @@
     ]
   },
     "dofi-bag": {
-    "name": "Daun Uşaqlar üçün Robot",
-    "info": "İnkişaf fərqləri olan uşaqlar üçün (məsələn, Daun sindromu) xüsusi olaraq hazırlanmış bu adaptiv ağıllı robot sadələşdirilmiş əmrlər, sensora uyğun oyunlar və emosional dəstək funksiyaları ilə zərif, interaktiv öyrənmə təmin edir.",
-    "description": "Daun Kids Ağıllı Robotu inklüziv öyrənməyə diqqət yetirir, uşaqlara əyləncəli, stresssiz şəkildə ünsiyyət, motor bacarıqları və idrak qabiliyyətlərini gücləndirməyə kömək edir. Bu robot valideynləri video zənglər və tərəqqinin izlənməsi vasitəsilə əlaqə saxlayarkən özünə inam və müstəqilliyi təşviq edir. Xüsusi ehtiyacları olan təhsil və şən oyun üçün mükəmməl yoldaş!",
-    "features": [
-      {
-        "name": "Asan qarşılıqlı əlaqə üçün sadələşdirilmiş səs əmrləri",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
-      },
-      {
-        "name": "Yavaş templi təlim modulları (riyaziyyat, dil)",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
-      },
-      {
-        "name": "Uşağın əhval-ruhiyyəsinə cavab vermək üçün emosiyaların tanınması",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
-      },
-      {
-        "name": "Sensor oyunlar (zərif gizlənqaç, səs uyğunluğu)",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
-      },
-      {
-        "name": "Təhlükəsiz, idarə olunan oyun üçün valideyn nəzarəti proqramı",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
-      }
-    ]
-  }
+      "name": "Le Sac de Dofi",
+      "info": "Un sac résistant et adapté aux enfants pour transporter et protéger votre robot intelligent.",
+      "description": "Gardez votre robot en sécurité et facile à transporter avec ce sac léger et résistant aux chocs. Idéal pour la maison, l’école ou les voyages !",
+      "features": [
+        {
+          "name": "Intérieur rembourré pour éviter les chocs et les rayures",
+          "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+        },
+        {
+          "name": "Bandoulière réglable pour un port confortable",
+          "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+        },
+        {
+          "name": "Poche pour accessoires (câble de chargement, cartes, etc.)",
+          "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+        },
+        {
+          "name": "Design amusant sur le thème du robot que les enfants adorent",
+          "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+        }
+      ]
+    }
 }
