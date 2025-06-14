@@ -71,6 +71,12 @@ const Footer = () => {
                                 <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
                             </a>
                         </li>
+                        <li>
+                            <a href="https://www.youtube.com/@DofiKid" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube.png" alt="Youtube" className="w-8 h-8" />
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
