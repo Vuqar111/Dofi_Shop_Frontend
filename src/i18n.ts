@@ -232,10 +232,7 @@ const resources = {
             about_page_title: "Hello, World",
             about_page_title2: "We're Dofi",
             about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
-            about_page_info: "Dofi began as a spark of curiosity between Vugar and Sanan - a shared dream to build a robot that felt alive. With Laman crafting its playful personality through UI/UX, Huseyn & Valida shaping its iconic 3D form, and a community of mentors lighting the way, Dofi slowly winked into existence. This robot isn’t just ours; it’s a mosaic of late-night ideas, stubborn problem-solving, and the kind of magic that happens when the right people come together.",
-
-
-
+            about_page_info: "Dofi began as a spark of curiosity between Vugar Hasanov and Sanan Muzaffarov — a shared dream to build a robot that felt alive. With Laman Hasanova crafting its playful personality through UI/UX, Huseyn and Valida Adilova shaping its iconic 3D form, and Anar Aghazada bringing visual harmony through his graphic design touch, Dofi slowly winked into existence. Guided by a community of mentors and fueled by late-night ideas and stubborn problem-solving, this robot isn’t just ours; it’s a mosaic of creativity, collaboration, and the kind of magic that happens when the right people come together.",
 
         },
     },
@@ -453,7 +450,7 @@ const resources = {
             about_page_title: "Salam, Dünya",
             about_page_title2: "Biz Dofi'yik",
             about_page_description: "Hər böyük robotun arxasında maraqlı bir zəkâ və xəyalpərəstlərdən ibarət bir komanda dayanır. Dofi'nin necə yarandığını və ona ürək verən insanları öyrənin.",
-            about_page_info: "Dofi, Vüqar və Sənan arasında yaranan bir maraq qığılcımı ilə başladı – canlı kimi hiss olunan bir robot yaratmaq arzusu ilə. Onun oynaq xarakteri Ləman tərəfindən UI/UX vasitəsilə formalaşdırıldı, Hüseyn və Valida onun ikonik 3D formasını yaratdı və mentorlar icması yola işıq saldı. Dofi yavaş-yavaş həyat tapdı. Bu robot təkcə bizim deyil; o, gecəyarısı ideyalarının, inadkar problem həll etmənin və doğru insanların bir araya gəldikdə yaranan sehrin mozaikasıdır.",
+            about_page_info: "Dofi, Vüqar Həsənov və Sənan Muzaffarov arasında yaranan maraq qığılcımı ilə başladı — canlı kimi hiss olunan bir robot yaratmaq arzusu ilə. Onun oyunçu şəxsiyyətini Ləman Həsənova UI/UX vasitəsilə formalaşdırdı, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə qrafik dizaynla vizual harmoniya qatdı. Mentorlar icmasının rəhbərliyi və gecəyarısı ideyaları ilə qidalanan inadkar problem həll etmə əzmi ilə Dofi tədricən həyata keçdi. Bu robot yalnız bizə aid deyil; o, yaradıcılığın, əməkdaşlığın və doğru insanlar bir araya gəldikdə baş verən sehrin mozaikasıdır."
         },
     },
     tr: {
@@ -652,7 +649,7 @@ const resources = {
             about_page_title: "Merhaba, Dünya",
             about_page_title2: "Biz Dofi'yiz",
             about_page_description: "Her harika robotun arkasında meraklı bir zihin ve hayalperest bir ekip vardır. Dofi'nin nasıl hayata geçtiğini ve ona kalp veren insanları öğrenin.",
-            about_page_info: "Dofi, Vugar ve Sanan arasında merak kıvılcımıyla başlayan - canlı hissi veren bir robot inşa etme hayaliydi. Laman’ın arayüz tasarımıyla ona eğlenceli bir kişilik katması, Huseyn ve Valida’nın ikonik 3D formunu şekillendirmesi ve yol gösteren bir mentor topluluğuyla Dofi yavaş yavaş hayata göz kırptı. Bu robot sadece bizim değil; o, geç saatlerde ortaya çıkan fikirlerin, inatçı problem çözmenin ve doğru insanların bir araya geldiğinde oluşan sihrin bir mozaiğidir.",
+            about_page_info: "Dofi, Vugar Hasanov ve Sanan Muzaffarov arasında bir merak kıvılcımıyla başladı — canlı gibi hissedilen bir robot yapma hayaliyle. Laman Hasanova onun eğlenceli kişiliğini UI/UX ile şekillendirdi, Hüseyin ve Valida Adilova ikonik 3D formunu oluşturdu, Anar Aghazada ise grafik tasarımıyla görsel uyum kattı. Bir mentor topluluğunun rehberliğinde ve gece geç saatlerdeki fikirler ile inatçı problem çözümünden güç alarak Dofi yavaş yavaş hayata göz kırptı. Bu robot sadece bizim değil; bu, yaratıcılığın, iş birliğinin ve doğru insanlar bir araya geldiğinde oluşan sihrin bir mozaiğidir."
         },
     },
     ar: {
@@ -867,7 +864,7 @@ const resources = {
             about_page_title: "مرحباً، أيها العالم",
             about_page_title2: "نحن دوفي",
             about_page_description: "وراء كل روبوت عظيم عقل فضولي وفريق من الحالمين. تعرف على كيف وُلد دوفي — وعلى الأشخاص الذين منحوه قلباً.",
-            about_page_info: "بدأ دوفي كشرارة فضول بين ووقار وسنان - حلم مشترك لبناء روبوت يشعر بالحياة. صممت لامان شخصيته المرحة من خلال تصميم واجهة المستخدم، وشكّل حسين وفاليدا شكله الأيقوني ثلاثي الأبعاد، ومع مجتمع من المرشدين الذين أضاءوا الطريق، بدأ دوفي بالظهور تدريجياً. هذا الروبوت ليس ملكاً لنا فقط؛ بل هو فسيفساء من أفكار منتصف الليل، وحل المشكلات بإصرار، ونوع من السحر الذي يحدث عندما يجتمع الأشخاص المناسبون.",
+            about_page_info: "بدأت دوفي كشرارة فضول بين ووقار حسنوف وسنان مظفرُف — حلم مشترك لبناء روبوت يبدو حيًا. قامت لامان حسنوفا بتشكيل شخصيته المرحة من خلال تصميم UI/UX، بينما صمم حسين وفاليدا أديلوفا شكله ثلاثي الأبعاد الأيقوني، وأضاف أنار أغازاده لمسة من الانسجام البصري من خلال تصميمه الجرافيكي. بدعم من مجتمع من الموجهين، وأفكار منتصف الليل، والإصرار على حل المشكلات، ظهرت دوفي إلى الوجود شيئًا فشيئًا. هذا الروبوت ليس ملكًا لنا فقط؛ إنه فسيفساء من الإبداع والتعاون والسحر الذي يحدث عندما يجتمع الأشخاص المناسبون."
         },
     },
     fr: {
@@ -1066,7 +1063,7 @@ const resources = {
             about_page_title: "Bonjour, le monde",
             about_page_title2: "Nous sommes Dofi",
             about_page_description: "Derrière chaque grand robot se cache un esprit curieux et une équipe de rêveurs. Découvrez comment Dofi a vu le jour — et les humains qui lui ont donné un cœur.",
-            about_page_info: "Dofi a commencé comme une étincelle de curiosité entre Vugar et Sanan — un rêve partagé de construire un robot qui semble vivant. Avec Laman qui façonnait sa personnalité ludique via l’UI/UX, Huseyn et Valida qui lui donnaient sa forme 3D iconique, et une communauté de mentors éclairant le chemin, Dofi a lentement pris vie. Ce robot n’est pas seulement à nous ; c’est une mosaïque d’idées nocturnes, de résolutions de problèmes acharnées, et de cette magie qui naît lorsque les bonnes personnes se réunissent.",
+            about_page_info: "Dofi est née d’une étincelle de curiosité entre Vugar Hasanov et Sanan Muzaffarov — un rêve partagé de construire un robot qui semble vivant. Laman Hasanova a donné forme à sa personnalité ludique via l’UI/UX, Huseyn et Valida Adilova ont façonné sa forme 3D emblématique, et Anar Aghazada a apporté l’harmonie visuelle grâce à sa touche de design graphique. Guidée par une communauté de mentors et nourrie par des idées nocturnes et une résolution de problèmes obstinée, Dofi a lentement vu le jour. Ce robot n’est pas seulement le nôtre ; c’est une mosaïque de créativité, de collaboration, et de cette magie qui naît lorsque les bonnes personnes se réunissent."
         },
     },
     cn: {
@@ -1283,7 +1280,7 @@ const resources = {
             about_page_title: "你好，世界",
             about_page_title2: "我们是 Dofi",
             about_page_description: "每一个伟大的机器人背后，都有一颗好奇的心和一群梦想家。了解 Dofi 是如何诞生的——以及那些赋予它心灵的人。",
-            about_page_info: "Dofi 起初是 Vugar 和 Sanan 之间的一次好奇火花——一个让机器人仿佛有生命的共同梦想。在 Laman 通过 UI/UX 塑造其俏皮个性、Huseyn 和 Valida 构建其标志性 3D 外形，以及一群导师社区的引导下，Dofi 慢慢地诞生了。这个机器人不仅属于我们；它是深夜想法、执着解决问题，以及当对的人走到一起时发生的那种魔力的拼图。",
+            about_page_info: "Dofi 起初是一束由 Vugar Hasanov 和 Sanan Muzaffarov 激发的好奇心火花 —— 一个共同的梦想，希望创造出一个充满生命感的机器人。Laman Hasanova 通过 UI/UX 设计赋予了它活泼的个性，Huseyn 和 Valida Adilova 塑造了它标志性的 3D 形态，而 Anar Aghazada 则用他的平面设计为其带来了视觉上的和谐。在一群导师的引导下，借助深夜的灵感和顽强的问题解决精神，Dofi 慢慢诞生了。这个机器人不仅仅属于我们；它是一幅由创造力、协作精神以及当合适的人聚在一起时所产生的魔力拼接而成的马赛克。"
         },
     },
     de: {
@@ -1500,7 +1497,7 @@ const resources = {
             about_page_title: "Hallo, Welt",
             about_page_title2: "Wir sind Dofi",
             about_page_description: "Hinter jedem großartigen Roboter steht ein neugieriger Geist und ein Team von Träumern. Erfahre, wie Dofi zum Leben erweckt wurde – und die Menschen, die ihm ein Herz gaben.",
-            about_page_info: "Dofi begann als ein Funke der Neugier zwischen Vugar und Sanan – ein gemeinsamer Traum, einen Roboter zu bauen, der lebendig wirkt. Mit Laman, die durch UI/UX seine verspielte Persönlichkeit formte, Huseyn & Valida, die seine ikonische 3D-Form gestalteten, und einer Community von Mentoren, die den Weg wiesen, zwinkerte Dofi langsam ins Leben. Dieser Roboter gehört nicht nur uns; er ist ein Mosaik aus nächtlichen Ideen, hartnäckiger Problemlösung und jener Art von Magie, die entsteht, wenn die richtigen Menschen zusammenkommen.",
+            about_page_info: "Dofi begann als ein Funke der Neugier zwischen Vugar Hasanov und Sanan Muzaffarov — ein gemeinsamer Traum, einen Roboter zu bauen, der lebendig wirkt. Laman Hasanova formte seine verspielte Persönlichkeit durch UI/UX, Huseyn und Valida Adilova gestalteten seine ikonische 3D-Form, und Anar Aghazada brachte durch sein Grafikdesign visuelle Harmonie ein. Geleitet von einer Gemeinschaft von Mentoren und angetrieben durch nächtliche Ideen und hartnäckige Problemlösungen, erwachte Dofi langsam zum Leben. Dieser Roboter gehört nicht nur uns; er ist ein Mosaik aus Kreativität, Zusammenarbeit und jener Magie, die entsteht, wenn die richtigen Menschen zusammenkommen."
         },
     },
     es: {
@@ -1717,7 +1714,7 @@ const resources = {
             about_page_title: "Hola, Mundo",
             about_page_title2: "Somos Dofi",
             about_page_description: "Detrás de cada gran robot hay una mente curiosa y un equipo de soñadores. Descubre cómo nació Dofi—y las personas que le dieron un corazón.",
-            about_page_info: "Dofi comenzó como una chispa de curiosidad entre Vugar y Sanan: un sueño compartido de construir un robot que se sintiera vivo. Con Laman diseñando su personalidad juguetona a través del UI/UX, Huseyn y Valida dándole forma a su icónica figura 3D, y una comunidad de mentores guiando el camino, Dofi fue cobrando vida poco a poco. Este robot no es solo nuestro; es un mosaico de ideas nocturnas, soluciones tercas a problemas y la magia que surge cuando las personas correctas se unen.",
+            about_page_info: "Dofi comenzó como una chispa de curiosidad entre Vugar Hasanov y Sanan Muzaffarov — un sueño compartido de construir un robot que pareciera estar vivo. Laman Hasanova dio forma a su personalidad juguetona a través del diseño UI/UX, Huseyn y Valida Adilova moldearon su icónica forma 3D, y Anar Aghazada aportó armonía visual con su toque de diseño gráfico. Guiado por una comunidad de mentores e impulsado por ideas nocturnas y una resolución de problemas persistente, Dofi fue cobrando vida poco a poco. Este robot no es solo nuestro; es un mosaico de creatividad, colaboración y la magia que ocurre cuando las personas adecuadas se unen."
         },
     }
 };
