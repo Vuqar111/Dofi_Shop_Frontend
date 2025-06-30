@@ -203,7 +203,7 @@ const resources = {
             cart_page_part3: "Product",
             cart_page_part4: "Amount",
             cart_page_part5: "Total Price",
-            cart_page_part6: "Proceed to payment",
+            cart_page_part6: "Proceed to waitlist",
 
             modal_success_message_title: "Success",
             modal_success_message_description: "Product added to cart",
@@ -215,8 +215,6 @@ const resources = {
             modal_login_message_description: "You've succesfully logged!",
             modal_register_message_description: "You've succesfully registered",
 
-
-
             // Validation messages
             validation_email: "Email is required",
             validation_email_invalid: "Email is invalid",
@@ -226,7 +224,6 @@ const resources = {
             validation_address: "Address is required",
             validation_country: "Country is required",
             validation_city: "City is required",
-
 
             // About
             about_page_title: "Hello, World",
@@ -433,7 +430,7 @@ const resources = {
             cart_page_part3: "Məhsul",
             cart_page_part4: "Miqdar",
             cart_page_part5: "Ümumi qiymət",
-            cart_page_part6: "Ödənişə doğru irəlilə",
+            cart_page_part6: "Gözləmə siyahısına keçin",
 
             // Modal
             modal_success_message_title: "Uğurlu",
@@ -634,7 +631,7 @@ const resources = {
             cart_page_part3: "Ürün",
             cart_page_part4: "Adet",
             cart_page_part5: "Toplam Fiyat",
-            cart_page_part6: "Ödemeye geç",
+            cart_page_part6: "Bekleme listesine geç",
 
             modal_success_message_title: "Başarılı",
             modal_success_message_description: "Ürün sepete eklendi",
@@ -849,7 +846,7 @@ const resources = {
             cart_page_part3: "المنتج",
             cart_page_part4: "الكمية",
             cart_page_part5: "السعر الإجمالي",
-            cart_page_part6: "تابع إلى الدفع",
+            cart_page_part6: "المتابعة إلى قائمة الانتظار",
 
             modal_success_message_title: "نجاح",
             modal_success_message_description: "تم إضافة المنتج إلى السلة",
@@ -1048,7 +1045,7 @@ const resources = {
             cart_page_part3: "Produit",
             cart_page_part4: "Quantité",
             cart_page_part5: "Prix total",
-            cart_page_part6: "Procéder au paiement",
+            cart_page_part6: "Passer à la liste d'attente",
 
             modal_success_message_title: "Succès",
             modal_success_message_description: "Produit ajouté au panier",
@@ -1263,7 +1260,7 @@ const resources = {
             cart_page_part3: "商品",
             cart_page_part4: "数量",
             cart_page_part5: "总价",
-            cart_page_part6: "去支付",
+            cart_page_part6: "加入候补名单",
 
             // 提示弹窗
             modal_success_message_title: "操作成功",
@@ -1480,7 +1477,7 @@ const resources = {
             cart_page_part3: "Produkt",
             cart_page_part4: "Menge",
             cart_page_part5: "Gesamtpreis",
-            cart_page_part6: "Zur Zahlung",
+            cart_page_part6: "Zur Warteliste weitergehen",
 
             // Modale Nachrichten
             modal_success_message_title: "Erfolg",
@@ -1697,7 +1694,7 @@ const resources = {
             cart_page_part3: "Producto",
             cart_page_part4: "Cantidad",
             cart_page_part5: "Precio total",
-            cart_page_part6: "Proceder al pago",
+            cart_page_part6: "Ir a la lista de espera",
 
             // Modal
             modal_success_message_title: "Éxito",
