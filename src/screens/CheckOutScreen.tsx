@@ -549,7 +549,7 @@ const CheckOutScreen = () => {
                                     disabled={discountLoading || !discountCode.trim()}
                                     className={`rounded-md w-full py-3 flex items-center justify-center ${discountLoading || !discountCode.trim()
                                         ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                                        : "bg-green-500 text-white hover:bg-green-600 transition-colors"
+                                        : "bg-green-400 text-white hover:bg-green-600 transition-colors"
                                         }`}
                                 >
                                     {discountLoading ? (

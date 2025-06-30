@@ -24,7 +24,7 @@ const ProductDetailsScreen = () => {
     setSelectedIndex((prev) => (prev === imageGallery.length - 1 ? 0 : prev + 1));
   };
 
-  const [selectedColor, setSelectedColor] = useState('text-green-500')
+  const [selectedColor, setSelectedColor] = useState('#B7CB3F')
   const [selectedImage, setSelectedImage] = useState('')
   const [selectedQty, setSelectedQty] = useState(1);
 
@@ -49,12 +49,11 @@ const ProductDetailsScreen = () => {
 
 
   const imageGallery = [
-    "https://miko.ai/cdn/shop/files/Copy_of_Miko_3-product-1.webp?v=1735102234&width=713",
-    "https://miko.ai/cdn/shop/files/Copy_of_M3-red-Back.webp?v=1735102234&width=713",
-    "https://miko.ai/cdn/shop/files/Copy_of_M3-red-side_direct.webp?v=1735102234&width=713",
-    "https://miko.ai/cdn/shop/files/M3_Lyf-4.webp?v=1735102234&width=713",
-    "https://miko.ai/cdn/shop/files/M3_Lyf-3.webp?v=1735102235&width=713",
-    "https://miko.ai/cdn/shop/files/Copy_of_M3-blue-side_direct.webp?v=1735102235&width=713",
+    "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318610/Classic_45D_View_wzyd3t.png",
+    "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318600/Classic_Front_View_tsnfi8.png",
+    "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318621/Classic_Back_View_qfdkde.png",
+    "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318790/Classic_Side_View_rg2ny1.png",
+    "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318665/Classic_Down_View_myt95g.png",
   ]
 
   const increaseQty = () => {
@@ -160,11 +159,11 @@ const ProductDetailsScreen = () => {
               {t('product_details_part1')}
             </label>
             <div className="w-full flex gap-4 mt-4">
-              {["text-green-500", "text-blue-500", "text-orange-500", "text-red-500", "text-gray-500"].map((color) => (
+              {["#B7CB3F", "#FB64B6"].map((color) => (
                 <div
                   key={color}
                   onClick={() => setSelectedColor(color)}
-                  className={`cursor-pointer w-[50px] h-[50px] rounded-full bg-${color?.replace("text-", "")} border border-gray-300  p-3 text-center ${color} ${selectedColor === color ? "ring-4 ring-gray-400" : ""
+                  className={`cursor-pointer w-[50px] h-[50px] rounded-full bg-[${color}] border border-gray-300  p-3 text-center ${color} ${selectedColor === color ? "ring-4 ring-gray-400" : ""
                     }`}
                 >
                 </div>

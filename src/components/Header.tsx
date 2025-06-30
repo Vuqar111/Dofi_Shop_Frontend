@@ -87,7 +87,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
 
               {/* Product Count Badge */}
               {cartProducts.length > 0 && (
-                <span className="absolute top-[-10px] right-[-5px] bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                <span className="absolute top-[-10px] right-[-5px] bg-green-400 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                   {cartProducts.length}
                 </span>
               )}

@@ -23,7 +23,7 @@ const ProductAdvertising = () => {
       >
         <img
           className="w-full h-auto"
-          src="https://miko.ai/cdn/shop/files/Copy_of_18_a05ff5e1-53fb-4e80-8044-40c2354d45ca.jpg?v=1735102230&width=713"
+          src="https://res.cloudinary.com/dslgitrbt/image/upload/v1751318610/Classic_45D_View_wzyd3t.png"
           alt="productImage"
         />
       </motion.div>

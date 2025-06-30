@@ -13,6 +13,8 @@ const ProductCard = ({ product }: { product: any }) => {
   const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'en';
 
+  console.log(product);
+
 
   const [isAdded, setIsAdded] = useState(false);
   const [selectedColor, setSelectedColor] = useState("text-green-500");
@@ -39,7 +41,7 @@ const ProductCard = ({ product }: { product: any }) => {
       <Link to={`/${currentLang}/shop/${product?.slug}`}>
         <div className="min-h-[400px] bg-gray-200 py-24 flex items-center justify-center rounded-md">
           <img
-            className="w-48 h-48 object-contain"
+            className="w-64 h-64 object-contain"
             src={product?.image}
             alt={product?.name}
           />
@@ -47,9 +49,9 @@ const ProductCard = ({ product }: { product: any }) => {
       </Link>
       <div className="mt-3">
         <h3 className="text-lg font-semibold">{product?.name}</h3>
-       <p className="flex-1 opacity-70 text-sm h-24 overflow-hidden">
-  {t(`products.${product?.slug}.info`)}
-</p>
+        <p className="flex-1 opacity-70 text-sm h-24 overflow-hidden">
+          {t(`products.${product?.slug}.info`)}
+        </p>
         <div className="mt-3 flex items-center justify-between">
           <div className="text-lg font-medium">{product?.salePrice} AZN</div>
 

@@ -271,10 +271,10 @@ const RegisterScreen = () => {
                     {password && !errors.password && (
                         <div className="mt-2">
                             <div className="flex space-x-1">
-                                <div className={`h-1 flex-1 rounded ${password.length >= 8 ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                                <div className={`h-1 flex-1 rounded ${/(?=.*[a-z])(?=.*[A-Z])/.test(password) ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                                <div className={`h-1 flex-1 rounded ${/(?=.*\d)/.test(password) ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                                <div className={`h-1 flex-1 rounded ${/(?=.*[@$!%*?&])/.test(password) ? 'bg-green-500' : 'bg-gray-300'}`}></div>
+                                <div className={`h-1 flex-1 rounded ${password.length >= 8 ? 'bg-green-400' : 'bg-gray-300'}`}></div>
+                                <div className={`h-1 flex-1 rounded ${/(?=.*[a-z])(?=.*[A-Z])/.test(password) ? 'bg-green-400' : 'bg-gray-300'}`}></div>
+                                <div className={`h-1 flex-1 rounded ${/(?=.*\d)/.test(password) ? 'bg-green-400' : 'bg-gray-300'}`}></div>
+                                <div className={`h-1 flex-1 rounded ${/(?=.*[@$!%*?&])/.test(password) ? 'bg-green-400' : 'bg-gray-300'}`}></div>
                             </div>
                             <p className="text-xs text-gray-600 mt-1">
                                 Strong password contains: 8+ characters, uppercase, lowercase, number, special character
