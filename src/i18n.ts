@@ -11,7 +11,7 @@ const resources = {
 
             hero_page_title: "Welcome!",
             hero_page_subtitle: 'Smart, Safe & Super Fun for Every Kid!',
-            hero_page_button: "Pre-order now",
+            hero_page_button: "Join waitlist now",
             home_screen_products_title: "Dofi In Action",
             add_to_cart_text: "Add to cart",
             about_title: "Inside",
@@ -40,8 +40,8 @@ const resources = {
             faq_answer_part3: "Yes, Dofi is designed with safety in mind. It has enhanced encryption and parental controls to ensure a safe and secure experience for kids.",
             faq_question_part4: "What age group is Dofi suitable for?",
             faq_answer_part4: "Dofi is suitable for children between the ages of 3 and 8.",
-            faq_question_part5: "How do I pre-order Dofi?",
-            faq_answer_part5: "You can pre-order Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
+            faq_question_part5: "How do I join waitlist for Dofi?",
+            faq_answer_part5: "You can join waitlist Dofi directly from our website. Simply add the product to your cart and proceed to checkout.",
 
             // Profile
             profile_page_title: "Personal informations",
@@ -121,12 +121,12 @@ const resources = {
             product_details_part1: "Color",
             product_details_part2: "Quantity",
             product_details_part3: "Add to cart",
-            product_details_part4: "Pre-order now",
+            product_details_part4: "Join waitlist now",
             product_details_part5: "Detailed information",
             product_details_part6: "Shipping calculated at checkout",
 
             // Order checkout
-            order_checkout_parttitle: "Pre-order page",
+            order_checkout_parttitle: "Waitlist page",
             order_checkout_part1: "Contact",
             order_checkout_part2: "Email",
             order_checkout_part3: "Enter your email",
@@ -141,10 +141,10 @@ const resources = {
             order_checkout_part12: "Enter your apartment",
             order_checkout_part13: "Phone number",
             order_checkout_part14: "7 digit number",
-            order_checkout_part15: "Confirm pre-order",
+            order_checkout_part15: "Confirm waitlist",
             order_checkout_part16: "Delivery",
             order_checkout_part17: "Select your country",
-            order_checkout_part18: "Your order created as pre-order",
+            order_checkout_part18: "Your order created as waitlist",
             order_checkout_part19: "Postal code",
             order_checkout_part20: "Enter postal code",
 
@@ -243,7 +243,7 @@ const resources = {
 
             hero_page_title: "Xoş gəlmisiniz!",
             hero_page_subtitle: 'Hər Uşaq üçün Ağıllı, Təhlükəsiz və Super Əyləncəli!',
-            hero_page_button: "Ön sifariş et",
+            hero_page_button: "Gözləmə siyahısına qoşul",
             home_screen_products_title: "Dofi Fəaliyyətdədir",
             add_to_cart_text: "Səbətə əlavə et",
 
@@ -272,8 +272,8 @@ const resources = {
             faq_answer_part3: "Bəli, Dofi təhlükəsizlik nəzərə alınmaqla hazırlanmışdır. Uşaqlar üçün təhlükəsiz və təhlükəsiz təcrübə təmin etmək üçün təkmilləşdirilmiş şifrələmə və valideyn nəzarətinə malikdir.",
             faq_question_part4: "Dofi hansı yaş qrupu üçün uyğundur?",
             faq_answer_part4: "Dofi 3-8 yaş arası uşaqlar üçün uyğundur.",
-            faq_question_part5: "Dofi-ni necə əvvəlcədən sifariş edə bilərəm?",
-            faq_answer_part5: "Dofi-ni birbaşa saytımızdan öncədən sifariş edə bilərsiniz. Sadəcə olaraq məhsulu səbətinizə əlavə edin və ödənişə davam edin.",
+            faq_question_part5: "Dofi üçün necə gözləmə siyahısına qoşula bilərəm?",
+            faq_answer_part5: "Dofi-ni birbaşa saytımızdan gözləmə siyahısına əlavə edə bilərsiniz. Sadəcə olaraq 'Gözləmə siyahısına qoşul' düyməsini klikləyin və məlumatlarınızı qeyd edin.",
 
             // Profile
             profile_page_title: "Şəxsi məlumatlar",
@@ -353,12 +353,12 @@ const resources = {
             product_details_part1: "Rəng",
             product_details_part2: "Say",
             product_details_part3: "Karta əlavə et",
-            product_details_part4: "Ön sifariş et",
+            product_details_part4: "Öz yerini rezerv et",
             product_details_part5: "Detallı məlumat",
             product_details_part6: "Çatdırılma hesablanacaq",
 
             // Order checkout
-            order_checkout_parttitle: "Ön sifariş səhifəsi",
+            order_checkout_parttitle: "Gözləmə siyahısı",
             order_checkout_part1: "Əlaqə",
             order_checkout_part2: "E-poçt",
             order_checkout_part3: "E-poçtunuzu daxil edin",
@@ -373,7 +373,7 @@ const resources = {
             order_checkout_part12: "Binanı daxil edin",
             order_checkout_part13: "Əlaqə",
             order_checkout_part14: "7 rəqəmli nömrə",
-            order_checkout_part15: "Ön sifariş et",
+            order_checkout_part15: "Gözləmə siyahısına qoşul",
             order_checkout_part16: "Çatdırılma",
             order_checkout_part17: "Ölkə seçin",
             order_checkout_part18: "Sənin sifarişin yaradıldı",
