@@ -26,9 +26,6 @@ const Footer = () => {
                             {t('footer_part1')}
                         </Link></li>
                         <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
-                            {t('footer_part2')}
-                        </Link></li>
-                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">
                             {t('footer_part3')}
                         </Link></li>
                         <li className='mb-2 text-sm'><Link to={`/${currentLang}/shop`} className="hover:underline">

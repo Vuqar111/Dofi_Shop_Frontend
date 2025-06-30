@@ -7,10 +7,7 @@ import ActionButton from "../partials/ActionButton"
 import Loading from '../components/Loader'
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-
-
 
 const ProfileScreen = () => {
   const dispatch: AppDispatch = useDispatch()

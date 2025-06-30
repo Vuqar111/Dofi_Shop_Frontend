@@ -103,8 +103,7 @@ const resources = {
             // Footer
             footer_title1: "Products",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Bag for Dofi",
             footer_title2: "Shipping & Policy",
             footer_part5: "About",
@@ -332,8 +331,7 @@ const resources = {
             // Footer
             footer_title1: "Məhsullar",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Dofi çantası",
             footer_title2: "Çatdırılma & Siyasət",
             footer_part5: "Haqqında",
@@ -541,8 +539,7 @@ const resources = {
 
             footer_title1: "Ürünler",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Dofi çantası",
             footer_title2: "Kargo ve Politika",
             footer_part5: "Hakkında",
@@ -748,8 +745,7 @@ const resources = {
             // Footer
             footer_title1: "المنتجات",
             footer_part1: "دوفي برو",
-            footer_part2: "دوفي برو ميني",
-            footer_part3: "دوفي ميني",
+            footer_part3: "دوفي",
             footer_part4: "حقيبة دوفي",
             footer_title2: "الشحن والسياسات",
             footer_part5: "معلومات",
@@ -955,8 +951,7 @@ const resources = {
 
             footer_title1: "Produits",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Sac pour Dofi",
             footer_title2: "Livraison & Politique",
             footer_part5: "À propos",
@@ -1162,8 +1157,7 @@ const resources = {
             // 页脚
             footer_title1: "产品系列",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Dofi专用背包",
             footer_title2: "配送与政策",
             footer_part5: "关于我们",
@@ -1379,8 +1373,7 @@ const resources = {
             // Footer
             footer_title1: "Produkte",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Tasche für Dofi",
             footer_title2: "Versand & Richtlinien",
             footer_part5: "Über uns",
@@ -1596,8 +1589,7 @@ const resources = {
             // Footer
             footer_title1: "Productos",
             footer_part1: "Dofi Pro",
-            footer_part2: "Dofi Pro mini",
-            footer_part3: "Dofi mini",
+            footer_part3: "Dofi",
             footer_part4: "Bolsa para Dofi",
             footer_title2: "Envío y Políticas",
             footer_part5: "Información",
