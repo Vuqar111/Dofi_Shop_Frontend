@@ -446,7 +446,7 @@ const resources = {
             about_page_title: "Salam, Dünya",
             about_page_title2: "Biz Dofi'yik",
             about_page_description: "Hər böyük robotun arxasında maraqlı bir zəkâ və xəyalpərəstlərdən ibarət bir komanda dayanır. Dofi'nin necə yarandığını və ona ürək verən insanları öyrənin.",
-            about_page_info: "Dofi, Vüqar Həsənov və Sənan Müzəffərov arasında yaranan maraq qığılcımından doğuldu — canlı hiss etdirən bir robot yaratmaq arzusu. Əminə Əliyeva Dofiyə can verərək onun hərəkətlərini və anlarını idarə edən elektronikaları diqqətlə inşa etdi. Ləman Həsənova onun əyləncəli və yaxın xarakterini özünəməxsus dizaynı ilə canlandırdı,, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə özünəməxsus dizayn harmoniyası ilə son toxunuşu əlavə etdi. Sonsuz gecələr, maraqlı zehinlər və ilhamverici komanda ruhu ilə formalaşan Dofi bir məhsuldan daha çoxdur — bu, həqiqi yaradıcı əməkdaşlığın nəticəsidir."
+            about_page_info: "Dofi, Vüqar Həsənov və Sənan Müzəffərov arasında yaranan maraq qığılcımından doğuldu — canlı hiss etdirən bir robot yaratmaq arzusu. Əminə Əliyeva Dofiyə can verərək onun hərəkətlərini və anlarını idarə edən elektronikaları diqqətlə inşa etdi. Ləman Həsənova onun əyləncəli və yaxın xarakterini özünəməxsus dizaynı ilə canlandırdı, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə özünəməxsus dizayn harmoniyası ilə son toxunuşu əlavə etdi. Sonsuz gecələr, maraqlı zehinlər və ilhamverici komanda ruhu ilə formalaşan Dofi bir məhsuldan daha çoxdur — bu, həqiqi yaradıcı əməkdaşlığın nəticəsidir."
         },
     },
     tr: {
