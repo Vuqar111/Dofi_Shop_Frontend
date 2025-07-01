@@ -82,7 +82,7 @@ const ForgotPasswordScreen = () => {
                                 success={forgotPasswordSuccess}
                                 loading={forgotPasswordLoading}
                                 error={forgotPasswordError}
-                                message="Check your email"
+                                message={t('forgot_page_password_modal')}
                             />
                             <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
                                 {t('forgot_page_footer1')} <Link to={`/${currentLang}/auth/login`} className="text-green-500">
