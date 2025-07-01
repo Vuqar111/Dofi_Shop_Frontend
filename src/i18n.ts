@@ -195,6 +195,7 @@ const resources = {
             forgot_page_button: "Change password",
             forgot_page_footer1: "Do you have an account?",
             forgot_page_footer2: "Login",
+            forgot_page_password_modal: "Check your email",
 
             // Cart
             cart_page_part1: "Your cart",
@@ -421,7 +422,7 @@ const resources = {
             forgot_page_button: "Şifrəni dəyiş",
             forgot_page_footer1: "Hesabınız var?",
             forgot_page_footer2: "Daxil ol",
-
+            forgot_page_password_modal: "E-poçtunuzu yoxlayın",
             // Cart
             cart_page_part1: "Səbət",
             cart_page_part2: "Davam et",

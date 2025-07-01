@@ -126,7 +126,7 @@ const ResetPasswordScreen = () => {
                             loading={resetPasswordLoading}
                             error={resetPasswordError}
                             path={`/`}
-                            message="Password changed."
+                            message={t('profile_security_modal_desc')}
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
 
