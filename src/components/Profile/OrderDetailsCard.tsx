@@ -75,54 +75,13 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                 </div>
                 <div className="flex md:flex-row flex-col gap-2">
                     <span className="px-1 py-1 rounded:sm text:xs"> {t('profile_order_card_part2')}: {" "} {formatDate(order?.createdAt)}</span>
-                    <span className={`text-white px-1 py-1 rounded:sm text:xs ${order?.payment?.payment_status === "Canceled" ? "bg-red-400" : "bg-green-400"}`}>
-                        {order?.payment?.payment_status}
-                    </span>
+                   
                     <span className={`text-white px-1 py-1 rounded:sm ${order?.status === "Canceled" ? "bg-red-400" : "bg-orange-400"}`}>
                         {order?.status}
                     </span>
                 </div>
             </header>
             <div className='border border-b border-gray-100'></div>
-
-
-
-            <ol className="flex items-center w-[70%] mx-auto mt-6">
-                {displayStatuses.map((status, index) => {
-                    const isCompleted = isStepCompleted(index, status);
-                    const isLast = index === displayStatuses.length - 1;
-
-                    // Special styling for canceled status
-                    const stepColorClass = status === "Canceled"
-                        ? "text-red-600"
-                        : isCompleted
-                            ? "text-green-600"
-                            : "";
-
-                    const bgColorClass = status === "Canceled"
-                        ? "bg-red-100"
-                        : isCompleted
-                            ? "bg-green-100"
-                            : "bg-green-100";
-
-                    const connectorColorClass = status === "Canceled"
-                        ? "after:border-red-100"
-                        : isCompleted
-                            ? "after:border-green-100"
-                            : "after:border-green-100 ";
-
-                    return (
-                        <li key={status} className={`flex ${isLast ? 'items-center' : 'w-full items-center'} ${stepColorClass} ${!isLast ? `after:content-[''] after:w-full after:h-1 after:border-b after:border-4 after:inline-block ${connectorColorClass}` : ''}`}>
-                            <span className={`flex items-center justify-center w-10 h-10 ${bgColorClass} rounded-full lg:h-12 lg:w-12 shrink-0`}>
-                                {getStatusIcon(status)}
-                            </span>
-                        </li>
-                    );
-                })}
-            </ol>
-
-
-
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
                 <div>
@@ -137,7 +96,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                         <label>
                             <p>{t('profile_orders_details_part4')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
                         </label>
-                         <label>
+                        <label>
                             <p>{t('profile_orders_details_part_5')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.postal_code}</span></p>
                         </label>
                     </div>
@@ -159,7 +118,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                     </div>
                 </div>
 
-                <div>
+                {/* <div>
                     <h2 className='p-4'>{t('profile_orders_details_part9')}: {" "}</h2>
                     <div className='px-4 pt-2 text-[14px]'>
                         <label>
@@ -169,7 +128,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                             <p>{t('profile_orders_details_part11')}: {" "} <span className='opacity-[0.7]'>{order?.payment?.payment_type}</span></p>
                         </label>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <h2 className='p-4 mt-6'>

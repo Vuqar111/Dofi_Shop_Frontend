@@ -11,7 +11,6 @@ const ResetPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { resetPasswordSuccess, resetPasswordError, resetPasswordLoading } = useSelector((state: any) => state.auth);
 
-
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [searchParams] = useSearchParams();
@@ -20,7 +19,6 @@ const ResetPasswordScreen = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     const { t } = useTranslation();
-
 
     const handleResetPassword = async (e: React.FormEvent) => {
         e.preventDefault();

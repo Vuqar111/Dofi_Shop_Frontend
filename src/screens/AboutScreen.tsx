@@ -28,7 +28,6 @@ const AboutScreen = () => {
                     />
                 </div>
                 <p className="flex justify-center my-8 max-h-[400px] sm:max-h-[500px] md:max-h-[600px] w-full max-w-[90%] md:max-w-[80%] mx-auto opacity-70 text-sm sm:text-base md:text-lg">
-
                     {t('about_page_info')}
                 </p>
             </div>

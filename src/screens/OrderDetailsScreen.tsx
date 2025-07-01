@@ -15,10 +15,6 @@ const OrderDetailsScreen = () => {
 
     const id = window.location.pathname.split('/')[4]
 
-
-
-
-
     const breadcrumbPaths = [
     { name: t('breadcrumb_home'), href: '/' },
     { name: t('breadcrumb_profile'), href: '/profile' },

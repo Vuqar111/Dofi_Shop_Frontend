@@ -127,7 +127,6 @@ const CartScreen = () => {
                         </button>
                       </span>
                     </div>
-
                     <div className="font-semibold text-right">{product.qty * product.price} AZN</div>
                   </div>
                 </div>
