@@ -89,14 +89,14 @@ const resources = {
 
             // Sidebar
             sidebar_title_profile: "Profile",
-            sidebar_title_orders: "Orders",
+            sidebar_title_orders: "Pre-orders",
             sidebar_title_security: "Security",
             sidebar_title_logout: "Log out",
 
             // Breadcrumb
             breadcrumb_home: "Home",
             breadcrumb_profile: "Profile",
-            breadcrumb_orders: "Orders",
+            breadcrumb_orders: "Pre-orders",
             breadcrumb_order: "Order",
             breadcrumb_security: "Security",
 
@@ -388,7 +388,7 @@ const resources = {
 
             // Card modal
             card_modal_title: "Səbət",
-            cart_modal_footer: "Sifarişi tamamla",
+            cart_modal_footer: "Gözləmə siyahısına keç",
             cart_modal_message1: "Alış-verişə davam et",
             cart_modal_message2: "Sənin səbətin boşdur",
 
@@ -528,13 +528,13 @@ const resources = {
             profile_security_modal_desc: "Şifreniz başarıyla güncellendi!",
 
             sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Siparişler",
+            sidebar_title_orders: "Ön Siparişler",
             sidebar_title_security: "Güvenlik",
             sidebar_title_logout: "Çıkış yap",
 
             breadcrumb_home: "Ana sayfa",
             breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Siparişler",
+            breadcrumb_orders: "Ön Siparişler",
             breadcrumb_order: "Sipariş",
             breadcrumb_security: "Güvenlik",
 
@@ -592,7 +592,7 @@ const resources = {
             order_summary_part9: "Sepetiniz boş",
 
             card_modal_title: "Sepet",
-            cart_modal_footer: "Ödemeye geç",
+            cart_modal_footer: "Bekleme listesine geç",
             cart_modal_message1: "Alışverişe devam et",
             cart_modal_message2: "Sepetiniz boş",
 
@@ -623,6 +623,7 @@ const resources = {
             forgot_page_button: "Şifreyi değiştir",
             forgot_page_footer1: "Bir hesabınız var mı?",
             forgot_page_footer2: "Giriş yap",
+            forgot_page_password_modal: "E-postanızı kontrol edin",
 
             cart_page_part1: "Sepetiniz",
             cart_page_part2: "Devam et",
@@ -732,14 +733,14 @@ const resources = {
 
             // Sidebar
             sidebar_title_profile: "الملف الشخصي",
-            sidebar_title_orders: "الطلبات",
+            sidebar_title_orders: "الطلبات المسبقة",
             sidebar_title_security: "الأمان",
             sidebar_title_logout: "تسجيل الخروج",
 
             // Breadcrumb
             breadcrumb_home: "الرئيسية",
             breadcrumb_profile: "الملف الشخصي",
-            breadcrumb_orders: "الطلبات",
+            breadcrumb_orders: "الطلبات المسبقة",
             breadcrumb_order: "الطلب",
             breadcrumb_security: "الأمان",
 
@@ -802,7 +803,7 @@ const resources = {
 
             // Card modal
             card_modal_title: "السلة",
-            cart_modal_footer: "تابع إلى الدفع",
+            cart_modal_footer: "انتقل إلى قائمة الانتظار",
             cart_modal_message1: "متابعة التسوق",
             cart_modal_message2: "سلتك فارغة",
 
@@ -836,6 +837,7 @@ const resources = {
             forgot_page_button: "تغيير كلمة المرور",
             forgot_page_footer1: "هل لديك حساب؟",
             forgot_page_footer2: "تسجيل الدخول",
+            forgot_page_password_modal: "تحقق من بريدك الإلكتروني",
 
             // Cart
             cart_page_part1: "سلتك",
@@ -940,13 +942,13 @@ const resources = {
             profile_security_modal_desc: "Votre mot de passe a été mis à jour avec succès !",
 
             sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Commandes",
+            sidebar_title_orders: "Précommandes",
             sidebar_title_security: "Sécurité",
             sidebar_title_logout: "Se déconnecter",
 
             breadcrumb_home: "Accueil",
             breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Commandes",
+            breadcrumb_orders: "Précommandes",
             breadcrumb_order: "Commande",
             breadcrumb_security: "Sécurité",
 
@@ -1004,7 +1006,7 @@ const resources = {
             order_summary_part9: "Votre panier est vide",
 
             card_modal_title: "Panier",
-            cart_modal_footer: "Passer à la caisse",
+            cart_modal_footer: "Passer à la liste d'attente",
             cart_modal_message1: "Continuer vos achats",
             cart_modal_message2: "Votre panier est vide",
 
@@ -1035,6 +1037,8 @@ const resources = {
             forgot_page_button: "Changer le mot de passe",
             forgot_page_footer1: "Vous avez un compte ?",
             forgot_page_footer2: "Connexion",
+            forgot_page_password_modal: "Vérifiez votre e-mail",
+
 
             cart_page_part1: "Votre panier",
             cart_page_part2: "Continuer",
@@ -1144,14 +1148,14 @@ const resources = {
 
             // 侧边栏
             sidebar_title_profile: "个人资料",
-            sidebar_title_orders: "我的订单",
+            sidebar_title_orders: "预购订单",
             sidebar_title_security: "账户安全",
             sidebar_title_logout: "退出登录",
 
             // 面包屑导航
             breadcrumb_home: "首页",
             breadcrumb_profile: "个人资料",
-            breadcrumb_orders: "我的订单",
+            breadcrumb_orders: "预购订单",
             breadcrumb_order: "订单详情",
             breadcrumb_security: "账户安全",
 
@@ -1214,7 +1218,7 @@ const resources = {
 
             // 购物车弹窗
             card_modal_title: "购物车",
-            cart_modal_footer: "去结算",
+            cart_modal_footer: "前往等候名单",
             cart_modal_message1: "继续购物",
             cart_modal_message2: "购物车为空",
 
@@ -1248,6 +1252,7 @@ const resources = {
             forgot_page_button: "重置密码",
             forgot_page_footer1: "已有账户？",
             forgot_page_footer2: "立即登录",
+            forgot_page_password_modal: "检查你的电子邮件",
 
             // 购物车页面
             cart_page_part1: "您的购物车",
@@ -1360,14 +1365,14 @@ const resources = {
 
             // Sidebar
             sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Bestellungen",
+            sidebar_title_orders: "Vorbestellungen",
             sidebar_title_security: "Sicherheit",
             sidebar_title_logout: "Abmelden",
 
             // Breadcrumb
             breadcrumb_home: "Startseite",
             breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Bestellungen",
+            breadcrumb_orders: "Vorbestellungen",
             breadcrumb_order: "Bestellung",
             breadcrumb_security: "Sicherheit",
 
@@ -1430,7 +1435,7 @@ const resources = {
 
             // Warenkorb-Modal
             card_modal_title: "Warenkorb",
-            cart_modal_footer: "Zur Kasse gehen",
+            cart_modal_footer: "Zur Warteliste fortfahren",
             cart_modal_message1: "Einkauf fortsetzen",
             cart_modal_message2: "Ihr Warenkorb ist leer",
 
@@ -1464,6 +1469,7 @@ const resources = {
             forgot_page_button: "Passwort zurücksetzen",
             forgot_page_footer1: "Sie haben ein Konto?",
             forgot_page_footer2: "Anmelden",
+            forgot_page_password_modal: "Überprüfen Sie Ihre E-Mails",
 
             // Warenkorb-Seite
             cart_page_part1: "Ihr Warenkorb",
@@ -1576,14 +1582,14 @@ const resources = {
 
             // Sidebar
             sidebar_title_profile: "Perfil",
-            sidebar_title_orders: "Pedidos",
+            sidebar_title_orders: "Pedidos anticipados",
             sidebar_title_security: "Seguridad",
             sidebar_title_logout: "Cerrar sesión",
 
             // Breadcrumb
             breadcrumb_home: "Inicio",
             breadcrumb_profile: "Perfil",
-            breadcrumb_orders: "Pedidos",
+            breadcrumb_orders: "Pedidos anticipados",
             breadcrumb_order: "Pedido",
             breadcrumb_security: "Seguridad",
 
@@ -1646,7 +1652,7 @@ const resources = {
 
             // Card modal
             card_modal_title: "Carrito",
-            cart_modal_footer: "Proceder al pago",
+            cart_modal_footer: "Ir a la lista de espera",
             cart_modal_message1: "Seguir comprando",
             cart_modal_message2: "Tu carrito está vacío",
 
@@ -1680,6 +1686,7 @@ const resources = {
             forgot_page_button: "Cambiar contraseña",
             forgot_page_footer1: "¿Ya tienes cuenta?",
             forgot_page_footer2: "Iniciar sesión",
+            forgot_page_password_modal: "Revisa tu correo electrónico",
 
             // Cart
             cart_page_part1: "Tu carrito",

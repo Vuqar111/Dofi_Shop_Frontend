@@ -5,23 +5,23 @@
     "description": "Este robot inteligente se adapta al ritmo de aprendizaje de cada niño, ofreciendo educación personalizada mediante narración de cuentos, ejercicios de matemáticas y aprendizaje de idiomas (estilo Voscreen y Duolingo). Su rostro expresivo y sus habilidades de movimiento hacen que las interacciones sean realistas, mientras que los juegos integrados (deletreo, escondite, tres en raya) garantizan la participación. Los padres pueden mantenerse conectados mediante videollamadas y supervisar el tiempo de juego a través de la aplicación complementaria. ¡Perfecto para niños que aman la tecnología y el aprendizaje interactivo!",
     "features": [
       {
-        "name": "Robot con IA y tacto similar al humano.",
+        "name": "Robot con IA y tacto similar al humano",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
       },
       {
-        "name": "El cifrado mejorado garantiza la seguridad y el control parental.",
+        "name": "El cifrado mejorado garantiza la seguridad y el control parental",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
       },
       {
-        "name": "Robot interactivo que enseña y escucha.",
+        "name": "Robot interactivo que enseña y escucha",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       },
       {
-        "name": "Involucra el aprendizaje centrado en STEAM.",
+        "name": "Involucra el aprendizaje centrado en STEAM",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
       },
       {
-        "name": "Repleto de aplicaciones y juegos de aprendizaje.",
+        "name": "DreamBuddy – Creador de sueños con IA que estimula la imaginación y mejora el sueño",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
       }
     ]
