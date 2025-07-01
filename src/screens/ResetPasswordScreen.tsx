@@ -5,6 +5,7 @@ import { AppDispatch } from '../redux/store';
 import ActionButton from "../partials/ActionButton";
 import { useState } from "react";
 import swal from 'sweetalert';
+import { useTranslation } from 'react-i18next';
 
 const ResetPasswordScreen = () => {
     const dispatch: AppDispatch = useDispatch();
@@ -17,6 +18,9 @@ const ResetPasswordScreen = () => {
     const token = searchParams.get("token");
     const [confirmPassword, setConfirmPassword] = useState("")
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+    const { t } = useTranslation();
+
 
     const handleResetPassword = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -42,18 +46,22 @@ const ResetPasswordScreen = () => {
                 <Link to="/">
                     <h1 className="text-6xl font-bold text-green-400 mb-2">Dofi</h1>
                 </Link>
-                <p className="mb-4">We are glad to see you again!</p>
+                <p className="mb-4">
+                    {t('login_page_title')}
+                </p>
+
                 <form className="w-full max-w-md" onSubmit={handleResetPassword}>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Password
+                                                {t('login_page_label2')}
+
                         </label>
                         <div className="relative">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Enter password"
+                                placeholder={t('profile_security_form_placeholder2')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -79,13 +87,13 @@ const ResetPasswordScreen = () => {
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                            Confirm password
+                         {t('profile_security_form_label3')}
                         </label>
                         <div className="relative">
                             <input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                placeholder="Confirm your password"
+                                placeholder={t('profile_security_form_placeholder3')}
                                 className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-2 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
                             />
 
@@ -113,7 +121,7 @@ const ResetPasswordScreen = () => {
 
                     <div className="flex flex-col">
                         <ActionButton
-                            content="Change password"
+                            content={t('profile_security_form_button')}
                             success={resetPasswordSuccess}
                             loading={resetPasswordLoading}
                             error={resetPasswordError}
@@ -121,10 +129,16 @@ const ResetPasswordScreen = () => {
                             message="Password changed."
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            Don't have an account? <Link to="/auth/register" className="text-green-500">Sign up</Link>
+                
+                            {t('login_page_footer1')} {" "} 
+                 <Link to="/auth/register" className="text-green-500">
+                                {t('login_page_footer2')}
+                 </Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                            <Link to="/auth/forgot-password" className="text-red-500">Forgot your password?</Link>
+                            <Link to="/auth/forgot-password" className="text-red-500">
+                                {t('login_page_footer3')}
+                            </Link>
                         </span>
                     </div>
                 </form>
