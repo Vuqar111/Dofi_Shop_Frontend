@@ -434,20 +434,8 @@ const CheckOutScreen = () => {
                                 {getErrorMessage('address')}
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="mb-4">
-                                    <label className="mb-2 block font-medium text-black opacity-60">
-                                        {t('order_checkout_part11')}
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name="apartment"
-                                        value={formData.apartment}
-                                        onChange={handleInputChange}
-                                        placeholder={t('order_checkout_part12')}
-                                        className="w-full rounded-sm placeholder:text-sm border border-gray-200 bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none"
-                                    />
-                                </div>
+                            <div className="grid grid-cols-1 gap-4">
+                               
 
                                 <div className="mb-4">
                                     <label className="mb-2 block font-medium text-black opacity-60">

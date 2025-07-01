@@ -281,7 +281,7 @@ const resources = {
             profile_page_modal_desc: "Profiliniz uğurla yeniləndi",
 
             // Profile Orders
-            profile_orders_page_title: "Sənin sifarişlərin",
+            profile_orders_page_title: "Sənin  sifarişlərin",
             profile_order_card_part1: "Sifariş kodu",
             profile_order_card_part2: "Sifariş tarixi",
             profile_order_card_part3: "Sifariş detalları",
@@ -318,14 +318,14 @@ const resources = {
 
             // Sidebar
             sidebar_title_profile: "Profil",
-            sidebar_title_orders: "Sifarişlər",
+            sidebar_title_orders: "Ön Sifarişlər",
             sidebar_title_security: "Təhlükəsizlik",
             sidebar_title_logout: "Çıxış et",
 
             // Breadcrumb
             breadcrumb_home: "Ana səhifə",
             breadcrumb_profile: "Profil",
-            breadcrumb_orders: "Sifarişlər",
+            breadcrumb_orders: "Ön Sifarişlər",
             breadcrumb_order: "Sifariş",
             breadcrumb_security: "Təhlükəsizlik",
 
