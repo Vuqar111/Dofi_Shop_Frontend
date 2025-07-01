@@ -623,6 +623,7 @@ const resources = {
             forgot_page_button: "Şifreyi değiştir",
             forgot_page_footer1: "Bir hesabınız var mı?",
             forgot_page_footer2: "Giriş yap",
+            forgot_page_password_modal: "E-postanızı kontrol edin",
 
             cart_page_part1: "Sepetiniz",
             cart_page_part2: "Devam et",
@@ -836,6 +837,7 @@ const resources = {
             forgot_page_button: "تغيير كلمة المرور",
             forgot_page_footer1: "هل لديك حساب؟",
             forgot_page_footer2: "تسجيل الدخول",
+            forgot_page_password_modal: "تحقق من بريدك الإلكتروني",
 
             // Cart
             cart_page_part1: "سلتك",
@@ -1035,6 +1037,8 @@ const resources = {
             forgot_page_button: "Changer le mot de passe",
             forgot_page_footer1: "Vous avez un compte ?",
             forgot_page_footer2: "Connexion",
+            forgot_page_password_modal: "Vérifiez votre e-mail",
+
 
             cart_page_part1: "Votre panier",
             cart_page_part2: "Continuer",
@@ -1248,6 +1252,7 @@ const resources = {
             forgot_page_button: "重置密码",
             forgot_page_footer1: "已有账户？",
             forgot_page_footer2: "立即登录",
+            forgot_page_password_modal: "检查你的电子邮件",
 
             // 购物车页面
             cart_page_part1: "您的购物车",
@@ -1464,6 +1469,7 @@ const resources = {
             forgot_page_button: "Passwort zurücksetzen",
             forgot_page_footer1: "Sie haben ein Konto?",
             forgot_page_footer2: "Anmelden",
+            forgot_page_password_modal: "Überprüfen Sie Ihre E-Mails",
 
             // Warenkorb-Seite
             cart_page_part1: "Ihr Warenkorb",
@@ -1680,6 +1686,7 @@ const resources = {
             forgot_page_button: "Cambiar contraseña",
             forgot_page_footer1: "¿Ya tienes cuenta?",
             forgot_page_footer2: "Iniciar sesión",
+            forgot_page_password_modal: "Revisa tu correo electrónico",
 
             // Cart
             cart_page_part1: "Tu carrito",
