@@ -53,7 +53,7 @@ const ResetPasswordScreen = () => {
                 <form className="w-full max-w-md" onSubmit={handleResetPassword}>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                                                {t('login_page_label2')}
+                            {t('login_page_label2')}
 
                         </label>
                         <div className="relative">
@@ -87,7 +87,7 @@ const ResetPasswordScreen = () => {
                     </div>
                     <div className="mb-6">
                         <label className="mb-2 block font-medium text-black opacity-[0.6]">
-                         {t('profile_security_form_label3')}
+                            {t('profile_security_form_label3')}
                         </label>
                         <div className="relative">
                             <input
@@ -129,11 +129,11 @@ const ResetPasswordScreen = () => {
                             message="Password changed."
                         />
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
-                
-                            {t('login_page_footer1')} {" "} 
-                 <Link to="/auth/register" className="text-green-500">
+
+                            {t('login_page_footer1')} {" "}
+                            <Link to="/auth/register" className="text-green-500">
                                 {t('login_page_footer2')}
-                 </Link>
+                            </Link>
                         </span>
                         <span className="text-center pt-2 inline-block align-baseline text-sm text-gray-500 hover:text-green-800">
                             <Link to="/auth/forgot-password" className="text-red-500">

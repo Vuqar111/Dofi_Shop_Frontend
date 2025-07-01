@@ -161,7 +161,7 @@ const resources = {
 
             // Card modal
             card_modal_title: "Cart",
-            cart_modal_footer: "Proceed to checkout",
+            cart_modal_footer: "Proceed to waitlist",
             cart_modal_message1: "Continue to shopping",
             cart_modal_message2: "Your cart is empty",
 

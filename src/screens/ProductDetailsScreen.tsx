@@ -20,6 +20,10 @@ const ProductDetailsScreen = () => {
   const [selectedImage, setSelectedImage] = useState('');
   const [selectedQty, setSelectedQty] = useState(1);
 
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   const dispatch: AppDispatch = useDispatch();
   const { product } = useSelector((state: any) => state.products);
 
@@ -27,12 +31,6 @@ const ProductDetailsScreen = () => {
   useEffect(() => {
     dispatch(productDetails({ slug }));
   }, [dispatch, slug]);
-
-  useEffect(() => {
-    if (product?.images?.length > 0) {
-      setSelectedImage(product.images[0]);
-    }
-  }, [product]);
 
   const name = t(`products.${slug}.name`);
   const description = t(`products.${slug}.description`);
@@ -56,12 +54,29 @@ const ProductDetailsScreen = () => {
 
   const activeGallery = selectedColor === '#FB64B6' ? imageGalleryPink : imageGalleryGreen;
 
+  useEffect(() => {
+    // Change selected image when color changes
+    if (selectedColor === '#FB64B6') {
+      setSelectedImage(imageGalleryPink[0]);
+    } else {
+      setSelectedImage(imageGalleryGreen[0]);
+    }
+    setSelectedIndex(0);
+  }, [selectedColor]);
+
+  console.log(selectedImage);
+
+
   const prevImage = () => {
-    setSelectedIndex((prev) => (prev === 0 ? activeGallery.length - 1 : prev - 1));
+    const newIndex = selectedIndex === 0 ? activeGallery.length - 1 : selectedIndex - 1;
+    setSelectedIndex(newIndex);
+    setSelectedImage(activeGallery[newIndex]);
   };
 
   const nextImage = () => {
-    setSelectedIndex((prev) => (prev === activeGallery.length - 1 ? 0 : prev + 1));
+    const newIndex = selectedIndex === activeGallery.length - 1 ? 0 : selectedIndex + 1;
+    setSelectedIndex(newIndex);
+    setSelectedImage(activeGallery[newIndex]);
   };
 
   const increaseQty = () => {
@@ -81,7 +96,7 @@ const ProductDetailsScreen = () => {
       name: product.name,
       code: product.code,
       price: product.salePrice,
-      image: product.image,
+      image: selectedImage,
       qty: selectedQty,
       color: selectedColor,
     };
@@ -112,7 +127,7 @@ const ProductDetailsScreen = () => {
       <div className="w-[100%] md:w-[80%] mx-auto flex flex-col md:flex-row p-8">
         <div className="w-full md:w-1/2 relative">
           <div className="relative">
-            <img src={activeGallery[selectedIndex]} alt={`Product ${selectedIndex}`} className="w-full h-auto" />
+            <img src={selectedImage} alt={`Product ${selectedIndex}`} className="w-full h-auto" />
             <button
               className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
               onClick={prevImage}
@@ -137,11 +152,15 @@ const ProductDetailsScreen = () => {
                 src={image}
                 alt={`Product ${index}`}
                 className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
-                onClick={() => setSelectedIndex(index)}
+                onClick={() => {
+                  setSelectedIndex(index);
+                  setSelectedImage(image);
+                }}
               />
             ))}
           </div>
         </div>
+
         <div className="w-full md:w-1/2 md:pl-8">
           <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{name}</h1>
           <div className="mb-4">
@@ -157,6 +176,7 @@ const ProductDetailsScreen = () => {
               </li>
             ))}
           </ul>
+
           <div className="mb-4">
             <label className="mb-4">{t('product_details_part1')}</label>
             <div className="w-full flex gap-4 mt-4">
@@ -165,7 +185,6 @@ const ProductDetailsScreen = () => {
                   key={color}
                   onClick={() => {
                     setSelectedColor(color);
-                    setSelectedIndex(0);
                   }}
                   className={`cursor-pointer w-[50px] h-[50px] rounded-full border border-gray-300 p-3 text-center ${selectedColor === color ? "ring-4 ring-gray-400" : ""}`}
                   style={{ backgroundColor: color }}
@@ -173,6 +192,7 @@ const ProductDetailsScreen = () => {
               ))}
             </div>
           </div>
+
           <label className="mt-8">{t('product_details_part2')}</label>
           <div className="grid grid-cols-5 gap-4 mt-4">
             <div className="col-span-2 flex items-center justify-between border border-gray-200">
@@ -187,6 +207,7 @@ const ProductDetailsScreen = () => {
               {t('product_details_part3')}
             </div>
           </div>
+
           <div
             onClick={handleCheckout}
             className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
@@ -195,6 +216,7 @@ const ProductDetailsScreen = () => {
           </div>
         </div>
       </div>
+
       <div className="w-[100%] md:w-[80%] mx-auto my-8 p-8">
         <h2 className="text-2xl font-semibold text-gray-600">
           {t('product_details_part5')}
@@ -203,9 +225,11 @@ const ProductDetailsScreen = () => {
           {description}
         </p>
       </div>
+
       <div className="my-6">
         <FAQ />
       </div>
+
       <Footer />
     </>
   );

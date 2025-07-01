@@ -68,7 +68,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                 {t('cart_modal_message2')}
               </p>
             ) : (
-              cart.map((product: any) => (
+              cart?.map((product: any) => (
                 <div key={product._id} className="flex justify-between mb-4 pb-4 border-b border-gray-200">
                   <div className="flex">
                     <div>
@@ -76,7 +76,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
                     </div>
                     <div className='pl-2'>
                       <h3 className="font-semibold">{product.name}</h3>
-                      <p className="text-gray-400 text-sm flex items-center gap-2">{t('product_details_part1')}: <div className='w-[16px] h-[16px] bg-green-400 rounded-full'></div></p>
+                      <p className="text-gray-400 text-sm flex items-center gap-2">{t('product_details_part1')}: <div className={`w-[16px] h-[16px] bg-[${product?.color}] rounded-full`}></div></p>
                       <div className="flex items-center justify-between border border-gray-200 mt-2 p-2 max-w-[100px]">
                         <button
                           className="px-2 cursor-pointer"

@@ -17,7 +17,13 @@ const ProductCard = ({ product }: { product: any }) => {
 
 
   const [isAdded, setIsAdded] = useState(false);
-  const [selectedColor, setSelectedColor] = useState("text-green-500");
+  const [selectedColor, setSelectedColor] = useState<"#B7CB3F" | "#FB64B6">("#B7CB3F");
+  const images: Record<"#B7CB3F" | "#FB64B6", string> = {
+    "#B7CB3F": "https://res.cloudinary.com/dslgitrbt/image/upload/v1751318610/Classic_45D_View_wzyd3t.png",
+    "#FB64B6": "https://res.cloudinary.com/dslgitrbt/image/upload/v1751396221/Pink_45D_View_oxdb2w.png"
+  };
+
+
 
 
   const handleAddToCart = () => {
@@ -28,7 +34,7 @@ const ProductCard = ({ product }: { product: any }) => {
       code: product.code,
       qty: 1,
       color: selectedColor,
-      image: product?.image,
+      image: images[selectedColor]
     };
 
     dispatch(addToCart(cartItem));
