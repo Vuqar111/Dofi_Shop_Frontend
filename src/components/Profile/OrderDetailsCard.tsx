@@ -97,7 +97,7 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                             <p>{t('profile_orders_details_part4')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.address}</span></p>
                         </label>
                         <label>
-                            <p>{t('profile_orders_details_part_5')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.postal_code}</span></p>
+                            <p>{t('profile_orders_details_part11')}: {" "} <span className='opacity-[0.7]'>{order?.delivery?.postal_code}</span></p>
                         </label>
                     </div>
                 </div>
@@ -139,11 +139,11 @@ const OrderDetailsCard = ({ order }: { order: any }) => {
                 <div className="w-full flex flex-col gap-2 p-4">
                     {order?.products.map((product: any) => (
                         <div key={product._id} className="w-full grid md:grid-cols-4 gap-4 items-center">
-                            <div className='flex gap-2'>
+                            <div className='flex items-center gap-2'>
                                 <img src={product?.image} alt={product.name} className="w-16 h-20 object-cover" />
                                 <div>
                                     <h3 className="font-semibold">{product.name}</h3>
-                                    <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-${product?.color?.replace("text-", "")} rounded-full`}></div></p>
+                                    <p className="text-gray-400 text-sm flex items-center gap-2">{t('order_summary_part1')}: <div className={`w-[16px] h-[16px] bg-[${product?.color}] rounded-full`}></div></p>
                                 </div>
                             </div>
                             <div>
