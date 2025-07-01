@@ -23,13 +23,17 @@
       {
         "name": "Loaded with learning apps and games",
         "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+      },
+      {
+        "name": "DreamBuddy – Sleep-Time AI Companion",
+        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
       }
     ]
   },
   "dofi-pro": {
     "name": "Smart Robot for Daun Kids",
     "info": "Specially designed for children with developmental differences (such as Down syndrome), this adaptive smart robot provides gentle, interactive learning with simplified commands, sensory-friendly games, and emotional support features.",
-    "description": "The Daun Kids Smart Robot focuses on inclusive learning, helping children strengthen communication, motor skills, and cognitive abilities in a fun, stress-free way. This robot encourages confidence and independence while keeping parents connected through video calls and progress tracking. A perfect companion for special needs education & joyful play!",       
+    "description": "The Daun Kids Smart Robot focuses on inclusive learning, helping children strengthen communication, motor skills, and cognitive abilities in a fun, stress-free way. This robot encourages confidence and independence while keeping parents connected through video calls and progress tracking. A perfect companion for special needs education & joyful play!",
     "features": [
       {
         "name": "Simplified voice commands for easy interaction",
@@ -53,7 +57,7 @@
       }
     ]
   },
-    "dofi-bag": {
+  "dofi-bag": {
     "name": "Dofi’s Bag",
     "info": "A durable, kid-friendly bag to carry and protect your smart robot.",
     "description": "Keep your robot safe and portable with this lightweight, shock-resistant bag. Designed for easy travel. Perfect for home, school, or trips!",

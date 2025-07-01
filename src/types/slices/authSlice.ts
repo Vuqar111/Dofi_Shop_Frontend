@@ -6,7 +6,7 @@ export interface User {
     password: string;
   }
   
-  export interface AuthState {
+export interface AuthState {
     token: string | null;
     signinSuccess: any,
     signinLoading: boolean;
@@ -23,7 +23,7 @@ export interface User {
     isAuthenticated: boolean;
   }
   
-  export interface SigninResponse {
+export interface SigninResponse {
     user: User;
     token: string;
     expiresIn: number;
