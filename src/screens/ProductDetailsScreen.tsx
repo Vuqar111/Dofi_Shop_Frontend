@@ -64,7 +64,6 @@ const ProductDetailsScreen = () => {
     setSelectedIndex(0);
   }, [selectedColor]);
 
-  console.log(selectedImage);
 
 
   const prevImage = () => {

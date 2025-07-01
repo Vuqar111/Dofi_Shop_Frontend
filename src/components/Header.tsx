@@ -133,18 +133,18 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                 <div>
                   <Link to={`/${currentLang}/shop`}>
                     <div className='flex items-center justify-center'>
-                      <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_mini.png?v=1718185082" alt='' />
+                      <img src="https://res.cloudinary.com/dslgitrbt/image/upload/v1751318610/Classic_45D_View_wzyd3t.png" alt='' />
                     </div>
-                    <p className='pt-2 opacity-[0.8]'>Bags for robot</p>
+                    <p className='pt-2 opacity-[0.8]'>For boys</p>
                   </Link>
                 </div>
 
                 <div>
                   <Link to={`/${currentLang}/shop`}>
                     <div className='flex items-center justify-center'>
-                      <img src="https://cdn.shopify.com/s/files/1/0825/1893/3812/files/menu_miko3.png?v=1718185082" alt='' />
+                      <img src="https://res.cloudinary.com/dslgitrbt/image/upload/v1751396221/Pink_45D_View_oxdb2w.png" alt='' />
                     </div>
-                    <p className='pt-2 opacity-[0.8]'>Bags for girls</p>
+                    <p className='pt-2 opacity-[0.8]'>For girls</p>
                   </Link>
                 </div>
               </li>
