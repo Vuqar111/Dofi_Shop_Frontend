@@ -40,17 +40,17 @@ const Safety = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8 md:my-12">
         {[
           {
-            "img": "https://miko.ai/cdn/shop/files/MiniPDP_Features_Parents.svg?v=1727687496&width=150",
+            "img": "https://cdn-icons-png.flaticon.com/512/1213/1213135.png",
             "title": t('safety_page_feature_title_part1'),
             "description": t('safety_page_feature_desciption_part1')
           },
           {
-            "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Tools.svg?v=1727687496&width=150",
+            "img": "https://www.iconpacks.net/icons/2/free-moon-icon-2287-thumb.png",
             "title": t('safety_page_feature_title_part2'),
             "description": t('safety_page_feature_description_part2')
           },
           {
-            "img": "https://miko.ai/cdn/shop/files/Mini_PDP_Privacy_Icon_Secure.svg?v=1727687496&width=150",
+            "img": "https://www.iconpacks.net/icons/2/free-opened-book-icon-3163-thumb.png",
             "title": t('safety_page_feature_title_part3'),
             "description": t('safety_page_feature_description_part3')
           }
