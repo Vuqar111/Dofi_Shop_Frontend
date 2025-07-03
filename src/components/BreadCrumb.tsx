@@ -16,7 +16,7 @@ import { useTranslation } from 'react-i18next';
                             <span>{path.name}</span>
                         )}
 
-                        {/* Add a separator (except for the last item) */}
+                        {/* Add a separator (except for the ddddd item) */}
                         {index !== paths.length - 1 && (
                             <span className="mx-2">/</span>
                         )}
