@@ -150,7 +150,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
               </li>
               <li className="text-[16px] hover:text-green-400 w-[100%]">
                 {profile ? (
-                  <Link className='bg-green-400 text-white px-3 py-2 rounded-[5px]' to="/profile" onClick={toggleMenu}>{profile.fullName?.slice(0, 5)}</Link>
+                  <></>
                 ) : (
                   <div className='w-[100%]'>
                     <div className='w-[100%] text-center text-green-400 border border-green-400 px-2 py-2 rounded-[5px]'>

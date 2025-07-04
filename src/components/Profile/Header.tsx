@@ -12,7 +12,6 @@ export const Header = () => {
   const location = useLocation();
   const currentLang = location.pathname.split('/')[1] || 'en';
 
-  console.log(currentLang);
 
 
   useEffect(() => {
