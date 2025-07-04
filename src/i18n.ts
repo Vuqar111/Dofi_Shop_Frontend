@@ -258,6 +258,7 @@ const resources = {
             safety_page_feature_desciption_part1: "Yatmazdan əvvəl Dofi uşağınızla danışaraq sakitləşdirici işıq, səs və hekayəçilikdən istifadə edərək dinozavrlarla uçmaqdan tutmuş sualtı aləmləri kəşf etməyə qədər unikal bir yuxu macərası yaradır.",
             safety_page_feature_title_part2: "Yuxu Aktivli Lucid Siqnallar",
             safety_page_feature_description_part2: "Uşağınız yatarkən Dofi yuxuların aydınlığını, yaradıcılığı və beyin dalğalarının rahatlamasını artırmaq üçün yumşaq audio tonlardan, qoxu modullarından və incə sensor siqnallardan istifadə edir.",
+            safety_page_feature_title_part3: "Səhər Təsəvvür Jurnalı",
             safety_page_feature_description_part3: "Səhər oyandıqda, Dofi uşağınızı yuxusunu bölüşməyə və ya çəkməyə təşviq edir, bu da yaddaşı, emosional ifadəni və özünü dərk etməni inkişaf etdirir — və bunlar hamısı valideynlər üçün tətbiqdə saxlanılır.",
 
             faq_title: "Tez-tez soruşulan suallar",
