@@ -2,7 +2,14 @@ import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 
 const ProductAdvertising = () => {
-      const { t } = useTranslation();
+  const { t } = useTranslation();
+
+  const featureIcons = [
+    "https://static.thenounproject.com/png/2023630-200.png",
+    "https://cdn-icons-png.flaticon.com/512/4205/4205637.png", 
+    "https://cdn-icons-png.flaticon.com/512/1766/1766429.png", 
+    "https://cdn-icons-png.flaticon.com/512/9259/9259956.png"
+  ];
 
   return (
     <motion.div
@@ -36,10 +43,10 @@ const ProductAdvertising = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-500">
-          <span className="text-green-400">Dofi</span> {t('about_title')} 
+          <span className="text-green-400">Dofi</span> {t('about_title')}
         </h3>
         <p className="pt-4 opacity-70 text-sm sm:text-base md:text-lg">
-        {t('about_description')}
+          {t('about_description')}
         </p>
 
         {/* Features Grid */}
@@ -55,11 +62,11 @@ const ProductAdvertising = () => {
             >
               <img
                 className="w-12 h-12"
-                src="https://cdn-icons-png.freepik.com/256/7172/7172577.png?ga=GA1.1.1847706705.1740395403&semt=ais_hybrid"
-                alt=""
+                src={featureIcons[index]}
+                alt={`feature-icon-${index}`}
               />
               <p className="text-lg">
-                {t(`about_feature_part${index+1}`)}
+                {t(`about_feature_part${index + 1}`)}
               </p>
             </motion.div>
           ))}
