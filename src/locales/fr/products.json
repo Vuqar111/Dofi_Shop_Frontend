@@ -6,23 +6,27 @@
     "features": [
       {
         "name": "Robot doté d'IA et d'un toucher proche de l'humain",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_aiHumanTouch.svg?v=1727181505"
+        "icon": "https://cdn-icons-png.flaticon.com/512/1447/1447743.png"
       },
       {
         "name": "Cryptage amélioré pour plus de sécurité, contrôle parental",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_parentalControl.svg?v=1727181505"
+        "icon": "https://static.thenounproject.com/png/548802-200.png"
       },
       {
         "name": "Robot interactif qui enseigne et écoute",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/interactive2.svg?v=1729790397"
+        "icon": "https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-chatbot-line-icon-vector-png-image_6680403.png"
       },
       {
         "name": "S'engage dans un apprentissage axé sur les STEAM",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_steam.svg?v=1727181634"
+        "icon": "https://png.pngtree.com/png-vector/20230223/ourmid/pngtree-robot-line-icon-png-image_6616666.png"
+      },
+      {
+        "name": "Rempli d'applications éducatives et de jeux",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1298/1298153.png"
       },
       {
         "name": "DreamBuddy – Créateur de rêves alimenté par l’IA qui stimule l’imagination et améliore le sommeil",
-        "icon": "https://cdn.shopify.com/s/files/1/0685/0383/0762/files/features_games.svg?v=1727181634"
+        "icon": "https://www.svgrepo.com/show/380252/cloud-dream-fantasy-moon-sleep.svg"
       }
     ]
   },
