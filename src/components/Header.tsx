@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../redux/store';
 import { motion, AnimatePresence } from 'framer-motion';
 import LanguageSelector from './LanguageSelector';
+import { useTranslation } from 'react-i18next';
 
 
 export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) => {
@@ -14,6 +15,8 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const cartProducts = useSelector((state: any) => state.cart?.items);
   const currentLang = location.pathname.split('/')[1] || 'en';
+
+   const { t } = useTranslation();
 
 
   useEffect(() => {
@@ -135,7 +138,9 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                     <div className='flex items-center justify-center'>
                       <img src="https://res.cloudinary.com/dslgitrbt/image/upload/v1751318610/Classic_45D_View_wzyd3t.png" alt='' />
                     </div>
-                    <p className='pt-2 opacity-[0.8]'>For boys</p>
+                    <p className='pt-2 opacity-[0.8]'>
+                      {t('menu_sidebar_title1')}
+                    </p>
                   </Link>
                 </div>
 
@@ -144,7 +149,9 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                     <div className='flex items-center justify-center'>
                       <img src="https://res.cloudinary.com/dslgitrbt/image/upload/v1751396221/Pink_45D_View_oxdb2w.png" alt='' />
                     </div>
-                    <p className='pt-2 opacity-[0.8]'>For girls</p>
+                    <p className='pt-2 opacity-[0.8]'>
+                      {t('menu_sidebar_title2')}
+                    </p>
                   </Link>
                 </div>
               </li>

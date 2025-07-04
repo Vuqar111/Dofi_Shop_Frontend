@@ -231,7 +231,9 @@ const resources = {
             about_page_title2: "We're Dofi",
             about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
             about_page_info: "Dofi began as a spark of curiosity between Vugar Hasanov and Sanan Muzaffarov — a shared dream to build a robot that felt alive. Amina Aliyeva brought the robot to life from within, carefully engineering the electronics that power every move and moment. With Laman Hasanova crafting its playful personality through UI/UX, Huseyn and Valida Adilova shaping its iconic 3D form, and Anar Aghazada added the final touch with his signature design harmony. Shaped by countless late nights, curious minds, and an inspiring team spirit, Dofi is more than a product — it’s the result of true creative collaboration.",
-
+            menu_sidebar_title1: "For boys",
+            menu_sidebar_title2: "For girls",
+            
         },
     },
     az: {
@@ -448,7 +450,9 @@ const resources = {
             about_page_title: "Salam, Dünya",
             about_page_title2: "Biz Dofi'yik",
             about_page_description: "Hər böyük robotun arxasında maraqlı bir zəkâ və xəyalpərəstlərdən ibarət bir komanda dayanır. Dofi'nin necə yarandığını və ona ürək verən insanları öyrənin.",
-            about_page_info: "Dofi, Vüqar Həsənov və Sənan Müzəffərov arasında yaranan maraq qığılcımından doğuldu — canlı hiss etdirən bir robot yaratmaq arzusu. Əminə Əliyeva Dofiyə can verərək onun hərəkətlərini və anlarını idarə edən elektronikaları diqqətlə inşa etdi. Ləman Həsənova onun əyləncəli və yaxın xarakterini özünəməxsus dizaynı ilə canlandırdı, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə özünəməxsus dizayn harmoniyası ilə son toxunuşu əlavə etdi. Sonsuz gecələr, maraqlı zehinlər və ilhamverici komanda ruhu ilə formalaşan Dofi bir məhsuldan daha çoxdur — bu, həqiqi yaradıcı əməkdaşlığın nəticəsidir."
+            about_page_info: "Dofi, Vüqar Həsənov və Sənan Müzəffərov arasında yaranan maraq qığılcımından doğuldu — canlı hiss etdirən bir robot yaratmaq arzusu. Əminə Əliyeva Dofiyə can verərək onun hərəkətlərini və anlarını idarə edən elektronikaları diqqətlə inşa etdi. Ləman Həsənova onun əyləncəli və yaxın xarakterini özünəməxsus dizaynı ilə canlandırdı, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə özünəməxsus dizayn harmoniyası ilə son toxunuşu əlavə etdi. Sonsuz gecələr, maraqlı zehinlər və ilhamverici komanda ruhu ilə formalaşan Dofi bir məhsuldan daha çoxdur — bu, həqiqi yaradıcı əməkdaşlığın nəticəsidir.",
+            menu_sidebar_title1: "Oğlanlar üçün",
+            menu_sidebar_title2: "Qızlar üçün",
         },
     },
     tr: {
