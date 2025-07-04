@@ -39,6 +39,7 @@ const Footer = () => {
                     </h3>
                     <ul>
                         <li className='mb-2 text-sm'><Link to={`/${currentLang}/about`} className="hover:underline">{t('footer_part5')}</Link></li>
+                        <li className='mb-2 text-sm'><Link to={`/${currentLang}/app`} className="hover:underline">{t('footer_part13')}</Link></li>
                         {/* <li className='mb-2 text-sm'><Link to={`/${currentLang}/shipping`} className="hover:underline">{t('footer_part6')}</Link></li>
                         <li className='mb-2 text-sm'><Link to={`/${currentLang}/returns`} className="hover:underline">{t('footer_part7')}</Link></li>
                         <li className='mb-2 text-sm'><Link to={`/${currentLang}/privacy`} className="hover:underline">{t('footer_part8')}</Link></li>
