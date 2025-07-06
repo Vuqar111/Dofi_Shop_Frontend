@@ -232,8 +232,7 @@ const resources = {
             about_page_description: "Behind every great robot is a curious mind and a team of dreamers. Learn how Dofi came to life—and the humans who gave it a heart.",
             about_page_info: "Dofi began as a spark of curiosity between Vugar Hasanov and Sanan Muzaffarov — a shared dream to build a robot that felt alive. Amina Aliyeva brought the robot to life from within, carefully engineering the electronics that power every move and moment. With Laman Hasanova crafting its playful personality through UI/UX, Huseyn and Valida Adilova shaping its iconic 3D form, and Anar Aghazada added the final touch with his signature design harmony. Shaped by countless late nights, curious minds, and an inspiring team spirit, Dofi is more than a product — it’s the result of true creative collaboration.",
             menu_sidebar_title1: "For boys",
-            menu_sidebar_title2: "For girls",
-            
+            menu_sidebar_title2: "For girls", 
         },
     },
     az: {
@@ -652,7 +651,9 @@ const resources = {
             about_page_title: "Merhaba, Dünya",
             about_page_title2: "Biz Dofi'yiz",
             about_page_description: "Her harika robotun arkasında meraklı bir zihin ve hayalperest bir ekip vardır. Dofi'nin nasıl hayata geçtiğini ve ona kalp veren insanları öğrenin.",
-            about_page_info: "Dofi, Vugar Hasanov ve Sanan Muzaffarov arasında doğan bir merak kıvılcımından ortaya çıktı — canlı hissi veren bir robot yaratma arzusu. Amina Aliyeva, robotun her hareketini ve anını yönlendiren elektronik sistemleri titizlikle inşa ederek Dofi’ye hayat verdi. Laman Hasanova, onun eğlenceli ve samimi kişiliğini kendine özgü tasarımıyla canlandırdı. Huseyn ve Valida Adilova, ikonik 3D formunu şekillendirdi, Anar Aghazada ise kendine has tasarım uyumuyla son dokunuşu yaptı. Sonsuz geceler, merak dolu zihinler ve ilham verici bir ekip ruhuyla şekillenen Dofi, bir üründen çok daha fazlası — bu, gerçek bir yaratıcı iş birliğinin sonucudur."
+            about_page_info: "Dofi, Vugar Hasanov ve Sanan Muzaffarov arasında doğan bir merak kıvılcımından ortaya çıktı — canlı hissi veren bir robot yaratma arzusu. Amina Aliyeva, robotun her hareketini ve anını yönlendiren elektronik sistemleri titizlikle inşa ederek Dofi’ye hayat verdi. Laman Hasanova, onun eğlenceli ve samimi kişiliğini kendine özgü tasarımıyla canlandırdı. Huseyn ve Valida Adilova, ikonik 3D formunu şekillendirdi, Anar Aghazada ise kendine has tasarım uyumuyla son dokunuşu yaptı. Sonsuz geceler, merak dolu zihinler ve ilham verici bir ekip ruhuyla şekillenen Dofi, bir üründen çok daha fazlası — bu, gerçek bir yaratıcı iş birliğinin sonucudur.",
+            menu_sidebar_title1: "Erkek çocuklar için",
+            menu_sidebar_title2: "Kız çocuklar için"            
         },
     },
     ar: {
@@ -868,7 +869,9 @@ const resources = {
             about_page_title: "مرحباً، أيها العالم",
             about_page_title2: "نحن دوفي",
             about_page_description: "وراء كل روبوت عظيم عقل فضولي وفريق من الحالمين. تعرف على كيف وُلد دوفي — وعلى الأشخاص الذين منحوه قلباً.",
-            about_page_info: "وُلد Dofi من شرارة فضول بين Vugar Hasanov وSanan Muzaffarov — حلم مشترك لبناء روبوت يبدو حيًا. قامت Amina Aliyeva ببث الحياة في الروبوت من الداخل من خلال بناء الإلكترونيات التي تتحكم في كل حركة ولحظة بعناية. قامت Laman Hasanova بإحياء شخصيته المرحة والدافئة من خلال تصميمها الفريد. صمم Huseyn وValida Adilova شكله الأيقوني ثلاثي الأبعاد، وأضفى Anar Aghazada اللمسة الأخيرة من خلال تناغمه التصميمي الفريد. تم تشكيل Dofi من خلال ليالٍ لا تُعد، وعقول فضولية، وروح فريق ملهمة — إنه أكثر من مجرد منتج، بل هو نتيجة تعاون إبداعي حقيقي."
+            about_page_info: "وُلد Dofi من شرارة فضول بين Vugar Hasanov وSanan Muzaffarov — حلم مشترك لبناء روبوت يبدو حيًا. قامت Amina Aliyeva ببث الحياة في الروبوت من الداخل من خلال بناء الإلكترونيات التي تتحكم في كل حركة ولحظة بعناية. قامت Laman Hasanova بإحياء شخصيته المرحة والدافئة من خلال تصميمها الفريد. صمم Huseyn وValida Adilova شكله الأيقوني ثلاثي الأبعاد، وأضفى Anar Aghazada اللمسة الأخيرة من خلال تناغمه التصميمي الفريد. تم تشكيل Dofi من خلال ليالٍ لا تُعد، وعقول فضولية، وروح فريق ملهمة — إنه أكثر من مجرد منتج، بل هو نتيجة تعاون إبداعي حقيقي.",
+            menu_sidebar_title1: "للأولاد",
+            menu_sidebar_title2: "للبنات"
         },
     },
     fr: {
@@ -1069,7 +1072,9 @@ const resources = {
             about_page_title: "Bonjour, le monde",
             about_page_title2: "Nous sommes Dofi",
             about_page_description: "Derrière chaque grand robot se cache un esprit curieux et une équipe de rêveurs. Découvrez comment Dofi a vu le jour — et les humains qui lui ont donné un cœur.",
-            about_page_info: "Dofi est né d’une étincelle de curiosité entre Vugar Hasanov et Sanan Muzaffarov — le rêve commun de créer un robot qui semble vivant. Amina Aliyeva a donné vie à Dofi en construisant soigneusement les composants électroniques qui contrôlent chaque mouvement et moment. Laman Hasanova a insufflé sa personnalité joyeuse et attachante grâce à son design unique. Huseyn et Valida Adilova ont façonné sa forme 3D emblématique, et Anar Aghazada a ajouté la touche finale avec son harmonie de design unique. Né de nombreuses nuits blanches, d’esprits curieux et d’un esprit d’équipe inspirant, Dofi est bien plus qu’un simple produit — c’est le fruit d’une véritable collaboration créative."
+            about_page_info: "Dofi est né d’une étincelle de curiosité entre Vugar Hasanov et Sanan Muzaffarov — le rêve commun de créer un robot qui semble vivant. Amina Aliyeva a donné vie à Dofi en construisant soigneusement les composants électroniques qui contrôlent chaque mouvement et moment. Laman Hasanova a insufflé sa personnalité joyeuse et attachante grâce à son design unique. Huseyn et Valida Adilova ont façonné sa forme 3D emblématique, et Anar Aghazada a ajouté la touche finale avec son harmonie de design unique. Né de nombreuses nuits blanches, d’esprits curieux et d’un esprit d’équipe inspirant, Dofi est bien plus qu’un simple produit — c’est le fruit d’une véritable collaboration créative.",
+            menu_sidebar_title1: "Pour les garçons",
+            menu_sidebar_title2: "Pour les filles"
         },
     },
     cn: {
@@ -1287,7 +1292,9 @@ const resources = {
             about_page_title: "你好，世界",
             about_page_title2: "我们是 Dofi",
             about_page_description: "每一个伟大的机器人背后，都有一颗好奇的心和一群梦想家。了解 Dofi 是如何诞生的——以及那些赋予它心灵的人。",
-            about_page_info: "Dofi 起初源于 Vugar Hasanov 和 Sanan Muzaffarov 之间一丝好奇的火花——一个共同的梦想：打造一个有生命感的机器人。Amina Aliyeva 精心构建了驱动每一个动作与瞬间的电子系统，让 Dofi 真正“活”了过来。Laman Hasanova 通过她独特的设计赋予了 Dofi 充满乐趣与亲和力的个性。Huseyn 和 Valida Adilova 塑造了它标志性的 3D 外形，而 Anar Aghazada 则用他独特的设计和谐感完成了最终点缀。经历了无数个不眠之夜、充满好奇的思维和鼓舞人心的团队精神，Dofi 不只是一个产品，而是真正创意协作的结晶。"
+            about_page_info: "Dofi 起初源于 Vugar Hasanov 和 Sanan Muzaffarov 之间一丝好奇的火花——一个共同的梦想：打造一个有生命感的机器人。Amina Aliyeva 精心构建了驱动每一个动作与瞬间的电子系统，让 Dofi 真正“活”了过来。Laman Hasanova 通过她独特的设计赋予了 Dofi 充满乐趣与亲和力的个性。Huseyn 和 Valida Adilova 塑造了它标志性的 3D 外形，而 Anar Aghazada 则用他独特的设计和谐感完成了最终点缀。经历了无数个不眠之夜、充满好奇的思维和鼓舞人心的团队精神，Dofi 不只是一个产品，而是真正创意协作的结晶。",
+            menu_sidebar_title1: "男孩专属",
+            menu_sidebar_title2: "女孩专属"
         },
     },
     de: {
@@ -1505,7 +1512,9 @@ const resources = {
             about_page_title: "Hallo, Welt",
             about_page_title2: "Wir sind Dofi",
             about_page_description: "Hinter jedem großartigen Roboter steht ein neugieriger Geist und ein Team von Träumern. Erfahre, wie Dofi zum Leben erweckt wurde – und die Menschen, die ihm ein Herz gaben.",
-            about_page_info: "Dofi entstand aus einem Funken der Neugier zwischen Vugar Hasanov und Sanan Muzaffarov — dem gemeinsamen Traum, einen Roboter zu erschaffen, der lebendig wirkt. Amina Aliyeva erweckte den Roboter zum Leben, indem sie sorgfältig die Elektronik entwickelte, die jede Bewegung und jeden Moment steuert. Laman Hasanova verlieh ihm mit ihrem einzigartigen Design eine spielerische und nahbare Persönlichkeit. Huseyn und Valida Adilova formten seine ikonische 3D-Gestalt, und Anar Aghazada setzte mit seiner besonderen Designharmonie den letzten Schliff. Geformt durch unzählige Nächte, neugierige Köpfe und inspirierenden Teamgeist ist Dofi mehr als nur ein Produkt — es ist das Ergebnis echter kreativer Zusammenarbeit."
+            about_page_info: "Dofi entstand aus einem Funken der Neugier zwischen Vugar Hasanov und Sanan Muzaffarov — dem gemeinsamen Traum, einen Roboter zu erschaffen, der lebendig wirkt. Amina Aliyeva erweckte den Roboter zum Leben, indem sie sorgfältig die Elektronik entwickelte, die jede Bewegung und jeden Moment steuert. Laman Hasanova verlieh ihm mit ihrem einzigartigen Design eine spielerische und nahbare Persönlichkeit. Huseyn und Valida Adilova formten seine ikonische 3D-Gestalt, und Anar Aghazada setzte mit seiner besonderen Designharmonie den letzten Schliff. Geformt durch unzählige Nächte, neugierige Köpfe und inspirierenden Teamgeist ist Dofi mehr als nur ein Produkt — es ist das Ergebnis echter kreativer Zusammenarbeit.",
+            menu_sidebar_title1: "Für Jungen",
+            menu_sidebar_title2: "Für Mädchen"
         },
     },
     es: {
@@ -1723,7 +1732,9 @@ const resources = {
             about_page_title: "Hola, Mundo",
             about_page_title2: "Somos Dofi",
             about_page_description: "Detrás de cada gran robot hay una mente curiosa y un equipo de soñadores. Descubre cómo nació Dofi—y las personas que le dieron un corazón.",
-            about_page_info: "Dofi nació de una chispa de curiosidad entre Vugar Hasanov y Sanan Muzaffarov — un sueño compartido de crear un robot que se sintiera vivo. Amina Aliyeva le dio vida construyendo cuidadosamente la electrónica que controla cada movimiento y momento. Laman Hasanova dio forma a su personalidad divertida y cercana con un diseño único. Huseyn y Valida Adilova modelaron su icónica forma en 3D, y Anar Aghazada aportó el toque final con su armonía visual distintiva. Forjado en incontables noches, por mentes curiosas y un espíritu de equipo inspirador, Dofi es mucho más que un producto — es el resultado de una verdadera colaboración creativa."
+            about_page_info: "Dofi nació de una chispa de curiosidad entre Vugar Hasanov y Sanan Muzaffarov — un sueño compartido de crear un robot que se sintiera vivo. Amina Aliyeva le dio vida construyendo cuidadosamente la electrónica que controla cada movimiento y momento. Laman Hasanova dio forma a su personalidad divertida y cercana con un diseño único. Huseyn y Valida Adilova modelaron su icónica forma en 3D, y Anar Aghazada aportó el toque final con su armonía visual distintiva. Forjado en incontables noches, por mentes curiosas y un espíritu de equipo inspirador, Dofi es mucho más que un producto — es el resultado de una verdadera colaboración creativa.",
+            menu_sidebar_title1: "Para niños",
+            menu_sidebar_title2: "Para niñas"
         },
     }
 };
