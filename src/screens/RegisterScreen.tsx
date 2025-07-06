@@ -6,6 +6,7 @@ import ActionButton from "../partials/ActionButton";
 import { useState, useEffect } from "react";
 import swal from 'sweetalert';
 import { useTranslation } from 'react-i18next';
+import registerWallpaper from '../assets/images/registerWallpaper.png';
 
 interface ValidationErrors {
     fullName?: string;
@@ -299,7 +300,7 @@ const RegisterScreen = () => {
             </div>
             <div className="hidden md:block md:w-1/2 relative">
                 <img
-                    src="https://images.pexels.com/photos/2026960/pexels-photo-2026960.jpeg?auto=compress&cs=tinysrgb&w=1920"
+                src={registerWallpaper}
                     alt="Register Wallpaper"
                     className="absolute inset-0 w-full h-full object-cover"
                 />

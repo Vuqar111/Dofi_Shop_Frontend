@@ -16,7 +16,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
   const cartProducts = useSelector((state: any) => state.cart?.items);
   const currentLang = location.pathname.split('/')[1] || 'en';
 
-   const { t } = useTranslation();
+  const { t } = useTranslation();
 
 
   useEffect(() => {
@@ -164,7 +164,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
                       <Link to={`/${currentLang}/auth/login`} onClick={toggleMenu}>Login</Link>
                     </div>
                     <div className='w-[100%] text-center text-white border border-green-400 bg-green-400 px-2 py-2 rounded-[5px] mt-2'>
-                      <Link  to={`/${currentLang}/auth/register`} onClick={toggleMenu}>Sign up</Link>
+                      <Link to={`/${currentLang}/auth/register`} onClick={toggleMenu}>Sign up</Link>
                     </div>
                   </div>
                 )}
