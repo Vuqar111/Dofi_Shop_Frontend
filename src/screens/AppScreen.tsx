@@ -38,41 +38,51 @@ const AppScreen = () => {
 
         {/* Features Section */}
         <section className="bg-white py-16 px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            {t('app_testimontial_title')}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="p-6 bg-blue-100 rounded-xl shadow hover:scale-105 transition">
-              <h3 className="text-xl font-semibold mb-2">
-                
-                {t('app_testimontial_title1')}
-              </h3>
-              <p>
-                
-                {t('app_testimontial_description1')}
-              </p>
-            </div>
-            <div className="p-6 bg-indigo-100 rounded-xl shadow hover:scale-105 transition">
-              <h3 className="text-xl font-semibold mb-2">
-                
-                {t('app_testimontial_title2')}
-              </h3>
-              <p>
-                
-                {t('app_testimontial_description2')}
-              </p>
-            </div>
-            <div className="p-6 bg-purple-100 rounded-xl shadow hover:scale-105 transition">
-              <h3 className="text-xl font-semibold mb-2">
-                
-                {t('app_testimontial_title3')}
-              </h3>
-              <p>
-                {t('app_testimontial_description3')}
-              </p>
-            </div>
-          </div>
-        </section>
+  <h2 className="text-3xl font-bold text-center mb-12">
+    {t('app_testimontial_title')}
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div className="p-6 bg-blue-100 rounded-xl shadow hover:scale-105 transition">
+      <h3 className="text-xl font-semibold mb-2">
+        {t('app_testimontial_title1')}
+      </h3>
+      <p>{t('app_testimontial_description1')}</p>
+    </div>
+
+    <div className="p-6 bg-indigo-100 rounded-xl shadow hover:scale-105 transition">
+      <h3 className="text-xl font-semibold mb-2">
+        {t('app_testimontial_title2')}
+      </h3>
+      <p>{t('app_testimontial_description2')}</p>
+    </div>
+
+    <div className="p-6 bg-purple-100 rounded-xl shadow hover:scale-105 transition">
+      <h3 className="text-xl font-semibold mb-2">
+        {t('app_testimontial_title3')}
+      </h3>
+      <p>{t('app_testimontial_description3')}</p>
+    </div>
+
+    {/* Centered Bottom Row */}
+    <div className="md:col-span-3 flex justify-center gap-8 flex-wrap">
+      <div className="p-6 bg-blue-100 rounded-xl shadow hover:scale-105 transition w-full md:w-[300px]">
+        <h3 className="text-xl font-semibold mb-2">
+          {t('app_testimontial_title4')}
+        </h3>
+        <p>{t('app_testimontial_description4')}</p>
+      </div>
+
+      <div className="p-6 bg-indigo-100 rounded-xl shadow hover:scale-105 transition w-full md:w-[300px]">
+        <h3 className="text-xl font-semibold mb-2">
+          {t('app_testimontial_title5')}
+        </h3>
+        <p>{t('app_testimontial_description5')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
       </main>
 
       <Footer />
