@@ -17,6 +17,7 @@ import AboutScreen from './screens/AboutScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
 import CheckOutScreen from './screens/CheckOutScreen';
 import { useTranslation } from 'react-i18next';
+import AppScreen from './screens/AppScreen';
 
 const DefaultLayout = lazy(() => import('./layout/layout'));
 
@@ -45,6 +46,7 @@ const App = () => {
       <Route path="" element={<Home />} />
       <Route path="/:lang" element={<Home />} />
       <Route path="/:lang/auth/register" element={<RegisterScreen />} />
+      <Route path="/:lang/app" element={<AppScreen />} />
       <Route path="/:lang/auth/login" element={<LoginScreen />} />
       <Route path="/:lang/auth/forgot-password" element={<ForgotPassword />} />
       <Route path="/:lang/auth/reset-password" element={<ResetPasswordScreen />} />
