@@ -234,9 +234,6 @@ const resources = {
             menu_sidebar_title1: "For boys",
             menu_sidebar_title2: "For girls", 
 
-
-
-
             app_page_title: "Meet Dofi: Your Learning Buddy!",
             app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
             app_slide_title: "📱 App Preview",
@@ -467,20 +464,16 @@ const resources = {
             menu_sidebar_title1: "Oğlanlar üçün",
             menu_sidebar_title2: "Qızlar üçün",
 
-
-
-
-            app_page_title: "Meet Dofi: Yourddddd!",
-            app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
-            app_slide_title: "📱 App Preview",
-            app_testimontial_title: "✨ What Dofi Can Do",
-            app_testimontial_title1: "🎙️ Voice Command",
-            app_testimontial_description1: "Dofi understands and responds to kids’ voice instructions in Azerbaijani and English.",
-            app_testimontial_title2: "📚 Educational Games",
-            app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
-            app_testimontial_title3: "🧠 Emotional AI",
-            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!"
-        
+            app_page_title: "Dofi ilə tanış olun: Sizin Öyrənmə Dostunuz!",
+            app_page_description: "Dofi uşaqlara öyrənmək, oynamaq və inkişaf etmək üçün hazırlanmış interaktiv, əyləncəli və maarifləndirici robottur. 🎓🤖",
+            app_slide_title: "📱 Tətbiqə Baxış",
+            app_testimontial_title: "✨ Dofi nələr edə bilər",
+            app_testimontial_title1: "🎙️ Səsli Əmrlər",
+            app_testimontial_description1: "Dofi uşaqların Azərbaycan və İngilis dilində səsli göstərişlərini anlayır və cavab verir.",
+            app_testimontial_title2: "📚 Elmi Oyunlar",
+            app_testimontial_description2: "3-10 yaş arası uşaqlar üçün riyaziyyat, dil oyunları və yaddaş tapşırıqları təqdim edir.",
+            app_testimontial_title3: "🧠 Emosional Süni İntellekt",
+            app_testimontial_description3: "Dofi emosiyalarını animasiyalı gözlər və mimikalarla ifadə edir. O, canlı kimi hiss olunur!",        
         },
     },
     tr: {
@@ -682,7 +675,18 @@ const resources = {
             about_page_description: "Her harika robotun arkasında meraklı bir zihin ve hayalperest bir ekip vardır. Dofi'nin nasıl hayata geçtiğini ve ona kalp veren insanları öğrenin.",
             about_page_info: "Dofi, Vugar Hasanov ve Sanan Muzaffarov arasında doğan bir merak kıvılcımından ortaya çıktı — canlı hissi veren bir robot yaratma arzusu. Amina Aliyeva, robotun her hareketini ve anını yönlendiren elektronik sistemleri titizlikle inşa ederek Dofi’ye hayat verdi. Laman Hasanova, onun eğlenceli ve samimi kişiliğini kendine özgü tasarımıyla canlandırdı. Huseyn ve Valida Adilova, ikonik 3D formunu şekillendirdi, Anar Aghazada ise kendine has tasarım uyumuyla son dokunuşu yaptı. Sonsuz geceler, merak dolu zihinler ve ilham verici bir ekip ruhuyla şekillenen Dofi, bir üründen çok daha fazlası — bu, gerçek bir yaratıcı iş birliğinin sonucudur.",
             menu_sidebar_title1: "Erkek çocuklar için",
-            menu_sidebar_title2: "Kız çocuklar için"            
+            menu_sidebar_title2: "Kız çocuklar için",
+            
+            app_page_title: "Dofi ile Tanışın: Öğrenme Arkadaşınız!",
+            app_page_description: "Dofi, çocukların öğrenmesini, oynamasını ve gelişmesini destekleyen etkileşimli, eğlenceli ve eğitici bir robottur. 🎓🤖",
+            app_slide_title: "📱 Uygulama Önizlemesi",
+            app_testimontial_title: "✨ Dofi Neler Yapabilir",
+            app_testimontial_title1: "🎙️ Sesli Komut",
+            app_testimontial_description1: "Dofi, çocukların Türkçe ve İngilizce sesli komutlarını anlar ve yanıt verir.",
+            app_testimontial_title2: "📚 Eğitici Oyunlar",
+            app_testimontial_description2: "3-10 yaş arası çocuklar için matematik testleri, dil oyunları ve hafıza aktiviteleri sunar.",
+            app_testimontial_title3: "🧠 Duygusal Yapay Zeka",
+            app_testimontial_description3: "Dofi, animasyonlu gözler ve ifadelerle duygularını gösterir. Canlı gibi hissedilir!",
         },
     },
     ar: {
@@ -900,7 +904,18 @@ const resources = {
             about_page_description: "وراء كل روبوت عظيم عقل فضولي وفريق من الحالمين. تعرف على كيف وُلد دوفي — وعلى الأشخاص الذين منحوه قلباً.",
             about_page_info: "وُلد Dofi من شرارة فضول بين Vugar Hasanov وSanan Muzaffarov — حلم مشترك لبناء روبوت يبدو حيًا. قامت Amina Aliyeva ببث الحياة في الروبوت من الداخل من خلال بناء الإلكترونيات التي تتحكم في كل حركة ولحظة بعناية. قامت Laman Hasanova بإحياء شخصيته المرحة والدافئة من خلال تصميمها الفريد. صمم Huseyn وValida Adilova شكله الأيقوني ثلاثي الأبعاد، وأضفى Anar Aghazada اللمسة الأخيرة من خلال تناغمه التصميمي الفريد. تم تشكيل Dofi من خلال ليالٍ لا تُعد، وعقول فضولية، وروح فريق ملهمة — إنه أكثر من مجرد منتج، بل هو نتيجة تعاون إبداعي حقيقي.",
             menu_sidebar_title1: "للأولاد",
-            menu_sidebar_title2: "للبنات"
+            menu_sidebar_title2: "للبنات",
+
+            app_page_title: "تعرف على دوفي: رفيقك في التعلم!",
+            app_page_description: "دوفي هو روبوت تفاعلي، ممتع وتعليمي مصمم لمساعدة الأطفال على التعلم واللعب والنمو. 🎓🤖",
+            app_slide_title: "📱 معاينة التطبيق",
+            app_testimontial_title: "✨ ماذا يمكن أن يفعل دوفي",
+            app_testimontial_title1: "🎙️ الأوامر الصوتية",
+            app_testimontial_description1: "دوفي يفهم ويستجيب لتعليمات الأطفال الصوتية باللغة الأذربيجانية والإنجليزية.",
+            app_testimontial_title2: "📚 ألعاب تعليمية",
+            app_testimontial_description2: "يقدم اختبارات رياضيات، ألعاب لغوية، وتحديات ذاكرة للأطفال من عمر 3 إلى 10 سنوات.",
+            app_testimontial_title3: "🧠 ذكاء عاطفي",
+            app_testimontial_description3: "دوفي يعبر عن مشاعره من خلال عيون متحركة وتعبيرات وجهية. إنه يبدو حياً!",
         },
     },
     fr: {
@@ -1080,7 +1095,6 @@ const resources = {
             forgot_page_footer2: "Connexion",
             forgot_page_password_modal: "Vérifiez votre e-mail",
 
-
             cart_page_part1: "Votre panier",
             cart_page_part2: "Continuer",
             cart_page_part3: "Produit",
@@ -1103,7 +1117,18 @@ const resources = {
             about_page_description: "Derrière chaque grand robot se cache un esprit curieux et une équipe de rêveurs. Découvrez comment Dofi a vu le jour — et les humains qui lui ont donné un cœur.",
             about_page_info: "Dofi est né d’une étincelle de curiosité entre Vugar Hasanov et Sanan Muzaffarov — le rêve commun de créer un robot qui semble vivant. Amina Aliyeva a donné vie à Dofi en construisant soigneusement les composants électroniques qui contrôlent chaque mouvement et moment. Laman Hasanova a insufflé sa personnalité joyeuse et attachante grâce à son design unique. Huseyn et Valida Adilova ont façonné sa forme 3D emblématique, et Anar Aghazada a ajouté la touche finale avec son harmonie de design unique. Né de nombreuses nuits blanches, d’esprits curieux et d’un esprit d’équipe inspirant, Dofi est bien plus qu’un simple produit — c’est le fruit d’une véritable collaboration créative.",
             menu_sidebar_title1: "Pour les garçons",
-            menu_sidebar_title2: "Pour les filles"
+            menu_sidebar_title2: "Pour les filles",
+            
+            app_page_title: "Rencontrez Dofi : Votre compagnon d’apprentissage !",
+            app_page_description: "Dofi est un robot interactif, ludique et éducatif conçu pour aider les enfants à apprendre, jouer et grandir. 🎓🤖",
+            app_slide_title: "📱 Aperçu de l’application",
+            app_testimontial_title: "✨ Ce que Dofi peut faire",
+            app_testimontial_title1: "🎙️ Commandes vocales",
+            app_testimontial_description1: "Dofi comprend et répond aux instructions vocales des enfants en azéri et en anglais.",
+            app_testimontial_title2: "📚 Jeux éducatifs",
+            app_testimontial_description2: "Propose des quiz de maths, jeux de langage et défis de mémoire pour les enfants de 3 à 10 ans.",
+            app_testimontial_title3: "🧠 IA Émotionnelle",
+            app_testimontial_description3: "Dofi exprime des émotions avec des yeux animés et des expressions faciales. Il semble vivant !",
         },
     },
     cn: {
@@ -1323,7 +1348,18 @@ const resources = {
             about_page_description: "每一个伟大的机器人背后，都有一颗好奇的心和一群梦想家。了解 Dofi 是如何诞生的——以及那些赋予它心灵的人。",
             about_page_info: "Dofi 起初源于 Vugar Hasanov 和 Sanan Muzaffarov 之间一丝好奇的火花——一个共同的梦想：打造一个有生命感的机器人。Amina Aliyeva 精心构建了驱动每一个动作与瞬间的电子系统，让 Dofi 真正“活”了过来。Laman Hasanova 通过她独特的设计赋予了 Dofi 充满乐趣与亲和力的个性。Huseyn 和 Valida Adilova 塑造了它标志性的 3D 外形，而 Anar Aghazada 则用他独特的设计和谐感完成了最终点缀。经历了无数个不眠之夜、充满好奇的思维和鼓舞人心的团队精神，Dofi 不只是一个产品，而是真正创意协作的结晶。",
             menu_sidebar_title1: "男孩专属",
-            menu_sidebar_title2: "女孩专属"
+            menu_sidebar_title2: "女孩专属",
+
+            app_page_title: "认识Dofi：你的学习伙伴！",
+            app_page_description: "Dofi是一款互动、有趣且具有教育意义的机器人，专为帮助儿童学习、娱乐和成长而设计。🎓🤖",
+            app_slide_title: "📱 应用预览",
+            app_testimontial_title: "✨ Dofi的功能",
+            app_testimontial_title1: "🎙️ 语音指令",
+            app_testimontial_description1: "Dofi能听懂并响应儿童的阿塞拜疆语和英语语音指令。",
+            app_testimontial_title2: "📚 教育游戏",
+            app_testimontial_description2: "提供适合3-10岁儿童的数学测验、语言游戏和记忆挑战。",
+            app_testimontial_title3: "🧠 情感AI",
+            app_testimontial_description3: "Dofi通过动画眼睛和表情来表达情绪。它仿佛是有生命的！",
         },
     },
     de: {
@@ -1543,7 +1579,18 @@ const resources = {
             about_page_description: "Hinter jedem großartigen Roboter steht ein neugieriger Geist und ein Team von Träumern. Erfahre, wie Dofi zum Leben erweckt wurde – und die Menschen, die ihm ein Herz gaben.",
             about_page_info: "Dofi entstand aus einem Funken der Neugier zwischen Vugar Hasanov und Sanan Muzaffarov — dem gemeinsamen Traum, einen Roboter zu erschaffen, der lebendig wirkt. Amina Aliyeva erweckte den Roboter zum Leben, indem sie sorgfältig die Elektronik entwickelte, die jede Bewegung und jeden Moment steuert. Laman Hasanova verlieh ihm mit ihrem einzigartigen Design eine spielerische und nahbare Persönlichkeit. Huseyn und Valida Adilova formten seine ikonische 3D-Gestalt, und Anar Aghazada setzte mit seiner besonderen Designharmonie den letzten Schliff. Geformt durch unzählige Nächte, neugierige Köpfe und inspirierenden Teamgeist ist Dofi mehr als nur ein Produkt — es ist das Ergebnis echter kreativer Zusammenarbeit.",
             menu_sidebar_title1: "Für Jungen",
-            menu_sidebar_title2: "Für Mädchen"
+            menu_sidebar_title2: "Für Mädchen",
+
+            app_page_title: "Lerne Dofi kennen: Dein Lernfreund!",
+            app_page_description: "Dofi ist ein interaktiver, lustiger und lehrreicher Roboter, der Kindern beim Lernen, Spielen und Wachsen hilft. 🎓🤖",
+            app_slide_title: "📱 App-Vorschau",
+            app_testimontial_title: "✨ Was Dofi kann",
+            app_testimontial_title1: "🎙️ Sprachbefehle",
+            app_testimontial_description1: "Dofi versteht und reagiert auf Sprachbefehle von Kindern auf Aserbaidschanisch und Englisch.",
+            app_testimontial_title2: "📚 Lernspiele",
+            app_testimontial_description2: "Bietet Mathematik-Quiz, Sprachspiele und Gedächtnisübungen für Kinder im Alter von 3–10 Jahren.",
+            app_testimontial_title3: "🧠 Emotionale KI",
+            app_testimontial_description3: "Dofi zeigt Emotionen durch animierte Augen und Gesichtsausdrücke. Es fühlt sich lebendig an!",
         },
     },
     es: {
@@ -1763,7 +1810,18 @@ const resources = {
             about_page_description: "Detrás de cada gran robot hay una mente curiosa y un equipo de soñadores. Descubre cómo nació Dofi—y las personas que le dieron un corazón.",
             about_page_info: "Dofi nació de una chispa de curiosidad entre Vugar Hasanov y Sanan Muzaffarov — un sueño compartido de crear un robot que se sintiera vivo. Amina Aliyeva le dio vida construyendo cuidadosamente la electrónica que controla cada movimiento y momento. Laman Hasanova dio forma a su personalidad divertida y cercana con un diseño único. Huseyn y Valida Adilova modelaron su icónica forma en 3D, y Anar Aghazada aportó el toque final con su armonía visual distintiva. Forjado en incontables noches, por mentes curiosas y un espíritu de equipo inspirador, Dofi es mucho más que un producto — es el resultado de una verdadera colaboración creativa.",
             menu_sidebar_title1: "Para niños",
-            menu_sidebar_title2: "Para niñas"
+            menu_sidebar_title2: "Para niñas",
+
+            app_page_title: "Conoce a Dofi: ¡Tu compañero de aprendizaje!",
+            app_page_description: "Dofi es un robot interactivo, divertido y educativo diseñado para ayudar a los niños a aprender, jugar y desarrollarse. 🎓🤖",
+            app_slide_title: "📱 Vista previa de la app",
+            app_testimontial_title: "✨ Lo que puede hacer Dofi",
+            app_testimontial_title1: "🎙️ Comandos de voz",
+            app_testimontial_description1: "Dofi entiende y responde a instrucciones de voz en azerí e inglés.",
+            app_testimontial_title2: "📚 Juegos educativos",
+            app_testimontial_description2: "Ofrece cuestionarios de matemáticas, juegos de lenguaje y desafíos de memoria para niños de 3 a 10 años.",
+            app_testimontial_title3: "🧠 IA emocional",
+            app_testimontial_description3: "Dofi muestra emociones con ojos animados y expresiones. ¡Parece tener vida propia!",
         },
     }
 };
