@@ -233,6 +233,20 @@ const resources = {
             about_page_info: "Dofi began as a spark of curiosity between Vugar Hasanov and Sanan Muzaffarov — a shared dream to build a robot that felt alive. Amina Aliyeva brought the robot to life from within, carefully engineering the electronics that power every move and moment. With Laman Hasanova crafting its playful personality through UI/UX, Huseyn and Valida Adilova shaping its iconic 3D form, and Anar Aghazada added the final touch with his signature design harmony. Shaped by countless late nights, curious minds, and an inspiring team spirit, Dofi is more than a product — it’s the result of true creative collaboration.",
             menu_sidebar_title1: "For boys",
             menu_sidebar_title2: "For girls", 
+
+
+
+
+            app_page_title: "Meet Dofi: Your Learning Buddy!",
+            app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
+            app_slide_title: "📱 App Preview",
+            app_testimontial_title: "✨ What Dofi Can Do",
+            app_testimontial_title1: "🎙️ Voice Command",
+            app_testimontial_description1: "Dofi understands and responds to kids’ voice instructions in Azerbaijani and English.",
+            app_testimontial_title2: "📚 Educational Games",
+            app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
+            app_testimontial_title3: "🧠 Emotional AI",
+            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!"
         },
     },
     az: {
@@ -452,6 +466,21 @@ const resources = {
             about_page_info: "Dofi, Vüqar Həsənov və Sənan Müzəffərov arasında yaranan maraq qığılcımından doğuldu — canlı hiss etdirən bir robot yaratmaq arzusu. Əminə Əliyeva Dofiyə can verərək onun hərəkətlərini və anlarını idarə edən elektronikaları diqqətlə inşa etdi. Ləman Həsənova onun əyləncəli və yaxın xarakterini özünəməxsus dizaynı ilə canlandırdı, Hüseyn və Validə Adilova onun ikonik 3D formasını yaratdı, Anar Ağazadə isə özünəməxsus dizayn harmoniyası ilə son toxunuşu əlavə etdi. Sonsuz gecələr, maraqlı zehinlər və ilhamverici komanda ruhu ilə formalaşan Dofi bir məhsuldan daha çoxdur — bu, həqiqi yaradıcı əməkdaşlığın nəticəsidir.",
             menu_sidebar_title1: "Oğlanlar üçün",
             menu_sidebar_title2: "Qızlar üçün",
+
+
+
+
+            app_page_title: "Meet Dofi: Yourddddd!",
+            app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
+            app_slide_title: "📱 App Preview",
+            app_testimontial_title: "✨ What Dofi Can Do",
+            app_testimontial_title1: "🎙️ Voice Command",
+            app_testimontial_description1: "Dofi understands and responds to kids’ voice instructions in Azerbaijani and English.",
+            app_testimontial_title2: "📚 Educational Games",
+            app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
+            app_testimontial_title3: "🧠 Emotional AI",
+            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!"
+        
         },
     },
     tr: {

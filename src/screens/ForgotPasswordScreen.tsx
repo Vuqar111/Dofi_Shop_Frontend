@@ -18,10 +18,7 @@ const ForgotPasswordScreen = () => {
     const [emailSent, setEmailSent] = useState(false);
     const currentLang = location.pathname.split('/')[1] || 'en';
 
-
-
     const { t } = useTranslation();
-
 
     const handleForgotPassword = async (e: React.FormEvent) => {
         e.preventDefault();
