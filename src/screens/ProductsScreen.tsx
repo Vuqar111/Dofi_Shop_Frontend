@@ -38,12 +38,17 @@ const ProductsScreen = () => {
   }
   return (
     <div className='mb-6 p-4'>
-      <div className="w-[100%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {data?.slice(0,3).map((product: any) => (
-          <div key={product._id}>
-            <ProductCard product={product} />
-          </div>
-        ))}
+      <div className="w-[100%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-16">
+
+
+        {data
+          ?.filter((product: any) => product.slug === "dofi" || product.slug === "dofi-pro")
+          .map((product: any) => (
+            <div key={product._id}>
+              <ProductCard product={product} />
+            </div>
+          ))}
+
       </div>
     </div>
   )

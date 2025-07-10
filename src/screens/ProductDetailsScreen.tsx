@@ -21,13 +21,15 @@ const ProductDetailsScreen = () => {
   const [selectedQty, setSelectedQty] = useState(1);
 
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   const dispatch: AppDispatch = useDispatch();
   const { product } = useSelector((state: any) => state.products);
 
   const slug = window.location.pathname.split('/')[3];
+  const isComingSoon = slug === "dofi-bag";
+
   useEffect(() => {
     dispatch(productDetails({ slug }));
   }, [dispatch, slug]);
@@ -55,7 +57,6 @@ const ProductDetailsScreen = () => {
   const activeGallery = selectedColor === '#FB64B6' ? imageGalleryPink : imageGalleryGreen;
 
   useEffect(() => {
-    // Change selected image when color changes
     if (selectedColor === '#FB64B6') {
       setSelectedImage(imageGalleryPink[0]);
     } else {
@@ -63,8 +64,6 @@ const ProductDetailsScreen = () => {
     }
     setSelectedIndex(0);
   }, [selectedColor]);
-
-
 
   const prevImage = () => {
     const newIndex = selectedIndex === 0 ? activeGallery.length - 1 : selectedIndex - 1;
@@ -125,39 +124,51 @@ const ProductDetailsScreen = () => {
       <Header />
       <div className="w-[100%] md:w-[80%] mx-auto flex flex-col md:flex-row p-8">
         <div className="w-full md:w-1/2 relative">
-          <div className="relative">
-            <img src={selectedImage} alt={`Product ${selectedIndex}`} className="w-full h-auto" />
-            <button
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
-              onClick={prevImage}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </button>
-            <button
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
-              onClick={nextImage}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </button>
-          </div>
-          <div className="flex mt-4 space-x-2 justify-center overflow-x-auto max-w-full px-2">
-            {activeGallery.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Product ${index}`}
-                className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
-                onClick={() => {
-                  setSelectedIndex(index);
-                  setSelectedImage(image);
-                }}
-              />
-            ))}
-          </div>
+          {isComingSoon ? (
+            <div className="w-full h-[400px] bg-gray-100 flex items-center justify-center rounded-md relative">
+              <span className="text-2xl font-bold text-gray-600">
+                {t('bag_word2')}
+              </span>
+            </div>
+          ) : (
+            <>
+              <div className="relative">
+                <img src={selectedImage} alt={`Product ${selectedIndex}`} className="w-full h-auto" />
+                <button
+                  className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
+                  onClick={prevImage}
+                >
+                  {/* Left Arrow */}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </button>
+                <button
+                  className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md cursor-pointer"
+                  onClick={nextImage}
+                >
+                  {/* Right Arrow */}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex mt-4 space-x-2 justify-center overflow-x-auto max-w-full px-2">
+                {activeGallery.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Product ${index}`}
+                    className={`w-16 h-16 md:w-20 md:h-20 object-cover cursor-pointer ${selectedIndex === index ? 'border-2 border-gray-500' : ''}`}
+                    onClick={() => {
+                      setSelectedIndex(index);
+                      setSelectedImage(image);
+                    }}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
 
         <div className="w-full md:w-1/2 md:pl-8">
@@ -192,27 +203,31 @@ const ProductDetailsScreen = () => {
             </div>
           </div>
 
-          <label className="mt-8">{t('product_details_part2')}</label>
-          <div className="grid grid-cols-5 gap-4 mt-4">
-            <div className="col-span-2 flex items-center justify-between border border-gray-200">
-              <button className="px-2 cursor-pointer" onClick={decreaseQty} disabled={selectedQty <= 1}>-</button>
-              <span className="px-2">{selectedQty}</span>
-              <button className="px-2 cursor-pointer" onClick={increaseQty}>+</button>
-            </div>
-            <div
-              onClick={handleAddToCart}
-              className="w-[100%] col-span-3 cursor-pointer border-solid border-[1px] border-green-400 text-center bg-white text-green-400 py-2 px-4 rounded"
-            >
-              {t('product_details_part3')}
-            </div>
-          </div>
+          {!isComingSoon && (
+            <>
+              <label className="mt-8">{t('product_details_part2')}</label>
+              <div className="grid grid-cols-5 gap-4 mt-4">
+                <div className="col-span-2 flex items-center justify-between border border-gray-200">
+                  <button className="px-2 cursor-pointer" onClick={decreaseQty} disabled={selectedQty <= 1}>-</button>
+                  <span className="px-2">{selectedQty}</span>
+                  <button className="px-2 cursor-pointer" onClick={increaseQty}>+</button>
+                </div>
+                <div
+                  onClick={handleAddToCart}
+                  className="w-[100%] col-span-3 cursor-pointer border-solid border-[1px] border-green-400 text-center bg-white text-green-400 py-2 px-4 rounded"
+                >
+                  {t('product_details_part3')}
+                </div>
+              </div>
 
-          <div
-            onClick={handleCheckout}
-            className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
-          >
-            {t('product_details_part4')}
-          </div>
+              <div
+                onClick={handleCheckout}
+                className="w-[100%] cursor-pointer text-center mt-6 bg-green-400 text-white py-2 px-4 rounded hover:bg-green-400"
+              >
+                {t('product_details_part4')}
+              </div>
+            </>
+          )}
         </div>
       </div>
 

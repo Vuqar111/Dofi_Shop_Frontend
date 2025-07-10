@@ -246,7 +246,11 @@ const resources = {
             app_testimontial_title2: "📚 Educational Games",
             app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
             app_testimontial_title3: "🧠 Emotional AI",
-            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!"
+            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!",
+
+
+            bag_word1: "Soon",
+            bag_word2: "Coming Soon",
         },
     },
     az: {
