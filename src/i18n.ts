@@ -234,11 +234,8 @@ const resources = {
             menu_sidebar_title1: "For boys",
             menu_sidebar_title2: "For girls", 
 
-
-
-
-            app_page_title: "Meet Dofi: Your Learning Buddy!",
-            app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
+            app_page_title: "Meet Dofi: Smarter Learning with the Parent App",
+            app_page_description: "Dofi isn’t just a robot — it’s a smart learning companion connected to a powerful Parent App. Monitor your child’s progress, make video calls, receive instant updates, and stay involved in every learning moment. 🎓📱",
             app_slide_title: "📱 App Preview",
             app_testimontial_title: "✨ What Dofi Can Do",
             app_testimontial_title1: "🎙️ Voice Command",
@@ -251,6 +248,17 @@ const resources = {
 
             bag_word1: "Soon",
             bag_word2: "Coming Soon",
+            app_testimontial_title: "✨ What Dofi App Can Do",
+            app_testimontial_title1: "📊 Progress Tracking",
+            app_testimontial_description1: "Follow your child’s daily learning and game activity with easy-to-understand progress insights.",
+            app_testimontial_title2: "📸 Memories",
+            app_testimontial_description2: "Photos taken with Dofi are automatically saved in the Memories section — never miss a moment!",
+            app_testimontial_title3: "💬 Family Chat",
+            app_testimontial_description3: "Send and receive messages between the app and family members connected to Dofi.",
+            app_testimontial_title4: "📞 Video Call",
+            app_testimontial_description4: "Call your child directly through the app with Dofi’s built-in video call feature. You can also view the call history anytime.",
+            app_testimontial_title5: "🔔 Smart Notifications",
+            app_testimontial_description5: "Get instant notifications about video calls, new messages, and important updates — stay connected anytime.",
         },
     },
     az: {
@@ -471,20 +479,20 @@ const resources = {
             menu_sidebar_title1: "Oğlanlar üçün",
             menu_sidebar_title2: "Qızlar üçün",
 
-
-
-
-            app_page_title: "Meet Dofi: Yourddddd!",
-            app_page_description: "Dofi is an interactive, fun, and educational robot designed to help children learn, play, and grow. 🎓🤖",
-            app_slide_title: "📱 App Preview",
-            app_testimontial_title: "✨ What Dofi Can Do",
-            app_testimontial_title1: "🎙️ Voice Command",
-            app_testimontial_description1: "Dofi understands and responds to kids’ voice instructions in Azerbaijani and English.",
-            app_testimontial_title2: "📚 Educational Games",
-            app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
-            app_testimontial_title3: "🧠 Emotional AI",
-            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!"
-        
+            app_page_title: "Dofi ilə Tanış Olun: Valideyn Tətbiqi ilə Ağıllı Öyrənmə",
+            app_page_description: "Dofi sadəcə bir robot deyil — o, güclü valideyn tətbiqi ilə əlaqəli ağıllı bir öyrənmə yoldaşıdır. Övladınızın inkişafını izləyin, video zənglər edin, dərhal yeniliklər əldə edin və öyrənmə anlarına qoşulun. 🎓📱",
+            app_slide_title: "📱 Tətbiqə Baxış",
+            app_testimontial_title: "✨ Dofi Tətbiqi İlə Nə Edə Bilərsiniz",
+            app_testimontial_title1: "📊 İnkişafın İzlənməsi",
+            app_testimontial_description1: "Uşağınızın gündəlik öyrənmə və oyun fəaliyyətini asanlıqla izləyin.",
+            app_testimontial_title2: "📸 Xatirələr",
+            app_testimontial_description2: "Dofi ilə çəkilən fotolar avtomatik olaraq Xatirələr bölməsində saxlanılır — heç bir anı qaçırmayın!",
+            app_testimontial_title3: "💬 Ailə söhbəti",
+            app_testimontial_description3: "Dofi-yə qoşulmuş proqram və ailə üzvləri arasında mesaj göndərin və qəbul edin.",
+            app_testimontial_title4: "📞 Video Zəng",
+            app_testimontial_description4: "Dofi-nin video zəng funksiyası ilə uşağınıza birbaşa zəng edin. Zəng tarixçəsini də görə bilərsiniz.",
+            app_testimontial_title5: "🔔 Ağıllı Bildirişlər",
+            app_testimontial_description5: "Video zənglər, mesajlar və vacib yeniliklər barədə dərhal bildirişlər alın — hər zaman əlaqədə qalın.",
         },
     },
     tr: {
@@ -686,7 +694,22 @@ const resources = {
             about_page_description: "Her harika robotun arkasında meraklı bir zihin ve hayalperest bir ekip vardır. Dofi'nin nasıl hayata geçtiğini ve ona kalp veren insanları öğrenin.",
             about_page_info: "Dofi, Vugar Hasanov ve Sanan Muzaffarov arasında doğan bir merak kıvılcımından ortaya çıktı — canlı hissi veren bir robot yaratma arzusu. Amina Aliyeva, robotun her hareketini ve anını yönlendiren elektronik sistemleri titizlikle inşa ederek Dofi’ye hayat verdi. Laman Hasanova, onun eğlenceli ve samimi kişiliğini kendine özgü tasarımıyla canlandırdı. Huseyn ve Valida Adilova, ikonik 3D formunu şekillendirdi, Anar Aghazada ise kendine has tasarım uyumuyla son dokunuşu yaptı. Sonsuz geceler, merak dolu zihinler ve ilham verici bir ekip ruhuyla şekillenen Dofi, bir üründen çok daha fazlası — bu, gerçek bir yaratıcı iş birliğinin sonucudur.",
             menu_sidebar_title1: "Erkek çocuklar için",
-            menu_sidebar_title2: "Kız çocuklar için"            
+            menu_sidebar_title2: "Kız çocuklar için",
+            
+            app_page_title: "Dofi ile Tanışın: Ebeveyn Uygulamasıyla Akıllı Öğrenme",
+            app_page_description: "Dofi sadece bir robot değil — güçlü bir ebeveyn uygulamasıyla bağlantılı akıllı bir öğrenme arkadaşıdır. Çocuğunuzun ilerlemesini takip edin, görüntülü arama yapın, anlık bildirimler alın ve her öğrenme anına dahil olun. 🎓📱",
+            app_slide_title: "📱 Uygulama Önizlemesi",
+            app_testimontial_title: "✨ Dofi Uygulamasıyla Neler Yapabilirsiniz",
+            app_testimontial_title1: "📊 İlerleme Takibi",
+            app_testimontial_description1: "Çocuğunuzun günlük öğrenme ve oyun aktivitelerini kolayca takip edin.",
+            app_testimontial_title2: "📸 Anılar",
+            app_testimontial_description2: "Dofi ile çekilen fotoğraflar otomatik olarak Anılar bölümüne kaydedilir — hiçbir anı kaçırmayın!",
+            app_testimontial_title3: "💬 Aile Sohbeti",
+            app_testimontial_description3: "Uygulama üzerinden Dofi'ye bağlı aile üyeleriyle mesajlaşın.",
+            app_testimontial_title4: "📞 Görüntülü Arama",
+            app_testimontial_description4: "Dofi'nin görüntülü arama özelliği ile çocuğunuzu doğrudan arayın. Arama geçmişini de görüntüleyebilirsiniz.",
+            app_testimontial_title5: "🔔 Akıllı Bildirimler",
+            app_testimontial_description5: "Görüntülü aramalar, yeni mesajlar ve önemli gelişmeler hakkında anında bildirimler alın — her zaman bağlı kalın.",
         },
     },
     ar: {
@@ -904,7 +927,22 @@ const resources = {
             about_page_description: "وراء كل روبوت عظيم عقل فضولي وفريق من الحالمين. تعرف على كيف وُلد دوفي — وعلى الأشخاص الذين منحوه قلباً.",
             about_page_info: "وُلد Dofi من شرارة فضول بين Vugar Hasanov وSanan Muzaffarov — حلم مشترك لبناء روبوت يبدو حيًا. قامت Amina Aliyeva ببث الحياة في الروبوت من الداخل من خلال بناء الإلكترونيات التي تتحكم في كل حركة ولحظة بعناية. قامت Laman Hasanova بإحياء شخصيته المرحة والدافئة من خلال تصميمها الفريد. صمم Huseyn وValida Adilova شكله الأيقوني ثلاثي الأبعاد، وأضفى Anar Aghazada اللمسة الأخيرة من خلال تناغمه التصميمي الفريد. تم تشكيل Dofi من خلال ليالٍ لا تُعد، وعقول فضولية، وروح فريق ملهمة — إنه أكثر من مجرد منتج، بل هو نتيجة تعاون إبداعي حقيقي.",
             menu_sidebar_title1: "للأولاد",
-            menu_sidebar_title2: "للبنات"
+            menu_sidebar_title2: "للبنات",
+
+            app_page_title: "تعرّف على دوفي: تعلّم ذكي عبر تطبيق الوالدين",
+            app_page_description: "دوفي ليس مجرد روبوت — إنه رفيق تعليمي ذكي متصل بتطبيق الوالدين القوي. راقب تقدم طفلك، أجرِ مكالمات فيديو، استلم إشعارات فورية، وكن جزءًا من كل لحظة تعلم. 🎓📱",
+            app_slide_title: "📱 معاينة التطبيق",
+            app_testimontial_title: "✨ ماذا يمكن أن يفعل تطبيق دوفي",
+            app_testimontial_title1: "📊 تتبع التقدم",
+            app_testimontial_description1: "تابع أنشطة التعلم واللعب اليومية لطفلك من خلال تقارير سهلة الفهم.",
+            app_testimontial_title2: "📸 الذكريات",
+            app_testimontial_description2: "يتم حفظ الصور الملتقطة باستخدام دوفي تلقائيًا في قسم الذكريات — لا تفوّت أي لحظة!",
+            app_testimontial_title3: "💬 دردشة العائلة",
+            app_testimontial_description3: "أرسل واستقبل الرسائل بين التطبيق وأفراد العائلة المتصلين بدوفي.",
+            app_testimontial_title4: "📞 مكالمة فيديو",
+            app_testimontial_description4: "اتصل بطفلك مباشرة من خلال التطبيق باستخدام ميزة مكالمات الفيديو في دوفي. يمكنك أيضًا عرض سجل المكالمات في أي وقت.",
+            app_testimontial_title5: "🔔 إشعارات ذكية",
+            app_testimontial_description5: "استلم إشعارات فورية حول المكالمات والرسائل والتحديثات المهمة — كن متصلاً دائمًا.",
         },
     },
     fr: {
@@ -1084,7 +1122,6 @@ const resources = {
             forgot_page_footer2: "Connexion",
             forgot_page_password_modal: "Vérifiez votre e-mail",
 
-
             cart_page_part1: "Votre panier",
             cart_page_part2: "Continuer",
             cart_page_part3: "Produit",
@@ -1107,7 +1144,22 @@ const resources = {
             about_page_description: "Derrière chaque grand robot se cache un esprit curieux et une équipe de rêveurs. Découvrez comment Dofi a vu le jour — et les humains qui lui ont donné un cœur.",
             about_page_info: "Dofi est né d’une étincelle de curiosité entre Vugar Hasanov et Sanan Muzaffarov — le rêve commun de créer un robot qui semble vivant. Amina Aliyeva a donné vie à Dofi en construisant soigneusement les composants électroniques qui contrôlent chaque mouvement et moment. Laman Hasanova a insufflé sa personnalité joyeuse et attachante grâce à son design unique. Huseyn et Valida Adilova ont façonné sa forme 3D emblématique, et Anar Aghazada a ajouté la touche finale avec son harmonie de design unique. Né de nombreuses nuits blanches, d’esprits curieux et d’un esprit d’équipe inspirant, Dofi est bien plus qu’un simple produit — c’est le fruit d’une véritable collaboration créative.",
             menu_sidebar_title1: "Pour les garçons",
-            menu_sidebar_title2: "Pour les filles"
+            menu_sidebar_title2: "Pour les filles",
+            
+            app_page_title: "Découvrez Dofi : Un apprentissage intelligent avec l’application parentale",
+            app_page_description: "Dofi n’est pas qu’un robot — c’est un compagnon d’apprentissage intelligent connecté à une puissante application parentale. Suivez les progrès de votre enfant, passez des appels vidéo, recevez des notifications instantanées et restez impliqué à chaque moment d’apprentissage. 🎓📱",
+            app_slide_title: "📱 Aperçu de l’application",
+            app_testimontial_title: "✨ Ce que l’application Dofi peut faire",
+            app_testimontial_title1: "📊 Suivi des progrès",
+            app_testimontial_description1: "Suivez facilement les activités quotidiennes d’apprentissage et de jeu de votre enfant.",
+            app_testimontial_title2: "📸 Souvenirs",
+            app_testimontial_description2: "Les photos prises avec Dofi sont automatiquement enregistrées dans la section Souvenirs — ne manquez aucun moment !",
+            app_testimontial_title3: "💬 Chat familial",
+            app_testimontial_description3: "Envoyez et recevez des messages entre l’application et les membres de la famille connectés à Dofi.",
+            app_testimontial_title4: "📞 Appel vidéo",
+            app_testimontial_description4: "Appelez directement votre enfant via l’application grâce à la fonction d’appel vidéo intégrée de Dofi. Vous pouvez aussi consulter l’historique des appels.",
+            app_testimontial_title5: "🔔 Notifications intelligentes",
+            app_testimontial_description5: "Recevez des notifications instantanées concernant les appels, les nouveaux messages et les mises à jour importantes — restez toujours connecté.",
         },
     },
     cn: {
@@ -1327,7 +1379,22 @@ const resources = {
             about_page_description: "每一个伟大的机器人背后，都有一颗好奇的心和一群梦想家。了解 Dofi 是如何诞生的——以及那些赋予它心灵的人。",
             about_page_info: "Dofi 起初源于 Vugar Hasanov 和 Sanan Muzaffarov 之间一丝好奇的火花——一个共同的梦想：打造一个有生命感的机器人。Amina Aliyeva 精心构建了驱动每一个动作与瞬间的电子系统，让 Dofi 真正“活”了过来。Laman Hasanova 通过她独特的设计赋予了 Dofi 充满乐趣与亲和力的个性。Huseyn 和 Valida Adilova 塑造了它标志性的 3D 外形，而 Anar Aghazada 则用他独特的设计和谐感完成了最终点缀。经历了无数个不眠之夜、充满好奇的思维和鼓舞人心的团队精神，Dofi 不只是一个产品，而是真正创意协作的结晶。",
             menu_sidebar_title1: "男孩专属",
-            menu_sidebar_title2: "女孩专属"
+            menu_sidebar_title2: "女孩专属",
+
+            app_page_title: "认识Dofi：与家长应用程序联动的智能学习",
+            app_page_description: "Dofi不仅仅是一个机器人——它是一个与强大的家长应用程序连接的智能学习伙伴。监控孩子的学习进度，进行视频通话，接收即时通知，陪伴每一个学习时刻。🎓📱",
+            app_slide_title: "📱 应用预览",
+            app_testimontial_title: "✨ Dofi 应用可以做什么",
+            app_testimontial_title1: "📊 进度跟踪",
+            app_testimontial_description1: "轻松查看孩子每天的学习和游戏活动进展。",
+            app_testimontial_title2: "📸 回忆",
+            app_testimontial_description2: "通过Dofi拍摄的照片会自动保存在“回忆”部分——不遗漏任何精彩瞬间！",
+            app_testimontial_title3: "💬 家庭聊天",
+            app_testimontial_description3: "通过应用程序与连接到Dofi的家庭成员收发消息。",
+            app_testimontial_title4: "📞 视频通话",
+            app_testimontial_description4: "通过Dofi的内置视频通话功能直接与孩子通话。您还可以随时查看通话记录。",
+            app_testimontial_title5: "🔔 智能通知",
+            app_testimontial_description5: "即时获取视频通话、新消息和重要更新的通知 —— 时刻保持连接。",
         },
     },
     de: {
@@ -1547,7 +1614,22 @@ const resources = {
             about_page_description: "Hinter jedem großartigen Roboter steht ein neugieriger Geist und ein Team von Träumern. Erfahre, wie Dofi zum Leben erweckt wurde – und die Menschen, die ihm ein Herz gaben.",
             about_page_info: "Dofi entstand aus einem Funken der Neugier zwischen Vugar Hasanov und Sanan Muzaffarov — dem gemeinsamen Traum, einen Roboter zu erschaffen, der lebendig wirkt. Amina Aliyeva erweckte den Roboter zum Leben, indem sie sorgfältig die Elektronik entwickelte, die jede Bewegung und jeden Moment steuert. Laman Hasanova verlieh ihm mit ihrem einzigartigen Design eine spielerische und nahbare Persönlichkeit. Huseyn und Valida Adilova formten seine ikonische 3D-Gestalt, und Anar Aghazada setzte mit seiner besonderen Designharmonie den letzten Schliff. Geformt durch unzählige Nächte, neugierige Köpfe und inspirierenden Teamgeist ist Dofi mehr als nur ein Produkt — es ist das Ergebnis echter kreativer Zusammenarbeit.",
             menu_sidebar_title1: "Für Jungen",
-            menu_sidebar_title2: "Für Mädchen"
+            menu_sidebar_title2: "Für Mädchen",
+
+            app_page_title: "Lerne Dofi kennen: Intelligentes Lernen mit der Eltern-App",
+            app_page_description: "Dofi ist nicht nur ein Roboter – er ist ein intelligenter Lernbegleiter, der mit einer leistungsstarken Eltern-App verbunden ist. Verfolge den Fortschritt deines Kindes, führe Videoanrufe, erhalte Sofortbenachrichtigungen und begleite jeden Lernmoment. 🎓📱",
+            app_slide_title: "📱 App-Vorschau",
+            app_testimontial_title: "✨ Was die Dofi-App kann",
+            app_testimontial_title1: "📊 Fortschrittsverfolgung",
+            app_testimontial_description1: "Verfolge die täglichen Lern- und Spielaktivitäten deines Kindes mit verständlichen Einblicken.",
+            app_testimontial_title2: "📸 Erinnerungen",
+            app_testimontial_description2: "Fotos, die mit Dofi aufgenommen wurden, werden automatisch im Erinnerungsbereich gespeichert – kein Moment geht verloren!",
+            app_testimontial_title3: "💬 Familienchat",
+            app_testimontial_description3: "Sende und empfange Nachrichten zwischen der App und den mit Dofi verbundenen Familienmitgliedern.",
+            app_testimontial_title4: "📞 Videoanruf",
+            app_testimontial_description4: "Rufe dein Kind direkt über die App mit der integrierten Videoanruffunktion von Dofi an. Der Anrufverlauf kann jederzeit eingesehen werden.",
+            app_testimontial_title5: "🔔 Intelligente Benachrichtigungen",
+            app_testimontial_description5: "Erhalte Sofortbenachrichtigungen über Videoanrufe, neue Nachrichten und wichtige Updates – bleibe immer verbunden.",
         },
     },
     es: {
@@ -1767,7 +1849,22 @@ const resources = {
             about_page_description: "Detrás de cada gran robot hay una mente curiosa y un equipo de soñadores. Descubre cómo nació Dofi—y las personas que le dieron un corazón.",
             about_page_info: "Dofi nació de una chispa de curiosidad entre Vugar Hasanov y Sanan Muzaffarov — un sueño compartido de crear un robot que se sintiera vivo. Amina Aliyeva le dio vida construyendo cuidadosamente la electrónica que controla cada movimiento y momento. Laman Hasanova dio forma a su personalidad divertida y cercana con un diseño único. Huseyn y Valida Adilova modelaron su icónica forma en 3D, y Anar Aghazada aportó el toque final con su armonía visual distintiva. Forjado en incontables noches, por mentes curiosas y un espíritu de equipo inspirador, Dofi es mucho más que un producto — es el resultado de una verdadera colaboración creativa.",
             menu_sidebar_title1: "Para niños",
-            menu_sidebar_title2: "Para niñas"
+            menu_sidebar_title2: "Para niñas",
+
+            app_page_title: "Conoce a Dofi: Aprendizaje inteligente con la app para padres",
+            app_page_description: "Dofi no es solo un robot — es un compañero de aprendizaje inteligente conectado a una potente aplicación para padres. Supervisa el progreso de tu hijo, haz videollamadas, recibe notificaciones instantáneas y participa en cada momento de aprendizaje. 🎓📱",
+            app_slide_title: "📱 Vista previa de la app",
+            app_testimontial_title: "✨ Lo que puede hacer la app de Dofi",
+            app_testimontial_title1: "📊 Seguimiento del progreso",
+            app_testimontial_description1: "Sigue fácilmente las actividades diarias de aprendizaje y juego de tu hijo.",
+            app_testimontial_title2: "📸 Recuerdos",
+            app_testimontial_description2: "Las fotos tomadas con Dofi se guardan automáticamente en la sección de Recuerdos — ¡no te pierdas ningún momento!",
+            app_testimontial_title3: "💬 Chat familiar",
+            app_testimontial_description3: "Envía y recibe mensajes entre la app y los miembros de la familia conectados a Dofi.",
+            app_testimontial_title4: "📞 Videollamada",
+            app_testimontial_description4: "Llama a tu hijo directamente desde la app con la función de videollamada integrada de Dofi. También puedes ver el historial de llamadas en cualquier momento.",
+            app_testimontial_title5: "🔔 Notificaciones inteligentes",
+            app_testimontial_description5: "Recibe notificaciones instantáneas sobre videollamadas, nuevos mensajes y actualizaciones importantes — mantente siempre conectado.",
         },
     }
 };
