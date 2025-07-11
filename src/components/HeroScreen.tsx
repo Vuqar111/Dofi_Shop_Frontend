@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-
+import mainVideo from '../assets/video/mainvideo.mp4';
+  
 const HeroScreen = () => {
     const { t } = useTranslation();
     const location = useLocation();
@@ -19,7 +20,7 @@ const HeroScreen = () => {
                 playsInline
                 className='absolute top-0 left-0 w-full h-full object-cover'
             >
-                <source src="https://cdn.shopify.com/videos/c/o/v/b53aad82a4c143d6a02e9a186e65322d.mp4" type="video/mp4" />
+            <source src={mainVideo} type="video/mp4" />
             </video>
 
             {/* Hero Content */}
