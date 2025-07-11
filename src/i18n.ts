@@ -238,7 +238,6 @@ const resources = {
             app_page_description: "Dofi isn’t just a robot — it’s a smart learning companion connected to a powerful Parent App. Monitor your child’s progress, make video calls, receive instant updates, and stay involved in every learning moment. 🎓📱",
             app_slide_title: "📱 App Preview",
 
-
             bag_word1: "Soon",
             bag_word2: "Coming Soon",
             app_testimontial_title: "✨ What Dofi App Can Do",
@@ -472,6 +471,8 @@ const resources = {
             menu_sidebar_title1: "Oğlanlar üçün",
             menu_sidebar_title2: "Qızlar üçün",
 
+            bag_word1: "Tezliklə",
+            bag_word2: "Tezliklə Gəlir",
             app_page_title: "Dofi ilə Tanış Olun: Valideyn Tətbiqi ilə Ağıllı Öyrənmə",
             app_page_description: "Dofi sadəcə bir robot deyil — o, güclü valideyn tətbiqi ilə əlaqəli ağıllı bir öyrənmə yoldaşıdır. Övladınızın inkişafını izləyin, video zənglər edin, dərhal yeniliklər əldə edin və öyrənmə anlarına qoşulun. 🎓📱",
             app_slide_title: "📱 Tətbiqə Baxış",
@@ -689,6 +690,8 @@ const resources = {
             menu_sidebar_title1: "Erkek çocuklar için",
             menu_sidebar_title2: "Kız çocuklar için",
             
+            bag_word1: "Yakında",
+            bag_word2: "Yakında Geliyor",
             app_page_title: "Dofi ile Tanışın: Ebeveyn Uygulamasıyla Akıllı Öğrenme",
             app_page_description: "Dofi sadece bir robot değil — güçlü bir ebeveyn uygulamasıyla bağlantılı akıllı bir öğrenme arkadaşıdır. Çocuğunuzun ilerlemesini takip edin, görüntülü arama yapın, anlık bildirimler alın ve her öğrenme anına dahil olun. 🎓📱",
             app_slide_title: "📱 Uygulama Önizlemesi",
@@ -922,6 +925,8 @@ const resources = {
             menu_sidebar_title1: "للأولاد",
             menu_sidebar_title2: "للبنات",
 
+            bag_word1: "قريبًا",
+            bag_word2: "قريبًا قادم",
             app_page_title: "تعرّف على دوفي: تعلّم ذكي عبر تطبيق الوالدين",
             app_page_description: "دوفي ليس مجرد روبوت — إنه رفيق تعليمي ذكي متصل بتطبيق الوالدين القوي. راقب تقدم طفلك، أجرِ مكالمات فيديو، استلم إشعارات فورية، وكن جزءًا من كل لحظة تعلم. 🎓📱",
             app_slide_title: "📱 معاينة التطبيق",
@@ -1139,6 +1144,8 @@ const resources = {
             menu_sidebar_title1: "Pour les garçons",
             menu_sidebar_title2: "Pour les filles",
             
+            bag_word1: "Bientôt",
+            bag_word2: "À venir bientôt",
             app_page_title: "Découvrez Dofi : Un apprentissage intelligent avec l’application parentale",
             app_page_description: "Dofi n’est pas qu’un robot — c’est un compagnon d’apprentissage intelligent connecté à une puissante application parentale. Suivez les progrès de votre enfant, passez des appels vidéo, recevez des notifications instantanées et restez impliqué à chaque moment d’apprentissage. 🎓📱",
             app_slide_title: "📱 Aperçu de l’application",
@@ -1374,6 +1381,8 @@ const resources = {
             menu_sidebar_title1: "男孩专属",
             menu_sidebar_title2: "女孩专属",
 
+            bag_word1: "即将",
+            bag_word2: "即将推出",
             app_page_title: "认识Dofi：与家长应用程序联动的智能学习",
             app_page_description: "Dofi不仅仅是一个机器人——它是一个与强大的家长应用程序连接的智能学习伙伴。监控孩子的学习进度，进行视频通话，接收即时通知，陪伴每一个学习时刻。🎓📱",
             app_slide_title: "📱 应用预览",
@@ -1609,6 +1618,8 @@ const resources = {
             menu_sidebar_title1: "Für Jungen",
             menu_sidebar_title2: "Für Mädchen",
 
+            bag_word1: "Bald",
+            bag_word2: "Kommt bald",
             app_page_title: "Lerne Dofi kennen: Intelligentes Lernen mit der Eltern-App",
             app_page_description: "Dofi ist nicht nur ein Roboter – er ist ein intelligenter Lernbegleiter, der mit einer leistungsstarken Eltern-App verbunden ist. Verfolge den Fortschritt deines Kindes, führe Videoanrufe, erhalte Sofortbenachrichtigungen und begleite jeden Lernmoment. 🎓📱",
             app_slide_title: "📱 App-Vorschau",
@@ -1844,6 +1855,8 @@ const resources = {
             menu_sidebar_title1: "Para niños",
             menu_sidebar_title2: "Para niñas",
 
+            bag_word1: "Pronto",
+            bag_word2: "Próximamente",
             app_page_title: "Conoce a Dofi: Aprendizaje inteligente con la app para padres",
             app_page_description: "Dofi no es solo un robot — es un compañero de aprendizaje inteligente conectado a una potente aplicación para padres. Supervisa el progreso de tu hijo, haz videollamadas, recibe notificaciones instantáneas y participa en cada momento de aprendizaje. 🎓📱",
             app_slide_title: "📱 Vista previa de la app",
