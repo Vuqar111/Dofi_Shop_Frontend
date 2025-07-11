@@ -237,13 +237,6 @@ const resources = {
             app_page_title: "Meet Dofi: Smarter Learning with the Parent App",
             app_page_description: "Dofi isn’t just a robot — it’s a smart learning companion connected to a powerful Parent App. Monitor your child’s progress, make video calls, receive instant updates, and stay involved in every learning moment. 🎓📱",
             app_slide_title: "📱 App Preview",
-            app_testimontial_title: "✨ What Dofi Can Do",
-            app_testimontial_title1: "🎙️ Voice Command",
-            app_testimontial_description1: "Dofi understands and responds to kids’ voice instructions in Azerbaijani and English.",
-            app_testimontial_title2: "📚 Educational Games",
-            app_testimontial_description2: "Offers math quizzes, language games, and memory challenges tailored for ages 3-10.",
-            app_testimontial_title3: "🧠 Emotional AI",
-            app_testimontial_description3: "Dofi reacts with emotions through animated eyes and expressions. It feels alive!",
 
 
             bag_word1: "Soon",
