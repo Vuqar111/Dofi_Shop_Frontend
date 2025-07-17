@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useTranslation } from 'react-i18next';
+import aboutImage from '../assets/images/aboutImage.jpg';
 
 const AboutScreen = () => {
     const [isOpened, setIsOpened] = useState(false)
@@ -21,11 +22,7 @@ const AboutScreen = () => {
                     {t('about_page_description')}
                 </p>
                 <div className="flex justify-center my-8 max-h-[400px] sm:max-h-[500px] md:max-h-[600px] w-full max-w-[90%] md:max-w-[80%] mx-auto">
-                    <img
-                        className="w-full h-auto object-cover rounded-lg"
-                        src="https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="teamPhoto"
-                    />
+                    <img src={aboutImage} alt="Description" width="300" className="w-full h-auto object-cover rounded-lg" />
                 </div>
                 <p className="flex justify-center my-8 max-h-[400px] sm:max-h-[500px] md:max-h-[600px] w-full max-w-[90%] md:max-w-[80%] mx-auto opacity-70 text-sm sm:text-base md:text-lg">
                     {t('about_page_info')}
