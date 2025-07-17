@@ -174,7 +174,12 @@ const ProductDetailsScreen = () => {
         <div className="w-full md:w-1/2 md:pl-8">
           <h1 className="text-4xl font-extrabold mb-4 pt-4 text-gray-700">{name}</h1>
           <div className="mb-4">
-            <p className="text-lg text-gray-500 line-through">450 AZN</p>
+            <p className="text-lg text-gray-500 line-through">
+
+              {product?.slug === "dofi-bag" ? '99 AZN' : product?.price}
+              {product?.slug === "dofi" ? '399 AZN' : product?.price} 
+              {product?.slug === "dofi-pro" ? '450 AZN' : product?.price}
+            </p>
             <p className="text-2xl text-green-500 font-bold">{product?.salePrice} AZN</p>
             <span className="bg-yellow-400 text-white text-sm px-2 py-1 rounded">SALE</span>
           </div>
