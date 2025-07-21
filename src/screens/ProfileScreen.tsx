@@ -151,7 +151,7 @@ const ProfileScreen = () => {
           loading={updateProfileLoading}
           error={updateProfileError}
           path={`/${currentLang}/profile`}
-         message={t('order_checkout_part17')}
+         message={t('profile_page_modal_desc')}
 
         />
       </form>
