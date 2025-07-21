@@ -32,7 +32,8 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
     <React.Fragment>
       <div className="sticky top-0 z-50 bg-white w-[100%] ">
         <div className='md:w-[80%] mx-auto flex justify-between items-center p-2 md:p-4'>
-          <button onClick={toggleMenu} className="md:hidden rounded text-2xl cursor-pointer relative w-12 h-12 flex items-center justify-center">
+          <div className='flex items-center gap-2'>
+          <button onClick={toggleMenu} className="md:hidden rounded text-2xl cursor-pointer w-12 h-12 flex items-center justify-center">
             <svg
               className="w-8 h-8 transition-transform duration-300 ease-in-out"
               viewBox="0 0 24 24"
@@ -67,10 +68,10 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
           </button>
 
           {/* Center: Logo */}
-          <Link to={`/${currentLang}`} className="absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0">
+          <Link to={`/${currentLang}`} className="">
             <h3 className='text-4xl font-extrabold text-green-400'>Dofi</h3>
           </Link>
-
+</div>
           {/* Right: Cart Icon */}
           <div className='flex gap-2'>
             <div>
