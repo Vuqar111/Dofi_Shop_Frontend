@@ -177,11 +177,11 @@ const ProductDetailsScreen = () => {
             <p className="text-lg text-gray-500 line-through">
 
               {product?.slug === "dofi-bag" ? '99 AZN' : product?.price}
-              {product?.slug === "dofi" ? '399 AZN' : product?.price} 
+              {product?.slug === "dofi" ? '349 AZN' : product?.price} 
               {product?.slug === "dofi-pro" ? '450 AZN' : product?.price}
             </p>
             <p className="text-2xl text-green-500 font-bold">{product?.salePrice} AZN</p>
-            <span className="bg-yellow-400 text-white text-sm px-2 py-1 rounded">SALE</span>
+            <span className="bg-yellow-400 text-white text-sm px-2 py-1 rounded">ENDİRİM</span>
           </div>
           <ul>
             {features?.map((feature, index) => (
