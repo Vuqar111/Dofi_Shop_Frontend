@@ -7,7 +7,7 @@ const HeroScreen = () => {
     const { t } = useTranslation();
     const location = useLocation();
 
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
 
     return (

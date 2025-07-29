@@ -10,7 +10,7 @@ const LoginScreen = () => {
     const dispatch: AppDispatch = useDispatch();
     const { signinSuccess, signinError, signinLoading } = useSelector((state: any) => state.auth);
     const location = useLocation()
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
     const { t } = useTranslation();
 

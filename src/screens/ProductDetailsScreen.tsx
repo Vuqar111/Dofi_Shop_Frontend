@@ -14,7 +14,7 @@ const ProductDetailsScreen = () => {
   const location = useLocation();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const { t } = useTranslation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   const [selectedColor, setSelectedColor] = useState('#B7CB3F');
   const [selectedImage, setSelectedImage] = useState('');

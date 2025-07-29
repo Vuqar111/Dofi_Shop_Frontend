@@ -14,7 +14,7 @@ const SecurityScreen = () => {
   const dispatch: AppDispatch = useDispatch()
   const { t } = useTranslation();
   const { updateProfilePasswordSuccess, updateProfilePasswordLoading, updateProfilePasswordError } = useSelector((state: any) => state.profile)
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   const [current_password, setCurrentPassword] = useState<string | undefined>('')
   const [new_password, setNewPassword] = useState<string | undefined>('')

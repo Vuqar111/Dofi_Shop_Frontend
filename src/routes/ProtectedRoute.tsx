@@ -10,7 +10,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
   const location = useLocation();
   const token = localStorage.getItem("token");
   const tokenExpired = isTokenExpired();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   if (!token || tokenExpired) {
     localStorage.removeItem("token");

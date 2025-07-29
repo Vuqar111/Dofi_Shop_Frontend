@@ -20,7 +20,7 @@ const RegisterScreen = () => {
     const { registerSuccess, registerError, registerLoading } = useSelector((state: any) => state.auth);
 
     const location = useLocation()
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
     const { t } = useTranslation();
 

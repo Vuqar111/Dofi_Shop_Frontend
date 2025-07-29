@@ -16,7 +16,7 @@ const LanguageSelector: React.FC = () => {
     navigate(pathParts.join('/'));
   };
 
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   return (
     <select

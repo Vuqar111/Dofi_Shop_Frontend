@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 const OrderDetailsCard = ({ order }: { order: any }) => {
     const location = useLocation();
     const { t } = useTranslation();
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
 
     const allStatuses = ["Created", "Pending", "Shipped", "Delivered"];

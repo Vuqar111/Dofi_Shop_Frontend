@@ -10,7 +10,7 @@ export const Header = () => {
   const { profile } = useSelector((state: any) => state.profile);
   const cartProducts = useSelector((state: any) => state.cart?.items);
   const location = useLocation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
 
 

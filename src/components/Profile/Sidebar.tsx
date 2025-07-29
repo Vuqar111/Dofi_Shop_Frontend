@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
   const { t } = useTranslation();
 
 

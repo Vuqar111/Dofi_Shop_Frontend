@@ -16,7 +16,7 @@ const ForgotPasswordScreen = () => {
 
     const [email, setEmail] = useState('');
     const [emailSent, setEmailSent] = useState(false);
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
     const { t } = useTranslation();
 

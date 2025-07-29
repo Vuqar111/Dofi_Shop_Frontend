@@ -14,7 +14,7 @@ export const Header = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void
   const { profile } = useSelector((state: any) => state.profile);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const cartProducts = useSelector((state: any) => state.cart?.items);
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   const { t } = useTranslation();
 

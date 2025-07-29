@@ -17,7 +17,7 @@ const CartScreen = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   const subtotal = cart.reduce((acc: number, item: any) => acc + item.price * item.qty, 0)
   const discount = 0

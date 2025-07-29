@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 const OrderCard = ({ order }: { order: any }) => {
     const location = useLocation();
   const { t } = useTranslation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   return (
     <div className="shadow mb-4">

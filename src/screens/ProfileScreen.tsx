@@ -16,7 +16,7 @@ const ProfileScreen = () => {
   const { profile, loading, error, updateProfileSuccess, updateProfileLoading, updateProfileError } = useSelector((state: any) => state.profile)
   
   const location = useLocation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   const [fullName, setFullName] = useState<string | undefined>(profile?.fullName || undefined)
   const [email, setEmail] = useState<string | undefined>(profile?.email || undefined)

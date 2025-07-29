@@ -17,7 +17,7 @@ const CartModal = ({ setIsOpened }: { setIsOpened: (isOpen: boolean) => void }) 
   const navigate = useNavigate()
 
   const location = useLocation();
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
 
   const handleRemoveFromCart = (product: any) => {

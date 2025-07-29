@@ -5,7 +5,7 @@ const Footer = () => {
     const { t } = useTranslation();
         const location = useLocation();
 
-      const currentLang = location.pathname.split('/')[1] || 'en';
+      const currentLang = location.pathname.split('/')[1] || 'az';
 
     return (
         <div className="bg-black text-white px-4 py-8">
