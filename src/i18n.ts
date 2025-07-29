@@ -125,6 +125,7 @@ const resources = {
             product_details_part4: "Join waitlist now",
             product_details_part5: "Detailed information",
             product_details_part6: "Shipping calculated at checkout",
+            product_details_part7: "Discount",
 
             // Order checkout
             order_checkout_parttitle: "Waitlist page",
@@ -375,6 +376,7 @@ const resources = {
             product_details_part4: "Öz yerini rezerv et",
             product_details_part5: "Detallı məlumat",
             product_details_part6: "Çatdırılma hesablanacaq",
+            product_details_part7: "Endirim",
 
             // Order checkout
             order_checkout_parttitle: "Gözləmə siyahısı",
@@ -604,6 +606,7 @@ const resources = {
             product_details_part4: "Şimdi ön sipariş ver",
             product_details_part5: "Detaylı bilgi",
             product_details_part6: "Kargo ödeme sırasında hesaplanır",
+            product_details_part7: "İndirim",
 
             order_checkout_parttitle: "Ön sipariş sayfası",
             order_checkout_part1: "İletişim",
@@ -834,6 +837,7 @@ const resources = {
             product_details_part4: "الطلب المسبق الآن",
             product_details_part5: "تفاصيل المنتج",
             product_details_part6: "سيتم احتساب الشحن عند إتمام الطلب",
+            product_details_part7: "خصم",
 
             // Order 
             order_checkout_parttitle: "صفحة الطلب المسبق",
@@ -1062,6 +1066,7 @@ const resources = {
             product_details_part4: "Précommandez maintenant",
             product_details_part5: "Informations détaillées",
             product_details_part6: "Livraison calculée à la caisse",
+            product_details_part7: "Réduction",
 
             order_checkout_parttitle: "Page de précommande",
             order_checkout_part1: "Contact",
@@ -1292,6 +1297,7 @@ const resources = {
             product_details_part4: "立即预订",
             product_details_part5: "商品详情",
             product_details_part6: "运费结算时计算",
+            product_details_part7: "折扣",
 
             // 订单结算
             order_checkout_parttitle: "预购页面",
@@ -1531,6 +1537,7 @@ const resources = {
             product_details_part4: "Jetzt vorbestellen",
             product_details_part5: "Detaillierte Informationen",
             product_details_part6: "Versandkosten an der Kasse",
+            product_details_part7: "Rabatt",
 
             // Bestellvorgang
             order_checkout_parttitle: "Vorbestellungsseite",
@@ -1770,6 +1777,7 @@ const resources = {
             product_details_part4: "Pre-pedido ahora",
             product_details_part5: "Detalles del producto",
             product_details_part6: "Envío calculado al finalizar la compra",
+            product_details_part7: "Descuento",
 
             // Order checkout
             order_checkout_parttitle: "Página de pedido anticipado",

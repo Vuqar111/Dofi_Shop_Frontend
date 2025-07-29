@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import mainVideo from '../assets/video/mainvideo.mp4';
-  
+import mainImage3 from '../assets/images/mainThird.jpg';
+
 const HeroScreen = () => {
     const { t } = useTranslation();
     const location = useLocation();
@@ -12,16 +12,8 @@ const HeroScreen = () => {
 
     return (
         <div className='relative w-full h-[60vh] md:h-[80vh] overflow-hidden'>
-            {/* Background Video */}
-            <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className='absolute top-0 left-0 w-full h-full object-cover'
-            >
-            <source src={mainVideo} type="video/mp4" />
-            </video>
+
+            <img src={mainImage3} alt="mainImage3" className='absolute top-0 left-0 w-full h-full object-cover'/>
 
             {/* Hero Content */}
             <div className='w-full absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2'>

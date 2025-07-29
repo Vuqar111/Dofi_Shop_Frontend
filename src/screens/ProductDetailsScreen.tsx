@@ -181,7 +181,7 @@ const ProductDetailsScreen = () => {
               {product?.slug === "dofi-pro" ? '450 AZN' : product?.price}
             </p>
             <p className="text-2xl text-green-500 font-bold">{product?.salePrice} AZN</p>
-            <span className="bg-yellow-400 text-white text-sm px-2 py-1 rounded">ENDİRİM</span>
+            <span className="bg-yellow-400 text-white text-sm px-2 py-1 rounded">{t('product_details_part7')}</span>
           </div>
           <ul>
             {features?.map((feature, index) => (
