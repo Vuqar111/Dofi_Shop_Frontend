@@ -72,7 +72,7 @@ const CheckOutScreen = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { t } = useTranslation();
-    const currentLang = location.pathname.split('/')[1] || 'en';
+    const currentLang = location.pathname.split('/')[1] || 'az';
 
     const dispatch = useDispatch<AppDispatch>();
     const { profile, loading: profileLoading } = useSelector((state: RootState) => state.profile);
@@ -171,8 +171,8 @@ const CheckOutScreen = () => {
 
         if (!validateRequiredField(formData.fullName)) errors.fullName = t('validation_fullName');
         if (!validateEmail(formData.email)) errors.email = t('validation_email');
-        if (!validateRequiredField(formData.country)) errors.country = t('validation_country');
-        if (!validateRequiredField(formData.city)) errors.city = t('validation_city');
+        // if (!validateRequiredField(formData.country)) errors.country = t('validation_country');
+        // if (!validateRequiredField(formData.city)) errors.city = t('validation_city');
         if (!validateRequiredField(formData.address)) errors.address = t('validation_address');
         if (!validatePhone(formData.phoneNumber)) errors.phoneNumber = t('validation_phone');
 
@@ -240,6 +240,8 @@ const CheckOutScreen = () => {
             return;
         }
 
+
+        console.log(formData);
         try {
             const orderData = {
                 customerId: formData.email,
@@ -261,8 +263,8 @@ const CheckOutScreen = () => {
                 email: formData.email,
                 delivery: {
                     email: formData.email,
-                    country: formData.country,
-                    city: formData.city,
+                    country: "Axerbaijan",
+                    city: "Baku",
                     full_name: formData.fullName,
                     address: formData.address,
                     apartment: formData.apartment,
@@ -482,7 +484,7 @@ const CheckOutScreen = () => {
                             success={createOrderSuccess}
                             loading={createOrderLoading}
                             error={createOrderError}
-                            path={`/${currentLang}/profile/orders`}
+                            path={`/${currentLang}`}
                             message={t('order_checkout_part18')}
                         />
                     </form>
