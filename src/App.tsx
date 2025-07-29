@@ -54,13 +54,13 @@ const App = () => {
       <Route path="/:lang/shop/:slug" element={<ProductDetailsScreen />} />
       <Route path="/:lang/about" element={<AboutScreen />} />
       <Route path="/:lang/cart" element={<CartScreen />} />
+      <Route path="/:lang/cart" element={<CartScreen />} />
 
       <Route
         path="/:lang/checkout"
         element={
-          <ProtectedRoute>
-            <CheckOutScreen />
-          </ProtectedRoute>
+
+          <CheckOutScreen />
         }
       />
 

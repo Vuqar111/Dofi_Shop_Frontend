@@ -334,6 +334,23 @@ const CheckOutScreen = () => {
 
                             <div className="mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-60">
+                                    {t('order_checkout_part4')}
+                                </label>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleInputChange}
+                                    placeholder={t('order_checkout_part5')}
+                                    className={`w-full rounded-sm placeholder:text-sm border ${touched.fullName && formErrors.fullName ? 'border-red-500' : 'border-gray-200'
+                                        } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
+                                />
+                                {getErrorMessage('fullName')}
+                            </div>
+
+
+                            <div className="mb-4">
+                                <label className="mb-2 block font-medium text-black opacity-60">
                                     {t('order_checkout_part2')}
                                 </label>
                                 <div className="relative">
@@ -350,20 +367,25 @@ const CheckOutScreen = () => {
                                 </div>
                             </div>
 
-                            <div className="mb-4">
+
+                            <div className="mb-6">
                                 <label className="mb-2 block font-medium text-black opacity-60">
-                                    {t('order_checkout_part4')}
+                                    {t('order_checkout_part13')}
                                 </label>
-                                <input
-                                    type="text"
-                                    name="fullName"
-                                    value={formData.fullName}
-                                    onChange={handleInputChange}
-                                    placeholder={t('order_checkout_part5')}
-                                    className={`w-full rounded-sm placeholder:text-sm border ${touched.fullName && formErrors.fullName ? 'border-red-500' : 'border-gray-200'
-                                        } bg-transparent py-3 pl-3 pr-10 outline-none focus:border-primary focus-visible:shadow-none`}
+                                <PhoneInput
+                                    country={'az'}
+                                    value={formData.phoneNumber}
+
+                                    onChange={handlePhoneChange}
+                                    enableSearch={true}
+                                    inputClass={`!w-full !rounded-sm !border ${touched.phoneNumber && formErrors.phoneNumber ? '!border-red-500' : '!border-gray-200'
+                                        } !bg-transparent !py-3 !pl-10 !pr-10 !text-sm !h-[50px]`}
+                                    containerClass="!w-full"
+                                    buttonClass="!border-none !bg-transparent"
+                                    inputStyle={{ width: '100%' }}
+                                    placeholder={t('order_checkout_part14')}
                                 />
-                                {getErrorMessage('fullName')}
+                                {getErrorMessage('phoneNumber')}
                             </div>
                         </div>
 
@@ -371,7 +393,7 @@ const CheckOutScreen = () => {
                         <div className="mb-6">
                             <h3 className="text-lg font-semibold mb-4">{t('order_checkout_part16')}</h3>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="mb-4">
                                     <label className="mb-2 block font-medium text-black opacity-60">
                                         {t('order_checkout_part6')}
@@ -416,7 +438,7 @@ const CheckOutScreen = () => {
                                     </select>
                                     {getErrorMessage('city')}
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="mb-4">
                                 <label className="mb-2 block font-medium text-black opacity-60">
@@ -425,6 +447,7 @@ const CheckOutScreen = () => {
                                 <input
                                     type="text"
                                     name="address"
+                                    required
                                     value={formData.address}
                                     onChange={handleInputChange}
                                     placeholder={t('order_checkout_part10')}
@@ -435,7 +458,7 @@ const CheckOutScreen = () => {
                             </div>
 
                             <div className="grid grid-cols-1 gap-4">
-                               
+
 
                                 <div className="mb-4">
                                     <label className="mb-2 block font-medium text-black opacity-60">
@@ -452,24 +475,7 @@ const CheckOutScreen = () => {
                                 </div>
                             </div>
 
-                            <div className="mb-6">
-                                <label className="mb-2 block font-medium text-black opacity-60">
-                                    {t('order_checkout_part13')}
-                                </label>
-                                <PhoneInput
-                                    country={'az'}
-                                    value={formData.phoneNumber}
-                                    onChange={handlePhoneChange}
-                                    enableSearch={true}
-                                    inputClass={`!w-full !rounded-sm !border ${touched.phoneNumber && formErrors.phoneNumber ? '!border-red-500' : '!border-gray-200'
-                                        } !bg-transparent !py-3 !pl-10 !pr-10 !text-sm !h-[50px]`}
-                                    containerClass="!w-full"
-                                    buttonClass="!border-none !bg-transparent"
-                                    inputStyle={{ width: '100%' }}
-                                    placeholder={t('order_checkout_part14')}
-                                />
-                                {getErrorMessage('phoneNumber')}
-                            </div>
+
                         </div>
                         <ActionButton
                             content={t('order_checkout_part15')}
@@ -499,7 +505,7 @@ const CheckOutScreen = () => {
                                             <p className="text-gray-500 text-sm">{t('product_details_part2')}: {product.qty}</p>
                                             <p className="text-gray-500 text-sm flex items-center gap-2">
                                                 {t('order_summary_part1')}:
-                                                <div className={`w-4 h-4 bg-${product?.color?.replace("text-", "")} rounded-full`}></div>
+                                                <div className={`w-4 h-4 bg-[${product?.color}] rounded-full`}></div>
                                             </p>
                                         </div>
                                     </div>

@@ -38,11 +38,13 @@ const CartScreen = () => {
     const token = localStorage.getItem("token")
     const tokenExpired = isTokenExpired()
 
-    if (!token || tokenExpired) {
-      navigate(`${currentLang}/auth/login?checkout`)
-    } else {
-      navigate(`/${currentLang}/checkout`)
-    }
+    navigate(`/${currentLang}/checkout`)
+
+    // if (!token || tokenExpired) {
+    //   navigate(`/${currentLang}/checkout`)
+    // } else {
+    //   navigate(`/${currentLang}/checkout`)
+    // }
   }
 
   return (

@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 const ProfileScreen = lazy(() => import('../screens/ProfileScreen'));
 const SecurityScreen = lazy(() => import('../screens/SecurityScreen'));
-const CheckOutScreen = lazy(() => import('../screens/CheckOutScreen'));
 const OrdersScreen = lazy(() => import('../screens/OrdersScreen'));
 const OrderDetailsScreen = lazy(() => import('../screens/OrderDetailsScreen'));
 const coreRoutes = [
