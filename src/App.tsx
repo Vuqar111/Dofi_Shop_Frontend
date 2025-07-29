@@ -29,7 +29,7 @@ const App = () => {
   const { i18n } = useTranslation();
 
   // Get the current language from the path
-  const currentLang = location.pathname.split('/')[1] || 'en';
+  const currentLang = location.pathname.split('/')[1] || 'az';
 
   useEffect(() => {
     // Change language based on URL

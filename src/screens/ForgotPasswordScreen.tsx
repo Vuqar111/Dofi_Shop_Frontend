@@ -27,7 +27,6 @@ const ForgotPasswordScreen = () => {
             const userData = { email };
             await dispatch(forgotPassword({ userData }));
         } catch (error) {
-            console.error(error);
             swal('Error!', 'Something went wrong. Please try again later.', 'error');
         }
     };

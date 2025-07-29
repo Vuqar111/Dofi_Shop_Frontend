@@ -69,7 +69,6 @@ const ProfileScreen = () => {
       await dispatch(updateProfile({ updatedProfile }))
     } catch (error) {
       swal(t('modal_error_message_title'), t('modal_error_message_description'),'error')
-      console.error(error)
     }
   }
 

@@ -27,8 +27,7 @@ export const profileDetails = createAsyncThunk(
       });
       return response.data;
     } catch (error: any) {
-      console.log(rejectWithValue(error.response.data));
-    }
+      }
   }
 );
 

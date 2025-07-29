@@ -13,7 +13,7 @@ const HeroScreen = () => {
     return (
         <div className='relative w-full h-[60vh] md:h-[80vh] overflow-hidden'>
 
-            <img src={mainImage3} alt="mainImage3" className='absolute top-0 left-0 w-full h-full object-cover'/>
+            <img src={mainImage3} alt="mainImage3" className="absolute top-0 left-0 w-full h-full object-cover brightness-50" />
 
             {/* Hero Content */}
             <div className='w-full absolute top-1/2 left-1/2 text-center transform -translate-x-1/2 -translate-y-1/2'>

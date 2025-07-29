@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 
 const HomeScreen = () => {
   const [isOpened, setIsOpened] = useState(false)
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className='relative'>
@@ -21,13 +21,13 @@ const HomeScreen = () => {
         <HeroScreen />
         <div className='w-[95%] lg:w-[80%] mx-auto'>
           <h3 className='px-4 text-2xl sm:text-5xl md:text-6xl  text-center font-extrabold opacity-[0.8] my-8'>
-             {t('home_screen_products_title')}
+            {t('home_screen_products_title')}
           </h3>
           <ProductsScreen />
         </div>
         <ProductAdvertising />
         <Safety />
-        <FAQ/>
+        <FAQ />
         <Footer />
       </div>
       {isOpened && <CartModal setIsOpened={setIsOpened} />}
