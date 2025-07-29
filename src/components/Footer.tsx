@@ -50,9 +50,9 @@ const Footer = () => {
                 {/* Social Media Accounts */}
                 <div>
                     <h3 className="font-bold mb-4">{t('footer_title3')}</h3>
-                    <p className='mb-2 text-sm'>Sabunchu district, 10Q</p>
+                    <p className='mb-2 text-sm'>{t('footer_part2')} 10Q</p>
                     <p className='mb-2 text-sm'>{t('footer_part10')}: dofi.robot@gmail.com</p>
-                    <p className='mb-2 text-sm'>{t('footer_part11')}: +995 50 519 87 54</p>
+                    <p className='mb-2 text-sm'>{t('footer_part11')}: +994 50 519 87 54</p>
                     <ul className="flex space-x-4 mt-4">
                         <li>
                             <a href="https://www.tiktok.com/@dofi.kid" target="_blank" rel="noopener noreferrer">

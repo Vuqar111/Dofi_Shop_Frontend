@@ -113,6 +113,7 @@ const resources = {
             footer_part8: "Privacy Policy",
             footer_part9: "Terms of Service",
             footer_title3: "Follow us",
+            footer_part2: "Sabunchu District",
             footer_part10: "Email",
             footer_part11: "Phone",
             footer_part12: "All Rights Reserved",
@@ -275,7 +276,7 @@ const resources = {
             safety_page_description: "DreamWeaver Rejimi, Dofi-nin süni intellektlə dəstəklənən hekayəçiliyi, sensor siqnalları və səhər refleksiyaları ilə uşağınızı öz xəyal macəralarına yönəltdiyi inqilabi bir yuxuya hazırlıq xüsusiyyətidir — yaradıcılığı, emosional inkişafı və daha yaxşı yuxunu təşviq edir.",
             safety_page_feature_title_part1: "Fərdi Yuxu Qurucusu",
             safety_page_feature_desciption_part1: "Yatmazdan əvvəl Dofi uşağınızla danışaraq sakitləşdirici işıq, səs və hekayəçilikdən istifadə edərək dinozavrlarla uçmaqdan tutmuş sualtı aləmləri kəşf etməyə qədər unikal bir yuxu macərası yaradır.",
-            safety_page_feature_title_part2: "Yuxu Aktivli Lucid Siqnallar",
+            safety_page_feature_title_part2: "Yuxu zamanı aktivləşən aydınlıq siqnalları",
             safety_page_feature_description_part2: "Uşağınız yatarkən Dofi yuxuların aydınlığını, yaradıcılığı və beyin dalğalarının rahatlamasını artırmaq üçün yumşaq audio tonlardan, qoxu modullarından və incə sensor siqnallardan istifadə edir.",
             safety_page_feature_title_part3: "Səhər Təsəvvür Jurnalı",
             safety_page_feature_description_part3: "Səhər oyandıqda, Dofi uşağınızı yuxusunu bölüşməyə və ya çəkməyə təşviq edir, bu da yaddaşı, emosional ifadəni və özünü dərk etməni inkişaf etdirir — və bunlar hamısı valideynlər üçün tətbiqdə saxlanılır.",
@@ -362,6 +363,7 @@ const resources = {
             footer_part8: "Məxfiləşdirmə siyasəti",
             footer_part9: "Xidmət şərtləri",
             footer_title3: "Bizi izləyin",
+            footer_part2: "Sabunçu Rayonu",
             footer_part10: "E-poçt",
             footer_part11: "Əlaqə",
             footer_part12: "Bütün hüquqlar qorunur",
@@ -394,6 +396,7 @@ const resources = {
             order_checkout_part16: "Çatdırılma",
             order_checkout_part17: "Ölkə seçin",
             order_checkout_part18: "Sənin sifarişin yaradıldı",
+            order_checkout_part19: "Poçt indeksi",
 
             // Order Summary
             order_summary_title: "Sifariş özəti",
@@ -510,7 +513,7 @@ const resources = {
             safety_page_description: "DreamWeaver Modu, Dofi'nin yapay zekâ destekli hikâye anlatımı, duyusal ipuçları ve sabah yansımalarıyla çocuğunuzu kendi hayal maceralarına yönlendirdiği devrim niteliğinde bir uyku zamanı özelliğidir — yaratıcılığı, duygusal gelişimi ve kaliteli uykuyu destekler.",
             safety_page_feature_title_part1: "Kişiselleştirilmiş Rüya Kurucusu",
             safety_page_feature_desciption_part1: "Uyumadan önce Dofi, çocuğunuzla konuşarak dinozorlarla uçmaktan denizaltı krallıkları keşfetmeye kadar eşsiz bir rüya yolculuğu oluşturur — huzur verici ışık, ses ve hikâye anlatımı ile.",
-            safety_page_feature_title_part2: "Uykuda Aktif Lucid İpuçları",
+            safety_page_feature_title_part2: "Uykuda Aktifleşen Berraklık İpuçları",
             safety_page_feature_description_part2: "Çocuğunuz uyurken Dofi, rüyaların canlılığını, yaratıcılığı ve beyin dalgası rahatlamasını artırmak için yumuşak ses tonları, isteğe bağlı koku modülleri ve ince duyusal ipuçları kullanır.",
             safety_page_feature_title_part3: "Sabah Hayal Günlüğü",
             safety_page_feature_description_part3: "Sabahları Dofi, çocuğunuzu rüyasını paylaşmaya veya çizmeye teşvik eder; bu da hafızayı, duygusal ifadeyi ve öz farkındalığı geliştirir — hepsi ebeveyn uygulamasında saklanır.",
@@ -590,6 +593,7 @@ const resources = {
             footer_part8: "Gizlilik Politikası",
             footer_part9: "Hizmet Şartları",
             footer_title3: "Bizi takip edin",
+            footer_part2: "Sabunçu İlçesi",
             footer_part10: "E-posta",
             footer_part11: "Telefon",
             footer_part12: "Tüm Hakları Saklıdır",
@@ -620,6 +624,7 @@ const resources = {
             order_checkout_part16: "Teslimat",
             order_checkout_part17: "Ülkenizi seçin",
             order_checkout_part18: "Siparişiniz ön sipariş olarak oluşturuldu",
+            order_checkout_part19: "Posta kodu",
 
             order_summary_title: "Sipariş özeti",
             order_summary_part1: "Renk",
@@ -817,7 +822,8 @@ const resources = {
             footer_part8: "سياسة الخصوصية",
             footer_part9: "شروط الخدمة",
             footer_title3: "تابعنا",
-            footer_part10: "البريد الإلكتروني",
+            footer_part2: "منطقة صابونتشي",
+            footer_part10: "بريد إلكتروني",
             footer_part11: "رقم الهاتف",
             footer_part12: "جميع الحقوق محفوظة",
 
@@ -849,6 +855,7 @@ const resources = {
             order_checkout_part16: "الشحن",
             order_checkout_part17: "اختار دولتك",
             order_checkout_part18: "تم إنشاء طلبك كطلب مسبق",
+            order_checkout_part19: "الرمز البريدي",
 
             // Order Summary
             order_summary_title: "ملخص الطلب",
@@ -1044,6 +1051,7 @@ const resources = {
             footer_part8: "Politique de confidentialité",
             footer_part9: "Conditions d'utilisation",
             footer_title3: "Suivez-nous",
+            footer_part2: "District de Sabunchu",
             footer_part10: "Email",
             footer_part11: "Téléphone",
             footer_part12: "Tous droits réservés",
@@ -1074,6 +1082,7 @@ const resources = {
             order_checkout_part16: "Livraison",
             order_checkout_part17: "Sélectionnez votre pays",
             order_checkout_part18: "Votre commande a été créée comme précommande",
+            order_checkout_part19: "Code postal",
 
             order_summary_title: "Résumé de la commande",
             order_summary_part1: "Couleur",
@@ -1271,6 +1280,7 @@ const resources = {
             footer_part8: "隐私政策",
             footer_part9: "服务条款",
             footer_title3: "关注我们",
+            footer_part2: "萨本楚区",
             footer_part10: "电子邮箱",
             footer_part11: "联系电话",
             footer_part12: "版权所有",
@@ -1303,6 +1313,7 @@ const resources = {
             order_checkout_part16: "配送方式",
             order_checkout_part17: "选择国家",
             order_checkout_part18: "您的订单已创建为预售订单",
+            order_checkout_part19: "邮政编码",
 
             // 订单摘要
             order_summary_title: "订单汇总",
@@ -1508,6 +1519,7 @@ const resources = {
             footer_part8: "Datenschutz",
             footer_part9: "Nutzungsbedingungen",
             footer_title3: "Folgen Sie uns",
+            footer_part2: "Bezirk Sabunchu",
             footer_part10: "E-Mail",
             footer_part11: "Telefon",
             footer_part12: "Alle Rechte vorbehalten",
@@ -1540,6 +1552,7 @@ const resources = {
             order_checkout_part16: "Lieferung",
             order_checkout_part17: "Land auswählen",
             order_checkout_part18: "Ihre Vorbestellung wurde angelegt",
+            order_checkout_part19: "Postleitzahl",
 
             // Bestellübersicht
             order_summary_title: "Bestellübersicht",
@@ -1745,6 +1758,7 @@ const resources = {
             footer_part8: "Política de privacidad",
             footer_part9: "Términos de servicio",
             footer_title3: "Síguenos",
+            footer_part2: "Distrito de Sabunchu",
             footer_part10: "Correo Electrónico",
             footer_part11: "Teléfono",
             footer_part12: "Todos los derechos reservados",
@@ -1777,6 +1791,7 @@ const resources = {
             order_checkout_part16: "Envío",
             order_checkout_part17: "Selecciona tu país",
             order_checkout_part18: "Tu pedido ha sido creado como pre-pedido",
+            order_checkout_part19: "Código postal",
 
             // Order Summary
             order_summary_title: "Resumen del Pedido",
