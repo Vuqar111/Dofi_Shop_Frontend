@@ -9,7 +9,7 @@ const resources = {
 
             products: require('./locales/en/products.json'),
 
-            hero_page_title: "Welcome!",
+            hero_page_title: "Be Among the First 100 Families to Own Dofi!",
             hero_page_subtitle: 'Smart, Safe & Super Fun for Every Kid!',
             hero_page_button: "Join waitlist now",
             home_screen_products_title: "Dofi In Action",
@@ -260,10 +260,10 @@ const resources = {
 
             products: require('./locales/az/products.json'),
 
-            hero_page_title: "Xoş gəlmisiniz!",
+            hero_page_title: "İlk 100 Müştəridən biri olun!",
             hero_page_subtitle: 'Hər Uşaq üçün Ağıllı, Təhlükəsiz və Super Əyləncəli!',
             hero_page_button: "Gözləmə siyahısına qoşul",
-            home_screen_products_title: "Dofi Fəaliyyətdədir",
+            home_screen_products_title: "Dofi İndi Sizin Üçün Hazırdır!",
             add_to_cart_text: "Səbətə əlavə et",
 
             about_title: "Daxilində",
@@ -499,7 +499,7 @@ const resources = {
 
             products: require('./locales/tr/products.json'),
 
-            hero_page_title: "Hoş geldiniz!",
+            hero_page_title: "Dofi'ye sahip olan ilk 100 aileden biri olun!",
             hero_page_subtitle: "Akıllı, Güvenli ve Her Çocuk İçin Süper Eğlenceli!",
             hero_page_button: "Şimdi ön sipariş ver",
             home_screen_products_title: "Dofi İş Başında",
@@ -721,7 +721,7 @@ const resources = {
 
             products: require('./locales/ar/products.json'),
 
-            hero_page_title: "مرحباً بك!",
+            hero_page_title: "كن من أوائل 100 عائلة تمتلك دوفي!",
             hero_page_subtitle: "ذكي، آمن، وممتع للغاية لكل طفل!",
             hero_page_button: "الطلب المسبق الآن",
             home_screen_products_title: "دوفي في العمل",
@@ -959,7 +959,7 @@ const resources = {
 
             products: require('./locales/fr/products.json'),
 
-            hero_page_title: "Bienvenue !",
+            hero_page_title: "Faites partie des 100 premières familles à posséder Dofi !",
             hero_page_subtitle: "Intelligent, sûr et super amusant pour chaque enfant !",
             hero_page_button: "Précommandez maintenant",
             home_screen_products_title: "Dofi en action",
@@ -1181,7 +1181,7 @@ const resources = {
 
             products: require('./locales/cn/products.json'),
 
-            hero_page_title: "欢迎！",
+            hero_page_title: "成为首批拥有 Dofi 的 100 个家庭之一！",
             hero_page_subtitle: "每个孩子的智能、安全又超级有趣的伙伴！",
             hero_page_button: "立即预订",
             home_screen_products_title: "Dofi实景展示",
@@ -1421,7 +1421,7 @@ const resources = {
 
             products: require('./locales/de/products.json'),
 
-            hero_page_title: "Willkommen!",
+            hero_page_title: "Gehören Sie zu den ersten 100 Familien, die Dofi besitzen!",
             hero_page_subtitle: "Intelligent, sicher & super spaßig für jedes Kind!",
             hero_page_button: "Jetzt vorbestellen",
             home_screen_products_title: "Dofi in Aktion",
@@ -1661,7 +1661,7 @@ const resources = {
 
             products: require('./locales/es/products.json'),
 
-            hero_page_title: "¡Bienvenido!",
+            hero_page_title: "¡Sé una de las primeras 100 familias en tener a Dofi!",
             hero_page_subtitle: "Inteligente, Seguro y Súper Divertido para Cada Niño!",
             hero_page_button: "Pre-pedido ahora",
             home_screen_products_title: "Dofi en Acción",
